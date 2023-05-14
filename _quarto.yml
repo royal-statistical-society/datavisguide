@@ -8,6 +8,23 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - href: docs/introduction.qmd
+        text: Guide
+        
+  sidebar: 
+      - title: Guide
+        style: floating
+        collapse-level: 2
+        align: left
+        contents:
+          - href: docs/introduction.qmd
+            text: Introduction
+          - href: docs/why-visualise.qmd
+            text: Why do we visualise data?
+          - href: docs/principles.qmd
+            text: Principles of data visualisation
+            
+  page-navigation: true
 
 format:
   html:

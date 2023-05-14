@@ -1,5 +1,6 @@
 ---
 title: "rssdatavisguide"
+sidebar: false
 ---
 
 This is a Quarto website.

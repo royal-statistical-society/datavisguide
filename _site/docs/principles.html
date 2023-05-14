@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.319">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>rssdatavisguide - 3. Principles of data visualisation</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../docs/why-visualise.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">rssdatavisguide</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../docs/introduction.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Guide</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../docs/principles.html">Principles of data visualisation</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../docs/introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../docs/why-visualise.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Why do we visualise data?</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../docs/principles.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Principles of data visualisation</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#elements-of-data-visualisations" id="toc-elements-of-data-visualisations" class="nav-link active" data-scroll-target="#elements-of-data-visualisations">3.1 Elements of data visualisations</a>
+  <ul class="collapse">
+  <li><a href="#layout-panels-facets" id="toc-layout-panels-facets" class="nav-link" data-scroll-target="#layout-panels-facets">Layout (panels, facets)</a></li>
+  <li><a href="#aspect-ratio" id="toc-aspect-ratio" class="nav-link" data-scroll-target="#aspect-ratio">Aspect ratio</a></li>
+  <li><a href="#lines" id="toc-lines" class="nav-link" data-scroll-target="#lines">Lines</a></li>
+  <li><a href="#points" id="toc-points" class="nav-link" data-scroll-target="#points">Points</a></li>
+  <li><a href="#colours" id="toc-colours" class="nav-link" data-scroll-target="#colours">Colours</a></li>
+  <li><a href="#axes" id="toc-axes" class="nav-link" data-scroll-target="#axes">Axes</a></li>
+  <li><a href="#symbols" id="toc-symbols" class="nav-link" data-scroll-target="#symbols">Symbols</a></li>
+  <li><a href="#legends" id="toc-legends" class="nav-link" data-scroll-target="#legends">Legends</a></li>
+  <li><a href="#orientation" id="toc-orientation" class="nav-link" data-scroll-target="#orientation">Orientation</a></li>
+  <li><a href="#auxiliary-elements" id="toc-auxiliary-elements" class="nav-link" data-scroll-target="#auxiliary-elements">Auxiliary elements</a></li>
+  <li><a href="#higher-dimensions" id="toc-higher-dimensions" class="nav-link" data-scroll-target="#higher-dimensions">Higher dimensions</a></li>
+  </ul></li>
+  <li><a href="#elements-of-tables" id="toc-elements-of-tables" class="nav-link" data-scroll-target="#elements-of-tables">3.2 Elements of tables</a>
+  <ul class="collapse">
+  <li><a href="#layout" id="toc-layout" class="nav-link" data-scroll-target="#layout">Layout</a></li>
+  <li><a href="#digits" id="toc-digits" class="nav-link" data-scroll-target="#digits">Digits</a></li>
+  <li><a href="#alignment" id="toc-alignment" class="nav-link" data-scroll-target="#alignment">Alignment</a></li>
+  <li><a href="#multiple-numbers-in-table-cells" id="toc-multiple-numbers-in-table-cells" class="nav-link" data-scroll-target="#multiple-numbers-in-table-cells">Multiple numbers in table cells</a></li>
+  <li><a href="#orientation-1" id="toc-orientation-1" class="nav-link" data-scroll-target="#orientation-1">Orientation</a></li>
+  <li><a href="#fonts-and-colours" id="toc-fonts-and-colours" class="nav-link" data-scroll-target="#fonts-and-colours">Fonts and colours</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">3. Principles of data visualisation</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Data visualisations must serve a purpose. By understanding the purpose of a visualisation, we – as author or reader – are in a position to assess whether a visualisation succeeds in its aims or requires improvement.</p>
+<p>Arguably the most common purpose of a visualisation is a comparison of groups of data, such as data on patients receiving different treatments. A good choice of axes, axis limits, labels and symbols can facilitate substantially the identification of patterns in the data, whereas&nbsp; poor choices for any of these elements can substantially hamper the extraction of information.</p>
+<section id="elements-of-data-visualisations" class="level2">
+<h2 class="anchored" data-anchor-id="elements-of-data-visualisations">3.1 Elements of data visualisations</h2>
+<p>Various elements of a visualisation can contribute to the efficacy with which information can be distilled. All visualisation software packages will output graphics in a default style, but these will rarely, if ever, be the optimum choices for the data visualisation you are creating. When designing a data visualisation, one needs to consider the range of options available. Some of these options are discussed in what follows.</p>
+<section id="layout-panels-facets" class="level3">
+<h3 class="anchored" data-anchor-id="layout-panels-facets">Layout (panels, facets)</h3>
+<p>The layout (arrangement of multiple panels, facets, or subplots) is highly relevant for efficient comparison. If data on the y-axis are to be compared, a single y-axis with all panels aligned horizontally facilitates comparison, whereas for efficient comparison of x-axis values, panels should be stacked. Matrix layouts (multiple rows and columns in a single figure) should only be used if the data shown in individual panels are not related or space does not permit a single row or a single column (e.g., if there are too many panels to fit on a single row).</p>
+<p><strong>Example:</strong> Figure 1 shows two different layouts of exactly the same data with exactly the same type of visualisation except for the layout. Note how difficult it is to compare the data across panels on the left-hand side, while it is easy with the layout on the right-hand side. The key difference is that the panels on the right share a common y-axis, which is key for comparison of y-values across panels.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Data set creation.</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">93384</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>time <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">16</span>, <span class="dv">24</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">32</span> <span class="co"># no of subjects</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">ID=</span><span class="dv">1</span><span class="sc">:</span>n, <span class="at">time=</span>time)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>bw <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">ID=</span><span class="fu">sort</span>(<span class="fu">unique</span>(data<span class="sc">$</span>ID)),</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">bw=</span><span class="fu">rlnorm</span>(n, <span class="fu">log</span>(<span class="dv">75</span>), <span class="at">sdlog=</span><span class="fl">0.25</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>bw<span class="sc">$</span>bw.category <span class="ot">&lt;-</span> <span class="fu">cut</span>(bw<span class="sc">$</span>bw,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks=</span><span class="fu">quantile</span>(bw<span class="sc">$</span>bw, <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.33</span>, <span class="fl">0.66</span>, <span class="dv">1</span>)), </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels=</span><span class="fu">paste</span>(<span class="fu">c</span>(<span class="st">"low"</span>, <span class="st">"medium"</span>, <span class="st">"high"</span>), <span class="st">"body weight"</span>), </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">include.lowest=</span><span class="cn">TRUE</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">merge</span>(data, bw)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data[<span class="fu">order</span>(data<span class="sc">$</span>ID, data<span class="sc">$</span>time), ]</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulate drug concentrations as a function of body weight.</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>conc <span class="ot">&lt;-</span> <span class="dv">100</span><span class="sc">/</span>(data<span class="sc">$</span>bw<span class="sc">^</span><span class="fl">1.0</span>)<span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.085</span><span class="sc">*</span>data<span class="sc">$</span>time)<span class="sc">*</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rlnorm</span>(<span class="fu">nrow</span>(data), <span class="at">sdlog=</span><span class="fl">0.25</span>)<span class="sc">+</span> <span class="co"># res. error</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    (data<span class="sc">$</span>ID<span class="sc">-</span><span class="fu">mean</span>(data<span class="sc">$</span>ID))<span class="sc">/</span><span class="fu">mean</span>(data<span class="sc">$</span>ID)<span class="sc">/</span><span class="dv">4</span> <span class="co"># r. eff</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># ---</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualisation.</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>ID <span class="ot">&lt;-</span> <span class="fu">factor</span>(data<span class="sc">$</span>ID)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>gg[[<span class="st">"3x1"</span>]] <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x=</span>time, <span class="at">y=</span>conc, <span class="at">group=</span>ID, <span class="at">color=</span>ID)) <span class="sc">+</span> <span class="fu">geom_line</span>() </span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>gg[[<span class="st">"3x1"</span>]] <span class="ot">&lt;-</span> gg[[<span class="st">"3x1"</span>]] <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">24</span>, <span class="at">by=</span><span class="dv">4</span>)) </span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>gg[[<span class="st">"3x1"</span>]] <span class="ot">&lt;-</span> gg[[<span class="st">"3x1"</span>]] <span class="sc">+</span> <span class="fu">theme_bw</span>() <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"time [h]"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"drug concentration [ng/mL]"</span>)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>gg[[<span class="st">"3x1"</span>]] <span class="ot">&lt;-</span> gg[[<span class="st">"3x1"</span>]] <span class="sc">+</span> <span class="fu">facet_grid</span>(bw.category <span class="sc">~</span> .)</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>gg[[<span class="st">"3x1"</span>]] <span class="ot">&lt;-</span> gg[[<span class="st">"3x1"</span>]] <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"none"</span>)</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>gg[[<span class="st">"1x3"</span>]] <span class="ot">&lt;-</span> gg[[<span class="st">"3x1"</span>]] <span class="sc">+</span> <span class="fu">facet_grid</span>(. <span class="sc">~</span> bw.category)</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Add space to the rhs of the first figure for better separation in the cowplot.</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>gg[[<span class="st">"3x1"</span>]] <span class="ot">&lt;-</span> gg[[<span class="st">"3x1"</span>]] <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">plot.margin =</span> <span class="fu">unit</span>(<span class="fu">c</span>(<span class="fl">0.5</span>, <span class="dv">4</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>), <span class="st">"lines"</span>))</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="co"># print(gg)</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="co"># ---</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Both figures into a single output figure.</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_grid</span>(gg[[<span class="dv">1</span>]], gg[[<span class="dv">2</span>]], <span class="at">rel_widths=</span><span class="fu">c</span>(<span class="fl">1.5</span>, <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="principles_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="figure-caption">
+<p><strong>Figure 1:</strong> A demonstration of the importance of panel layout for comparison across panels.</p>
+</div>
+</section>
+<section id="aspect-ratio" class="level3">
+<h3 class="anchored" data-anchor-id="aspect-ratio">Aspect ratio</h3>
+<p>Our visual perception of data in a display must not depend on the choice of x- and y-axes. In many cases, a square figure avoids visual bias. A square figure should be considered in particular if the two axes share a communality such as a measurement before and after some event, observed data vs model-predicted values or, more generally, the same units (such as kg or metres). Generally, a 1:1 aspect ratio (the physical length of 1 measurement unit in the x- and the y-direction) is a good default. If the figure has identical ranges for the x- and the y-axis, a 1:1 aspect ratio yields a square figure.</p>
+<p><strong>Example:</strong> The three panels below all show the same data, aiming at enabling judgement about the goodness of a model fit (predicted vs observed values). Note the difference in visual perception between a stretched x-axis, a stretched y-axis, and a 1:1 aspect ratio (i.e., one unit in x and y corresponds to the same number of pixels) and identical axis limits (such that the figure is square). Other applications: any x and y that are to be compared.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Observed vs predicted (any data with comparable x and y will do).</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ---</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Data set.</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Old Faithful Geyser (Yellowstone) data set with eruption duration</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   and waiting time to the next eruption (both in minutes).</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span>faithful<span class="sc">$</span>eruptions,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span>faithful<span class="sc">$</span>waiting</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># ---</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Regression model fit.</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, <span class="at">data=</span>data)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Addition of predicted values to the data set.</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(fit)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Range of y and y predicted combined.</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> <span class="fu">range</span>(<span class="fu">unlist</span>(data[<span class="fu">c</span>(<span class="st">"y"</span>, <span class="st">"pred"</span>)]))</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co"># ---</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting.</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x=</span>pred, <span class="at">y=</span>y))</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding the line of identity, y=x (note: plotting it first will add points on top).</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">geom_abline</span>(<span class="at">intercept=</span><span class="dv">0</span>, <span class="at">slope=</span><span class="dv">1</span>, <span class="at">color=</span><span class="st">"black"</span>, <span class="at">linewidth=</span><span class="dv">1</span>)</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding points, removing grey background.</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">theme_bw</span>() </span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding linear OLS regression fit of y~x.</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">"loess"</span>, <span class="at">color=</span><span class="st">"firebrick"</span>, <span class="at">se=</span><span class="cn">FALSE</span>)</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding axis labels.</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"predicted"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"observed"</span>)</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Transpose (flip coordinates)</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>gg2 <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">coord_flip</span>()</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Setting the aspect ratio to 1 (1 unit in x and y corresponds</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="co">#   to the same number of pixels).</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>gg3 <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">coord_fixed</span>()</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="co"># Defining identical axis limits for x and y.</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>gg3 <span class="ot">&lt;-</span> gg3 <span class="sc">+</span> <span class="fu">xlim</span>(r) <span class="sc">+</span> <span class="fu">ylim</span>(r)</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="co"># Cow (column-wise) plot, combine all figures into one.</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_grid</span>(gg, gg2, gg3, <span class="at">rel_widths=</span><span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">2</span>), <span class="at">nrow=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="principles_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="figure-cation">
+<p><strong>Figure 2:</strong> A demonstration showing how visual perception is influenced by the aspect ratio.</p>
+</div>
+</section>
+<section id="lines" class="level3">
+<h3 class="anchored" data-anchor-id="lines">Lines</h3>
+<p>Lines introduce an order, a sequence. If there is no order, data should not be interconnected by lines. If different line types indicate different groups that have an inherent order, it is helpful if the chosen line styles have an order, too (example: line thickness, dash density, or darkness of colour increases with values from the lowest to the highest group).</p>
+</section>
+<section id="points" class="level3">
+<h3 class="anchored" data-anchor-id="points">Points</h3>
+<p>Point symbols should be chosen such that the visualisation displays the data in a meaningful way. If thousands of data points are to be shown, open circles or smaller filled symbols are better than overlapping filled symbols. If the data are discrete and observations overlay, consider jittering the data gently for a better visualisation.</p>
+</section>
+<section id="colours" class="level3">
+<h3 class="anchored" data-anchor-id="colours">Colours</h3>
+<p>Colours should serve a purpose such as helping to identify different groups. Colours for pure decoration are discouraged.&nbsp;</p>
+</section>
+<section id="axes" class="level3">
+<h3 class="anchored" data-anchor-id="axes">Axes</h3>
+<section id="origins-and-limits" class="level4">
+<h4 class="anchored" data-anchor-id="origins-and-limits">Origins and limits</h4>
+<p>Axis ranges should generally start at 0 unless there is a good reason for choosing other ranges. If the data do not contain negative values, the axis should not stretch into negative values and in particular not have tick marks at negative values.</p>
+<p>If relative changes or ratios are displayed, the corresponding axis should be logarithmic (such that, e.g., 1/4 has the same distance to the reference point, 1, as 4) and symmetric around the point of no change. An auxiliary line at the point of no change can facilitate interpretation. Axis tickmarks and auxiliary grey lines will facilitate reading off values, avoiding wrong linear interpolation by the viewer. Axis tick mark labels should indicate the ratio (e..g, “1/4” instead of 0.25).</p>
+<p>If the data displayed as x and as y are comparable, axis limits should be identical and the figure square, such that distances are consistent in the x- and in the y-direction.</p>
+<p><strong>Example:</strong> The figure below illustrates that the deliberate choice of axis limits (here, y-axis limits) can make a big difference to perception, and therefore interpretation, by the reader. The only difference between the three panels is the y-axis range.</p>
+<p><img src="images/principles-fig3.png" class="img-fluid"></p>
+<div class="figure-caption">
+<p><strong>Figure 3:</strong> A demonstration of how visual impression can be driven by the choice of axis limits. Note: there is no R code for this figure. R makes it hard to omit 0 on the y-axis of barcharts (for a reason). This figure was instead created in Excel.</p>
+</div>
+</section>
+<section id="linear-and-logarithmic-axes" class="level4">
+<h4 class="anchored" data-anchor-id="linear-and-logarithmic-axes">Linear and logarithmic axes</h4>
+<p><strong>Example:</strong> Let’s say that you want to know whether some variable, y, changes (compared to a reference or baseline measurement) depending on another variable, x. For example, does blood pressure change with treatment?</p>
+<p>Figure 4 shows data with, on average, no change compared to a reference (baseline) measurement (red horizontal line) – approximately half the data are below and above the point of no change. However, this is not easily apparent from the top-left panel, which uses a linear axis, and so space is allocated asymmetrically in the vertical direction -- both up and down – away from the reference line. In the top-right panel, which uses a logarithmic axis, the relatively even spread of the data points around the reference line is clear to see.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Naïve plot of y vs x. If there is no change (on average), </span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># half the data are below the line of no change.</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Asymmetric view, and it depends on y/x or x/y.</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">33838</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">x=</span><span class="fu">rlnorm</span>(<span class="dv">200</span>, <span class="dv">2</span>, <span class="fl">0.2</span>),</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">y=</span><span class="fu">rlnorm</span>(<span class="dv">200</span>, <span class="fl">0.2</span>, <span class="fl">0.75</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Add an outlier manually.</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rbind</span>(x, <span class="fu">data.frame</span>(<span class="at">x=</span><span class="fu">quantile</span>(x<span class="sc">$</span>x, <span class="fl">0.8</span>), <span class="at">y=</span><span class="fu">max</span>(x<span class="sc">$</span>y)<span class="sc">*</span><span class="fl">1.5</span>))</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># ---</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting.</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Scatterplot of y vs x.</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(x, <span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">theme_bw</span>()</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">geom_hline</span>(<span class="at">yintercept=</span><span class="dv">1</span>, <span class="at">color=</span><span class="st">"firebrick"</span>, <span class="at">linewidth=</span><span class="dv">2</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"x-variable"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"Fold-change"</span>)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>gg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="principles_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Logarithmic axes, symmetric range (!):</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>xbr <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">10</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">10</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">breaks=</span>xbr, <span class="at">trans=</span><span class="st">"log10"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">limits=</span><span class="fu">max</span>(<span class="fu">abs</span>(x<span class="sc">$</span>y))<span class="sc">^</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(gg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="principles_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid" width="672"></p>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Second axis:</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">breaks=</span>xbr,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels=</span><span class="fu">paste</span>(<span class="dv">100</span><span class="sc">*</span>xbr, <span class="st">"%"</span>, <span class="at">sep=</span><span class="st">""</span>),</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">trans=</span><span class="st">"log10"</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">limits=</span><span class="fu">max</span>(<span class="fu">abs</span>(x<span class="sc">$</span>y))<span class="sc">^</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>),</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">sec.axis=</span><span class="fu">sec_axis</span>(<span class="at">trans=</span><span class="sc">~</span>.<span class="sc">*</span><span class="dv">1</span>, <span class="at">breaks=</span>xbr,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels=</span><span class="fu">ifelse</span>(xbr <span class="sc">&lt;</span> <span class="dv">1</span>, <span class="fu">paste</span>(<span class="st">"1/"</span>, <span class="dv">1</span><span class="sc">/</span>xbr, <span class="at">sep=</span><span class="st">""</span>), xbr))</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>Scale for y is already present.
+Adding another scale for y, which will replace the existing scale.</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(gg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="principles_files/figure-html/unnamed-chunk-3-3.png" class="img-fluid" width="672"></p>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ---</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Univariate distribution (histogram).</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(x, <span class="fu">aes</span>(<span class="at">x=</span>y)) <span class="sc">+</span> <span class="fu">theme_bw</span>() <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Fold-change"</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">color=</span><span class="st">"firebrick"</span>, <span class="at">fill=</span><span class="st">"gray"</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(gg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="principles_files/figure-html/unnamed-chunk-3-4.png" class="img-fluid" width="672"></p>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Symmetric range, log scale.</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">breaks=</span>xbr,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels=</span><span class="fu">ifelse</span>(xbr <span class="sc">&lt;</span> <span class="dv">1</span>, <span class="fu">paste</span>(<span class="st">"1/"</span>, <span class="dv">1</span><span class="sc">/</span>xbr), xbr),</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">trans=</span><span class="st">"log10"</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">limits=</span><span class="fu">max</span>(<span class="fu">abs</span>(x<span class="sc">$</span>x))<span class="sc">^</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(gg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="principles_files/figure-html/unnamed-chunk-3-5.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="figure-caption">
+<p><strong>Figure 4:</strong> [caption to be added]</p>
+</div>
+</section>
+</section>
+<section id="symbols" class="level3">
+<h3 class="anchored" data-anchor-id="symbols">Symbols</h3>
+<p>Symbols should be intuitive (for example, “+” for a positive outcome, “-” for a negative outcome, “O” for a neutral outcome). In an ideal case, symbols require only a single look at the legend to subsequently focus on the visualisation.&nbsp;</p>
+<p>Symbols such as triangles, circles, and squares do not have an intuitive connotation. However, if there is an order in the data, it might be reflected in the order of the symbols, e.g., the number of vertices (circle, dash, triangle, square, pentagon, etc.).</p>
+</section>
+<section id="legends" class="level3">
+<h3 class="anchored" data-anchor-id="legends">Legends</h3>
+<p>Legends should not attract too much attention and certainly not cover up data. They should be placed in the margins of the figure or can be captured in a small text below the figure.&nbsp;</p>
+</section>
+<section id="orientation" class="level3">
+<h3 class="anchored" data-anchor-id="orientation">Orientation</h3>
+<p>Research has shown that the human eye is better at following imaginary vertical lines than horizontal lines. Horizontal boxplots allow for a more accurate visual comparison than vertical boxplots.</p>
+</section>
+<section id="auxiliary-elements" class="level3">
+<h3 class="anchored" data-anchor-id="auxiliary-elements">Auxiliary elements</h3>
+<p>Generally speaking, when designing a data visualisation, we need to be wary of what Tufte calls “chart junk” – any element of a chart that does not add to or enhance the information on display. Data are, of course, the star of the show, so should receive the most space. Meanwhile, all additional elements (lines, colours, symbols, etc.) should be assessed for their contribution to the interpretation of the data. If there is no contribution, they can be removed. A typical example of a redundant element in a data visualisation is a figure that has 5 panels (sub-figures or facets), each with x- and y-axis. To allow for efficient comparison of the data shown in the different panels, a single y-axis suffices if the panels are all aligned on a single row. This creates more space for the data and synchronises y-axis limits and data positions as a side benefit.&nbsp;</p>
+<p>Some helpful additional elements can include lines at relevant points. Examples include a vertical line at x=0 (e.g., for time 0), a horizontal line at y=0 (e.g., to indicate the point of no change, or a diagonal (at y=x, e.g., to indicate no difference between x and y). Consider whether the auxiliary element is better plotted under or over the data (which generally depends on the sequence of adding graphics elements).</p>
+<p>A local scatterplot smoother (loess, lowess, polynomial) can be particularly helpful to identify relationships with limited model assumptions. The confidence band (pointwise confidence intervals) should only be shown if relevant.</p>
+<p><strong>Example:</strong> Figure 5 displays changes from a starting point (time 0) over time. A plain figure (left panel) requires the reader to read the y-axis labels to identify the point of no change (y=0). The addition of a line (middle panel) indicating the point of no change makes reading easier, and choosing an axis range symmetric around the point of no change (right panel) allocates changes up to the upper half of the visualisation and changes down to the lower half.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Function for data set generation.</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>make.data <span class="ot">&lt;-</span> <span class="cf">function</span>(</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">16</span>, <span class="dv">24</span>),</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">y=</span><span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.2</span><span class="sc">*</span>x) <span class="sc">-</span> <span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.21</span><span class="sc">*</span>x),</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">sd=</span><span class="fl">0.25</span>, <span class="co"># std dev of y</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">seed=</span><span class="dv">4384590</span>,</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">n=</span><span class="dv">50</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Setting the random number seed for reproducibility.</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set.seed</span>(seed)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Creation of x- and y-variables.</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  x2 <span class="ot">&lt;-</span> <span class="fu">rep</span>(x, n)</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  y2 <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n)</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    y2 <span class="ot">&lt;-</span> <span class="fu">c</span>(y2, y<span class="sc">*</span>(<span class="dv">2</span><span class="sc">*</span>(n<span class="sc">/</span><span class="dv">4</span><span class="sc">-</span>i)) <span class="sc">+</span> <span class="fu">rlnorm</span>(<span class="fu">length</span>(y), <span class="at">sd=</span>sd))</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Creation of an identifier for each profile.</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>  ID <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>n, <span class="fu">rep</span>(<span class="fu">length</span>(y), n)))</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Composition of the data set.</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">PD=</span><span class="dv">100</span><span class="sc">*</span>y2, <span class="at">time=</span>x, <span class="at">ID=</span>ID)</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Addition of a baseline variable.</span></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>  BL <span class="ot">&lt;-</span> df[df<span class="sc">$</span>time<span class="sc">==</span><span class="dv">0</span>, <span class="fu">c</span>(<span class="st">"ID"</span>, <span class="st">"PD"</span>)]</span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">names</span>(BL) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"ID"</span>, <span class="st">"BL"</span>)</span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> <span class="fu">merge</span>(df, BL)</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Addition of change from baseline.</span></span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>  df<span class="sc">$</span>Change <span class="ot">&lt;-</span> df<span class="sc">$</span>PD <span class="sc">-</span> df<span class="sc">$</span>BL</span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Definition of treatment.</span></span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>  df<span class="sc">$</span>trt <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(df<span class="sc">$</span>BL <span class="sc">&gt;</span> <span class="fu">mean</span>(df<span class="sc">$</span>BL), <span class="st">"active"</span>, <span class="st">" placebo"</span>)</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(df)</span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate the data.</span></span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">make.data</span>()</span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a><span class="co"># ---</span></span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a><span class="co"># Figures.</span></span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(x, <span class="fu">aes</span>(<span class="at">x=</span>time, <span class="at">y=</span>Change, <span class="at">group=</span>ID, <span class="at">color=</span>ID))</span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">theme_bw</span>()</span>
+<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Time [h]"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"Change from baseline"</span>)</span>
+<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="at">linewidth=</span><span class="fl">1.1</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"none"</span>)</span>
+<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">facet_grid</span>(.<span class="sc">~</span>trt)</span>
+<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a><span class="co"># Addition of an auxiliary line at y=0.</span></span>
+<span id="cb13-52"><a href="#cb13-52" aria-hidden="true" tabindex="-1"></a>gg2 <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">geom_hline</span>(<span class="at">yintercept=</span><span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">1.2</span>)</span>
+<span id="cb13-53"><a href="#cb13-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-54"><a href="#cb13-54" aria-hidden="true" tabindex="-1"></a><span class="co"># Symmetric y-axis limits.</span></span>
+<span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a>gg3 <span class="ot">&lt;-</span> gg2 <span class="sc">+</span> <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>)<span class="sc">*</span><span class="fu">max</span>(<span class="fu">abs</span>(x<span class="sc">$</span>Change)))</span>
+<span id="cb13-56"><a href="#cb13-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-57"><a href="#cb13-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Arranging all plots into one figure.</span></span>
+<span id="cb13-58"><a href="#cb13-58" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
+<span id="cb13-59"><a href="#cb13-59" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_grid</span>(gg, gg2, gg3, <span class="at">nrow=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="principles_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="figure-caption">
+<p><strong>Figure 5:</strong> [caption to come - also need to fix height of panels]</p>
+</div>
+</section>
+<section id="higher-dimensions" class="level3">
+<h3 class="anchored" data-anchor-id="higher-dimensions">Higher dimensions</h3>
+<p>Three-dimensional displays of data may look striking, in some respects, but accurate reading and interpretation is not straightforward with such presentations.</p>
+<p><strong>Example:</strong> The left panel of Figure 6 displays a single number, 10, as a 3D bar chart. The correct identification of the value is indicated by the red "X": the height of the bar must be projected against the rear wall (the axis) from the viewing position. The figure on the right positions bars on a tilted surface, resulting in perceived height differences when there are none: the same four numbers, 10, 20, 30, and 40, are shown in each row and column.</p>
+<p><img src="images/principles-fig6.png" class="img-fluid"></p>
+<div class="figure-caption">
+<p><strong>Figure 6:</strong> A demonstration of the difficulty of reading off data values from 3D charts. Note: again, as with Figure 3, this figure is produced in Excel, not in R.</p>
+</div>
+</section>
+</section>
+<section id="elements-of-tables" class="level2">
+<h2 class="anchored" data-anchor-id="elements-of-tables">3.2 Elements of tables</h2>
+<p>Tables can be an efficient means of visualisation, just like graphics – and they also can be misleading or cumbersome to read if not properly presented. Tables should in particular be considered for a small number of data points or if precise numbers are to be shown. For example if numbers need to be overlaid on graphics to aid readability and interpretation (for example, appending digits to the end of the bars in a barchart), one might consider omitting the graphic entirely and displaying the numbers as a table.</p>
+<p>Tables have design elements just like graphics. Some of them are discussed in the following.</p>
+<section id="layout" class="level3">
+<h3 class="anchored" data-anchor-id="layout">Layout</h3>
+<p>One design element for tables is the layout, i.e., rows and columns. The layout should be chosen actively with the reader in mind. It is generally easier to compare numbers vertically than horizontally.</p>
+</section>
+<section id="digits" class="level3">
+<h3 class="anchored" data-anchor-id="digits">Digits</h3>
+<p>The number of digits should be consistent within a table row or column (i.e., the same variable) but can differ across variables (e.g., if the table contains small and large numbers). Unnecessary precision should be avoided, a lower number of digits might facilitate reading and comparison.</p>
+</section>
+<section id="alignment" class="level3">
+<h3 class="anchored" data-anchor-id="alignment">Alignment</h3>
+<p>Numbers should be right-aligned to allow for easy identification of large and small numbers. In this way, large numbers literally stick out.</p>
+</section>
+<section id="multiple-numbers-in-table-cells" class="level3">
+<h3 class="anchored" data-anchor-id="multiple-numbers-in-table-cells">Multiple numbers in table cells</h3>
+<p>If table cells contain more than a single value (e.g., means and confidence intervals), it should be considered if there is a better way to display the data for easy reading. Options include splitting the numbers into multiple table cells, rows, or columns, or reducing the font size for the less relevant numbers (e.g., means might be more important than confidence intervals).</p>
+</section>
+<section id="orientation-1" class="level3">
+<h3 class="anchored" data-anchor-id="orientation-1">Orientation</h3>
+<p>Landscape orientation is discouraged unless it cannot be avoided. Rotating a document in order to read a part of it is cumbersome for the reader, whether in print or on screen. Splitting a table into two might be a remedy to avoid landscape orientation – but one will need to consider whether splitting the table makes important comparisons more difficult to achieve.</p>
+</section>
+<section id="fonts-and-colours" class="level3">
+<h3 class="anchored" data-anchor-id="fonts-and-colours">Fonts and colours</h3>
+<p>Different fonts and colours can be used if these serve a purpose, such as highlighting a particular value. Use of different fonts or colours for decorative purposes is discouraged.</p>
+
+
+<!-- -->
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../docs/why-visualise.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Why do we visualise data?</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb14" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> 3. Principles of data visualisation</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>Data visualisations must serve a purpose. By understanding the purpose of a visualisation, we -- as author or reader -- are in a position to assess whether a visualisation succeeds in its aims or requires improvement.</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>Arguably the most common purpose of a visualisation is a comparison of groups of data, such as data on patients receiving different treatments. A good choice of axes, axis limits, labels and symbols can facilitate substantially the identification of patterns in the data, whereas&nbsp; poor choices for any of these elements can substantially hamper the extraction of information.</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3.1 Elements of data visualisations</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>Various elements of a visualisation can contribute to the efficacy with which information can be distilled. All visualisation software packages will output graphics in a default style, but these will rarely, if ever, be the optimum choices for the data visualisation you are creating. When designing a data visualisation, one needs to consider the range of options available. Some of these options are discussed in what follows.</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="fu">### Layout (panels, facets)</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>The layout (arrangement of multiple panels, facets, or subplots) is highly relevant for efficient comparison. If data on the y-axis are to be compared, a single y-axis with all panels aligned horizontally facilitates comparison, whereas for efficient comparison of x-axis values, panels should be stacked. Matrix layouts (multiple rows and columns in a single figure) should only be used if the data shown in individual panels are not related or space does not permit a single row or a single column (e.g., if there are too many panels to fit on a single row).</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>**Example:** Figure 1 shows two different layouts of exactly the same data with exactly the same type of visualisation except for the layout. Note how difficult it is to compare the data across panels on the left-hand side, while it is easy with the layout on the right-hand side. The key difference is that the panels on the right share a common y-axis, which is key for comparison of y-values across panels.</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a><span class="co"># ---</span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Data set creation.</span></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">93384</span>)</span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>time <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">16</span>, <span class="dv">24</span>)</span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">32</span> <span class="co"># no of subjects</span></span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">ID=</span><span class="dv">1</span><span class="sc">:</span>n, <span class="at">time=</span>time)</span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>bw <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">ID=</span><span class="fu">sort</span>(<span class="fu">unique</span>(data<span class="sc">$</span>ID)),</span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">bw=</span><span class="fu">rlnorm</span>(n, <span class="fu">log</span>(<span class="dv">75</span>), <span class="at">sdlog=</span><span class="fl">0.25</span>)</span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>bw<span class="sc">$</span>bw.category <span class="ot">&lt;-</span> <span class="fu">cut</span>(bw<span class="sc">$</span>bw,</span>
+<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks=</span><span class="fu">quantile</span>(bw<span class="sc">$</span>bw, <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.33</span>, <span class="fl">0.66</span>, <span class="dv">1</span>)), </span>
+<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels=</span><span class="fu">paste</span>(<span class="fu">c</span>(<span class="st">"low"</span>, <span class="st">"medium"</span>, <span class="st">"high"</span>), <span class="st">"body weight"</span>), </span>
+<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">include.lowest=</span><span class="cn">TRUE</span>)</span>
+<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">merge</span>(data, bw)</span>
+<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data[<span class="fu">order</span>(data<span class="sc">$</span>ID, data<span class="sc">$</span>time), ]</span>
+<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulate drug concentrations as a function of body weight.</span></span>
+<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>conc <span class="ot">&lt;-</span> <span class="dv">100</span><span class="sc">/</span>(data<span class="sc">$</span>bw<span class="sc">^</span><span class="fl">1.0</span>)<span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.085</span><span class="sc">*</span>data<span class="sc">$</span>time)<span class="sc">*</span></span>
+<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rlnorm</span>(<span class="fu">nrow</span>(data), <span class="at">sdlog=</span><span class="fl">0.25</span>)<span class="sc">+</span> <span class="co"># res. error</span></span>
+<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a>    (data<span class="sc">$</span>ID<span class="sc">-</span><span class="fu">mean</span>(data<span class="sc">$</span>ID))<span class="sc">/</span><span class="fu">mean</span>(data<span class="sc">$</span>ID)<span class="sc">/</span><span class="dv">4</span> <span class="co"># r. eff</span></span>
+<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a><span class="co"># ---</span></span>
+<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualisation.</span></span>
+<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>ID <span class="ot">&lt;-</span> <span class="fu">factor</span>(data<span class="sc">$</span>ID)</span>
+<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a>gg[[<span class="st">"3x1"</span>]] <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x=</span>time, <span class="at">y=</span>conc, <span class="at">group=</span>ID, <span class="at">color=</span>ID)) <span class="sc">+</span> <span class="fu">geom_line</span>() </span>
+<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a>gg[[<span class="st">"3x1"</span>]] <span class="ot">&lt;-</span> gg[[<span class="st">"3x1"</span>]] <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">24</span>, <span class="at">by=</span><span class="dv">4</span>)) </span>
+<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a>gg[[<span class="st">"3x1"</span>]] <span class="ot">&lt;-</span> gg[[<span class="st">"3x1"</span>]] <span class="sc">+</span> <span class="fu">theme_bw</span>() <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"time [h]"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"drug concentration [ng/mL]"</span>)</span>
+<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a>gg[[<span class="st">"3x1"</span>]] <span class="ot">&lt;-</span> gg[[<span class="st">"3x1"</span>]] <span class="sc">+</span> <span class="fu">facet_grid</span>(bw.category <span class="sc">~</span> .)</span>
+<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a>gg[[<span class="st">"3x1"</span>]] <span class="ot">&lt;-</span> gg[[<span class="st">"3x1"</span>]] <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"none"</span>)</span>
+<span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a>gg[[<span class="st">"1x3"</span>]] <span class="ot">&lt;-</span> gg[[<span class="st">"3x1"</span>]] <span class="sc">+</span> <span class="fu">facet_grid</span>(. <span class="sc">~</span> bw.category)</span>
+<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a><span class="co"># Add space to the rhs of the first figure for better separation in the cowplot.</span></span>
+<span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a>gg[[<span class="st">"3x1"</span>]] <span class="ot">&lt;-</span> gg[[<span class="st">"3x1"</span>]] <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">plot.margin =</span> <span class="fu">unit</span>(<span class="fu">c</span>(<span class="fl">0.5</span>, <span class="dv">4</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>), <span class="st">"lines"</span>))</span>
+<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-74"><a href="#cb14-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-75"><a href="#cb14-75" aria-hidden="true" tabindex="-1"></a><span class="co"># print(gg)</span></span>
+<span id="cb14-76"><a href="#cb14-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-77"><a href="#cb14-77" aria-hidden="true" tabindex="-1"></a><span class="co"># ---</span></span>
+<span id="cb14-78"><a href="#cb14-78" aria-hidden="true" tabindex="-1"></a><span class="co"># Both figures into a single output figure.</span></span>
+<span id="cb14-79"><a href="#cb14-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-80"><a href="#cb14-80" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
+<span id="cb14-81"><a href="#cb14-81" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_grid</span>(gg[[<span class="dv">1</span>]], gg[[<span class="dv">2</span>]], <span class="at">rel_widths=</span><span class="fu">c</span>(<span class="fl">1.5</span>, <span class="dv">2</span>))</span>
+<span id="cb14-82"><a href="#cb14-82" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-83"><a href="#cb14-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-84"><a href="#cb14-84" aria-hidden="true" tabindex="-1"></a>::: figure-caption</span>
+<span id="cb14-85"><a href="#cb14-85" aria-hidden="true" tabindex="-1"></a>**Figure 1:** A demonstration of the importance of panel layout for comparison across panels.</span>
+<span id="cb14-86"><a href="#cb14-86" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-87"><a href="#cb14-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-88"><a href="#cb14-88" aria-hidden="true" tabindex="-1"></a><span class="fu">### Aspect ratio</span></span>
+<span id="cb14-89"><a href="#cb14-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-90"><a href="#cb14-90" aria-hidden="true" tabindex="-1"></a>Our visual perception of data in a display must not depend on the choice of x- and y-axes. In many cases, a square figure avoids visual bias. A square figure should be considered in particular if the two axes share a communality such as a measurement before and after some event, observed data vs model-predicted values or, more generally, the same units (such as kg or metres). Generally, a 1:1 aspect ratio (the physical length of 1 measurement unit in the x- and the y-direction) is a good default. If the figure has identical ranges for the x- and the y-axis, a 1:1 aspect ratio yields a square figure.</span>
+<span id="cb14-91"><a href="#cb14-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-92"><a href="#cb14-92" aria-hidden="true" tabindex="-1"></a>**Example:** The three panels below all show the same data, aiming at enabling judgement about the goodness of a model fit (predicted vs observed values). Note the difference in visual perception between a stretched x-axis, a stretched y-axis, and a 1:1 aspect ratio (i.e., one unit in x and y corresponds to the same number of pixels) and identical axis limits (such that the figure is square). Other applications: any x and y that are to be compared.</span>
+<span id="cb14-93"><a href="#cb14-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-96"><a href="#cb14-96" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-97"><a href="#cb14-97" aria-hidden="true" tabindex="-1"></a><span class="co"># Observed vs predicted (any data with comparable x and y will do).</span></span>
+<span id="cb14-98"><a href="#cb14-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-99"><a href="#cb14-99" aria-hidden="true" tabindex="-1"></a><span class="co"># ---</span></span>
+<span id="cb14-100"><a href="#cb14-100" aria-hidden="true" tabindex="-1"></a><span class="co"># Data set.</span></span>
+<span id="cb14-101"><a href="#cb14-101" aria-hidden="true" tabindex="-1"></a><span class="co"># Old Faithful Geyser (Yellowstone) data set with eruption duration</span></span>
+<span id="cb14-102"><a href="#cb14-102" aria-hidden="true" tabindex="-1"></a><span class="co">#   and waiting time to the next eruption (both in minutes).</span></span>
+<span id="cb14-103"><a href="#cb14-103" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb14-104"><a href="#cb14-104" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span>faithful<span class="sc">$</span>eruptions,</span>
+<span id="cb14-105"><a href="#cb14-105" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span>faithful<span class="sc">$</span>waiting</span>
+<span id="cb14-106"><a href="#cb14-106" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-107"><a href="#cb14-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-108"><a href="#cb14-108" aria-hidden="true" tabindex="-1"></a><span class="co"># ---</span></span>
+<span id="cb14-109"><a href="#cb14-109" aria-hidden="true" tabindex="-1"></a><span class="co"># Regression model fit.</span></span>
+<span id="cb14-110"><a href="#cb14-110" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, <span class="at">data=</span>data)</span>
+<span id="cb14-111"><a href="#cb14-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-112"><a href="#cb14-112" aria-hidden="true" tabindex="-1"></a><span class="co"># Addition of predicted values to the data set.</span></span>
+<span id="cb14-113"><a href="#cb14-113" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(fit)</span>
+<span id="cb14-114"><a href="#cb14-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-115"><a href="#cb14-115" aria-hidden="true" tabindex="-1"></a><span class="co"># Range of y and y predicted combined.</span></span>
+<span id="cb14-116"><a href="#cb14-116" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> <span class="fu">range</span>(<span class="fu">unlist</span>(data[<span class="fu">c</span>(<span class="st">"y"</span>, <span class="st">"pred"</span>)]))</span>
+<span id="cb14-117"><a href="#cb14-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-118"><a href="#cb14-118" aria-hidden="true" tabindex="-1"></a><span class="co"># ---</span></span>
+<span id="cb14-119"><a href="#cb14-119" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting.</span></span>
+<span id="cb14-120"><a href="#cb14-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-121"><a href="#cb14-121" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb14-122"><a href="#cb14-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-123"><a href="#cb14-123" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x=</span>pred, <span class="at">y=</span>y))</span>
+<span id="cb14-124"><a href="#cb14-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-125"><a href="#cb14-125" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding the line of identity, y=x (note: plotting it first will add points on top).</span></span>
+<span id="cb14-126"><a href="#cb14-126" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">geom_abline</span>(<span class="at">intercept=</span><span class="dv">0</span>, <span class="at">slope=</span><span class="dv">1</span>, <span class="at">color=</span><span class="st">"black"</span>, <span class="at">linewidth=</span><span class="dv">1</span>)</span>
+<span id="cb14-127"><a href="#cb14-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-128"><a href="#cb14-128" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding points, removing grey background.</span></span>
+<span id="cb14-129"><a href="#cb14-129" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">theme_bw</span>() </span>
+<span id="cb14-130"><a href="#cb14-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-131"><a href="#cb14-131" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding linear OLS regression fit of y~x.</span></span>
+<span id="cb14-132"><a href="#cb14-132" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">"loess"</span>, <span class="at">color=</span><span class="st">"firebrick"</span>, <span class="at">se=</span><span class="cn">FALSE</span>)</span>
+<span id="cb14-133"><a href="#cb14-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-134"><a href="#cb14-134" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding axis labels.</span></span>
+<span id="cb14-135"><a href="#cb14-135" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"predicted"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"observed"</span>)</span>
+<span id="cb14-136"><a href="#cb14-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-137"><a href="#cb14-137" aria-hidden="true" tabindex="-1"></a><span class="co"># Transpose (flip coordinates)</span></span>
+<span id="cb14-138"><a href="#cb14-138" aria-hidden="true" tabindex="-1"></a>gg2 <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">coord_flip</span>()</span>
+<span id="cb14-139"><a href="#cb14-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-140"><a href="#cb14-140" aria-hidden="true" tabindex="-1"></a><span class="co"># Setting the aspect ratio to 1 (1 unit in x and y corresponds</span></span>
+<span id="cb14-141"><a href="#cb14-141" aria-hidden="true" tabindex="-1"></a><span class="co">#   to the same number of pixels).</span></span>
+<span id="cb14-142"><a href="#cb14-142" aria-hidden="true" tabindex="-1"></a>gg3 <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">coord_fixed</span>()</span>
+<span id="cb14-143"><a href="#cb14-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-144"><a href="#cb14-144" aria-hidden="true" tabindex="-1"></a><span class="co"># Defining identical axis limits for x and y.</span></span>
+<span id="cb14-145"><a href="#cb14-145" aria-hidden="true" tabindex="-1"></a>gg3 <span class="ot">&lt;-</span> gg3 <span class="sc">+</span> <span class="fu">xlim</span>(r) <span class="sc">+</span> <span class="fu">ylim</span>(r)</span>
+<span id="cb14-146"><a href="#cb14-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-147"><a href="#cb14-147" aria-hidden="true" tabindex="-1"></a><span class="co"># Cow (column-wise) plot, combine all figures into one.</span></span>
+<span id="cb14-148"><a href="#cb14-148" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
+<span id="cb14-149"><a href="#cb14-149" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_grid</span>(gg, gg2, gg3, <span class="at">rel_widths=</span><span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">2</span>), <span class="at">nrow=</span><span class="dv">1</span>)</span>
+<span id="cb14-150"><a href="#cb14-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-151"><a href="#cb14-151" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-152"><a href="#cb14-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-153"><a href="#cb14-153" aria-hidden="true" tabindex="-1"></a>::: figure-cation</span>
+<span id="cb14-154"><a href="#cb14-154" aria-hidden="true" tabindex="-1"></a>**Figure 2:** A demonstration showing how visual perception is influenced by the aspect ratio.</span>
+<span id="cb14-155"><a href="#cb14-155" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-156"><a href="#cb14-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-157"><a href="#cb14-157" aria-hidden="true" tabindex="-1"></a><span class="fu">### Lines</span></span>
+<span id="cb14-158"><a href="#cb14-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-159"><a href="#cb14-159" aria-hidden="true" tabindex="-1"></a>Lines introduce an order, a sequence. If there is no order, data should not be interconnected by lines. If different line types indicate different groups that have an inherent order, it is helpful if the chosen line styles have an order, too (example: line thickness, dash density, or darkness of colour increases with values from the lowest to the highest group).</span>
+<span id="cb14-160"><a href="#cb14-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-161"><a href="#cb14-161" aria-hidden="true" tabindex="-1"></a><span class="fu">### Points</span></span>
+<span id="cb14-162"><a href="#cb14-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-163"><a href="#cb14-163" aria-hidden="true" tabindex="-1"></a>Point symbols should be chosen such that the visualisation displays the data in a meaningful way. If thousands of data points are to be shown, open circles or smaller filled symbols are better than overlapping filled symbols. If the data are discrete and observations overlay, consider jittering the data gently for a better visualisation.</span>
+<span id="cb14-164"><a href="#cb14-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-165"><a href="#cb14-165" aria-hidden="true" tabindex="-1"></a><span class="fu">### Colours</span></span>
+<span id="cb14-166"><a href="#cb14-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-167"><a href="#cb14-167" aria-hidden="true" tabindex="-1"></a>Colours should serve a purpose such as helping to identify different groups. Colours for pure decoration are discouraged.&nbsp;</span>
+<span id="cb14-168"><a href="#cb14-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-169"><a href="#cb14-169" aria-hidden="true" tabindex="-1"></a><span class="fu">### Axes</span></span>
+<span id="cb14-170"><a href="#cb14-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-171"><a href="#cb14-171" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Origins and limits</span></span>
+<span id="cb14-172"><a href="#cb14-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-173"><a href="#cb14-173" aria-hidden="true" tabindex="-1"></a>Axis ranges should generally start at 0 unless there is a good reason for choosing other ranges. If the data do not contain negative values, the axis should not stretch into negative values and in particular not have tick marks at negative values.</span>
+<span id="cb14-174"><a href="#cb14-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-175"><a href="#cb14-175" aria-hidden="true" tabindex="-1"></a>If relative changes or ratios are displayed, the corresponding axis should be logarithmic (such that, e.g., 1/4 has the same distance to the reference point, 1, as 4) and symmetric around the point of no change. An auxiliary line at the point of no change can facilitate interpretation. Axis tickmarks and auxiliary grey lines will facilitate reading off values, avoiding wrong linear interpolation by the viewer. Axis tick mark labels should indicate the ratio (e..g, "1/4" instead of 0.25).</span>
+<span id="cb14-176"><a href="#cb14-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-177"><a href="#cb14-177" aria-hidden="true" tabindex="-1"></a>If the data displayed as x and as y are comparable, axis limits should be identical and the figure square, such that distances are consistent in the x- and in the y-direction.</span>
+<span id="cb14-178"><a href="#cb14-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-179"><a href="#cb14-179" aria-hidden="true" tabindex="-1"></a>**Example:** The figure below illustrates that the deliberate choice of axis limits (here, y-axis limits) can make a big difference to perception, and therefore interpretation, by the reader. The only difference between the three panels is the y-axis range.</span>
+<span id="cb14-180"><a href="#cb14-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-181"><a href="#cb14-181" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/principles-fig3.png)</span></span>
+<span id="cb14-182"><a href="#cb14-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-183"><a href="#cb14-183" aria-hidden="true" tabindex="-1"></a>::: figure-caption</span>
+<span id="cb14-184"><a href="#cb14-184" aria-hidden="true" tabindex="-1"></a>**Figure 3:** A demonstration of how visual impression can be driven by the choice of axis limits. Note: there is no R code for this figure. R makes it hard to omit 0 on the y-axis of barcharts (for a reason). This figure was instead created in Excel.</span>
+<span id="cb14-185"><a href="#cb14-185" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-186"><a href="#cb14-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-187"><a href="#cb14-187" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Linear and logarithmic axes</span></span>
+<span id="cb14-188"><a href="#cb14-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-189"><a href="#cb14-189" aria-hidden="true" tabindex="-1"></a>**Example:** Let's say that you want to know whether some variable, y, changes (compared to a reference or baseline measurement) depending on another variable, x. For example, does blood pressure change with treatment?</span>
+<span id="cb14-190"><a href="#cb14-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-191"><a href="#cb14-191" aria-hidden="true" tabindex="-1"></a>Figure 4 shows data with, on average, no change compared to a reference (baseline) measurement (red horizontal line) -- approximately half the data are below and above the point of no change. However, this is not easily apparent from the top-left panel, which uses a linear axis, and so space is allocated asymmetrically in the vertical direction <span class="sc">\-</span>- both up and down -- away from the reference line. In the top-right panel, which uses a logarithmic axis, the relatively even spread of the data points around the reference line is clear to see.</span>
+<span id="cb14-192"><a href="#cb14-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-195"><a href="#cb14-195" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-196"><a href="#cb14-196" aria-hidden="true" tabindex="-1"></a><span class="co"># Naïve plot of y vs x. If there is no change (on average), </span></span>
+<span id="cb14-197"><a href="#cb14-197" aria-hidden="true" tabindex="-1"></a><span class="co"># half the data are below the line of no change.</span></span>
+<span id="cb14-198"><a href="#cb14-198" aria-hidden="true" tabindex="-1"></a><span class="co"># Asymmetric view, and it depends on y/x or x/y.</span></span>
+<span id="cb14-199"><a href="#cb14-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-200"><a href="#cb14-200" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">33838</span>)</span>
+<span id="cb14-201"><a href="#cb14-201" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb14-202"><a href="#cb14-202" aria-hidden="true" tabindex="-1"></a>  <span class="at">x=</span><span class="fu">rlnorm</span>(<span class="dv">200</span>, <span class="dv">2</span>, <span class="fl">0.2</span>),</span>
+<span id="cb14-203"><a href="#cb14-203" aria-hidden="true" tabindex="-1"></a>  <span class="at">y=</span><span class="fu">rlnorm</span>(<span class="dv">200</span>, <span class="fl">0.2</span>, <span class="fl">0.75</span>)</span>
+<span id="cb14-204"><a href="#cb14-204" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-205"><a href="#cb14-205" aria-hidden="true" tabindex="-1"></a><span class="co"># Add an outlier manually.</span></span>
+<span id="cb14-206"><a href="#cb14-206" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rbind</span>(x, <span class="fu">data.frame</span>(<span class="at">x=</span><span class="fu">quantile</span>(x<span class="sc">$</span>x, <span class="fl">0.8</span>), <span class="at">y=</span><span class="fu">max</span>(x<span class="sc">$</span>y)<span class="sc">*</span><span class="fl">1.5</span>))</span>
+<span id="cb14-207"><a href="#cb14-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-208"><a href="#cb14-208" aria-hidden="true" tabindex="-1"></a><span class="co"># ---</span></span>
+<span id="cb14-209"><a href="#cb14-209" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting.</span></span>
+<span id="cb14-210"><a href="#cb14-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-211"><a href="#cb14-211" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb14-212"><a href="#cb14-212" aria-hidden="true" tabindex="-1"></a><span class="co"># Scatterplot of y vs x.</span></span>
+<span id="cb14-213"><a href="#cb14-213" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(x, <span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">theme_bw</span>()</span>
+<span id="cb14-214"><a href="#cb14-214" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">geom_hline</span>(<span class="at">yintercept=</span><span class="dv">1</span>, <span class="at">color=</span><span class="st">"firebrick"</span>, <span class="at">linewidth=</span><span class="dv">2</span>)</span>
+<span id="cb14-215"><a href="#cb14-215" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"x-variable"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"Fold-change"</span>)</span>
+<span id="cb14-216"><a href="#cb14-216" aria-hidden="true" tabindex="-1"></a>gg</span>
+<span id="cb14-217"><a href="#cb14-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-218"><a href="#cb14-218" aria-hidden="true" tabindex="-1"></a><span class="co"># Logarithmic axes, symmetric range (!):</span></span>
+<span id="cb14-219"><a href="#cb14-219" aria-hidden="true" tabindex="-1"></a>xbr <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">10</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">10</span>)</span>
+<span id="cb14-220"><a href="#cb14-220" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">breaks=</span>xbr, <span class="at">trans=</span><span class="st">"log10"</span>,</span>
+<span id="cb14-221"><a href="#cb14-221" aria-hidden="true" tabindex="-1"></a>  <span class="at">limits=</span><span class="fu">max</span>(<span class="fu">abs</span>(x<span class="sc">$</span>y))<span class="sc">^</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb14-222"><a href="#cb14-222" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(gg)</span>
+<span id="cb14-223"><a href="#cb14-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-224"><a href="#cb14-224" aria-hidden="true" tabindex="-1"></a><span class="co"># Second axis:</span></span>
+<span id="cb14-225"><a href="#cb14-225" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb14-226"><a href="#cb14-226" aria-hidden="true" tabindex="-1"></a>  <span class="at">breaks=</span>xbr,</span>
+<span id="cb14-227"><a href="#cb14-227" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels=</span><span class="fu">paste</span>(<span class="dv">100</span><span class="sc">*</span>xbr, <span class="st">"%"</span>, <span class="at">sep=</span><span class="st">""</span>),</span>
+<span id="cb14-228"><a href="#cb14-228" aria-hidden="true" tabindex="-1"></a>  <span class="at">trans=</span><span class="st">"log10"</span>,</span>
+<span id="cb14-229"><a href="#cb14-229" aria-hidden="true" tabindex="-1"></a>  <span class="at">limits=</span><span class="fu">max</span>(<span class="fu">abs</span>(x<span class="sc">$</span>y))<span class="sc">^</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>),</span>
+<span id="cb14-230"><a href="#cb14-230" aria-hidden="true" tabindex="-1"></a>  <span class="at">sec.axis=</span><span class="fu">sec_axis</span>(<span class="at">trans=</span><span class="sc">~</span>.<span class="sc">*</span><span class="dv">1</span>, <span class="at">breaks=</span>xbr,</span>
+<span id="cb14-231"><a href="#cb14-231" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels=</span><span class="fu">ifelse</span>(xbr <span class="sc">&lt;</span> <span class="dv">1</span>, <span class="fu">paste</span>(<span class="st">"1/"</span>, <span class="dv">1</span><span class="sc">/</span>xbr, <span class="at">sep=</span><span class="st">""</span>), xbr))</span>
+<span id="cb14-232"><a href="#cb14-232" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-233"><a href="#cb14-233" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(gg)</span>
+<span id="cb14-234"><a href="#cb14-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-235"><a href="#cb14-235" aria-hidden="true" tabindex="-1"></a><span class="co"># ---</span></span>
+<span id="cb14-236"><a href="#cb14-236" aria-hidden="true" tabindex="-1"></a><span class="co"># Univariate distribution (histogram).</span></span>
+<span id="cb14-237"><a href="#cb14-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-238"><a href="#cb14-238" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(x, <span class="fu">aes</span>(<span class="at">x=</span>y)) <span class="sc">+</span> <span class="fu">theme_bw</span>() <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Fold-change"</span>)</span>
+<span id="cb14-239"><a href="#cb14-239" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">color=</span><span class="st">"firebrick"</span>, <span class="at">fill=</span><span class="st">"gray"</span>)</span>
+<span id="cb14-240"><a href="#cb14-240" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(gg)</span>
+<span id="cb14-241"><a href="#cb14-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-242"><a href="#cb14-242" aria-hidden="true" tabindex="-1"></a><span class="co"># Symmetric range, log scale.</span></span>
+<span id="cb14-243"><a href="#cb14-243" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(</span>
+<span id="cb14-244"><a href="#cb14-244" aria-hidden="true" tabindex="-1"></a>  <span class="at">breaks=</span>xbr,</span>
+<span id="cb14-245"><a href="#cb14-245" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels=</span><span class="fu">ifelse</span>(xbr <span class="sc">&lt;</span> <span class="dv">1</span>, <span class="fu">paste</span>(<span class="st">"1/"</span>, <span class="dv">1</span><span class="sc">/</span>xbr), xbr),</span>
+<span id="cb14-246"><a href="#cb14-246" aria-hidden="true" tabindex="-1"></a>  <span class="at">trans=</span><span class="st">"log10"</span>,</span>
+<span id="cb14-247"><a href="#cb14-247" aria-hidden="true" tabindex="-1"></a>  <span class="at">limits=</span><span class="fu">max</span>(<span class="fu">abs</span>(x<span class="sc">$</span>x))<span class="sc">^</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb14-248"><a href="#cb14-248" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-249"><a href="#cb14-249" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(gg)</span>
+<span id="cb14-250"><a href="#cb14-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-251"><a href="#cb14-251" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-252"><a href="#cb14-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-253"><a href="#cb14-253" aria-hidden="true" tabindex="-1"></a>::: figure-caption</span>
+<span id="cb14-254"><a href="#cb14-254" aria-hidden="true" tabindex="-1"></a>**Figure 4:** <span class="sc">\[</span>caption to be added<span class="sc">\]</span></span>
+<span id="cb14-255"><a href="#cb14-255" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-256"><a href="#cb14-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-257"><a href="#cb14-257" aria-hidden="true" tabindex="-1"></a><span class="fu">### Symbols</span></span>
+<span id="cb14-258"><a href="#cb14-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-259"><a href="#cb14-259" aria-hidden="true" tabindex="-1"></a>Symbols should be intuitive (for example, "+" for a positive outcome, "-" for a negative outcome, "O" for a neutral outcome). In an ideal case, symbols require only a single look at the legend to subsequently focus on the visualisation.&nbsp;</span>
+<span id="cb14-260"><a href="#cb14-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-261"><a href="#cb14-261" aria-hidden="true" tabindex="-1"></a>Symbols such as triangles, circles, and squares do not have an intuitive connotation. However, if there is an order in the data, it might be reflected in the order of the symbols, e.g., the number of vertices (circle, dash, triangle, square, pentagon, etc.).</span>
+<span id="cb14-262"><a href="#cb14-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-263"><a href="#cb14-263" aria-hidden="true" tabindex="-1"></a><span class="fu">### Legends</span></span>
+<span id="cb14-264"><a href="#cb14-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-265"><a href="#cb14-265" aria-hidden="true" tabindex="-1"></a>Legends should not attract too much attention and certainly not cover up data. They should be placed in the margins of the figure or can be captured in a small text below the figure.&nbsp;</span>
+<span id="cb14-266"><a href="#cb14-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-267"><a href="#cb14-267" aria-hidden="true" tabindex="-1"></a><span class="fu">### Orientation</span></span>
+<span id="cb14-268"><a href="#cb14-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-269"><a href="#cb14-269" aria-hidden="true" tabindex="-1"></a>Research has shown that the human eye is better at following imaginary vertical lines than horizontal lines. Horizontal boxplots allow for a more accurate visual comparison than vertical boxplots.</span>
+<span id="cb14-270"><a href="#cb14-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-271"><a href="#cb14-271" aria-hidden="true" tabindex="-1"></a><span class="fu">### Auxiliary elements</span></span>
+<span id="cb14-272"><a href="#cb14-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-273"><a href="#cb14-273" aria-hidden="true" tabindex="-1"></a>Generally speaking, when designing a data visualisation, we need to be wary of what Tufte calls "chart junk" -- any element of a chart that does not add to or enhance the information on display. Data are, of course, the star of the show, so should receive the most space. Meanwhile, all additional elements (lines, colours, symbols, etc.) should be assessed for their contribution to the interpretation of the data. If there is no contribution, they can be removed. A typical example of a redundant element in a data visualisation is a figure that has 5 panels (sub-figures or facets), each with x- and y-axis. To allow for efficient comparison of the data shown in the different panels, a single y-axis suffices if the panels are all aligned on a single row. This creates more space for the data and synchronises y-axis limits and data positions as a side benefit.&nbsp;</span>
+<span id="cb14-274"><a href="#cb14-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-275"><a href="#cb14-275" aria-hidden="true" tabindex="-1"></a>Some helpful additional elements can include lines at relevant points. Examples include a vertical line at x=0 (e.g., for time 0), a horizontal line at y=0 (e.g., to indicate the point of no change, or a diagonal (at y=x, e.g., to indicate no difference between x and y). Consider whether the auxiliary element is better plotted under or over the data (which generally depends on the sequence of adding graphics elements).</span>
+<span id="cb14-276"><a href="#cb14-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-277"><a href="#cb14-277" aria-hidden="true" tabindex="-1"></a>A local scatterplot smoother (loess, lowess, polynomial) can be particularly helpful to identify relationships with limited model assumptions. The confidence band (pointwise confidence intervals) should only be shown if relevant.</span>
+<span id="cb14-278"><a href="#cb14-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-279"><a href="#cb14-279" aria-hidden="true" tabindex="-1"></a>**Example:** Figure 5 displays changes from a starting point (time 0) over time. A plain figure (left panel) requires the reader to read the y-axis labels to identify the point of no change (y=0). The addition of a line (middle panel) indicating the point of no change makes reading easier, and choosing an axis range symmetric around the point of no change (right panel) allocates changes up to the upper half of the visualisation and changes down to the lower half.</span>
+<span id="cb14-280"><a href="#cb14-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-283"><a href="#cb14-283" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-284"><a href="#cb14-284" aria-hidden="true" tabindex="-1"></a><span class="co"># Function for data set generation.</span></span>
+<span id="cb14-285"><a href="#cb14-285" aria-hidden="true" tabindex="-1"></a>make.data <span class="ot">&lt;-</span> <span class="cf">function</span>(</span>
+<span id="cb14-286"><a href="#cb14-286" aria-hidden="true" tabindex="-1"></a>  <span class="at">x=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">16</span>, <span class="dv">24</span>),</span>
+<span id="cb14-287"><a href="#cb14-287" aria-hidden="true" tabindex="-1"></a>  <span class="at">y=</span><span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.2</span><span class="sc">*</span>x) <span class="sc">-</span> <span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.21</span><span class="sc">*</span>x),</span>
+<span id="cb14-288"><a href="#cb14-288" aria-hidden="true" tabindex="-1"></a>  <span class="at">sd=</span><span class="fl">0.25</span>, <span class="co"># std dev of y</span></span>
+<span id="cb14-289"><a href="#cb14-289" aria-hidden="true" tabindex="-1"></a>  <span class="at">seed=</span><span class="dv">4384590</span>,</span>
+<span id="cb14-290"><a href="#cb14-290" aria-hidden="true" tabindex="-1"></a>  <span class="at">n=</span><span class="dv">50</span></span>
+<span id="cb14-291"><a href="#cb14-291" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-292"><a href="#cb14-292" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb14-293"><a href="#cb14-293" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Setting the random number seed for reproducibility.</span></span>
+<span id="cb14-294"><a href="#cb14-294" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set.seed</span>(seed)</span>
+<span id="cb14-295"><a href="#cb14-295" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Creation of x- and y-variables.</span></span>
+<span id="cb14-296"><a href="#cb14-296" aria-hidden="true" tabindex="-1"></a>  x2 <span class="ot">&lt;-</span> <span class="fu">rep</span>(x, n)</span>
+<span id="cb14-297"><a href="#cb14-297" aria-hidden="true" tabindex="-1"></a>  y2 <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb14-298"><a href="#cb14-298" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n)</span>
+<span id="cb14-299"><a href="#cb14-299" aria-hidden="true" tabindex="-1"></a>    y2 <span class="ot">&lt;-</span> <span class="fu">c</span>(y2, y<span class="sc">*</span>(<span class="dv">2</span><span class="sc">*</span>(n<span class="sc">/</span><span class="dv">4</span><span class="sc">-</span>i)) <span class="sc">+</span> <span class="fu">rlnorm</span>(<span class="fu">length</span>(y), <span class="at">sd=</span>sd))</span>
+<span id="cb14-300"><a href="#cb14-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-301"><a href="#cb14-301" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Creation of an identifier for each profile.</span></span>
+<span id="cb14-302"><a href="#cb14-302" aria-hidden="true" tabindex="-1"></a>  ID <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>n, <span class="fu">rep</span>(<span class="fu">length</span>(y), n)))</span>
+<span id="cb14-303"><a href="#cb14-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-304"><a href="#cb14-304" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Composition of the data set.</span></span>
+<span id="cb14-305"><a href="#cb14-305" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">PD=</span><span class="dv">100</span><span class="sc">*</span>y2, <span class="at">time=</span>x, <span class="at">ID=</span>ID)</span>
+<span id="cb14-306"><a href="#cb14-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-307"><a href="#cb14-307" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Addition of a baseline variable.</span></span>
+<span id="cb14-308"><a href="#cb14-308" aria-hidden="true" tabindex="-1"></a>  BL <span class="ot">&lt;-</span> df[df<span class="sc">$</span>time<span class="sc">==</span><span class="dv">0</span>, <span class="fu">c</span>(<span class="st">"ID"</span>, <span class="st">"PD"</span>)]</span>
+<span id="cb14-309"><a href="#cb14-309" aria-hidden="true" tabindex="-1"></a>  <span class="fu">names</span>(BL) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"ID"</span>, <span class="st">"BL"</span>)</span>
+<span id="cb14-310"><a href="#cb14-310" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> <span class="fu">merge</span>(df, BL)</span>
+<span id="cb14-311"><a href="#cb14-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-312"><a href="#cb14-312" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Addition of change from baseline.</span></span>
+<span id="cb14-313"><a href="#cb14-313" aria-hidden="true" tabindex="-1"></a>  df<span class="sc">$</span>Change <span class="ot">&lt;-</span> df<span class="sc">$</span>PD <span class="sc">-</span> df<span class="sc">$</span>BL</span>
+<span id="cb14-314"><a href="#cb14-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-315"><a href="#cb14-315" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Definition of treatment.</span></span>
+<span id="cb14-316"><a href="#cb14-316" aria-hidden="true" tabindex="-1"></a>  df<span class="sc">$</span>trt <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(df<span class="sc">$</span>BL <span class="sc">&gt;</span> <span class="fu">mean</span>(df<span class="sc">$</span>BL), <span class="st">"active"</span>, <span class="st">" placebo"</span>)</span>
+<span id="cb14-317"><a href="#cb14-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-318"><a href="#cb14-318" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(df)</span>
+<span id="cb14-319"><a href="#cb14-319" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-320"><a href="#cb14-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-321"><a href="#cb14-321" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate the data.</span></span>
+<span id="cb14-322"><a href="#cb14-322" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">make.data</span>()</span>
+<span id="cb14-323"><a href="#cb14-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-324"><a href="#cb14-324" aria-hidden="true" tabindex="-1"></a><span class="co"># ---</span></span>
+<span id="cb14-325"><a href="#cb14-325" aria-hidden="true" tabindex="-1"></a><span class="co"># Figures.</span></span>
+<span id="cb14-326"><a href="#cb14-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-327"><a href="#cb14-327" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb14-328"><a href="#cb14-328" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(x, <span class="fu">aes</span>(<span class="at">x=</span>time, <span class="at">y=</span>Change, <span class="at">group=</span>ID, <span class="at">color=</span>ID))</span>
+<span id="cb14-329"><a href="#cb14-329" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">theme_bw</span>()</span>
+<span id="cb14-330"><a href="#cb14-330" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Time [h]"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"Change from baseline"</span>)</span>
+<span id="cb14-331"><a href="#cb14-331" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="at">linewidth=</span><span class="fl">1.1</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"none"</span>)</span>
+<span id="cb14-332"><a href="#cb14-332" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">facet_grid</span>(.<span class="sc">~</span>trt)</span>
+<span id="cb14-333"><a href="#cb14-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-334"><a href="#cb14-334" aria-hidden="true" tabindex="-1"></a><span class="co"># Addition of an auxiliary line at y=0.</span></span>
+<span id="cb14-335"><a href="#cb14-335" aria-hidden="true" tabindex="-1"></a>gg2 <span class="ot">&lt;-</span> gg <span class="sc">+</span> <span class="fu">geom_hline</span>(<span class="at">yintercept=</span><span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">1.2</span>)</span>
+<span id="cb14-336"><a href="#cb14-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-337"><a href="#cb14-337" aria-hidden="true" tabindex="-1"></a><span class="co"># Symmetric y-axis limits.</span></span>
+<span id="cb14-338"><a href="#cb14-338" aria-hidden="true" tabindex="-1"></a>gg3 <span class="ot">&lt;-</span> gg2 <span class="sc">+</span> <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>)<span class="sc">*</span><span class="fu">max</span>(<span class="fu">abs</span>(x<span class="sc">$</span>Change)))</span>
+<span id="cb14-339"><a href="#cb14-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-340"><a href="#cb14-340" aria-hidden="true" tabindex="-1"></a><span class="co"># Arranging all plots into one figure.</span></span>
+<span id="cb14-341"><a href="#cb14-341" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
+<span id="cb14-342"><a href="#cb14-342" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_grid</span>(gg, gg2, gg3, <span class="at">nrow=</span><span class="dv">1</span>)</span>
+<span id="cb14-343"><a href="#cb14-343" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-344"><a href="#cb14-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-345"><a href="#cb14-345" aria-hidden="true" tabindex="-1"></a>::: figure-caption</span>
+<span id="cb14-346"><a href="#cb14-346" aria-hidden="true" tabindex="-1"></a>**Figure 5:** <span class="co">[</span><span class="ot">caption to come - also need to fix height of panels</span><span class="co">]</span></span>
+<span id="cb14-347"><a href="#cb14-347" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-348"><a href="#cb14-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-349"><a href="#cb14-349" aria-hidden="true" tabindex="-1"></a><span class="fu">### Higher dimensions</span></span>
+<span id="cb14-350"><a href="#cb14-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-351"><a href="#cb14-351" aria-hidden="true" tabindex="-1"></a>Three-dimensional displays of data may look striking, in some respects, but accurate reading and interpretation is not straightforward with such presentations.</span>
+<span id="cb14-352"><a href="#cb14-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-353"><a href="#cb14-353" aria-hidden="true" tabindex="-1"></a>**Example:** The left panel of Figure 6 displays a single number, 10, as a 3D bar chart. The correct identification of the value is indicated by the red \"X\": the height of the bar must be projected against the rear wall (the axis) from the viewing position. The figure on the right positions bars on a tilted surface, resulting in perceived height differences when there are none: the same four numbers, 10, 20, 30, and 40, are shown in each row and column.</span>
+<span id="cb14-354"><a href="#cb14-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-355"><a href="#cb14-355" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/principles-fig6.png)</span></span>
+<span id="cb14-356"><a href="#cb14-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-357"><a href="#cb14-357" aria-hidden="true" tabindex="-1"></a>::: figure-caption</span>
+<span id="cb14-358"><a href="#cb14-358" aria-hidden="true" tabindex="-1"></a>**Figure 6:** A demonstration of the difficulty of reading off data values from 3D charts. Note: again, as with Figure 3, this figure is produced in Excel, not in R.</span>
+<span id="cb14-359"><a href="#cb14-359" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-360"><a href="#cb14-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-361"><a href="#cb14-361" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3.2 Elements of tables</span></span>
+<span id="cb14-362"><a href="#cb14-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-363"><a href="#cb14-363" aria-hidden="true" tabindex="-1"></a>Tables can be an efficient means of visualisation, just like graphics -- and they also can be misleading or cumbersome to read if not properly presented. Tables should in particular be considered for a small number of data points or if precise numbers are to be shown. For example if numbers need to be overlaid on graphics to aid readability and interpretation (for example, appending digits to the end of the bars in a barchart), one might consider omitting the graphic entirely and displaying the numbers as a table.</span>
+<span id="cb14-364"><a href="#cb14-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-365"><a href="#cb14-365" aria-hidden="true" tabindex="-1"></a>Tables have design elements just like graphics. Some of them are discussed in the following.</span>
+<span id="cb14-366"><a href="#cb14-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-367"><a href="#cb14-367" aria-hidden="true" tabindex="-1"></a><span class="fu">### Layout</span></span>
+<span id="cb14-368"><a href="#cb14-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-369"><a href="#cb14-369" aria-hidden="true" tabindex="-1"></a>One design element for tables is the layout, i.e., rows and columns. The layout should be chosen actively with the reader in mind. It is generally easier to compare numbers vertically than horizontally.</span>
+<span id="cb14-370"><a href="#cb14-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-371"><a href="#cb14-371" aria-hidden="true" tabindex="-1"></a><span class="fu">### Digits</span></span>
+<span id="cb14-372"><a href="#cb14-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-373"><a href="#cb14-373" aria-hidden="true" tabindex="-1"></a>The number of digits should be consistent within a table row or column (i.e., the same variable) but can differ across variables (e.g., if the table contains small and large numbers). Unnecessary precision should be avoided, a lower number of digits might facilitate reading and comparison.</span>
+<span id="cb14-374"><a href="#cb14-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-375"><a href="#cb14-375" aria-hidden="true" tabindex="-1"></a><span class="fu">### Alignment</span></span>
+<span id="cb14-376"><a href="#cb14-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-377"><a href="#cb14-377" aria-hidden="true" tabindex="-1"></a>Numbers should be right-aligned to allow for easy identification of large and small numbers. In this way, large numbers literally stick out.</span>
+<span id="cb14-378"><a href="#cb14-378" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-379"><a href="#cb14-379" aria-hidden="true" tabindex="-1"></a><span class="fu">### Multiple numbers in table cells</span></span>
+<span id="cb14-380"><a href="#cb14-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-381"><a href="#cb14-381" aria-hidden="true" tabindex="-1"></a>If table cells contain more than a single value (e.g., means and confidence intervals), it should be considered if there is a better way to display the data for easy reading. Options include splitting the numbers into multiple table cells, rows, or columns, or reducing the font size for the less relevant numbers (e.g., means might be more important than confidence intervals).</span>
+<span id="cb14-382"><a href="#cb14-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-383"><a href="#cb14-383" aria-hidden="true" tabindex="-1"></a><span class="fu">### Orientation</span></span>
+<span id="cb14-384"><a href="#cb14-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-385"><a href="#cb14-385" aria-hidden="true" tabindex="-1"></a>Landscape orientation is discouraged unless it cannot be avoided. Rotating a document in order to read a part of it is cumbersome for the reader, whether in print or on screen. Splitting a table into two might be a remedy to avoid landscape orientation -- but one will need to consider whether splitting the table makes important comparisons more difficult to achieve.</span>
+<span id="cb14-386"><a href="#cb14-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-387"><a href="#cb14-387" aria-hidden="true" tabindex="-1"></a><span class="fu">### Fonts and colours</span></span>
+<span id="cb14-388"><a href="#cb14-388" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-389"><a href="#cb14-389" aria-hidden="true" tabindex="-1"></a>Different fonts and colours can be used if these serve a purpose, such as highlighting a particular value. Use of different fonts or colours for decorative purposes is discouraged.</span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+</body></html>
