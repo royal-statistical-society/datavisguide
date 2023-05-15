@@ -7,12 +7,76 @@ format:
 execute: 
   eval: false
   echo: true
+editor: source
 ---
-
 
 ## Principles of styling charts
 
 The two charts below show the same data using the same type of chart - guinea pig tooth growth data visualised on a horizontal bar chart. However, the clarity of the two charts is distinctly different. The choice of colours, addition of text annotations, change of font size, and more informative labels make the chart on the right hand side much easier to interpret. In this section, we’ll explore each of these elements in detail, and discuss how to style different elements of charts to improve accessibility and interpretability of your data visualisations.
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(ggtext)
+plot_data <- ToothGrowth %>%
+  mutate(dose = factor(dose)) %>%
+  group_by(dose, supp) %>%
+  summarise(len = mean(len)) %>%
+  ungroup()
+
+# Unstyled plot
+ggplot(
+  data = plot_data,
+  mapping = aes(x = len, y = dose, fill = supp)
+) +
+  geom_col(position = "dodge")
+
+# Styled plot
+ggplot(
+  data = plot_data,
+  mapping = aes(x = len, y = dose, fill = supp)
+) +
+  geom_col(
+    position = position_dodge(width = 0.7),
+    width = 0.7
+  ) +
+  scale_x_continuous(
+    limits = c(0, 30),
+    name = "Tooth length"
+  ) +
+  geom_text(
+    mapping = aes(label = round(len, 0)),
+    position = position_dodge(width = 0.7),
+    hjust = 1.5,
+    size = 6,
+    fontface = "bold",
+    colour = "white"
+  ) +
+  scale_fill_manual(values = c("#9B1D20", "#3D5A80")) +
+  labs(
+    title = "Tooth Growth",
+    subtitle = "Each of 60 guinea pigs received one of three dose levels of
+       vitamin C (0.5, 1, and 2 mg/day) by one of two delivery methods:
+       <span style='color: #9B1D20'>**orange juice**</span> or <span style='color: #3D5A80'>
+       **ascorbic acid**</span>.",
+    y = "Dosage (mg/day)"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    legend.position = "none",
+    plot.title = element_textbox_simple(face = "bold"),
+    plot.subtitle = element_textbox_simple(
+      margin = margin(t = 10),
+      lineheight = 1.5
+    ),
+    plot.title.position = "plot",
+    plot.margin = margin(15, 10, 10, 15),
+    panel.grid = element_blank(),
+    axis.text.x = element_blank()
+  )
+```
+
+![Before and after bar charts visualising tooth growth of guinea pigs](images/styling-intro.png){fig-alt="Before and after bar charts visualising tooth growth of guinea pigs. Left is unstyled with default colour scheme. Right is styled with labelled bars, a text legend, and easier to read fonts."}
 
 ## Fonts
 
@@ -49,9 +113,150 @@ As with font choices, colour choices can strongly impact the accessibility of yo
 
 Before you get into choosing colours, ask yourself the question: do I really need to use colour here? Beecham et al showed that the use of colour is one of the least effective methods for visually communicating differences between variables. Both accessibility and interpretability improve when using fewer colours. 
 
+```{r}
+library(dplyr)
+library(ggplot2)
+plot_data <- mtcars %>%
+  mutate(car = rownames(mtcars))
+
+# Colour all bars
+ggplot(
+  data = plot_data,
+  mapping = aes(
+    y = reorder(car, disp),
+    x = disp,
+    fill = car
+  )
+) +
+  geom_col() +
+  labs(
+    x = "Variable 1",
+    y = ""
+  ) +
+  coord_cartesian(expand = FALSE) +
+  theme_minimal(base_size = 14) +
+  theme(
+    legend.position = "none",
+    legend.title = element_blank(),
+    plot.title = element_text(
+      face = "bold",
+      margin = margin(b = 10)
+    ),
+    plot.title.position = "plot",
+    plot.margin = margin(15, 10, 10, 15)
+  )
+
+# Highlight one bar
+ggplot(
+  data = plot_data,
+  mapping = aes(
+    y = reorder(car, disp),
+    x = disp,
+    fill = (car == "Maserati Bora")
+  )
+) +
+  geom_col() +
+  scale_fill_manual(values = c("#AFE1AF", "#7a9d7a")) +
+  labs(
+    x = "Variable 1",
+    y = ""
+  ) +
+  coord_cartesian(expand = FALSE) +
+  theme_minimal(base_size = 14) +
+  theme(
+    legend.position = "none",
+    legend.title = element_blank(),
+    plot.title = element_text(
+      face = "bold",
+      margin = margin(b = 10)
+    ),
+    plot.title.position = "plot",
+    plot.margin = margin(15, 10, 10, 15)
+  )
+```
+
+![Before and after bar charts visualising car data showing colouring vs highlighting](images/styling-highlight.png){fig-alt="Before and after bar charts visualising car data. Left has a different colour for each bar. Right uses colour to highlight a specific bar."}
+
 In the bar chart example above, rather than duplicating the information on the y-axis and colouring each bar a different colour, a better approach is to use colour to highlight a specific element of the data e.g. a specific car, which focuses the reader’s attention straight to the point you are trying to make.
 
 It’s useful not to rely on colour as the only factor which distinguishes data points in different groups. For example, in scatter plots, as well as colouring points in two groups either green or orange, the points code be encoded as circles and triangles.
+
+```{r}
+library(readr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+wheels <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-09/wheels.csv")
+plot_data <- wheels %>%
+  select(country, height, diameter) %>%
+  drop_na() %>%
+  filter(country %in% c("USA", "Japan"))
+
+# Colour only
+ggplot(
+  data = plot_data,
+  mapping = aes(
+    x = diameter,
+    y = height,
+    colour = country
+  )
+) +
+  geom_point(size = 3, alpha = 0.8) +
+  scale_x_continuous(limits = c(0, 800)) +
+  scale_y_continuous(limits = c(0, 800)) +
+  scale_colour_brewer(palette = "Dark2") +
+  coord_cartesian(expand = FALSE) +
+  labs(
+    title = "Ferris wheels",
+    x = "Diameter (ft)",
+    y = "Height (ft)"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    legend.position = "top",
+    legend.title = element_blank(),
+    plot.title = element_text(
+      face = "bold",
+      margin = margin(b = 10)
+    ),
+    plot.title.position = "plot",
+    plot.margin = margin(15, 10, 10, 15)
+  )
+
+# Shapes and colours
+ggplot(
+  data = plot_data,
+  mapping = aes(
+    x = diameter,
+    y = height,
+    colour = country,
+    shape = country
+  )
+) +
+  geom_point(size = 3, alpha = 0.8) +
+  scale_x_continuous(limits = c(0, 800)) +
+  scale_y_continuous(limits = c(0, 800)) +
+  scale_colour_brewer(palette = "Dark2") +
+  coord_cartesian(expand = FALSE) +
+  labs(
+    title = "Ferris wheels",
+    x = "Diameter (ft)",
+    y = "Height (ft)"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    legend.position = "top",
+    legend.title = element_blank(),
+    plot.title = element_text(
+      face = "bold",
+      margin = margin(b = 10)
+    ),
+    plot.title.position = "plot",
+    plot.margin = margin(15, 10, 10, 15)
+  )
+```
+
+![Before and after scatterplots visualising Ferris wheel data showing only dots, vs, dots and triangles to differentiate groups](images/styling-shapes.png){fig-alt="Before and after scatterplots visualising Ferris wheel data. Left uses only colour to differentiate country. Right also uses different shapes."}
 
 Despite the difficulties that can arise from ineffectively using colour, it’s still one of the most common methods for either distinguishing between categories, or showing changes in a value. When you decide to use colours, you then need to decide which colours to use.
 
@@ -63,17 +268,128 @@ Colour palettes generally fall into one of three categories, and the type of col
 * **Diverging**: used to visualise data that is ordered and diverges from an important midpoint e.g. days of above or below average temperature.
 * **Qualitative**: used to visualise categorical data, where the magnitude of difference between, and ordering of, categories is not important e.g. distinct railway lines.
 
+```{r}
+library(ggplot2)
+library(PrettyCols)
+
+# Sequential
+ggplot(
+  data = data.frame(x = 1:7, y = 1),
+  mapping = aes(x = x, y = y, fill = x)
+) +
+  geom_tile() +
+  labs(title = "Sequential") +
+  scale_fill_pretty_c("Teals") +
+  theme_void() +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(size = 20, face = "bold"),
+    plot.margin = margin(15, 10, 10, 15)
+  )
+
+# Diverging
+ggplot(
+  data = data.frame(x = 1:7, y = 1),
+  mapping = aes(x = x, y = y, fill = x - mean(x))
+) +
+  geom_tile() +
+  labs(title = "Diverging") +
+  scale_fill_gradient2(low = "#f1a340", high = "#998ec3") +
+  theme_void() +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(size = 20, face = "bold"),
+    plot.margin = margin(15, 10, 10, 15)
+  )
+
+# Qualitative
+ggplot(
+  data = data.frame(x = 1:7, y = 1),
+  mapping = aes(x = x, y = y, fill = factor(x))
+) +
+  geom_tile() +
+  labs(title = "Qualitative") +
+  scale_fill_brewer(palette = "Dark2") +
+  theme_void() +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(size = 20, face = "bold"),
+    plot.margin = margin(15, 10, 10, 15)
+  )
+```
+
+![Different types of colour palettes](images/styling-palettes.png){fig-alt="Three colour palette plots showing sequential blue colours, diverging orange to purple colours, and bold qualitative colours."}
+
 ### Accessible colour palettes
 When choosing a particular colour palette, there are several important factors to consider:
 
 Colours should be distinct from each other, for all readers. There are several different forms of colour blindness which can cause some colours to appear indistinguishable. The use of a colour blind checker can show you what your plots may look like under different types of colour blindness. This is particularly important for diverging and qualitative palettes where the distinction between hues is used to tell apart different values. In contrast, sequential palettes often use luminosity to show how values change. Paul Tol has some very useful resources on choices of colours, and several suggested palettes.
 
+```{r}
+library(ggplot2)
+library(dplyr)
+library(ggtext)
+library(colourblindr)
+plot_data <- ToothGrowth %>%
+  mutate(dose = factor(dose)) %>%
+  group_by(dose, supp) %>%
+  summarise(len = mean(len)) %>%
+  ungroup()
+
+g <- ggplot(
+  data = plot_data,
+  mapping = aes(x = len, y = dose, fill = supp)
+) +
+  geom_col(
+    position = position_dodge(width = 0.7),
+    width = 0.7
+  ) +
+  scale_x_continuous(
+    limits = c(0, 30),
+    name = "Tooth length"
+  ) +
+  geom_text(
+    mapping = aes(label = round(len, 0)),
+    position = position_dodge(width = 0.7),
+    hjust = 1.5,
+    size = 6,
+    fontface = "bold",
+    colour = "white"
+  ) +
+  scale_fill_manual(values = c("#9B1D20", "#3D5A80")) +
+  labs(
+    title = "Tooth Growth",
+    subtitle = "Each of 60 guinea pigs received one of three dose levels of
+       vitamin C (0.5, 1, and 2 mg/day) by one of two delivery methods:
+       <span style='color: #9B1D20'>**orange juice**</span> or <span style='color: #3D5A80'>
+       **ascorbic acid**</span>.",
+    y = "Dosage (mg/day)"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    legend.position = "none",
+    plot.title = element_textbox_simple(face = "bold"),
+    plot.subtitle = element_textbox_simple(
+      margin = margin(t = 10),
+      lineheight = 1.5
+    ),
+    plot.title.position = "plot",
+    plot.margin = margin(15, 10, 10, 15),
+    panel.grid = element_blank(),
+    axis.text.x = element_blank()
+  )
+
+cvd_grid(g)
+```
+
+![The simulated appearance of the same bar chart with different types of colour blindness](images/styling-colours.png){fig-alt="A 2x2 grid showing a bar chart under three types of colour blindness, and in monochrome. The monochrome is especially hard to differentiate colours."}
 
 Colours should appear distinct from each other when printed in black and white. Readers, or indeed academic journals, may choose to print your visualisations in monochrome. Colours that seem visually distinct that have similar luminosity (a measure of how light or dark a hue is) may appear indistinguishable when printed in black and white.
 
 Colours should appropriately match your data. It’s important not to play into stereotypes e.g. choosing pink and blue for data relating to women and men. Don’t confuse your readers by flipping common colour associations around, e.g. red for good and green for bad. Lisa Muth wrote an article for Datawrapper discussing the use of colour to display gender data, and many of the points can be extended to other types of data.
 
 ### Checklist
+
 * Minimise the number of different colours used.
 * Check that your colours are colour blind friendly, and have sufficient contrast when viewed in monochrome.
 * Check that the type of colour palette matches the type of data visualised.
@@ -85,6 +401,92 @@ Colours should appropriately match your data. It’s important not to play into 
 When talking about adding annotations to data visualisations, we simply mean adding text that adds a comment or clarification in order to help the reader understand the point made in the graphic. Annotations can be used to add details or explanation, highlight an interesting data point, or clarify how the chart should be interpreted. Although additional text can be extremely useful to a reader, it’s important not to overload a data visualisation with text as it can be distracting and make it more difficult to focus the point. 
 
 A common use of annotation that enhances clarity of data visualisations is directly labelling data points on line graphs or bar charts. In line graphs, it’s common to label the value at the end of the line as it’s often far away from the y-axis labels (on the left by default). In bar charts, adding the values for each bar at, or near, the end of each bar also means readers don’t have to look up the values themselves. This can reduce the amount of eye movement required for readers to find the exact values and allows them to make better, more accurate comparisons. This isn’t always required if, for example, these values are additionally provided in a table.
+
+```{r}
+library(ggplot2)
+library(dplyr)
+plot_data <- ToothGrowth %>%
+  mutate(dose = factor(dose)) %>%
+  group_by(dose, supp) %>%
+  summarise(len = mean(len)) %>%
+  ungroup()
+
+# Not annotated
+ggplot(
+  data = plot_data,
+  mapping = aes(
+    x = len,
+    y = dose,
+    fill = supp
+  )
+) +
+  geom_col(
+    position = position_dodge(width = 0.7),
+    width = 0.7
+  ) +
+  scale_x_continuous(
+    limits = c(0, 30),
+    name = "Tooth length"
+  ) +
+  scale_fill_manual(
+    name = "Supplement: ",
+    values = c("#9B1D20", "#3D5A80")
+  ) +
+  labs(
+    title = "Tooth Growth",
+    y = "Dose"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    legend.position = "top",
+    plot.title = element_text(face = "bold"),
+    plot.title.position = "plot",
+    plot.margin = margin(15, 10, 10, 15)
+  )
+
+# Annotated
+ggplot(
+  data = plot_data,
+  mapping = aes(
+    x = len,
+    y = dose,
+    fill = supp
+  )
+) +
+  geom_col(
+    position = position_dodge(width = 0.7),
+    width = 0.7
+  ) +
+  scale_x_continuous(
+    limits = c(0, 30),
+    name = "Tooth length"
+  ) +
+  geom_text(
+    mapping = aes(label = round(len, 0)),
+    position = position_dodge(width = 0.7),
+    hjust = 1.5,
+    size = 6,
+    fontface = "bold",
+    colour = "white"
+  ) +
+  scale_fill_manual(
+    name = "Supplement: ",
+    values = c("#9B1D20", "#3D5A80")
+  ) +
+  labs(
+    title = "Tooth Growth",
+    y = "Dose"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    legend.position = "top",
+    plot.title = element_text(face = "bold"),
+    plot.title.position = "plot",
+    plot.margin = margin(15, 10, 10, 15)
+  )
+```
+
+![Before and after adding annotations to label a bar chart](images/styling-annotate-bars.png){fig-alt="A before and after showing the same bar chart of tooth growth data without annotations on the left, and with labels showing bar values on the right."}
 
 The placement of annotations is also key:
 
@@ -99,5 +501,3 @@ When choosing the font size, family, face, and colour of the annotation text, th
 * Check if there are outliers that need further explanation, or values that could be directly labelled.
 * Labels are positioned sensibly, and the data visualisation does not feel crowded with text.
 * Make sure there is sufficient contrast between the text and the background.
-
-
