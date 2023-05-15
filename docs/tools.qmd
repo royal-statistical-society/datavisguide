@@ -1,0 +1,95 @@
+---
+title: 7. Styling charts for RSS publications
+format:
+  html:
+    code-fold: true
+    code-tools: true
+execute: 
+  eval: false
+  echo: true
+editor: source
+---
+
+## Styling charts with different tools
+
+In this section, we discuss the technical details of how to change the style of charts built with some of the most common types of software used to create data visualisations.
+
+### R
+
+[R](https://www.r-project.org/) is a programming language which is popular for statistical computing and graphics. There are many packages with R that can be used to create data visualisations, and we don’t aim to cover them all here. Instead, we address the most common methods: built-in base R graphics, and the {ggplot2} package.
+
+#### Base R
+
+R has built-in graphics capabilities that allow users to make a wide range of data visualisations without installing any additional packages. This [blog post from Jumping Rivers](https://www.jumpingrivers.com/blog/styling-base-r-graphics/) provides instructions on how to style graphics created in base R.
+
+**Example**: changing bar chart colours in base R
+
+To ensure the same colours are used for all base R plots created in an R session match, you can set the default colours using the `palette()` function.
+
+```{r}
+# data
+plot_data <- data.frame(group = PlantGrowth$group,
+                        mean_weight = ave(PlantGrowth$weight, PlantGrowth$group))
+# choose colours
+palette(c(rgb(155, 29, 32, maxColorValue = 255),
+          rgb(61, 90, 128,  maxColorValue = 255),
+          rgb(61, 128, 99, maxColorValue = 255)))
+
+# make a bar chart
+barplot(height = unique(plot_data)$mean_weight,
+        names = unique(plot_data)$group,
+        col = 1:3,
+        main="Plant growth by treatment",
+        xlab="Treatment",
+        ylab = "Average weight")
+```
+
+![Bar charts visualising plant growth for different treatments with user specified colours](images/tools-bar-cols.png){fig-alt="Bar charts visualising plant growth of average hght for different treatments with user specified colours red, blue, and dark green."}
+
+**Example**: changing the font family in base R
+
+Within the `plot()`, `barplot()`, and `hist()`(and related base R plotting functions), the `family` argument changes which font family is used. Setting `family = “serif”` uses the default system serif font. The default setting is to use a sans serif font. You can also load a specific font family, and apply it in the same way. The code to load a specific font family may vary between operating systems. 
+
+```{r}
+# data
+plot_data <- data.frame(group = PlantGrowth$group,
+                        mean_weight = ave(PlantGrowth$weight, PlantGrowth$group))
+
+# make a bar chart
+barplot(height = unique(plot_data)$mean_weight,
+        names = unique(plot_data)$group,
+        main="Plant growth by treatment",
+        xlab="Treatment",
+        ylab = "Average weight",
+        family = "serif")
+```
+
+![Bar charts visualising plant growth for different treatments with user specified font](images/tools-base-r-font.png){fig-alt="Bar charts visualising plant growth of average hght for different treatments with user specified serif font."}
+
+#### {ggplot2}
+
+
+
+## Technical details for RSS publications
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
