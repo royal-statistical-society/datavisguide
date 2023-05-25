@@ -23,6 +23,10 @@ website:
             text: Why do we visualise data?
           - href: docs/principles.qmd
             text: Principles of data visualisation
+          - href: docs/choosing.qmd
+            text: Choosing a visualisation type
+          - href: docs/styling.qmd
+            text: Styling your visualisation
             
   page-navigation: true
 
