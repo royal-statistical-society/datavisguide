@@ -78,40 +78,11 @@ ggplot(
 
 ![Before and after bar charts visualising tooth growth of guinea pigs](images/styling-intro.png){fig-alt="Before and after bar charts visualising tooth growth of guinea pigs. Left is unstyled with default colour scheme. Right is styled with labelled bars, a text legend, and easier to read fonts."}
 
-## Fonts
-
-Font choice is a key component of making your data visualisations easy to understand. Some fonts are easier to read than others, and this is particularly true for those with visual impairments, or a learning disability such as dyslexia. A poor choice of font may make your visualisation inaccessible to a significant number of people in your audience. 
-
-Try to minimise the number of different types of font you use: use a fixed set of sizes, a maximum of two different font families, and minimise the use of mixing font faces. This all helps to reduce unnecessary work from a reader when they look at your visualisation.
-
-### Font size
-
-Larger fonts are easier to read. It’s generally recommended that font size is at least 12pt for printed materials or websites. If you’re creating a presentation, fonts should be at least 36pt to make sure they’re visible to people nearer the back of the room.
-
-### Font family
-
-So what makes a good choice of font family? There is no consensus as to which type of font (serif, sans serif, or monospace) is more accessible. The simpler characters of sans serif fonts may increase readability for visually impaired readers, while those with dyslexia may find the characters more difficult to tell apart. Serif fonts (such as Times New Roman) can be more difficult to read as the decorative lines distract from the shape of the letter. This is especially true in digital publications where on-screen pixelation can further distort the letters. We’d recommend avoiding serif fonts for any text in images that will appear online.
-
-Common sans serif fonts such as Arial, Calibri, and Verdana are often considered to be accessible. [Dyslexie](https://www.dyslexiefont.com/) and [OpenDyslexic](https://opendyslexic.org/) are fonts specifically designed to aid readability for those with dyslexia, as they increase font weight at the bottom of the letters which reduces how much the letters appear to move around. Atkinson Hyperlegible is a font developed by the Braille Institute of America, which is designed to maximise distinction between different characters for low vision readers . It’s freely available, and can be downloaded from the [Braille Institute](https://brailleinstitute.org/freefont) or used through [Google Fonts](https://fonts.google.com/specimen/Atkinson+Hyperlegible). Some fonts, particularly sans serif fonts, have characters which appear very similar to other characters. For example, a capital I, lowercase l, and number 1, can sometimes be indistinguishable. Choose a font face with a distinguishable feature for each letter and number.
-
-### Font face
-
-Font faces, e.g. bold or italic effects can be used to emphasise particular parts of text. For example, a plot annotation may highlight a specific value placed in amongst some explanatory text. Italicised text is generally considered more difficult to read, as is capitalised text when used for the purpose of emphasis. Instead, use bold text to highlight (sparingly).
-
-### Checklist
-
-As you can see, there is no single font recommendation that will ensure your visualisation is accessible to all. However, there are some things you can do to maximise accessibility.
-
-* Ensure the font size is at least 12pt.
-* Ensure that a capital I, lowercase l, and number 1 are distinguishable. 
-* Minimise the number of different fonts used (no more than two).
-* Minimise the use of italics and uppercase text, instead (sparingly) use bold text for emphasis.
-
 ## Colours
 
-As with font choices, colour choices can strongly impact the accessibility of your data visualisation. The correct use of colour can also help to emphasise the story you are trying to tell.
+Colour choices can strongly impact the accessibility of your data visualisation. The correct use of colour can also help to emphasise the story you are trying to tell.
 
-Before you get into choosing colours, ask yourself the question: do I really need to use colour here? [Beecham et al](https://www.mdpi.com/2220-9964/10/4/213) showed that the use of colour is one of the least effective methods for visually communicating differences between variables. Both accessibility and interpretability improve when using fewer colours. 
+Before you get into choosing colours, ask yourself the question: do I really need to use colour here? [Beecham et al](https://www.mdpi.com/2220-9964/10/4/213) showed that the use of colour is one of the least effective methods for visually communicating differences between variables. Charts become both more accessible and more intuitive when using fewer colours. 
 
 ```{r}
 library(dplyr)
@@ -179,7 +150,7 @@ ggplot(
 
 In the bar chart example above, rather than duplicating the information on the y-axis and colouring each bar a different colour, a better approach is to use colour to highlight a specific element of the data e.g. a specific car, which focuses the reader’s attention straight to the point you are trying to make.
 
-It’s useful not to rely on colour as the only factor which distinguishes data points in different groups. For example, in scatter plots, as well as colouring points in two groups either green or orange, the points code be encoded as circles and triangles.
+It’s useful not to rely on colour as the only factor which distinguishes data points in different groups. For example, in scatter plots, as well as colouring points in two groups either green or orange, the points could be encoded as circles and triangles.
 
 ```{r}
 library(readr)
@@ -258,15 +229,15 @@ ggplot(
 
 ![Before and after scatterplots visualising Ferris wheel data showing only dots, vs, dots and triangles to differentiate groups](images/styling-shapes.png){fig-alt="Before and after scatterplots visualising Ferris wheel data. Left uses only colour to differentiate country. Right also uses different shapes."}
 
-Despite the difficulties that can arise from ineffectively using colour, it’s still one of the most common methods for either distinguishing between categories, or showing changes in a value. When you decide to use colours, you then need to decide which colours to use.
+Despite the difficulties that can arise from ineffectively using colour, it’s still one of the most common methods for either distinguishing between categories, or showing changes in a value. If you decide to use colours, you then need to decide which colours to use.
 
 ### Types of colour palette
 
 Colour palettes generally fall into one of three categories, and the type of colour palette you choose should reflect the type of data you are visualising.
 
-* **Sequential**: used to visualise data that is ordered from low to high (or vice versa) e.g. temperature.
-* **Diverging**: used to visualise data that is ordered and diverges from an important midpoint e.g. days of above or below average temperature.
-* **Qualitative**: used to visualise categorical data, where the magnitude of difference between, and ordering of, categories is not important e.g. distinct railway lines.
+* **Sequential**: used to visualise data that is ordered from low to high (or vice versa), e.g. temperature.
+* **Diverging**: used to visualise data that is ordered and diverges from an important midpoint, e.g. days of above or below average temperature, in two directions.
+* **Qualitative**: used to visualise categorical data, where the magnitude of difference between, and ordering of, categories is not meaningful, e.g. distinct railway lines.
 
 ```{r}
 library(ggplot2)
@@ -396,6 +367,7 @@ Colours should appropriately match your data. It’s important not to play into 
 * Use non-colour elements to distinguish between different groups where possible.
 * Avoid stereotypes and confusing associations with different colours.
 
+
 ## Annotations
 
 When talking about adding annotations to data visualisations, we simply mean adding text that adds a comment or clarification in order to help the reader understand the point made in the graphic. Annotations can be used to add details or explanation, highlight an interesting data point, or clarify how the chart should be interpreted. Although additional text can be extremely useful to a reader, it’s important not to overload a data visualisation with text as it can be distracting and make it more difficult to focus the point. 
@@ -502,9 +474,44 @@ When choosing the font size, family, face, and colour of the annotation text, th
 * Labels are positioned sensibly, and the data visualisation does not feel crowded with text.
 * Make sure there is sufficient contrast between the text and the background.
 
+## Fonts
+
+Font choice is a key component of making your data visualisations easy to understand. Some fonts are easier to read than others, and this is particularly true for those with visual impairments, or a learning disability such as dyslexia. A poor choice of font may make your visualisation inaccessible to a significant number of people in your audience. 
+
+Try to minimise the number of different types of font you use: use a fixed set of sizes, a maximum of two different font families, and minimise the use of mixing font faces. This all helps to reduce unnecessary work from a reader when they look at your visualisation.
+
+### Font size
+
+Larger fonts are easier to read. It’s generally recommended that font size is at least 12pt for printed materials or websites. If you’re creating a presentation, fonts should be at least 36pt to make sure they’re visible to people nearer the back of the room.
+
+### Font family
+
+So what makes a good choice of font family? There are three main types of font:
+
+* Serif: serifs are the small strokes on the ends of some longer strokes that occur in some fonts. Fonts that have these serifs are called serif fonts.
+* Sans serif: Fonts without serifs are called sans serif fonts.
+* Monospace: monospace fonts are those whose characters each take up an equal width.
+
+
+There is no consensus as to which type of font (serif, sans serif, or monospace) is more accessible. The simpler characters of sans serif fonts may increase readability for visually impaired readers, while those with dyslexia may find the characters more difficult to tell apart. Serif fonts (such as Times New Roman) can be more difficult to read as the decorative lines distract from the shape of the letter. This is especially true in digital publications where on-screen pixelation can further distort the letters. We’d recommend avoiding serif fonts for any text in images that will appear online.
+
+Common sans serif fonts such as Arial, Calibri, and Verdana are often considered to be accessible. [Dyslexie](https://www.dyslexiefont.com/) and [OpenDyslexic](https://opendyslexic.org/) are fonts specifically designed to aid readability for those with dyslexia, as they increase font weight at the bottom of the letters which reduces how much the letters appear to move around. Atkinson Hyperlegible is a font developed by the Braille Institute of America, which is designed to maximise distinction between different characters for low vision readers . It’s freely available, and can be downloaded from the [Braille Institute](https://brailleinstitute.org/freefont) or used through [Google Fonts](https://fonts.google.com/specimen/Atkinson+Hyperlegible). Some fonts, particularly sans serif fonts, have characters which appear very similar to other characters. For example, a capital I, lowercase l, and number 1, can sometimes be indistinguishable. Choose a font face with a distinguishable feature for each letter and number. Source Sans Pro and Verdana both meet this condition.
+
+### Font face
+
+Font faces, e.g. bold or italic effects can be used to emphasise particular parts of text. For example, a plot annotation may highlight a specific value placed in amongst some explanatory text. Italicised text is generally considered more difficult to read, as is capitalised text when used for the purpose of emphasis. Instead, use bold text to highlight (sparingly!).
+
+### Checklist
+
+As you can see, there is no single font recommendation that will ensure your visualisation is accessible to all. However, there are some things you can do to improve accessibility.
+
+* Ensure the font size is at least 12 pt.
+* Ensure that a capital I, lowercase l, and number 1 are distinguishable. 
+* Minimise the number of different fonts used (no more than two).
+* Minimise the use of italics and uppercase text, instead (sparingly) use bold text for emphasis.
 
 ## Alt Text
 
-Alt text is text that describes the visual aspect and purpose of an image - including charts. Though alt text has various uses - its primary purpose is to aid visually impaired users in interpreting images when the alt text is read aloud by screen readers. 
+Alt text (short for alternative text) is text that describes the visual aspects and purpose of an image - including charts. Though alt text has various uses - its primary purpose is to aid visually impaired users in interpreting images when the alt text is read aloud by screen readers. 
 
 In a recent a [Significance article](https://academic.oup.com/jrssig/article/20/1/38/7034177), Mine Dogucu discussed the importance of adding alt text to your data visualisations, to ensure those who are blind or visually impaired don't miss out on the content in your charts. This [Medium article](https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81) by Amy Cesal provides a simple structure to aid you in writing alt text for data visualisations.
