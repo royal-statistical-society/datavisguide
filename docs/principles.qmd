@@ -305,37 +305,55 @@ If legend entries refer to single objects (e.g., one line per group), placing th
 **Example:** The figure below shows that ease of reading can be improved by adding the legend directly into the figure, next to the corresponding data. Note that labels must not overlay and label positions might require adaptation depending on the data.
 
 ```{r}
-#| layout-ncol: 2
-
 # ---
 # EU stock markets, year and indices DAX, SMI, CAC, and FTSE.
 
+# Store graphics into a list.
+gg.list <- list()
+
+# Prepare the data set (reformat EuStockMarkets that comes with R).
 x <- EuStockMarkets
 df <- data.frame(
-    time= as.vector(time(x)),
+    time=as.vector(time(x)),
     index=rep(colnames(x), rep(nrow(x), ncol(x))),
-    value=as.vector(EuStockMarkets)
+    value=as.vector(x)
 )
-
-# Add leading spaces for better plotting/labeling.
-df$index2 <- paste(" ", df$index)
+df$index2 <- df$index # For use with labels later.
 
 library(ggplot2)
 
 # Standard layout and legend.
 gg <- ggplot(df, aes(x=time, y=value, group=index, color=index, label=index2))
 gg <- gg + geom_line() + theme_bw()
-print(gg)
+
+# Nicer axis tick mark settings.
+ax <- pretty(df$time, n=10)
+gg <- gg + scale_x_continuous(limits=range(ax), breaks=ax)
+gg <- gg + xlab("year") + ylab("Stock index")
+
+gg.list[[1]] <- gg
 
 # Use the last element of each time series for x,y of the label.
+# Use that the last element is the first element of the reversed order,
+#   and extract the first element per index by using !duplicated.
 y <- df[rev(order(df$time)), ] # descending in time.
 y <- y[!duplicated(y$index), ] # first entry per index
+y$index2 <- y$index # Create a copy that contains formatted strings.
+levels(y$index2)[levels(y$index2)=="FTSE"] <- "\n\nFTSE" 
+	# Add a newline to separate FTSE from DAX.
+	# Note that the factor level is modified, not the data.
 
 # Drop the legend, move labels into figure.
-gg <- gg + geom_text(data=y, hjust="left") # aes as before
+gg <- gg + geom_text(data=y, hjust="left", nudge_x=0.1) 
+# aes as before, nudge adds space on the lhs.
 gg <- gg + theme(legend.position="none")
-gg <- gg + xlim(range(pretty(df$time, n=50)))
-print(gg)
+gg.list[[2]] <- gg
+
+# ---
+# Both figures into a single output figure.
+
+library(cowplot)
+plot_grid(gg.list[[1]], gg.list[[2]], rel_widths=c(2.25, 2))
 ```
 
 ::: figure-caption
