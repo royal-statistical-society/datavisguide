@@ -2,8 +2,11 @@
 title: How to use this guide
 toc: true
 ---
+::: {.callout-warning appearance="simple"}
+This site and its content are in development. The authors welcome feedback. Please either \[insert info about raising an issue/PR/email etc.\]
+:::
 
-We designed this guide to be read from beginning to end, so that each section builds on the foundations of those that came before. If this is your first time reading the guide, we would encourage you to read it in this way. However, those looking for guidance on specific aspects of data visualisation can make use of the in-built search and navigation functions of this website. If you'd prefer to read offline, you can download a PDF version of the complete guide.
+We designed this guide to be read from beginning to end, so that each section builds on the foundations of those that came before. If this is your first time reading the guide, we would encourage you to read it in this way. However, those looking for guidance on specific aspects of data visualisation can make use of the in-built search and navigation functions of this website. If you'd prefer to read offline, you can download a PDF version of the complete guide. You can also download PDFs of individuals sections.
 
 Throughout the text you will find examples of charts and graphs. For many of these, we provide code in R to allow you to reproduce the visualisations, and we encourage you to do so and to adapt the code for your own purposes.
 
@@ -15,14 +18,6 @@ Throughout the text you will find examples of charts and graphs. For many of the
 
 \[add section on using GitHub discussions. Could also consider adding a comment functionality to section pages. Also need to include guidance on standards of discourse - e.g. be civil, no libellous comments, etc.\]
 
-## Copyright, re-use, distribution, and disclaimer
-
-This guide is copyright © 2023 Andreas Krause, Nicola Rennie and the Royal Statistical Society. Unless otherwise stated, all copyright content in this guide is licensed under a [Creative Commons Attribution 4.0 (CC BY 4.0) International licence](http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1), meaning it can be used and adapted for any purpose, provided attribution is given to the original authors. **How to cite:** Authors, Title, Version, URL.
-
-If you've found this guide useful and want to make use of it or build on it for other purposes, please do so -- and please share your work with us.
-
-No warranty, use at your own risk, etc. See the R disclaimer for an example ("R comes with absolutely no warranty").
-
 ## How to reach us
 
 How can readers contact the authors?
@@ -30,3 +25,11 @@ How can readers contact the authors?
 -   Submit a GitHub issue
 
 -   Email address?
+
+## Copyright, re-use, distribution, and disclaimer
+
+This guide is copyright © 2023 Andreas Krause, Nicola Rennie and the Royal Statistical Society. Unless otherwise stated, all copyright content in this guide is licensed under a [Creative Commons Attribution 4.0 (CC BY 4.0) International licence](http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1), meaning it can be used and adapted for any purpose, provided attribution is given to the original authors. **How to cite:** Authors, Title, Version, URL.
+
+If you've found this guide useful and want to make use of it or build on it for other purposes, please do so -- and please share your work with us.
+
+No warranty, use at your own risk, etc. See the R disclaimer for an example ("R comes with absolutely no warranty").

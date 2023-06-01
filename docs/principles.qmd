@@ -1,5 +1,5 @@
 ---
-title: Principles of data visualisation
+title: Principles and elements of visualisations
 format:
   html:
     code-fold: true
@@ -8,11 +8,15 @@ execute:
   warning: false
 ---
 
+::: {.callout-warning appearance="simple"}
+This site and its content are in development. The authors welcome feedback. Please either \[insert info about raising an issue/PR/email etc.\]
+:::
+
 Data visualisations must serve a purpose. By understanding the purpose of a visualisation, we -- as author or reader -- are in a position to assess whether a visualisation succeeds in its aims or requires improvement.
 
 Arguably the most common purpose of a visualisation is a comparison of groups of data, such as data on patients receiving different treatments. A good choice of axes, axis limits, labels and symbols can facilitate substantially the identification of patterns in the data, whereas  poor choices for any of these elements can substantially hamper the extraction of information.
 
-## Elements of data visualisations
+## Elements of charts
 
 Various elements of a visualisation can contribute to the efficacy with which information can be distilled. All visualisation software packages will output graphics in a default style, but these will rarely, if ever, be the optimum choices for the data visualisation you are creating. When designing a data visualisation, one needs to consider the range of options available. Some of these options are discussed in what follows.
 
@@ -20,7 +24,7 @@ Various elements of a visualisation can contribute to the efficacy with which in
 
 The layout (arrangement of multiple panels, facets, or subplots) is highly relevant for efficient comparison. If data on the y-axis are to be compared, a single y-axis with all panels aligned horizontally facilitates comparison, whereas for efficient comparison of x-axis values, panels should be stacked. Matrix layouts (multiple rows and columns in a single figure) should only be used if the data shown in individual panels are not related or space does not permit a single row or a single column (e.g., if there are too many panels to fit on a single row).
 
-**Example:** Figure 1 shows two different layouts of exactly the same data with exactly the same type of visualisation except for the layout. Note how difficult it is to compare the data across panels on the left-hand side, while it is easy with the layout on the right-hand side. The key difference is that the panels on the right share a common y-axis, which is key for comparison of y-values across panels.
+**Example:** The figure below shows two different layouts of exactly the same data with exactly the same type of visualisation except for the layout. Note how difficult it is to compare the data across panels on the left-hand side, while it is easy with the layout on the right-hand side. The key difference is that the panels on the right share a common y-axis, which is key for comparison of y-values across panels.
 
 ```{r}
 # ---
@@ -82,7 +86,7 @@ plot_grid(gg[[1]], gg[[2]], rel_widths=c(1.5, 2))
 ```
 
 ::: figure-caption
-**Figure 1:** A demonstration of the importance of panel layout for comparison across panels.
+Choice of layout determines ease of comparison across panels
 :::
 
 ### Aspect ratio
@@ -150,8 +154,8 @@ plot_grid(gg, gg2, gg3, rel_widths=c(4, 2, 2), nrow=1)
 
 ```
 
-::: figure-cation
-**Figure 2:** A demonstration showing how visual perception is influenced by the aspect ratio.
+::: figure-caption
+Visual perception is influenced by aspect ratio
 :::
 
 ### Lines
@@ -164,7 +168,7 @@ Point symbols should be chosen such that the visualisation displays the data in 
 
 ### Colours
 
-Colours should serve a purpose such as helping to identify different groups. Colours for pure decoration are discouraged. 
+Colours should serve a purpose such as helping to identify different groups. Colours for pure decoration are discouraged. Cleveland pointed out that because "they do have a natural visual hierarchy, varying shades of gray show varying quantities better than color", and "the shades of gray provide an easily comprehended order to the data measures. This is the key" (Cleveland 2001, p. 154).
 
 ### Axes
 
@@ -176,19 +180,51 @@ If relative changes or ratios are displayed, the corresponding axis should be lo
 
 If the data displayed as x and as y are comparable, axis limits should be identical and the figure square, such that distances are consistent in the x- and in the y-direction.
 
-**Example:** The figure below illustrates that the deliberate choice of axis limits (here, y-axis limits) can make a big difference to perception, and therefore interpretation, by the reader. The only difference between the three panels is the y-axis range.
+**Example:** The figure below illustrates that the deliberate choice of axis limits (here, y-axis limits) can make a big difference to perception, and therefore interpretation, by the reader. The only difference between the two panels is the y-axis range.
 
-![](images/principles-fig3.png)
+```{r}
+#| layout-ncol: 2
+
+library(ggplot2)
+plot_data <- data.frame(type = factor(
+      c("Our product", "Competitor"),
+      levels = c("Our product", "Competitor")),
+      value = c(220, 210))
+
+# Original plot
+ggplot(plot_data) +
+      geom_col(
+            mapping=aes(x=type, y=value),
+            fill="lightblue",
+            colour="black"
+  ) +
+      scale_y_continuous(breaks=seq(0, 220, by=20), expand=c(0, 0)) +
+      labs(x="", y="") + theme_minimal()
+
+# Offset the y axis
+offset <- 208
+ggplot(plot_data) +
+      geom_col(
+            mapping = aes(x=type, y=value-offset),
+            fill="lightblue",
+            colour="black"
+  ) +
+  scale_y_continuous(breaks=seq(0, 14, by=2),
+                     labels=seq(0+offset, 14 + offset, by=2),
+                     expand=c(0, 0)) +
+      labs(x="", y="") +
+      theme_minimal()
+```
 
 ::: figure-caption
-**Figure 3:** A demonstration of how visual impression can be driven by the choice of axis limits. Note: there is no R code for this figure. R makes it hard to omit 0 on the y-axis of barcharts (for a reason). This figure was instead created in Excel.
+Visual impression can be driven by the choice of axis limits
 :::
 
 #### Linear and logarithmic axes
 
 **Example:** Let's say that you want to know whether some variable, y, changes (compared to a reference or baseline measurement) depending on another variable, x. For example, does blood pressure change with treatment?
 
-Figure 4 shows data with, on average, no change compared to a reference (baseline) measurement (red horizontal line) -- approximately half the data are below and above the point of no change. However, this is not easily apparent from the top-left panel, which uses a linear axis, and so space is allocated asymmetrically in the vertical direction \-- both up and down -- away from the reference line. In the top-right panel, which uses a logarithmic axis, the relatively even spread of the data points around the reference line is clear to see.
+The figure below shows data with, on average, no change compared to a reference (baseline) measurement (red horizontal line) -- approximately half the data are below and above the point of no change. However, this is not easily apparent from the top-left panel, which uses a linear axis, and so space is allocated asymmetrically in the vertical direction \-- both up and down -- away from the reference line. In the top-right panel, which uses a logarithmic axis, the relatively even spread of the data points around the reference line is clear to see.
 
 ```{r}
 #| warning: false
@@ -231,7 +267,6 @@ gg <- gg + scale_y_continuous(
   sec.axis=sec_axis(trans=~.*1, breaks=xbr,
   labels=ifelse(xbr < 1, paste("1/", 1/xbr, sep=""), xbr))
 )
-print(gg)
 
 # ---
 # Univariate distribution (histogram).
@@ -252,7 +287,7 @@ print(gg)
 ```
 
 ::: figure-caption
-**Figure 4:** \[caption to be added\]
+\[caption to be added\]
 :::
 
 ### Symbols
@@ -265,9 +300,53 @@ Symbols such as triangles, circles, and squares do not have an intuitive connota
 
 Legends should not attract too much attention and certainly not cover up data. They should be placed in the margins of the figure or can be captured in a small text below the figure. 
 
+If legend entries refer to single objects (e.g., one line per group), placing the legend next to the corresponding object makes it easier for the reader to map legend entries to display objects.
+
+**Example:** The figure below shows that ease of reading can be improved by adding the legend directly into the figure, next to the corresponding data. Note that labels must not overlay and label positions might require adaptation depending on the data.
+
+```{r}
+#| layout-ncol: 2
+
+# ---
+# EU stock markets, year and indices DAX, SMI, CAC, and FTSE.
+
+x <- EuStockMarkets
+df <- data.frame(
+    time= as.vector(time(x)),
+    index=rep(colnames(x), rep(nrow(x), ncol(x))),
+    value=as.vector(EuStockMarkets)
+)
+
+# Add leading spaces for better plotting/labeling.
+df$index2 <- paste(" ", df$index)
+
+library(ggplot2)
+
+# Standard layout and legend.
+gg <- ggplot(df, aes(x=time, y=value, group=index, color=index, label=index2))
+gg <- gg + geom_line() + theme_bw()
+print(gg)
+
+# Use the last element of each time series for x,y of the label.
+y <- df[rev(order(df$time)), ] # descending in time.
+y <- y[!duplicated(y$index), ] # first entry per index
+
+# Drop the legend, move labels into figure.
+gg <- gg + geom_text(data=y, hjust="left") # aes as before
+gg <- gg + theme(legend.position="none")
+gg <- gg + xlim(range(pretty(df$time, n=50)))
+print(gg)
+```
+
+::: figure-caption
+Direct labelling of figure elements can improve ease of reading
+:::
+
 ### Orientation
 
-Research has shown that the human eye is better at following imaginary vertical lines than horizontal lines. Horizontal boxplots allow for a more accurate visual comparison than vertical boxplots.
+Horizontal boxplots allow for a more accurate visual comparison than vertical boxplots since it is easier for the human eye to follow an imaginary vertical line than an imaginary horizontal line.
+
+If there is an order in the data that is to be visualised, e.g., as a barplot, showing the data as horizontal bars and sorting so as to place larger values on top is more intuitive than showing vertical bars with a left-to-right orientation (Few, 2004, p. 182).
 
 ### Auxiliary elements
 
@@ -277,7 +356,7 @@ Some helpful additional elements can include lines at relevant points. Examples 
 
 A local scatterplot smoother (loess, lowess, polynomial) can be particularly helpful to identify relationships with limited model assumptions. The confidence band (pointwise confidence intervals) should only be shown if relevant.
 
-**Example:** Figure 5 displays changes from a starting point (time 0) over time. A plain figure (left panel) requires the reader to read the y-axis labels to identify the point of no change (y=0). The addition of a line (middle panel) indicating the point of no change makes reading easier, and choosing an axis range symmetric around the point of no change (right panel) allocates changes up to the upper half of the visualisation and changes down to the lower half.
+**Example:** The figure below displays changes from a starting point (time 0) over time. A plain figure (left panel) requires the reader to read the y-axis labels to identify the point of no change (y=0). The addition of a line (middle panel) indicating the point of no change makes reading easier, and choosing an axis range symmetric around the point of no change (right panel) allocates increases (changes upward) to the upper half of the visualisation and decreases (changes downward) to the lower half, making reading and interpretation more intuitive.
 
 ```{r}
 #| fig-height: 3
@@ -343,19 +422,19 @@ plot_grid(gg, gg2, gg3, nrow=1)
 ```
 
 ::: figure-caption
-**Figure 5:** \[caption to come - also need to fix height of panels\]
+\[caption to come\]
 :::
 
 ### Higher dimensions
 
 Three-dimensional displays of data may look striking, in some respects, but accurate reading and interpretation is not straightforward with such presentations.
 
-**Example:** The left panel of Figure 6 displays a single number, 10, as a 3D bar chart. The correct identification of the value is indicated by the red "X": the height of the bar must be projected against the rear wall (the axis) from the viewing position. The figure on the right positions bars on a tilted surface, resulting in perceived height differences when there are none: the same four numbers, 10, 20, 30, and 40, are shown in each row and column.
+**Example:** The left panel of the figure below displays a single number, 10, as a 3D bar chart. The correct identification of the value is indicated by the red "X": the height of the bar must be projected against the rear wall (the axis) from the viewing position. The figure on the right positions bars on a tilted surface, resulting in perceived height differences when there are none: the same four numbers, 10, 20, 30, and 40, are shown in each row and column.
 
 ![](images/principles-fig6.png)
 
 ::: figure-caption
-**Figure 6:** A demonstration of the difficulty of reading off data values from 3D charts. Note: again, as with Figure 3, this figure is produced in Excel, not in R.
+Reading off data values from 3D charts is difficult
 :::
 
 ## Elements of tables

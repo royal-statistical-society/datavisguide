@@ -1,6 +1,10 @@
 ---
-title: Why do we visualise data?
+title: Why we visualise data
 ---
+
+::: {.callout-warning appearance="simple"}
+This site and its content are in development. The authors welcome feedback. Please either \[insert info about raising an issue/PR/email etc.\]
+:::
 
 ## Motivation
 
@@ -50,7 +54,7 @@ Tables, too, are a way to visualise data or statistics, and can be similarly imp
 
 ## A brief history of data visualisation
 
-Visualisation in itself has been a topic of scientific research for a long time. An early visualisation was created by Minard in 1861, depicting data from Napoleon's march on Moscow in 1812/13 and his subsequent retreat (below).
+Visualisation in itself has been a topic of scientific research for a long time. An early visualisation was created by Minard in 1861, depicting [data from Napoleon's march on Moscow](https://academic.oup.com/jrssig/article/5/3/133/7029764) in 1812/13 and his subsequent retreat (below).
 
 [![](images/minard.png)](images/minard.png)
 
@@ -60,12 +64,12 @@ Visualisation in itself has been a topic of scientific research for a long time.
 
 The map shows latitude and longitude of the army as it moved. The line shows the direction of the move, and the line width represents the size of the army (the surviving soldiers). Particular locations were marked by the date of the army presence, and the temperature is shown, too. Six variables were elegantly woven into a single display (References: Tufte, The visual display of quantitative information; Corbett, Charles Joseph Minard, Mapping Napoleon's March; Robinson AH, The thematic maps of Charles Joseph Minard).
 
-Data were visualised by hand until computers came along. The first monitors and printers worked in text mode only, though, with a resolution of 25 rows and 80 columns or similar, not permitting much detail or precision. Graphics terminals and printers followed, and resolutions kept increasing with the development of laser printers.
+Data were visualised by hand until computers came along. The first monitors and printers worked in text mode only, with a resolution of 25 rows and 80 columns or similar, which did not permit much detail or precision. Graphics terminals and printers followed, and resolutions kept increasing with the development of laser printers.
 
 Statistical systems such as SAS enabled creation of data visualisations early on (reference to an early manual or other work needed).
 
 Arguably the most consistent implementation of a graphics system was realised with ggplot (Wickham, 2011) based on Wilkinson's "The Grammar of Graphics" (2005).
 
-A key component of ggplot2 is the feature of creating conditional displays. These allow for subsetting the data by the values of one or more variables. The concept was introduced by Cleveland (1993), showcasing a barley data set that was analysed in textbooks for decades until a visualisation strongly suggested an error in the data set -- two years of crop yield of one variety at one of six farms were accidentally swapped. It took a visualisation to reveal what numerous numerical analyses had missed!
+A key component of ggplot2 is the feature of creating conditional displays. These allow for subsetting the data by the values of one or more variables. The concept was introduced by Cleveland (1993), showcasing a widely-known barley data set that was analysed in textbooks for decades until a visualisation strongly suggested an error in the data set -- two years of crop yield of one variety at one of six farms were accidentally swapped. It took a visualisation to reveal what numerous numerical analyses had missed!
 
-Cleveland named the display type "trellis", being inspired by a trellis in his garden (Cleveland, 1993). The trellis concept was first implemented in S (Becker and Chambers, 1984) and S-PLUS (**ref**). When R (ref) came along, a package lattice was developed (Sarkar 2008) since trellis carried a trademark. With the advent of ggplot, the term faceting was introduced (with functions facet_grid and facet_wrap).
+Cleveland named the display type "trellis", being inspired by a trellis in his garden (Cleveland, 1993). The trellis concept was first implemented in S (Becker and Chambers, 1984) and S-PLUS (**ref**). When R (ref) was developed by Robert Gentleman and Ross Ihaka in Auckland NZ in the 1980s, a package named `lattice` was developed (Sarkar 2008) since "trellis" carried a trademark (by Lucent and later MathSoft). With the advent of ggplot, the term faceting (with functions facet_grid and facet_wrap) replaced the "lattice" with its "panels".

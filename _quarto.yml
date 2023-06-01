@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Guide to Good Graphics"
+  title: "Best Practices for Data Visualisation"
   image: RSS_logo_colour.png
   navbar:
     logo: RSS_logo_colour.png
@@ -30,15 +30,17 @@ website:
           - section: "The guide"
             contents: 
               - href: docs/why-visualise.qmd
-                text: Why do we visualise data?
+                text: Why we visualise data
               - href: docs/principles.qmd
-                text: Principles of data visualisation
+                text: Principles and elements of visualisations
               - href: docs/choosing.qmd
                 text: Choosing a visualisation type
               - href: docs/styling.qmd
-                text: Styling your visualisation
+                text: Styling for accessibility
               - href: docs/tools.qmd
-                text: Styling charts for RSS publications
+                text: Styling for RSS publications
+              - href: docs/references.qmd
+                text: References
           - href: about.qmd
             text: About the authors
             

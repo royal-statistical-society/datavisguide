@@ -1,15 +1,18 @@
 ---
-title: "The RSS Guide to Good Graphics"
+title: Best Practices for Data Visualisation
+subtitle: Insights, advice, and examples (with code) to make data outputs more readable, accessible, and impactful  
 ---
+
+::: {.callout-warning appearance="simple"}
+This site and its content are in development. The authors welcome feedback. Please either \[insert info about raising an issue/PR/email etc.\]
+:::
 
 Statistics is "the science of collecting, analyzing, presenting, and interpreting data" ([Encyclopaedia Britannica, 2023](https://www.britannica.com/science/statistics)). Presentation of data is a key means to support and guide interpretation and subsequent decision making. Techniques exist for effective display. This is what this guide is all about.
 
-Good data visualisation requires appreciation and careful consideration of the technical aspects of data presentation. But it also involves a creative element. Authorial choices are made about the "story" we want to tell, and design decisions are driven by the need to convey that story most effectively to our audience. Software systems use default settings for most graphical elements, however, each visualisation has its own story to tell, and so we must actively consider and choose settings for the visualisation under construction.
+Good data visualisation requires appreciation and careful consideration of the technical aspects of data presentation. But it also involves a creative element. Authorial choices are made about the "story" we want to tell, and design decisions are driven by the need to convey that story most effectively to our audience. Software systems use default settings for most graphical elements. However, each visualisation has its own story to tell, and so we must actively consider and choose settings for the visualisation under construction.
 
 This guide covers both aspects of data visualisation: the art and the science. It is written primarily for contributors to [Royal Statistical Society publications](https://rss.org.uk/news-publication/publications/) -- chiefly, [*Significance* magazine](https://academic.oup.com/jrssig), the [*Journal of the Royal Statistical Society Series A*](https://academic.oup.com/jrsssa), and [Real World Data Science](https://realworlddatascience.net/) -- but we hope you will find the information and advice within to be of broad relevance and use to any data visualisation task.
 
-Our overarching aim is to equip you, the reader, with the fundamentals for creating data visualisations that are high quality, readable, effective at conveying information, accurate in display and interpretation, and which fulfil their intended purpose.
+The overarching aim of this guide is to equip the reader with the fundamentals for creating data visualisations that are high quality, readable, effective at conveying information, accurate in display and interpretation, and which fulfil their intended purpose. It begins with an overview of [why we visualise data](docs/why-visualise.qmd), and then discusses the [core principles and elements of data visualisations](docs/principles.qmd) -- including the structure of charts and tables, and how those structures can be refined to aid readability. Concrete advice, examples, and code are then presented to help improve the [styling of charts](docs/styling.qmd), with a particular focus on accessibility. There's a dedicated section on [styling charts for RSS publications](docs/tools.qmd), and readers will also find links to resources for [choosing the right type of chart](docs/choosing.qmd) for the data at hand.
 
-We begin with a discussion of why we visualise data, and then set out the core principles of data visualisation. Next, we provide advice on which chart types are most appropriate for different types of data, and then explore the structure of charts and how those structures can be refined to aid readability. Finally, we look at styling charts, both generally and for RSS publications specifically.
-
-In constructing this guide, we draw on many exceptional textbooks, papers, and other resources created by experts in the field. You will find references to these throughout and we encourage you to seek out the original sources if you are motivated to deepen your understanding and appreciation for the art and science of data visualisation.
+In constructing this guide, [the authors](about.qmd) draw on many exceptional textbooks, papers, and other material created by experts in the field. References can be found throughout, and readers are encouraged to seek out the original sources to deepen their understanding of, and appreciation for, the art and science of data visualisation.
