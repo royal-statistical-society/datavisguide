@@ -1,5 +1,5 @@
 ---
-title: 5. Styling your charts
+title: Styling your charts
 format:
   html:
     code-fold: true

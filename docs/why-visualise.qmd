@@ -1,8 +1,8 @@
 ---
-title: 2. Why do we visualise data?
+title: Why do we visualise data?
 ---
 
-## 2.1 Motivation
+## Motivation
 
 Data visualisations can be a very efficient means of identifying patterns in data and conveying a message. The scientific aim of any visualisation is to allow the reader to understand data:
 
@@ -48,7 +48,7 @@ For these reasons, data visualisations are key elements in almost any kind of pu
 
 Tables, too, are a way to visualise data or statistics, and can be similarly important components of a publication. A table may in some cases visualise data better than a graphic. For example, five numbers are probably better displayed in a table than in a complex pie chart that uses colours, angles, and possibly shading and more than two dimensions. 
 
-## 2.2 A brief history of data visualisation
+## A brief history of data visualisation
 
 Visualisation in itself has been a topic of scientific research for a long time. An early visualisation was created by Minard in 1861, depicting data from Napoleon's march on Moscow in 1812/13 and his subsequent retreat (below).
 
