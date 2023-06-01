@@ -57,6 +57,7 @@ plot(1:4, 1:4, col=1:4, pch=19, cex=3, xlab="", ylab="")
 ```
 
 ![Scatter plot showing the colours from the `signif_qual` palette](images/tools-qual-base.png){fig-alt="Scatter plot showing the colours from signif_qual"}
+
 Run `palette("default")` to reset to original base R colours.
 
 **Example**: changing the styling of base R plots
@@ -87,7 +88,7 @@ plot_df <- data.frame(x = LETTERS[1:4],
 
 **Example**: changing the non-mapped colours in {ggplot2}
 
-In {ggplot2}, the `colour` (or `color`) arguments changes the colour that outlines an element, and `fill` changes the colour that fills the element. If all of the, e.g. bars, lines, or points should have the same colour, you can set either the `fill` or `colour` arguments to have one of the RSS colours. The options are: `signif_red`, `signif_blue`, `signif_green`, `signif_orange`, or `signif_yellow`.
+In {ggplot2}, the `colour` (or `color`) argument changes the colour that outlines an element, and `fill` changes the colour that fills the element. If all of the, e.g., bars, lines, or points should have the same colour, you can set either the `fill` or `colour` arguments to have one of the RSS colours. The options are: `signif_red`, `signif_blue`, `signif_green`, `signif_orange`, or `signif_yellow`.
 
 ```{r}
 ggplot(data = plot_df,
