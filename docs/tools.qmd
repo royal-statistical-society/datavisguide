@@ -201,12 +201,12 @@ If you find a bug in the {RSSthemes} package, or something that isn’t working 
 
 **Example**: changing bar chart colours in matplotlib
 
-```{python}
+```{{python}}
 ```
 
 **Example**: changing the font family in matplotlib
 
-```{python}
+```{{python}}
 ```
 
 ### Microsoft Excel
