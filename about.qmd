@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "About the authors"
 ---
 
-About this site
+Bios and links to go here
