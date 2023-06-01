@@ -1,8 +1,15 @@
 ---
-title: "rssdatavisguide"
-sidebar: false
+title: "The RSS Guide to Good Graphics"
 ---
 
-This is a Quarto website.
+Statistics is "the science of collecting, analyzing, presenting, and interpreting data" ([Encyclopaedia Britannica, 2023](https://www.britannica.com/science/statistics)). Presentation of data is a key means to support and guide interpretation and subsequent decision making. Techniques exist for effective display. This is what this guide is all about.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Good data visualisation requires appreciation and careful consideration of the technical aspects of data presentation. But it also involves a creative element. Authorial choices are made about the "story" we want to tell, and design decisions are driven by the need to convey that story most effectively to our audience. Software systems use default settings for most graphical elements, however, each visualisation has its own story to tell, and so we must actively consider and choose settings for the visualisation under construction.
+
+This guide covers both aspects of data visualisation: the art and the science. It is written primarily for contributors to [Royal Statistical Society publications](https://rss.org.uk/news-publication/publications/) -- chiefly, [*Significance* magazine](https://academic.oup.com/jrssig), the [*Journal of the Royal Statistical Society Series A*](https://academic.oup.com/jrsssa), and [Real World Data Science](https://realworlddatascience.net/) -- but we hope you will find the information and advice within to be of broad relevance and use to any data visualisation task.
+
+Our overarching aim is to equip you, the reader, with the fundamentals for creating data visualisations that are high quality, readable, effective at conveying information, accurate in display and interpretation, and which fulfil their intended purpose.
+
+We begin with a discussion of why we visualise data, and then set out the core principles of data visualisation. Next, we provide advice on which chart types are most appropriate for different types of data, and then explore the structure of charts and how those structures can be refined to aid readability. Finally, we look at styling charts, both generally and for RSS publications specifically.
+
+In constructing this guide, we draw on many exceptional textbooks, papers, and other resources created by experts in the field. You will find references to these throughout and we encourage you to seek out the original sources if you are motivated to deepen your understanding and appreciation for the art and science of data visualisation.

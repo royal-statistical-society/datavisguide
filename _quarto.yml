@@ -2,14 +2,20 @@ project:
   type: website
 
 website:
-  title: "rssdatavisguide"
+  title: "Guide to Good Graphics"
+  image: RSS_logo_colour.png
   navbar:
+    logo: RSS_logo_colour.png
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
-      - href: docs/introduction.qmd
-        text: Guide
+        text: Introduction
+      - href: howto.qmd
+        text: How to use this guide
+      - href: docs/index.qmd
+        text: The guide
+      - href: about.qmd
+        text: About the authors
+
         
   sidebar: 
       - title: Guide
@@ -17,18 +23,24 @@ website:
         collapse-level: 2
         align: left
         contents:
-          - href: docs/introduction.qmd
+          - href: index.qmd
             text: Introduction
-          - href: docs/why-visualise.qmd
-            text: Why do we visualise data?
-          - href: docs/principles.qmd
-            text: Principles of data visualisation
-          - href: docs/choosing.qmd
-            text: Choosing a visualisation type
-          - href: docs/styling.qmd
-            text: Styling your visualisation
-          - href: docs/tools.qmd
-            text: Styling charts for RSS publications
+          - href: howto.qmd
+            text: How to use this guide
+          - section: "The guide"
+            contents: 
+              - href: docs/why-visualise.qmd
+                text: Why do we visualise data?
+              - href: docs/principles.qmd
+                text: Principles of data visualisation
+              - href: docs/choosing.qmd
+                text: Choosing a visualisation type
+              - href: docs/styling.qmd
+                text: Styling your visualisation
+              - href: docs/tools.qmd
+                text: Styling charts for RSS publications
+          - href: about.qmd
+            text: About the authors
             
   page-navigation: true
 

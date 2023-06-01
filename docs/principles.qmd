@@ -1,5 +1,5 @@
 ---
-title: 3. Principles of data visualisation
+title: Principles of data visualisation
 format:
   html:
     code-fold: true
@@ -12,7 +12,7 @@ Data visualisations must serve a purpose. By understanding the purpose of a visu
 
 Arguably the most common purpose of a visualisation is a comparison of groups of data, such as data on patients receiving different treatments. A good choice of axes, axis limits, labels and symbols can facilitate substantially the identification of patterns in the data, whereas  poor choices for any of these elements can substantially hamper the extraction of information.
 
-## 3.1 Elements of data visualisations
+## Elements of data visualisations
 
 Various elements of a visualisation can contribute to the efficacy with which information can be distilled. All visualisation software packages will output graphics in a default style, but these will rarely, if ever, be the optimum choices for the data visualisation you are creating. When designing a data visualisation, one needs to consider the range of options available. Some of these options are discussed in what follows.
 
@@ -358,7 +358,7 @@ Three-dimensional displays of data may look striking, in some respects, but accu
 **Figure 6:** A demonstration of the difficulty of reading off data values from 3D charts. Note: again, as with Figure 3, this figure is produced in Excel, not in R.
 :::
 
-## 3.2 Elements of tables
+## Elements of tables
 
 Tables can be an efficient means of visualisation, just like graphics -- and they also can be misleading or cumbersome to read if not properly presented. Tables should in particular be considered for a small number of data points or if precise numbers are to be shown. For example if numbers need to be overlaid on graphics to aid readability and interpretation (for example, appending digits to the end of the bars in a barchart), one might consider omitting the graphic entirely and displaying the numbers as a table.
 
