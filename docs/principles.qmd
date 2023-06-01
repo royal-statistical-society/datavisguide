@@ -4,6 +4,8 @@ format:
   html:
     code-fold: true
     code-tools: true
+execute: 
+  warning: false
 ---
 
 Data visualisations must serve a purpose. By understanding the purpose of a visualisation, we -- as author or reader -- are in a position to assess whether a visualisation succeeds in its aims or requires improvement.
@@ -90,6 +92,8 @@ Our visual perception of data in a display must not depend on the choice of x- a
 **Example:** The three panels below all show the same data, aiming at enabling judgement about the goodness of a model fit (predicted vs observed values). Note the difference in visual perception between a stretched x-axis, a stretched y-axis, and a 1:1 aspect ratio (i.e., one unit in x and y corresponds to the same number of pixels) and identical axis limits (such that the figure is square). Other applications: any x and y that are to be compared.
 
 ```{r}
+#| message: false
+#| warning: false
 # Observed vs predicted (any data with comparable x and y will do).
 
 # ---
@@ -187,6 +191,9 @@ If the data displayed as x and as y are comparable, axis limits should be identi
 Figure 4 shows data with, on average, no change compared to a reference (baseline) measurement (red horizontal line) -- approximately half the data are below and above the point of no change. However, this is not easily apparent from the top-left panel, which uses a linear axis, and so space is allocated asymmetrically in the vertical direction \-- both up and down -- away from the reference line. In the top-right panel, which uses a logarithmic axis, the relatively even spread of the data points around the reference line is clear to see.
 
 ```{r}
+#| warning: false
+#| message: false
+#| layout-ncol: 2
 # Naïve plot of y vs x. If there is no change (on average), 
 # half the data are below the line of no change.
 # Asymmetric view, and it depends on y/x or x/y.
@@ -273,6 +280,7 @@ A local scatterplot smoother (loess, lowess, polynomial) can be particularly hel
 **Example:** Figure 5 displays changes from a starting point (time 0) over time. A plain figure (left panel) requires the reader to read the y-axis labels to identify the point of no change (y=0). The addition of a line (middle panel) indicating the point of no change makes reading easier, and choosing an axis range symmetric around the point of no change (right panel) allocates changes up to the upper half of the visualisation and changes down to the lower half.
 
 ```{r}
+#| fig-height: 3
 # Function for data set generation.
 make.data <- function(
   x=c(0, 0.5, 1, 2, 4, 8, 12, 16, 24),
@@ -335,14 +343,14 @@ plot_grid(gg, gg2, gg3, nrow=1)
 ```
 
 ::: figure-caption
-**Figure 5:** [caption to come - also need to fix height of panels]
+**Figure 5:** \[caption to come - also need to fix height of panels\]
 :::
 
 ### Higher dimensions
 
 Three-dimensional displays of data may look striking, in some respects, but accurate reading and interpretation is not straightforward with such presentations.
 
-**Example:** The left panel of Figure 6 displays a single number, 10, as a 3D bar chart. The correct identification of the value is indicated by the red \"X\": the height of the bar must be projected against the rear wall (the axis) from the viewing position. The figure on the right positions bars on a tilted surface, resulting in perceived height differences when there are none: the same four numbers, 10, 20, 30, and 40, are shown in each row and column.
+**Example:** The left panel of Figure 6 displays a single number, 10, as a 3D bar chart. The correct identification of the value is indicated by the red "X": the height of the bar must be projected against the rear wall (the axis) from the viewing position. The figure on the right positions bars on a tilted surface, resulting in perceived height differences when there are none: the same four numbers, 10, 20, 30, and 40, are shown in each row and column.
 
 ![](images/principles-fig6.png)
 

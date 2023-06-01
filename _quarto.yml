@@ -27,6 +27,8 @@ website:
             text: Choosing a visualisation type
           - href: docs/styling.qmd
             text: Styling your visualisation
+          - href: docs/tools.qmd
+            text: Styling charts for RSS publications
             
   page-navigation: true
 
