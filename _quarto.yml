@@ -51,9 +51,13 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+    grid:
+      sidebar-width: 200px
+      body-width: 1000px
+      margin-width: 200px
 
 editor: visual
 
 execute:
-  freeze: auto
+  freeze: false
 
