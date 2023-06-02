@@ -6,6 +6,8 @@ format:
     code-tools: true
 execute: 
   warning: false
+  eval: false
+  echo: true
 ---
 
 ::: {.callout-warning appearance="simple"}
@@ -85,15 +87,13 @@ library(cowplot)
 plot_grid(gg[[1]], gg[[2]], rel_widths=c(1.5, 2))
 ```
 
-::: figure-caption
-Choice of layout determines ease of comparison across panels
-:::
+[![Line plots showing how choice of layout determines ease of comparison across panels](images/principles-layout.png){fig-alt="Line plots showing how choice of layout determines ease of comparison across panels. Left panel shows 3 plots stacked vertically. Right panel shows same three plots arranged horizontally"}](images/principles-layout.png)
 
 ### Aspect ratio
 
 Our visual perception of data in a display must not depend on the choice of x- and y-axes. In many cases, a square figure avoids visual bias. A square figure should be considered in particular if the two axes share a communality such as a measurement before and after some event, observed data vs model-predicted values or, more generally, the same units (such as kg or metres). Generally, a 1:1 aspect ratio (the physical length of 1 measurement unit in the x- and the y-direction) is a good default. If the figure has identical ranges for the x- and the y-axis, a 1:1 aspect ratio yields a square figure.
 
-**Example:** The three panels below all show the same data, aiming at enabling judgement about the goodness of a model fit (predicted vs observed values). Note the difference in visual perception between a stretched x-axis, a stretched y-axis, and a 1:1 aspect ratio (i.e., one unit in x and y corresponds to the same number of pixels) and identical axis limits (such that the figure is square). Other applications: any x and y that are to be compared.
+**Example:** The three panels below all show the same data, aimed at enabling judgement about the goodness of a model fit (predicted vs observed values). Note the difference in visual perception between a stretched x-axis, a stretched y-axis, and a 1:1 aspect ratio with identical axis limits.
 
 ```{r}
 #| message: false
@@ -139,7 +139,9 @@ gg <- gg + geom_smooth(method="loess", color="firebrick", se=FALSE)
 gg <- gg + xlab("predicted") + ylab("observed")
 
 # Transpose (flip coordinates)
-gg2 <- gg + coord_flip()
+gg2 <- gg
+
+# + coord_flip()
 
 # Setting the aspect ratio to 1 (1 unit in x and y corresponds
 #   to the same number of pixels).
@@ -151,12 +153,9 @@ gg3 <- gg3 + xlim(r) + ylim(r)
 # Cow (column-wise) plot, combine all figures into one.
 library(cowplot)
 plot_grid(gg, gg2, gg3, rel_widths=c(4, 2, 2), nrow=1)
-
 ```
 
-::: figure-caption
-Visual perception is influenced by aspect ratio
-:::
+[![Scatter plots showing how visual perception of model fit can be influenced by aspect ratio](images/principles-aspect-ratio-2.png){fig-alt="Scatter plots showing how visual perception of model fit can be influenced by aspect ratio. Left panel has a stretched x-axis, middle panel has a stretched y-axis, and right panel has a 1:1 aspect ratio with identical axis limits."}](images/principles-aspect-ratio2.png)
 
 ### Lines
 
@@ -215,16 +214,13 @@ ggplot(plot_data) +
       labs(x="", y="") +
       theme_minimal()
 ```
-
-::: figure-caption
-Visual impression can be driven by the choice of axis limits
-:::
+[![Bar charts showing how visual impression can be driven by the choice of axis limits](images/principles-axes.png){fig-alt="Bar charts showing how visual impression can be driven by the choice of axis limits. Left panel chart has y-axis starting at zero, right panel has y-axis starting at 208, overselling the small 10-unit difference between two bars."}](images/principles-axes.png)
 
 #### Linear and logarithmic axes
 
 **Example:** Let's say that you want to know whether some variable, y, changes (compared to a reference or baseline measurement) depending on another variable, x. For example, does blood pressure change with treatment?
 
-The figure below shows data with, on average, no change compared to a reference (baseline) measurement (red horizontal line) -- approximately half the data are below and above the point of no change. However, this is not easily apparent from the top-left panel, which uses a linear axis, and so space is allocated asymmetrically in the vertical direction \-- both up and down -- away from the reference line. In the top-right panel, which uses a logarithmic axis, the relatively even spread of the data points around the reference line is clear to see.
+The figure below shows data with, on average, no change compared to a reference (baseline) measurement (red horizontal line, top two panels) -- approximately half the data are below the point of no change, and the other half are above. However, this is not easily apparent from the top-left panel, which uses a linear axis, and so space is allocated asymmetrically in the vertical direction -- both up and down -- away from the reference line. In the top-right panel, which uses a logarithmic axis, the relatively even spread of the data points around the reference line is clear to see. In the bottom row, the same data are shown in histogram form, again using linear and logarithmic axes.
 
 ```{r}
 #| warning: false
@@ -283,12 +279,9 @@ gg <- gg + scale_x_continuous(
   limits=max(abs(x$x))^c(-1, 1)
 )
 print(gg)
-
 ```
 
-::: figure-caption
-\[caption to be added\]
-:::
+[![Switching from linear axes (left) to logarithmic axes (right) helps clarify changes in values relative to some baseline measure](images/principles-log.png){fig-alt="Switching from linear axes to logarithmic axes helps clarify changes in values relative to some baseline measure. In the top row are two scatter plots, with a basline value marked with a red horizontal keyline. The top left panel is on a linear axis, while the top right panel is on a logarithmic axis and more clearly shows the even spread of data points around the baseline. In the bottom row, the same data is shown in histogram form, again with linear axis on the left and logarithmic on the right."}](images/principles-log.png)
 
 ### Symbols
 
@@ -316,7 +309,8 @@ x <- EuStockMarkets
 df <- data.frame(
     time=as.vector(time(x)),
     index=rep(colnames(x), rep(nrow(x), ncol(x))),
-    value=as.vector(x)
+    value=as.vector(x),
+      stringsAsFactors = TRUE
 )
 df$index2 <- df$index # For use with labels later.
 
@@ -355,16 +349,36 @@ gg.list[[2]] <- gg
 library(cowplot)
 plot_grid(gg.list[[1]], gg.list[[2]], rel_widths=c(2.25, 2))
 ```
-
-::: figure-caption
-Direct labelling of figure elements can improve ease of reading
-:::
+[![Line plots showing how direct labelling of figure elements can improve ease of reading](images/principles-legends.png){fig-alt="Line plots showing how direct labelling of figure elements can improve ease of reading. Left panel uses a legend to identify different coloured lines. Right panel includes labelling within figure, at the end of each line."}](images/principles-legends.png)
 
 ### Orientation
 
-Horizontal boxplots allow for a more accurate visual comparison than vertical boxplots since it is easier for the human eye to follow an imaginary vertical line than an imaginary horizontal line.
+If there is an order in the data that is to be visualised, e.g., as a barplot, showing the data as horizontal bars and sorting values from top to bottom (highest value to lowest) is more intuitive than showing vertical bars with a left-to-right orientation (Few, 2004, p. 182). One common exception to this is where data are to be ordered according to units of time. Time is often visually interpreted as flowing left to right, from past to present to future.
 
-If there is an order in the data that is to be visualised, e.g., as a barplot, showing the data as horizontal bars and sorting so as to place larger values on top is more intuitive than showing vertical bars with a left-to-right orientation (Few, 2004, p. 182).
+In the case of boxplots, for example, a horizontal orientation allows for a more accurate visual comparison than a vertical orientation, since it is easier for the human eye to follow an imaginary vertical line than an imaginary horizontal line, as can be seen from the figure below. Note, also, that the long x-axis labels are not readable in the panel on the left since they overlap, but they become readable with a horizontal orientation in the panel on the right.
+
+```{r}
+# Store figures into a list.
+gg.list <- list()
+
+library(ggplot2)
+
+x <- mpg # miles per gallon data set.
+x$car <- paste(x$manufacturer, x$model)
+
+gg <- ggplot(x, aes(x=car, y=hwy, group=car))
+gg <- gg + geom_boxplot() + theme_bw() + xlab("Miles per gallon (highway)")
+gg.list[["vertical orientation"]] <- gg
+
+gg.list[["horizontal orientation"]] <- gg + coord_flip()
+
+# ---
+# Both figures into a single output figure.
+
+library(cowplot)
+plot_grid(gg.list[[1]], gg.list[[2]], rel_widths=c(2, 2.5))
+```
+[![Changes to orientation can improve both readability of labels and the visual interpretation of data](images/principles-orientation.png){fig-alt="Changes to orientation can improve both readability of labels and the visual interpretation of data. Two boxplots are shown. On the left, the boxplots are vertical: axis labels overlap and visual comparison of values is more difficult than on the right, where boxplots are horizontal and axis labels are now separated and readable."}](images/principles-orientation.png)
 
 ### Auxiliary elements
 
@@ -439,21 +453,15 @@ library(cowplot)
 plot_grid(gg, gg2, gg3, nrow=1)
 ```
 
-::: figure-caption
-\[caption to come\]
-:::
+[![Adding elements, such as lines to indicate the point of no change, can improve readability](images/principles-auxiliary.png){fig-alt="Adding elements, such as lines to indicate the point of no change, can improve readability. In this three-part figure, the panel on the left is a line plot showing changes over time. In the middle plot, a keyline is added to mark the baseline -- zero -- on the y-axis, and in the right panel, the axis range is set to be symmetrical around this keyline."}](images/principles-auxiliary.png)
 
 ### Higher dimensions
 
 Three-dimensional displays of data may look striking, in some respects, but accurate reading and interpretation is not straightforward with such presentations.
 
-**Example:** The left panel of the figure below displays a single number, 10, as a 3D bar chart. The correct identification of the value is indicated by the red "X": the height of the bar must be projected against the rear wall (the axis) from the viewing position. The figure on the right positions bars on a tilted surface, resulting in perceived height differences when there are none: the same four numbers, 10, 20, 30, and 40, are shown in each row and column.
+**Example:** The left panel of the figure below displays a single number, 10, as a 3D bar chart. The correct identification of the value is indicated by the red "X": the height of the bar must be projected against the rear wall (the axis) from the viewing position. The panel on the right positions bars on a tilted surface, resulting in perceived height differences when there are none: the same four numbers, 10, 20, 30, and 40, are shown in each row and column.
 
-![](images/principles-fig6.png)
-
-::: figure-caption
-Reading off data values from 3D charts is difficult
-:::
+[![Reading off data values from 3D charts is difficult](images/principles-3d.png){fig-alt="Reading off data values from 3D charts is difficult. The left panel of this figure displays a single number, 10, as a 3D bar chart. The correct identification of the value is indicated by the red X on the rear wall of the image. The panel on the right positions bars on a tilted surface, resulting in perceived height differences when there are none: the same four numbers, 10, 20, 30, and 40, over several rows and columns."}](images/principles-3d.png)
 
 ## Elements of tables
 
