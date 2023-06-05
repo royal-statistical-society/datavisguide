@@ -55,5 +55,5 @@ format:
 editor: visual
 
 execute:
-  freeze: auto
+  freeze: false
 
