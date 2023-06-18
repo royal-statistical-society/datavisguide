@@ -28,6 +28,7 @@ website:
           - href: howto.qmd
             text: How to use this guide
           - section: "The guide"
+            href: docs/index.qmd
             contents: 
               - href: docs/why-visualise.qmd
                 text: Why we visualise data

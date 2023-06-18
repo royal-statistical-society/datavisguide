@@ -2,6 +2,11 @@
 title: "About the authors"
 editor: source
 ---
+
+::: {.callout-warning appearance="simple"}
+This site and its content are in development. The authors welcome feedback. Please either \[insert info about raising an issue/PR/email etc.\]
+:::
+
 ## Andreas Krause
 
 :::: {.grid}
@@ -64,7 +69,7 @@ Brian Tarran is a writer and editor with 20 years of experience covering the res
 
 ::: {.g-col-12 .g-col-md-6}
 
-![](images/brian.png){fig-align="center" fig-alt="Image of Nicola Rennie wearing a red jacket" width=70%}
+![](images/brian.png){fig-align="center" fig-alt="Image of Brian Tarran" width=70%}
 
 :::
 

@@ -214,6 +214,7 @@ ggplot(plot_data) +
       labs(x="", y="") +
       theme_minimal()
 ```
+
 [![Bar charts showing how visual impression can be driven by the choice of axis limits](images/principles-axes.png){fig-alt="Bar charts showing how visual impression can be driven by the choice of axis limits. Left panel chart has y-axis starting at zero, right panel has y-axis starting at 208, overselling the small 10-unit difference between two bars."}](images/principles-axes.png)
 
 #### Linear and logarithmic axes
@@ -349,6 +350,7 @@ gg.list[[2]] <- gg
 library(cowplot)
 plot_grid(gg.list[[1]], gg.list[[2]], rel_widths=c(2.25, 2))
 ```
+
 [![Line plots showing how direct labelling of figure elements can improve ease of reading](images/principles-legends.png){fig-alt="Line plots showing how direct labelling of figure elements can improve ease of reading. Left panel uses a legend to identify different coloured lines. Right panel includes labelling within figure, at the end of each line."}](images/principles-legends.png)
 
 ### Orientation
@@ -378,6 +380,7 @@ gg.list[["horizontal orientation"]] <- gg + coord_flip()
 library(cowplot)
 plot_grid(gg.list[[1]], gg.list[[2]], rel_widths=c(2, 2.5))
 ```
+
 [![Changes to orientation can improve both readability of labels and the visual interpretation of data](images/principles-orientation.png){fig-alt="Changes to orientation can improve both readability of labels and the visual interpretation of data. Two boxplots are shown. On the left, the boxplots are vertical: axis labels overlap and visual comparison of values is more difficult than on the right, where boxplots are horizontal and axis labels are now separated and readable."}](images/principles-orientation.png)
 
 ### Auxiliary elements
