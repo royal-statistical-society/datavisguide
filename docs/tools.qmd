@@ -9,6 +9,7 @@ execute:
   echo: true
 editor: source
 ---
+
 ::: {.callout-warning appearance="simple"}
 This site and its content are in development. The authors welcome feedback. Please either \[insert info about raising an issue/PR/email etc.\]
 :::
@@ -19,7 +20,7 @@ In this section, we discuss the technical details of how to change the style of 
 
 ### R
 
-[R](https://www.r-project.org/) is a programming language which is popular for statistical computing and graphics. There are many packages with R that can be used to create data visualisations, and we don’t aim to cover them all here. Instead, we address the most common methods: built-in base R graphics, and the {ggplot2} package.
+[R](https://www.r-project.org/) is a programming language which is popular for statistical computing and graphics. There are many packages with R that can be used to create data visualisations, and we don't aim to cover them all here. Instead, we address the most common methods: built-in base R graphics, and the {ggplot2} package.
 
 To help authors with styling their charts to fit in with the guidance in this document, we have developed an R package, [{RSSthemes}](https://github.com/nrennie/RSSthemes). We include some examples of using the package here, but encourage readers to check the GitHub repository for any updates.
 
@@ -78,7 +79,7 @@ abline(h=1:4, v=1:4, col = "lightgrey")
 
 {ggplot2} is an R package within the {tidyverse} framework specifically for creating data visualisations. The [package documentation](https://ggplot2.tidyverse.org/) provides guidance on how to create different types of charts. Advice on [changing the colours](https://ggplot2-book.org/scale-colour.html) and [styles](https://ggplot2-book.org/polishing.html) of {ggplot2} visualisations, can be found in the [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/index.html) book by Hadley Wickham, Danielle Navarro, and Thomas Lin Pedersen.
 
-Let’s set up a basic data set to make some plots wih {ggplot2}.
+Let's set up a basic data set to make some plots wih {ggplot2}.
 
 ```{r}
 library(ggplot2)
@@ -102,7 +103,7 @@ ggplot(data = plot_df,
 
 For working with qualitative (discrete) data, the best palette to use is `"signif_qual"`. This palette currently only contains four colours.
 
-* Discrete (fill) scale: `scale_fill_rss_d()`
+-   Discrete (fill) scale: `scale_fill_rss_d()`
 
 ```{r}
 ggplot(data = plot_df,
@@ -113,7 +114,7 @@ ggplot(data = plot_df,
 
 ![Bar chart with colours from `signif_qual`](images/tools-qual-bars.png){fig-alt="Bar chart with colours from signif_qual"}
 
-* Discrete (colour) scale: `scale_colour_rss_d()`
+-   Discrete (colour) scale: `scale_colour_rss_d()`
 
 ```{r}
 ggplot(data = plot_df,
@@ -128,7 +129,7 @@ ggplot(data = plot_df,
 
 Continuous colour scales may be sequential or diverging. For working with sequential (continuous) data, the best palette to use is `"signif_seq"`.
 
-* Continuous (fill) scale: `scale_fill_rss_c()`
+-   Continuous (fill) scale: `scale_fill_rss_c()`
 
 ```{r}
 ggplot(data = plot_df,
@@ -139,7 +140,7 @@ ggplot(data = plot_df,
 
 ![Bar chart showing sequential green colour palette](images/tools-seq-bars.png){fig-alt="Bar chart showing sequential green colour palette"}
 
-* Continuous (colour) scale: `scale_colour_rss_c()`
+-   Continuous (colour) scale: `scale_colour_rss_c()`
 
 ```{r}
 ggplot(data = plot_df,
@@ -150,10 +151,9 @@ ggplot(data = plot_df,
 
 ![Scatter plot showing sequential green colour palette](images/tools-seq-points.png){fig-alt="Scatter plot showing sequential green colour palette"}
 
-
 For working with diverging (continuous) data, the best palette to use is `"signif_div"`.
 
-* Continuous (fill) scale: `scale_fill_rss_c()`
+-   Continuous (fill) scale: `scale_fill_rss_c()`
 
 ```{r}
 ggplot(data = plot_df,
@@ -194,7 +194,7 @@ ggplot(data = plot_df,
 
 ![Bar chart styled with `theme_significance()`](images/tools-theme.png){fig-alt="Bar chart with bars coloured green, yellow, blue, and orange showing custom theme"}
 
-If you find a bug in the {RSSthemes} package, or something that isn’t working quite as you expected, please submit a [GitHub issue](https://github.com/nrennie/RSSthemes/issues).
+If you find a bug in the {RSSthemes} package, or something that isn't working quite as you expected, please submit a [GitHub issue](https://github.com/nrennie/RSSthemes/issues).
 
 ### Python
 
@@ -220,27 +220,116 @@ Microsoft Excel is a spreadsheet developed by Microsoft which features tools for
 
 **Example**: changing the colours in Microsoft Excel
 
-
 **Example**: changing the colours in Microsoft Excel
 
+## Publication specifications
 
+### Significance Magazine
 
+|           |                                 |
+|-----------|---------------------------------|
+| Page size | \(W\) 212.55 mm x (H) 263.65 mm |
+| Text area | \(W\) 188 mm x (H) 212 mm       |
 
+#### Notebook section
 
+Uses four-column layout.
 
++-----------------+-------------------------+
+| 1x column width | 45 mm                   |
++-----------------+-------------------------+
+| 2x column width | 93 mm                   |
++-----------------+-------------------------+
+| 3x column width | 140 mm                  |
++-----------------+-------------------------+
+| 4x column width | 188 mm                  |
++-----------------+-------------------------+
+| Body font       | Meta Serif OT, Book     |
++-----------------+-------------------------+
+| Font size       | 8.5 pt                  |
++-----------------+-------------------------+
+| Section colour  | Red:                    |
+|                 |                         |
+|                 | -   CMYK = 0, 96, 98, 1 |
+|                 |                         |
+|                 | -   RGB = 228, 27, 18   |
+|                 |                         |
+|                 | -   Hex code = #e41b12  |
++-----------------+-------------------------+
 
+#### Features section
 
+Uses three-column layout.
 
++-----------------+--------------------------+
+| 1x column width | 60 mm                    |
++-----------------+--------------------------+
+| 2x column width | 124 mm                   |
++-----------------+--------------------------+
+| 3x column width | 188 mm                   |
++-----------------+--------------------------+
+| Body font       | Source Sans Pro, Regular |
++-----------------+--------------------------+
+| Font size       | 9 pt                     |
++-----------------+--------------------------+
+| Section colour  | Green:                   |
+|                 |                          |
+|                 | -   CMYK = 75, 5, 100, 0 |
+|                 |                          |
+|                 | -   RGB = 63, 165, 53    |
+|                 |                          |
+|                 | -   Hex code = #3fa535   |
++-----------------+--------------------------+
 
+#### Profiles / Perspectives / Statscom section
 
+Uses three-column layout.
 
++------------------+--------------------------+
+| 1x column width  | 60 mm                    |
++------------------+--------------------------+
+| 2x column width  | 124 mm                   |
++------------------+--------------------------+
+| 3x column width  | 188 mm                   |
++------------------+--------------------------+
+| Body font        | Meta Serif OT, Book      |
++------------------+--------------------------+
+| Font size        | 8.5 pt                   |
++------------------+--------------------------+
+| Section colours: |                          |
++------------------+--------------------------+
+| Profiles         | Blue:                    |
+|                  |                          |
+|                  | -   CMYK = 78, 19, 15, 1 |
+|                  |                          |
+|                  | -   RGB = 0, 156, 196    |
+|                  |                          |
+|                  | -   Hex code = #009cc4   |
++------------------+--------------------------+
+| Perspectives     | Yellow:                  |
+|                  |                          |
+|                  | -   CMYK = 5, 24, 95, 1  |
+|                  |                          |
+|                  | -   RGB = 244, 193, 0    |
+|                  |                          |
+|                  | -   Hex code = #f4c100   |
++------------------+--------------------------+
+| Statscomm        | Orange:                  |
+|                  |                          |
+|                  | -   CMYK = 0, 60, 99, 0  |
+|                  |                          |
+|                  | -   RGB = 240, 125, 0    |
+|                  |                          |
+|                  | -   Hex code = #f07d00   |
++------------------+--------------------------+
 
+### Journal of the Royal Statistical Society Series A
 
+Uses a single-column layout.
 
-
-
-
-
-
-
-
+|           |                           |
+|-----------|---------------------------|
+| Page size | \(W\) 189 mm x (H) 246 mm |
+| Text area | \(W\) 136 mm x (H) 217 mm |
+| Body font | Sabon LT Std Roman        |
+| Font size | 9.25 pt                   |
