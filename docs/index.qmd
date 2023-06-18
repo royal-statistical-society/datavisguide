@@ -24,11 +24,14 @@ This site and its content are in development. The authors welcome feedback. Plea
   - Layout
   - Digits
   - Alignment
+  
 :::
 ::: {.g-col-12 .g-col-md-4 style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;"}
 ### [Choosing a visualisation type](/docs/choosing.qmd){style="text-decoration:none;"}
-- Elements of charts
-- Elements of tables
+- Goals
+- Target audience
+- Data types
+- Data relationships
 :::
 ::: {.g-col-12 .g-col-md-4 style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;"}
 ### [Styling charts for accessibility](/docs/styling.qmd){style="text-decoration:none;"}
@@ -47,6 +50,7 @@ This site and its content are in development. The authors welcome feedback. Plea
   - R
   - Python
   - Microsoft Excel
+  
 :::
 ::: {.g-col-12 .g-col-md-4 style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;"}
 ### [References](/docs/references.qmd){style="text-decoration:none;"}
