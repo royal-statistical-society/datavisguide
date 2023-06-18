@@ -1,3 +1,60 @@
 ---
-title: "Guide index"
+title: "The guide"
+subtitle: Table of contents
+toc: false
 ---
+
+::: {.callout-warning appearance="simple"}
+This site and its content are in development. The authors welcome feedback. Please either \[insert info about raising an issue/PR/email etc.\]
+:::
+
+::: grid
+::: {.g-col-12 .g-col-md-4 style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;"}
+### [Why we visualise data](/docs/why-visualise.qmd){style="text-decoration:none;"}
+- Motivation
+- A brief history of data visualisation
+:::
+::: {.g-col-12 .g-col-md-4 style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;"}
+### [Principles and elements of visualisations](/docs/principles.qmd){style="text-decoration:none;"}
+- Elements of charts, including:
+  - Layout
+  - Aspect ratio
+  - Lines, points and symbols
+- Elements of tables, including:
+  - Layout
+  - Digits
+  - Alignment
+  
+:::
+::: {.g-col-12 .g-col-md-4 style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;"}
+### [Choosing a visualisation type](/docs/choosing.qmd){style="text-decoration:none;"}
+- Goals
+- Target audience
+- Data types
+- Data relationships
+:::
+::: {.g-col-12 .g-col-md-4 style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;"}
+### [Styling charts for accessibility](/docs/styling.qmd){style="text-decoration:none;"}
+- Colours
+- Annotations
+- Fonts
+- Alt Text
+:::
+::: {.g-col-12 .g-col-md-4 style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;"}
+### [Styling charts for RSS publications](/docs/tools.qmd){style="text-decoration:none;"}
+- Publication specifications, including:
+  - Fonts
+  - Page sizes
+  - Formats
+- Styling with different tools, including:
+  - R
+  - Python
+  - Microsoft Excel
+  
+:::
+::: {.g-col-12 .g-col-md-4 style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;"}
+### [References](/docs/references.qmd){style="text-decoration:none;"}
+- Primary sources
+- Recommended reading
+:::
+:::

@@ -3,6 +3,33 @@ title: "About the authors"
 editor: source
 ---
 
+::: {.callout-warning appearance="simple"}
+This site and its content are in development. The authors welcome feedback. Please either \[insert info about raising an issue/PR/email etc.\]
+:::
+
+## Andreas Krause
+
+:::: {.grid}
+::: {.g-col-12 .g-col-md-6}
+
+Andreas Krause is...
+
+- Website: 
+- Twitter: 
+- LinkedIn: 
+- Mastodon: 
+- ORCID: 
+
+:::
+
+::: {.g-col-12 .g-col-md-6}
+
+
+
+:::
+
+::::
+
 ## Nicola Rennie
 
 :::: {.grid}
@@ -20,9 +47,30 @@ Nicola Rennie is an academic, data scientist, and educator with a passion for ef
 
 ::: {.g-col-12 .g-col-md-6}
 
-![](nicola.jpg){fig-align="center" fig-alt="Image of Nicola Rennie wearing a red jacket" width=70%}
+![](images/nicola.jpg){fig-align="center" fig-alt="Image of Nicola Rennie wearing a red jacket" width=70%}
 
 :::
 
 ::::
 
+## Brian Tarran
+
+:::: {.grid}
+::: {.g-col-12 .g-col-md-6}
+
+Brian Tarran is a writer and editor with 20 years of experience covering the research and data space. Has has worked for the Royal Statistical Society (RSS) for the past 8 years, and was editor of [Significance Magazine](https://www.significancemagazine.com/) (a joint publication of the RSS, the American Statistical Association and the Statistical Society of Australia) prior to the launch of [Real World Data Science](https://realworlddatascience.net/). Brian is a former editor of Research-Live.com and was launch editor of Impact magazine, both published by the Market Research Society.
+
+- Twitter: [@brtarran](https://twitter.com/brtarran)
+- LinkedIn: [linkedin.com/in/brian-tarran-58b0261](https://www.linkedin.com/in/brian-tarran-58b0261/)
+- Mastodon: [@mastodon.social/@brtarran](https://mastodon.social/@brtarran)
+- GitHub: [github.com/brtarran](https://github.com/brtarran)
+
+:::
+
+::: {.g-col-12 .g-col-md-6}
+
+![](images/brian.png){fig-align="center" fig-alt="Image of Brian Tarran" width=70%}
+
+:::
+
+::::

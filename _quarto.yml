@@ -3,9 +3,9 @@ project:
 
 website:
   title: "Best Practices for Data Visualisation"
-  image: RSS_logo_colour.png
+  image: images/RSS_logo_colour.png
   navbar:
-    logo: RSS_logo_colour.png
+    logo: images/RSS_logo_colour.png
     left:
       - href: index.qmd
         text: Introduction
@@ -28,6 +28,7 @@ website:
           - href: howto.qmd
             text: How to use this guide
           - section: "The guide"
+            href: docs/index.qmd
             contents: 
               - href: docs/why-visualise.qmd
                 text: Why we visualise data
