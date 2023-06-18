@@ -1,1 +1,1 @@
-Sitemap: https://fatso-jetson.github.io/rssdatavisguide/sitemap.xml
+Sitemap: https://brtarran.github.io/rssdatavisguide/sitemap.xml

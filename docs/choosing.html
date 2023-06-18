@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.319">
+<meta name="generator" content="quarto-1.3.361">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -57,7 +57,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -73,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../RSS_logo_colour.png" alt="" class="navbar-logo">
+    <img src="../images/RSS_logo_colour.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Best Practices for Data Visualisation</span>
@@ -112,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../docs/why-visualise.html">The guide</a></li><li class="breadcrumb-item"><a href="../docs/choosing.html">Choosing a visualisation type</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../docs/index.html">The guide</a></li><li class="breadcrumb-item"><a href="../docs/choosing.html">Choosing a visualisation type</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -138,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a href="../docs/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The guide</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -195,7 +196,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#goals-and-audience" id="toc-goals-and-audience" class="nav-link active" data-scroll-target="#goals-and-audience">Goals and audience</a>
+  <ul class="collapse">
+  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist">Checklist</a></li>
+  </ul></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a>
+  <ul class="collapse">
+  <li><a href="#type" id="toc-type" class="nav-link" data-scroll-target="#type">Type</a></li>
+  <li><a href="#relationship" id="toc-relationship" class="nav-link" data-scroll-target="#relationship">Relationship</a></li>
+  <li><a href="#checklist-1" id="toc-checklist-1" class="nav-link" data-scroll-target="#checklist-1">Checklist</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -217,9 +233,71 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>[to do]</p>
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>This site and its content are in development. The authors welcome feedback. Please either [insert info about raising an issue/PR/email etc.]</p>
+</div>
+</div>
+</div>
+<section id="goals-and-audience" class="level2">
+<h2 class="anchored" data-anchor-id="goals-and-audience">Goals and audience</h2>
+<p>The process of deciding what type of data visualisation to create begins with a simple question: Why am I doing this? <a href="../docs/principles.html">Data visualisations must serve a purpose</a> so all decisions about chart type, design, layout, etc., flow from a clear understanding of the intended purpose of a graphic.</p>
+<p><a href="https://statmodeling.stat.columbia.edu/2022/03/15/a-checklist-for-data-graphics/">Christian Hennig</a>, a statistics professor at the University of Bologna, suggests working through the following questions:</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li>Is the aim of the graph to find something out (“analysis graph”), or to make a point to others?</li>
+<li>What do you want to find out?</li>
+<li>Who is the audience for the graph? (It may be yourself.)</li>
+</ol>
+</blockquote>
+<p>Identifying the target audience at an early stage is crucial, as different groups of people are likely to have different levels of <a href="https://en.wikipedia.org/wiki/Graph_literacy">graph literacy</a> depending on their education level, technical expertise, prior exposure to data visualisation formats, and other factors. Design decisions that do not properly account for the needs of the intended audience will fail to achieve their aims.</p>
+<section id="checklist" class="level3">
+<h3 class="anchored" data-anchor-id="checklist">Checklist</h3>
+<p>Before any design decisions are made:</p>
+<ul>
+<li>Be clear about the intended purpose of a data visualisation.</li>
+<li>Understand your target audience, including their needs and familiarity with different visualisation types.</li>
+</ul>
+</section>
+</section>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>Software tools generally allow users the flexibility to visualise data in whatever format they choose. However, decisions about chart type must be informed either by the kind of data at hand or the data relationship that is of interest. Format choice must then be further guided by audience needs, as previously discussed.</p>
+<p>There are a range of online tools to help decide on a visualisation type. We recommend the following:</p>
+<section id="type" class="level3">
+<h3 class="anchored" data-anchor-id="type">Type</h3>
+<p><a href="https://www.data-to-viz.com/">From Data to Viz</a> presents users with a series of decision trees, each leading to different recommended chart formats depending on the type of data selected (numeric, categoric, etc.).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://www.data-to-viz.com/"><img src="images/choosing-data-to-viz.png" class="img-fluid figure-img" alt="Screenshot of From Data to Viz website, showing decision tree of chart formats suitable for numeric data"></a></p>
+<figcaption class="figure-caption">Screenshot of From Data to Viz</figcaption>
+</figure>
+</div>
+</section>
+<section id="relationship" class="level3">
+<h3 class="anchored" data-anchor-id="relationship">Relationship</h3>
+<p><a href="https://ft-interactive.github.io/visual-vocabulary/">Visual Vocabulary</a> is a site developed by the data visualisation team at the <em>Financial Times</em>. It allows users to narrow down the choice of chart type based on the data relationship that is “most important in your story”. Relationship options include deviation, correlation, change versus time, ranking, and more.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://ft-interactive.github.io/visual-vocabulary/"><img src="images/choosing-visual-vocabulary.png" class="img-fluid figure-img" alt="Screenshot of the Visual Vocabulary website, showing chart types suitable for visualising deviations from fixed reference points"></a></p>
+<figcaption class="figure-caption">Screenshot of Visual Vocabulary</figcaption>
+</figure>
+</div>
+</section>
+<section id="checklist-1" class="level3">
+<h3 class="anchored" data-anchor-id="checklist-1">Checklist</h3>
+<ul>
+<li>Choose a chart type based on either data type or data relationship.</li>
+<li>When selecting from a range of suitable chart types, keep in mind the needs of the target audience and their likely levels of graph literacy.</li>
+</ul>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

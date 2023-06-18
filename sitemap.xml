@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://fatso-jetson.github.io/rssdatavisguide/about.html</loc>
-    <lastmod>2023-06-05T17:10:57.944Z</lastmod>
+    <loc>https://brtarran.github.io/rssdatavisguide/about.html</loc>
+    <lastmod>2023-06-18T09:41:54.234Z</lastmod>
   </url>
   <url>
-    <loc>https://fatso-jetson.github.io/rssdatavisguide/docs/choosing.html</loc>
-    <lastmod>2023-06-05T17:10:58.504Z</lastmod>
+    <loc>https://brtarran.github.io/rssdatavisguide/docs/choosing.html</loc>
+    <lastmod>2023-06-18T09:41:54.857Z</lastmod>
   </url>
   <url>
-    <loc>https://fatso-jetson.github.io/rssdatavisguide/docs/principles.html</loc>
-    <lastmod>2023-06-05T17:11:05.125Z</lastmod>
+    <loc>https://brtarran.github.io/rssdatavisguide/docs/index.html</loc>
+    <lastmod>2023-06-18T09:41:55.506Z</lastmod>
   </url>
   <url>
-    <loc>https://fatso-jetson.github.io/rssdatavisguide/docs/references.html</loc>
-    <lastmod>2023-06-05T17:11:05.664Z</lastmod>
+    <loc>https://brtarran.github.io/rssdatavisguide/docs/principles.html</loc>
+    <lastmod>2023-06-18T09:42:00.154Z</lastmod>
   </url>
   <url>
-    <loc>https://fatso-jetson.github.io/rssdatavisguide/docs/styling.html</loc>
-    <lastmod>2023-06-05T17:11:09.882Z</lastmod>
+    <loc>https://brtarran.github.io/rssdatavisguide/docs/references.html</loc>
+    <lastmod>2023-06-18T09:42:00.629Z</lastmod>
   </url>
   <url>
-    <loc>https://fatso-jetson.github.io/rssdatavisguide/docs/tools.html</loc>
-    <lastmod>2023-06-05T17:11:13.238Z</lastmod>
+    <loc>https://brtarran.github.io/rssdatavisguide/docs/styling.html</loc>
+    <lastmod>2023-06-18T09:42:04.629Z</lastmod>
   </url>
   <url>
-    <loc>https://fatso-jetson.github.io/rssdatavisguide/docs/why-visualise.html</loc>
-    <lastmod>2023-06-05T17:11:13.842Z</lastmod>
+    <loc>https://brtarran.github.io/rssdatavisguide/docs/tools.html</loc>
+    <lastmod>2023-06-18T09:42:07.974Z</lastmod>
   </url>
   <url>
-    <loc>https://fatso-jetson.github.io/rssdatavisguide/howto.html</loc>
-    <lastmod>2023-06-05T17:11:14.394Z</lastmod>
+    <loc>https://brtarran.github.io/rssdatavisguide/docs/why-visualise.html</loc>
+    <lastmod>2023-06-18T09:42:08.608Z</lastmod>
   </url>
   <url>
-    <loc>https://fatso-jetson.github.io/rssdatavisguide/index.html</loc>
-    <lastmod>2023-06-05T17:11:15.000Z</lastmod>
+    <loc>https://brtarran.github.io/rssdatavisguide/howto.html</loc>
+    <lastmod>2023-06-18T09:42:09.175Z</lastmod>
+  </url>
+  <url>
+    <loc>https://brtarran.github.io/rssdatavisguide/index.html</loc>
+    <lastmod>2023-06-18T09:42:09.774Z</lastmod>
   </url>
 </urlset>

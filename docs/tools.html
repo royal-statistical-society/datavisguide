@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.319">
+<meta name="generator" content="quarto-1.3.361">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -91,7 +91,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -107,7 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../RSS_logo_colour.png" alt="" class="navbar-logo">
+    <img src="../images/RSS_logo_colour.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Best Practices for Data Visualisation</span>
@@ -146,7 +147,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../docs/why-visualise.html">The guide</a></li><li class="breadcrumb-item"><a href="../docs/tools.html">Styling for RSS publications</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../docs/index.html">The guide</a></li><li class="breadcrumb-item"><a href="../docs/tools.html">Styling for RSS publications</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -172,7 +173,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a href="../docs/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The guide</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -307,7 +308,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-blue-base.png" class="img-fluid figure-img" alt="Bar charts visualising plant growth of average hght for different treatments with user specified colours red, blue, and dark green."></p>
-<p></p><figcaption class="figure-caption">Bar chart with bars coloured in Significance blue</figcaption><p></p>
+<figcaption class="figure-caption">Bar chart with bars coloured in Significance blue</figcaption>
 </figure>
 </div>
 <p>If you colours in your plot are based on values in your data, you can set the default colours using the <code>palette()</code> function. Within {RSSthemes}, the <code>set_rss_palette()</code> function changes the default colours used. There are currently three palettes available in {RSSthemes}, although we hope to add more in the future. The options are <code>signif_qual</code>, <code>signif_div</code>, or <code>signif_seq</code>.</p>
@@ -321,7 +322,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-qual-base.png" class="img-fluid figure-img" alt="Scatter plot showing the colours from signif_qual"></p>
-<p></p><figcaption class="figure-caption">Scatter plot showing the colours from the <code>signif_qual</code> palette</figcaption><p></p>
+<figcaption class="figure-caption">Scatter plot showing the colours from the <code>signif_qual</code> palette</figcaption>
 </figure>
 </div>
 <p>Run <code>palette("default")</code> to reset to original base R colours.</p>
@@ -340,7 +341,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-theme-base.png" class="img-fluid figure-img" alt="Scatter plot showing the base R styling implemented by the Significance par function."></p>
-<p></p><figcaption class="figure-caption">Scatter plot showing the base R styling implemented by <code>set_signif_par()</code></figcaption><p></p>
+<figcaption class="figure-caption">Scatter plot showing the base R styling implemented by <code>set_signif_par()</code></figcaption>
 </figure>
 </div>
 </section>
@@ -369,7 +370,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-yellow-bars.png" class="img-fluid figure-img" alt="Bar chart with bars coloured yellow"></p>
-<p></p><figcaption class="figure-caption">Bar chart with bars coloured yellow</figcaption><p></p>
+<figcaption class="figure-caption">Bar chart with bars coloured yellow</figcaption>
 </figure>
 </div>
 <p><strong>Example</strong>: using a discrete colour scale in {ggplot2}</p>
@@ -389,7 +390,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-qual-bars.png" class="img-fluid figure-img" alt="Bar chart with colours from signif_qual"></p>
-<p></p><figcaption class="figure-caption">Bar chart with colours from <code>signif_qual</code></figcaption><p></p>
+<figcaption class="figure-caption">Bar chart with colours from <code>signif_qual</code></figcaption>
 </figure>
 </div>
 <ul>
@@ -407,7 +408,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-qual-points.png" class="img-fluid figure-img" alt="Scatter plot with colours from signif_qual"></p>
-<p></p><figcaption class="figure-caption">Scatter plot with colours from <code>signif_qual</code></figcaption><p></p>
+<figcaption class="figure-caption">Scatter plot with colours from <code>signif_qual</code></figcaption>
 </figure>
 </div>
 <p><strong>Example</strong>: using a continuous colour scale in {ggplot2}</p>
@@ -427,7 +428,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-seq-bars.png" class="img-fluid figure-img" alt="Bar chart showing sequential green colour palette"></p>
-<p></p><figcaption class="figure-caption">Bar chart showing sequential green colour palette</figcaption><p></p>
+<figcaption class="figure-caption">Bar chart showing sequential green colour palette</figcaption>
 </figure>
 </div>
 <ul>
@@ -445,7 +446,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-seq-points.png" class="img-fluid figure-img" alt="Scatter plot showing sequential green colour palette"></p>
-<p></p><figcaption class="figure-caption">Scatter plot showing sequential green colour palette</figcaption><p></p>
+<figcaption class="figure-caption">Scatter plot showing sequential green colour palette</figcaption>
 </figure>
 </div>
 <p>For working with diverging (continuous) data, the best palette to use is <code>"signif_div"</code>.</p>
@@ -464,7 +465,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-div-bars.png" class="img-fluid figure-img" alt="Bar chart showing diverging red to blue palette"></p>
-<p></p><figcaption class="figure-caption">Bar chart showing diverging red to blue palette</figcaption><p></p>
+<figcaption class="figure-caption">Bar chart showing diverging red to blue palette</figcaption>
 </figure>
 </div>
 <p>If you want to centre the diverging scale around a different value, you can alternatively pass the pre-defined colours from {RSSthemes} into <code>scale_fill_gradient2()</code> in {ggplot2}:</p>
@@ -480,7 +481,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-div-bars-grad.png" class="img-fluid figure-img" alt="Bar chart showing diverging red to blue palette centred at 2"></p>
-<p></p><figcaption class="figure-caption">Bar chart showing diverging red to blue palette centred at 2</figcaption><p></p>
+<figcaption class="figure-caption">Bar chart showing diverging red to blue palette centred at 2</figcaption>
 </figure>
 </div>
 <p><strong>Example</strong>: changing the theme in {ggplot2}</p>
@@ -502,7 +503,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-theme.png" class="img-fluid figure-img" alt="Bar chart with bars coloured green, yellow, blue, and orange showing custom theme"></p>
-<p></p><figcaption class="figure-caption">Bar chart styled with <code>theme_significance()</code></figcaption><p></p>
+<figcaption class="figure-caption">Bar chart styled with <code>theme_significance()</code></figcaption>
 </figure>
 </div>
 <p>If you find a bug in the {RSSthemes} package, or something that isn’t working quite as you expected, please submit a <a href="https://github.com/nrennie/RSSthemes/issues">GitHub issue</a>.</p>

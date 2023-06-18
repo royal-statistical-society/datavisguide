@@ -4,14 +4,56 @@
     "href": "about.html",
     "title": "About the authors",
     "section": "",
-    "text": "Bios and links to go here"
+    "text": "This site and its content are in development. The authors welcome feedback. Please either [insert info about raising an issue/PR/email etc.]"
+  },
+  {
+    "objectID": "about.html#andreas-krause",
+    "href": "about.html#andreas-krause",
+    "title": "About the authors",
+    "section": "Andreas Krause",
+    "text": "Andreas Krause\n\n\nAndreas Krause is…\n\nWebsite:\nTwitter:\nLinkedIn:\nMastodon:\nORCID:"
+  },
+  {
+    "objectID": "about.html#nicola-rennie",
+    "href": "about.html#nicola-rennie",
+    "title": "About the authors",
+    "section": "Nicola Rennie",
+    "text": "Nicola Rennie\n\n\nNicola Rennie is an academic, data scientist, and educator with a passion for effectively communicating data. She is a Lecturer in Health Data Science at Lancaster Medical School, where her research focuses on the use of statistical models to improve health outcomes. Her teaching experience covers topics including data visualisation, programming in R and Python, and how to effectively communicate the results of statistical analyses. Nicola is the author and maintainer of multiple R packages, and an active member of the R community - regularly presenting at R User Group Meetups and mentoring new members of the community.\n\nWebsite: nrennie.rbind.io\nTwitter: @nrennie35\nLinkedIn: linkedin.com/in/nicola-rennie-076511b3\nMastodon: @fosstodon.org/@nrennie\nORCID: orcid.org/0000-0003-4797-557X"
+  },
+  {
+    "objectID": "about.html#brian-tarran",
+    "href": "about.html#brian-tarran",
+    "title": "About the authors",
+    "section": "Brian Tarran",
+    "text": "Brian Tarran\n\n\nBrian Tarran is a writer and editor with 20 years of experience covering the research and data space. Has has worked for the Royal Statistical Society (RSS) for the past 8 years, and was editor of Significance Magazine (a joint publication of the RSS, the American Statistical Association and the Statistical Society of Australia) prior to the launch of Real World Data Science. Brian is a former editor of Research-Live.com and was launch editor of Impact magazine, both published by the Market Research Society.\n\nTwitter: @brtarran\nLinkedIn: linkedin.com/in/brian-tarran-58b0261\nMastodon: @mastodon.social/@brtarran\nGitHub: github.com/brtarran"
   },
   {
     "objectID": "docs/choosing.html",
     "href": "docs/choosing.html",
     "title": "Choosing a visualisation type",
     "section": "",
-    "text": "[to do]"
+    "text": "This site and its content are in development. The authors welcome feedback. Please either [insert info about raising an issue/PR/email etc.]"
+  },
+  {
+    "objectID": "docs/choosing.html#goals-and-audience",
+    "href": "docs/choosing.html#goals-and-audience",
+    "title": "Choosing a visualisation type",
+    "section": "Goals and audience",
+    "text": "Goals and audience\nThe process of deciding what type of data visualisation to create begins with a simple question: Why am I doing this? Data visualisations must serve a purpose so all decisions about chart type, design, layout, etc., flow from a clear understanding of the intended purpose of a graphic.\nChristian Hennig, a statistics professor at the University of Bologna, suggests working through the following questions:\n\n\nIs the aim of the graph to find something out (“analysis graph”), or to make a point to others?\nWhat do you want to find out?\nWho is the audience for the graph? (It may be yourself.)\n\n\nIdentifying the target audience at an early stage is crucial, as different groups of people are likely to have different levels of graph literacy depending on their education level, technical expertise, prior exposure to data visualisation formats, and other factors. Design decisions that do not properly account for the needs of the intended audience will fail to achieve their aims.\n\nChecklist\nBefore any design decisions are made:\n\nBe clear about the intended purpose of a data visualisation.\nUnderstand your target audience, including their needs and familiarity with different visualisation types."
+  },
+  {
+    "objectID": "docs/choosing.html#data",
+    "href": "docs/choosing.html#data",
+    "title": "Choosing a visualisation type",
+    "section": "Data",
+    "text": "Data\nSoftware tools generally allow users the flexibility to visualise data in whatever format they choose. However, decisions about chart type must be informed either by the kind of data at hand or the data relationship that is of interest. Format choice must then be further guided by audience needs, as previously discussed.\nThere are a range of online tools to help decide on a visualisation type. We recommend the following:\n\nType\nFrom Data to Viz presents users with a series of decision trees, each leading to different recommended chart formats depending on the type of data selected (numeric, categoric, etc.).\n\n\n\nScreenshot of From Data to Viz\n\n\n\n\nRelationship\nVisual Vocabulary is a site developed by the data visualisation team at the Financial Times. It allows users to narrow down the choice of chart type based on the data relationship that is “most important in your story”. Relationship options include deviation, correlation, change versus time, ranking, and more.\n\n\n\nScreenshot of Visual Vocabulary\n\n\n\n\nChecklist\n\nChoose a chart type based on either data type or data relationship.\nWhen selecting from a range of suitable chart types, keep in mind the needs of the target audience and their likely levels of graph literacy."
+  },
+  {
+    "objectID": "docs/index.html",
+    "href": "docs/index.html",
+    "title": "The guide",
+    "section": "",
+    "text": "This site and its content are in development. The authors welcome feedback. Please either [insert info about raising an issue/PR/email etc.]\n\n\n\n\n\nWhy we visualise data\n\nMotivation\nA brief history of data visualisation\n\n\n\nPrinciples and elements of visualisations\n\nElements of charts, including:\n\nLayout\nAspect ratio\nLines, points and symbols\n\nElements of tables, including:\n\nLayout\nDigits\nAlignment\n\n\n\n\nChoosing a visualisation type\n\nGoals\nTarget audience\nData types\nData relationships\n\n\n\nStyling charts for accessibility\n\nColours\nAnnotations\nFonts\nAlt Text\n\n\n\nStyling charts for RSS publications\n\nPublication specifications, including:\n\nFonts\nPage sizes\nFormats\n\nStyling with different tools, including:\n\nR\nPython\nMicrosoft Excel\n\n\n\n\nReferences\n\nPrimary sources\nRecommended reading"
   },
   {
     "objectID": "docs/principles.html",
