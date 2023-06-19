@@ -12,19 +12,22 @@ This site and its content are in development. The authors welcome feedback. Plea
 :::: {.grid}
 ::: {.g-col-12 .g-col-md-6}
 
-Andreas Krause is...
+Andreas Krause holds a PhD and an MSc in statistics and computer science. His current position is senior director, data science, modeling and simulation, at Idorsia Pharmaceuticals Ltd in Basel, Switzerland. His group provides clinical drug development teams with statistics and model-based analysis and predictions to support decision making. His works include more than 100 peer-reviewed [scientific publications](https://scholar.google.com/citations?hl=en&user=9a--8FUAAAAJ&view_op=list_works&sortby=pubdate).
 
-- Website: 
-- Twitter: 
-- LinkedIn: 
-- Mastodon: 
-- ORCID: 
+Andreas’ scientific activities include positions as co-editor of the American Statistical Association's section on [Statistical Computing and Graphics](https://community.amstat.org/jointscsg-section/home), book review editor and board member of [*Computational Statistics*](https://www.springer.com/journal/180), associate editor and editor-in-chief of [*Pharmaceutical Statistics*](https://onlinelibrary.wiley.com/page/journal/15391612/homepage/editorialboard.html), and, currently, advisory board member of *Pharmaceutical Statistics* and the [*Journal of Pharmacokinetics and Pharmacodynamics*](https://doi.org/10.1007/s10928-023-09855-x).
+
+Andreas started using the [S language](https://en.wikipedia.org/wiki/S_(programming_language)) in 1987, became European [S-PLUS](https://en.wikipedia.org/wiki/S-PLUS) distributor and supporter in 1988, and started using R in the 1990s. He is author of [*The Basics of S and S-Plus*](https://link.springer.com/search?query=the+basics+of+s&dc.creator=Andreas+Krause) (Springer, 4 editions, more than 20,000 copies sold) and editor of [*A picture is worth a thousand tables: graphics in life sciences*](https://doi.org/10.1007/978-1-4614-5329-1) (Springer, 2012).
+
+Graphics and visualisation are long-standing topics for him, including numerous presentations and workshops on "Graphics of clinical data: the good, the bad, and the ugly" at various conferences and seminars.
+
+- LinkedIn: [linkedin.com/in/andreaskrause](https://www.linkedin.com/in/andreaskrause/)
+- ORCID: [orcid.org/0000-0002-4686-976X](https://orcid.org/0000-0002-4686-976X)
 
 :::
 
 ::: {.g-col-12 .g-col-md-6}
 
-
+![](images/andreas.png){fig-align="center" fig-alt="Image of Andreas Krause" width=70%}
 
 :::
 
