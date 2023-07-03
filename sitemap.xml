@@ -2,42 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://brtarran.github.io/rssdatavisguide/about.html</loc>
-    <lastmod>2023-07-03T09:35:52.308Z</lastmod>
+    <lastmod>2023-07-03T11:39:49.338Z</lastmod>
   </url>
   <url>
     <loc>https://brtarran.github.io/rssdatavisguide/docs/choosing.html</loc>
-    <lastmod>2023-07-03T09:35:52.934Z</lastmod>
+    <lastmod>2023-07-03T11:39:50.142Z</lastmod>
   </url>
   <url>
     <loc>https://brtarran.github.io/rssdatavisguide/docs/index.html</loc>
-    <lastmod>2023-07-03T09:35:53.544Z</lastmod>
+    <lastmod>2023-07-03T11:39:50.907Z</lastmod>
   </url>
   <url>
     <loc>https://brtarran.github.io/rssdatavisguide/docs/principles.html</loc>
-    <lastmod>2023-07-03T09:35:58.026Z</lastmod>
+    <lastmod>2023-07-03T11:39:56.103Z</lastmod>
   </url>
   <url>
     <loc>https://brtarran.github.io/rssdatavisguide/docs/references.html</loc>
-    <lastmod>2023-07-03T09:35:58.482Z</lastmod>
+    <lastmod>2023-07-03T11:39:56.771Z</lastmod>
   </url>
   <url>
     <loc>https://brtarran.github.io/rssdatavisguide/docs/styling.html</loc>
-    <lastmod>2023-07-03T09:36:02.587Z</lastmod>
+    <lastmod>2023-07-03T11:40:01.333Z</lastmod>
   </url>
   <url>
     <loc>https://brtarran.github.io/rssdatavisguide/docs/tools.html</loc>
-    <lastmod>2023-07-03T09:36:06.388Z</lastmod>
+    <lastmod>2023-07-03T11:40:05.913Z</lastmod>
   </url>
   <url>
     <loc>https://brtarran.github.io/rssdatavisguide/docs/why-visualise.html</loc>
-    <lastmod>2023-07-03T09:36:07.027Z</lastmod>
+    <lastmod>2023-07-03T11:40:06.926Z</lastmod>
   </url>
   <url>
     <loc>https://brtarran.github.io/rssdatavisguide/howto.html</loc>
-    <lastmod>2023-07-03T09:36:07.576Z</lastmod>
+    <lastmod>2023-07-03T11:40:07.573Z</lastmod>
   </url>
   <url>
     <loc>https://brtarran.github.io/rssdatavisguide/index.html</loc>
-    <lastmod>2023-07-03T09:36:08.136Z</lastmod>
+    <lastmod>2023-07-03T11:40:08.189Z</lastmod>
+  </url>
+  <url>
+    <loc>https://brtarran.github.io/rssdatavisguide/ts-and-cs.html</loc>
+    <lastmod>2023-07-03T11:40:09.124Z</lastmod>
   </url>
 </urlset>

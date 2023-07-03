@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.361">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Best Practices for Data Visualisation - Terms and conditions</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./about.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./images/RSS_logo_colour.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Best Practices for Data Visualisation</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Introduction</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./howto.html" rel="" target="">
+ <span class="menu-text">How to use this guide</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./docs/index.html" rel="" target="">
+ <span class="menu-text">The guide</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">About the authors</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ts-and-cs.html">Terms and conditions</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./howto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to use this guide</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./docs/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The guide</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./docs/why-visualise.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Why we visualise data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./docs/principles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Principles and elements of visualisations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./docs/choosing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Choosing a visualisation type</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./docs/styling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Styling for accessibility</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./docs/tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Styling for RSS publications</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./docs/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About the authors</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ts-and-cs.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Terms and conditions</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#legal-disclaimer" id="toc-legal-disclaimer" class="nav-link active" data-scroll-target="#legal-disclaimer">Legal disclaimer</a></li>
+  <li><a href="#site-content" id="toc-site-content" class="nav-link" data-scroll-target="#site-content">Site content</a></li>
+  <li><a href="#what-websites-do-we-link-to" id="toc-what-websites-do-we-link-to" class="nav-link" data-scroll-target="#what-websites-do-we-link-to">What websites do we link to?</a></li>
+  <li><a href="#what-websites-will-we-not-link-to" id="toc-what-websites-will-we-not-link-to" class="nav-link" data-scroll-target="#what-websites-will-we-not-link-to">What websites will we not link to?</a></li>
+  <li><a href="#software-and-services" id="toc-software-and-services" class="nav-link" data-scroll-target="#software-and-services">Software and services</a></li>
+  <li><a href="#notice-and-takedown-policy" id="toc-notice-and-takedown-policy" class="nav-link" data-scroll-target="#notice-and-takedown-policy">Notice and Takedown policy</a></li>
+  <li><a href="#contributor-covenant-code-of-conduct" id="toc-contributor-covenant-code-of-conduct" class="nav-link" data-scroll-target="#contributor-covenant-code-of-conduct">Contributor Covenant Code of Conduct</a>
+  <ul class="collapse">
+  <li><a href="#our-pledge" id="toc-our-pledge" class="nav-link" data-scroll-target="#our-pledge">Our pledge</a></li>
+  <li><a href="#our-standards" id="toc-our-standards" class="nav-link" data-scroll-target="#our-standards">Our standards</a></li>
+  <li><a href="#enforcement-responsibilities" id="toc-enforcement-responsibilities" class="nav-link" data-scroll-target="#enforcement-responsibilities">Enforcement responsibilities</a></li>
+  <li><a href="#scope" id="toc-scope" class="nav-link" data-scroll-target="#scope">Scope</a></li>
+  <li><a href="#enforcement" id="toc-enforcement" class="nav-link" data-scroll-target="#enforcement">Enforcement</a></li>
+  <li><a href="#enforcement-guidelines" id="toc-enforcement-guidelines" class="nav-link" data-scroll-target="#enforcement-guidelines">Enforcement guidelines</a></li>
+  <li><a href="#attribution" id="toc-attribution" class="nav-link" data-scroll-target="#attribution">Attribution</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Terms and conditions</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="legal-disclaimer" class="level2">
+<h2 class="anchored" data-anchor-id="legal-disclaimer">Legal disclaimer</h2>
+<p>Statements of fact and opinion published on this website are those of the respective authors and contributors and not necessarily those of the Royal Statistical Society (RSS).</p>
+<p>The authors have prepared the content of this website responsibly and carefully. However, the authors and the RSS disclaim all warranties, express or implied, as to the accuracy of the information contained in any of the materials on this website or on other linked websites or on any subsequent links. This includes, but is not by way of limitation:</p>
+<ul>
+<li><p>any implied warranties of merchantability and fitness for a particular purpose.</p></li>
+<li><p>any liability for damage to your computer hardware, data, information, materials and business resulting from the information or the lack of information available.</p></li>
+<li><p>any errors, omissions, or inaccuracies in the information.</p></li>
+<li><p>any decision made or action taken or not taken in reliance upon the information.</p></li>
+</ul>
+<p>The authors and the RSS make no warranty as to the content, accuracy, timeliness or completeness of the information or that the information may be relied upon for any reason and bear no responsibility for the accuracy, content or legality of any linked site or for that of any subsequent links. The authors and the RSS make no warranty that the website service will be uninterrupted or error-free or that any defects can be corrected.</p>
+<p>The authors and the RSS shall not be liable for any losses or damages (including without limitation consequential loss or damage) whatsoever from the use of, or reliance on, the information in this website, or from the use of the internet generally. Links to other websites or the publication of advertisements do not constitute an endorsement or an approval by the authors and the RSS.</p>
+<p>These disclaimers and exclusions shall be governed by and construed in accordance with the laws of England and Wales under the exclusive jurisdiction of the courts of England and Wales. Those who choose to access this site from outside the United Kingdom are responsible for compliance with local laws if and to the extent local laws are applicable.</p>
+<p>By using this site, you agree to these terms and conditions of use.</p>
+</section>
+<section id="site-content" class="level2">
+<h2 class="anchored" data-anchor-id="site-content">Site content</h2>
+<p>This guide is copyright © 2023 Andreas Krause, Nicola Rennie and the Royal Statistical Society. Unless otherwise stated, all copyright content in this guide is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1">Creative Commons Attribution 4.0 (CC BY 4.0) International licence</a>, meaning it can be used and adapted for any purpose, provided attribution is given to the original authors.</p>
+<p>We make every reasonable effort to locate, contact and acknowledge copyright owners and wish to be informed by any copyright owners who are not properly identified and acknowledged on this website so that we may make any necessary corrections.</p>
+</section>
+<section id="what-websites-do-we-link-to" class="level2">
+<h2 class="anchored" data-anchor-id="what-websites-do-we-link-to">What websites do we link to?</h2>
+<p>Authors and contributors recommend external web links on the basis of their suitability and usefulness for our users. Selection and addition of links to our website is entirely a matter for the authors and the authors alone.</p>
+<p>It is not our policy to enter into agreements for reciprocal links.</p>
+<p>The inclusion of a link to an organisation’s or individual’s website does not constitute an endorsement or an approval by the authors and the RSS of any product, service, policy or opinion of the organisation or individual. The authors and the RSS are not responsible for the content of external websites.</p>
+</section>
+<section id="what-websites-will-we-not-link-to" class="level2">
+<h2 class="anchored" data-anchor-id="what-websites-will-we-not-link-to">What websites will we not link to?</h2>
+<p>We will not link to websites that contain racist, sexual or misleading content; that promote violence; that are in breach of any UK law; which are otherwise offensive to individuals or to groups of people.</p>
+<p>The decision of the authors is final and no correspondence will be entered into.</p>
+<p>If you wish to report a concern, please email <a href="mailto:b.tarran@rss.org.uk">b.tarran@rss.org.uk</a></p>
+</section>
+<section id="software-and-services" class="level2">
+<h2 class="anchored" data-anchor-id="software-and-services">Software and services</h2>
+<p>Source code and files for this site are available from <a href="https://github.com/brtarran/rssdatavisguide">GitHub</a>. Use of our GitHub repository is governed by the <a href="#contributor-covenant-code-of-conduct">Contributor Covenant Code of Conduct</a>.</p>
+<p>This site is built using <a href="https://quarto.org/">Quarto</a>, an open-source scientific and technical publishing system developed by <a href="https://posit.co/">Posit</a>. Quarto source code and software licences are available from <a href="https://github.com/quarto-dev">GitHub</a>.</p>
+<p>This site is hosted by <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+<p>This site uses <a href="https://support.google.com/analytics/answer/10089681?hl=en">Google Analytics 4</a> for web analytics reporting.</p>
+<p>User comments and reaction functionality is provided by <a href="https://giscus.app/">giscus</a>, a comments system powered by <a href="https://docs.github.com/en/discussions">GitHub Discussions</a>. Use of this comment functionality is governed by the <a href="#contributor-covenant-code-of-conduct">Contributor Covenant Code of Conduct</a>.</p>
+</section>
+<section id="notice-and-takedown-policy" class="level2">
+<h2 class="anchored" data-anchor-id="notice-and-takedown-policy">Notice and Takedown policy</h2>
+<p>If you are a rights holder and are concerned that you have found material on our site for which you have not given permission, or is not covered by a limitation or exception in national law, please contact us in writing stating the following:</p>
+<ol type="1">
+<li>Your contact details.</li>
+<li>The full bibliographic details of the material.</li>
+<li>The exact and full url where you found the material.</li>
+<li>Proof that you are the rights holder and a statement that, under penalty of perjury, you are the rights holder or are an authorised representative.</li>
+</ol>
+<p><strong>Contact details:</strong><br>
+Notice and Takedown,<br>
+Licensing,<br>
+12 Errol Street,<br>
+London EC1Y 8LX<br>
+web@rss.org.uk</p>
+<p>Upon receipt of notification, the ‘Notice and Takedown’ procedure is then invoked as follows:</p>
+<ol type="1">
+<li>We will acknowledge receipt of your complaint by email or letter and will make an initial assessment of the validity and plausibility of the complaint.</li>
+<li>Upon receipt of a valid complaint the material will be temporarily removed from our website pending an agreed solution.</li>
+<li>We will contact the contributor who deposited the material, if relevant. The contributor will be notified that the material is subject to a complaint, under what allegations, and will be encouraged to assuage the complaints concerned.</li>
+<li>The complainant and the contributor will be encouraged to resolve the issue swiftly and amicably and to the satisfaction of both parties, with the following possible outcomes:
+<ul>
+<li>The material is replaced on our website unchanged.</li>
+<li>The material is replaced on our website with changes.</li>
+<li>The material is permanently removed from our website.</li>
+</ul></li>
+</ol>
+<p>If the contributor and the complainant are unable to agree a solution, the material will remain unavailable through the website until a time when a resolution has been reached.</p>
+</section>
+<section id="contributor-covenant-code-of-conduct" class="level2">
+<h2 class="anchored" data-anchor-id="contributor-covenant-code-of-conduct">Contributor Covenant Code of Conduct</h2>
+<section id="our-pledge" class="level3">
+<h3 class="anchored" data-anchor-id="our-pledge">Our pledge</h3>
+<p>We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.</p>
+<p>We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.</p>
+</section>
+<section id="our-standards" class="level3">
+<h3 class="anchored" data-anchor-id="our-standards">Our standards</h3>
+<p>Examples of behavior that contributes to a positive environment for our community include:</p>
+<ul>
+<li>Demonstrating empathy and kindness toward other people</li>
+<li>Being respectful of differing opinions, viewpoints, and experiences</li>
+<li>Giving and gracefully accepting constructive feedback</li>
+<li>Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience</li>
+<li>Focusing on what is best not just for us as individuals, but for the overall community</li>
+</ul>
+<p>Examples of unacceptable behavior include:</p>
+<ul>
+<li>The use of sexualized language or imagery, and sexual attention or advances of any kind</li>
+<li>Trolling, insulting or derogatory comments, and personal or political attacks</li>
+<li>Public or private harassment</li>
+<li>Publishing others’ private information, such as a physical or email address, without their explicit permission</li>
+<li>Other conduct which could reasonably be considered inappropriate in a professional setting</li>
+</ul>
+</section>
+<section id="enforcement-responsibilities" class="level3">
+<h3 class="anchored" data-anchor-id="enforcement-responsibilities">Enforcement responsibilities</h3>
+<p>Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.</p>
+<p>Community leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.</p>
+</section>
+<section id="scope" class="level3">
+<h3 class="anchored" data-anchor-id="scope">Scope</h3>
+<p>This Code of Conduct applies within all community spaces (encompassing this site and our GitHub repository). It also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.</p>
+<p>Note that unless prior permission is agreed in writing with the RSS, only the lead authors (Andreas Krause, Nicola Rennie, and Brian Tarran) may officially represent the community. Comment to the media must only be given by appointed representatives and must be approved by the RSS press office.</p>
+</section>
+<section id="enforcement" class="level3">
+<h3 class="anchored" data-anchor-id="enforcement">Enforcement</h3>
+<p>Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at <a href="mailto:b.tarran@rss.org.uk">b.tarran@rss.org.uk</a>. All complaints will be reviewed and investigated promptly and fairly.</p>
+<p>All community leaders are obligated to respect the privacy and security of the reporter of any incident.</p>
+</section>
+<section id="enforcement-guidelines" class="level3">
+<h3 class="anchored" data-anchor-id="enforcement-guidelines">Enforcement guidelines</h3>
+<p>Community leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:</p>
+<section id="correction" class="level4">
+<h4 class="anchored" data-anchor-id="correction">1. Correction</h4>
+<p><strong>Community Impact</strong>: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.</p>
+<p><strong>Consequence</strong>: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested.</p>
+</section>
+<section id="warning" class="level4">
+<h4 class="anchored" data-anchor-id="warning">2. Warning</h4>
+<p><strong>Community Impact</strong>: A violation through a single incident or series of actions.</p>
+<p><strong>Consequence</strong>: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.</p>
+</section>
+<section id="temporary-ban" class="level4">
+<h4 class="anchored" data-anchor-id="temporary-ban">3. Temporary Ban</h4>
+<p><strong>Community Impact</strong>: A serious violation of community standards, including sustained inappropriate behavior.</p>
+<p><strong>Consequence</strong>: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.</p>
+</section>
+<section id="permanent-ban" class="level4">
+<h4 class="anchored" data-anchor-id="permanent-ban">4. Permanent Ban</h4>
+<p><strong>Community Impact</strong>: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.</p>
+<p><strong>Consequence</strong>: A permanent ban from any sort of public interaction within the community.</p>
+</section>
+</section>
+<section id="attribution" class="level3">
+<h3 class="anchored" data-anchor-id="attribution">Attribution</h3>
+<p>This Code of Conduct is adapted from the <a href="https://www.contributor-covenant.org">Contributor Covenant</a>, version 2.1, available at <a href="https://www.contributor-covenant.org/version/2/1/code_of_conduct.html" class="uri">https://www.contributor-covenant.org/version/2/1/code_of_conduct.html</a>.</p>
+<p>Community Impact Guidelines were inspired by <a href="https://github.com/mozilla/diversity">Mozilla’s code of conduct enforcement ladder</a>.</p>
+<p>For answers to common questions about this code of conduct, see the FAQ at <a href="https://www.contributor-covenant.org/faq" class="uri">https://www.contributor-covenant.org/faq</a>. Translations are available at <a href="https://www.contributor-covenant.org/translations" class="uri">https://www.contributor-covenant.org/translations</a>.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./about.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">About the authors</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
