@@ -89,7 +89,7 @@ The Paris Exposition in 1900 featured W. E. B. Du Bois exhibiting graphs, charts
 [![](images/du-bois.jpg)](images/du-bois.jpg)
 
 ::: figure-caption
-A series of statistical charts illustrating the condition of the descendants of former African slaves now in residence in the United States of America. Drawing, ca. 1900. //hdl.loc.gov/loc.pnp/ppmsca.33899. **Source:** [Library of Congress](https://blogs.loc.gov/picturethis/2014/02/du-boiss-american-negro-exhibit-for-the-1900-paris-exposition/)
+A series of statistical charts illustrating the condition of the descendants of former African slaves now in residence in the United States of America. Drawing, ca. 1900. //hdl.loc.gov/loc.pnp/ppmsca.33899. Source: [Library of Congress](https://blogs.loc.gov/picturethis/2014/02/du-boiss-american-negro-exhibit-for-the-1900-paris-exposition/).
 :::
 
 Groundbreaking work in modern visualisation was provided by Tukey with his book *Exploratory Data Analysis* (Tukey, 1970), and Edward Tufte (Tufte, 1990; Tufte, 2004; Tufte, 2006).
