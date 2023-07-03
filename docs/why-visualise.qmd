@@ -8,7 +8,7 @@ This site and its content are in development. The authors welcome feedback. Plea
 
 ## Motivation
 
-Data visualisations can be a very efficient means of identifying patterns in data and conveying a message. The scientific aim of any visualisation is to allow the reader to understand data:
+Data visualisations can be a very efficient means of identifying patterns in data and conveying a message. The scientific aim of any visualisation is to allow the reader to understand data and extract information:
 
 -   intuitively;
 
@@ -16,13 +16,15 @@ Data visualisations can be a very efficient means of identifying patterns in dat
 
 -   accurately. 
 
-If designed and executed successfully, a data visualisation will:
+It is important, when creating a visualisation, to consider the background of the reader or intended audience (Krause, 2013). Interpretation is in the eye of the beholder, and a visualisation will only succeed at conveying its message if designed with its audience in mind.
+
+A successful data visualisation will:
 
 -   
 
     Grab attention
 
-    :   In a sea of text, a visualisation will stand out. If a reader is short of time or not convinced that the content might be interesting, visuals are frequently key in deciding whether or not to study the entire document.
+    :   In a sea of text, a visualisation will stand out. If a reader is short on time or uncertain about whether a document is of interest, an attention-grabbing visualisation may entice them to start reading.
 
 -   
 
@@ -38,9 +40,9 @@ If designed and executed successfully, a data visualisation will:
 
 -   
 
-    Add credibility
+    Bolster credibility
 
-    :   While a textual summary provides a story, a visualisation of the data themselves can add credibility to otherwise unsubstantiated claims about the data: readers can see the numbers for themselves and arrive at the same conclusions.
+    :   While a textual summary provides a story, a visualisation of the data can add credibility to otherwise unsubstantiated claims: readers can see the numbers for themselves and arrive at the (same?) conclusions.
 
 -   
 
@@ -48,28 +50,58 @@ If designed and executed successfully, a data visualisation will:
 
     :   Visual displays allow for summarising complex textual content, aiding the reader in memorising key points.
 
-For these reasons, data visualisations are key elements in almost any kind of publication -- scientific papers, media reports, conference presentations, etc.
+For these reasons, data visualisations are key elements in almost any kind of publication -- scientific papers, media reports, conference presentations, social media posts, video summaries, etc.
 
 Tables, too, are a way to visualise data or statistics, and can be similarly important components of a publication. A table may in some cases visualise data better than a graphic. For example, five numbers are probably better displayed in a table than in a complex pie chart that uses colours, angles, and possibly shading and more than two dimensions. 
 
 ## A brief history of data visualisation
 
-Visualisation in itself has been a topic of scientific research for a long time. An early visualisation was created by Minard in 1861, depicting [data from Napoleon's march on Moscow](https://academic.oup.com/jrssig/article/5/3/133/7029764) in 1812/13 and his subsequent retreat (below).
+Data visualisation has been, for a long time, both a topic of scientific research and an evolving art form.
+
+In 1859, [Florence Nightingale](https://en.wikipedia.org/wiki/Florence_Nightingale), the founder of modern nursing, published her findings on the sanitary status of the British army during the war with Russia. She showed raw data as well as summary statistics in tables and charts (Nightingale, 1859). One chart in particular continues to be celebrated today: a polar area chart on the "causes of mortality in the army in the East" (below).
+
+[![](images/Nightingale-mortality.jpg)](images/Nightingale-mortality.jpg)
+
+::: figure-caption
+Florence Nightingale's polar area chart, "Diagram of the causes of mortality in the army in the East". Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Nightingale-mortality.jpg).
+:::
+
+"\[W\]hat made Nightingale's graphs particularly iconic," according to [Dr Alison Hedley](https://academic.oup.com/jrssig/article/17/2/26/7029585) "was their powerful use of visual rhetoric to make an argument about data." This quality is also evident in other visualisations produced by Nightingale's contemporaries.
+
+For example, a simplistic but rather impactful visualisation of the water pumps in London associated with transmission of cholera paved the way for root cause identification (Snow, 1854).
+
+[![](images/Snow-cholera-map.jpg)](images/Snow-cholera-map.jpg)
+
+::: figure-caption
+Map by John Snow showing clusters of cholera cases in the London epidemic of 1854. Source: [Wikimedia Commons](https://en.wikipedia.org/wiki/File:Snow-cholera-map-1.jpg).
+:::
+
+And an early complex visualisation was created by Minard in 1861, depicting [data from Napoleon's march on Moscow](https://academic.oup.com/jrssig/article/5/3/133/7029764) in 1812/13 and his subsequent retreat (below). The map shows latitude and longitude of the army as it moved. The line shows the direction of movement, and the line width represents the size of the army (the surviving soldiers). Particular locations were marked by the date of the army presence, and the temperature is shown, too. Six variables were elegantly woven into a single display ( Tufte, 2001; Corbett, 2001; Robinson, 1967).
 
 [![](images/minard.png)](images/minard.png)
 
 ::: figure-caption
-**Source:** [Wikimedia Commons](https://en.wikipedia.org/wiki/File:Minard.png)
+Charles Minard's 1869 map of "the successive losses in men of the French Army in the Russian campaign 1812--1813". Source: [Wikimedia Commons](https://en.wikipedia.org/wiki/File:Minard.png).
 :::
 
-The map shows latitude and longitude of the army as it moved. The line shows the direction of the move, and the line width represents the size of the army (the surviving soldiers). Particular locations were marked by the date of the army presence, and the temperature is shown, too. Six variables were elegantly woven into a single display (References: Tufte, The visual display of quantitative information; Corbett, Charles Joseph Minard, Mapping Napoleon's March; Robinson AH, The thematic maps of Charles Joseph Minard).
+The Paris Exposition in 1900 featured W. E. B. Du Bois exhibiting graphs, charts, and maps of how Black Americans were living (Du Bois, 1900; Battle-Baptiste and Rusert, 2018).
 
-Data were visualised by hand until computers came along. The first monitors and printers worked in text mode only, with a resolution of 25 rows and 80 columns or similar, which did not permit much detail or precision. Graphics terminals and printers followed, and resolutions kept increasing with the development of laser printers.
+[![](images/du-bois.jpg)](images/du-bois.jpg)
 
-Statistical systems such as SAS enabled creation of data visualisations early on (reference to an early manual or other work needed).
+::: figure-caption
+A series of statistical charts illustrating the condition of the descendants of former African slaves now in residence in the United States of America. Drawing, ca. 1900. //hdl.loc.gov/loc.pnp/ppmsca.33899. **Source:** [Library of Congress](https://blogs.loc.gov/picturethis/2014/02/du-boiss-american-negro-exhibit-for-the-1900-paris-exposition/)
+:::
 
-Arguably the most consistent implementation of a graphics system was realised with ggplot (Wickham, 2011) based on Wilkinson's "The Grammar of Graphics" (2005).
+Groundbreaking work in modern visualisation was provided by Tukey with his book *Exploratory Data Analysis* (Tukey, 1970), and Edward Tufte (Tufte, 1990; Tufte, 2004; Tufte, 2006).
 
-A key component of ggplot2 is the feature of creating conditional displays. These allow for subsetting the data by the values of one or more variables. The concept was introduced by Cleveland (1993), showcasing a widely-known barley data set that was analysed in textbooks for decades until a visualisation strongly suggested an error in the data set -- two years of crop yield of one variety at one of six farms were accidentally swapped. It took a visualisation to reveal what numerous numerical analyses had missed!
+The historical development of visualisations is provided in various publications by Michael Friendly (Friendly and Denis, 2005; Friendly, 2018; Friendly, 2022).
 
-Cleveland named the display type "trellis", being inspired by a trellis in his garden (Cleveland, 1993). The trellis concept was first implemented in S (Becker and Chambers, 1984) and S-PLUS (**ref**). When R (ref) was developed by Robert Gentleman and Ross Ihaka in Auckland NZ in the 1980s, a package named `lattice` was developed (Sarkar 2008) since "trellis" carried a trademark (by Lucent and later MathSoft). With the advent of ggplot, the term faceting (with functions facet_grid and facet_wrap) replaced the "lattice" with its "panels".
+Data were visualised by hand until computers came along. The first monitors and printers worked in text mode only, with a resolution of 25 rows and 80 columns or similar, which did not permit much detail or precision. Graphics terminals and dot matrix printers followed, and resolutions kept increasing with the development of laser printers.
+
+Statistical systems such as SAS enabled creation of data visualisations early on (SAS).
+
+Arguably the most consistent implementation of a graphics system was realised with ggplot (Wickham, 2011; Wickham, 2016) based on Wilkinson's "The Grammar of Graphics" (Wilkinson, 2005).
+
+A key component of ggplot2 is the feature of creating conditional displays. These allow for subsetting the data by the values of one or more variables. The concept was introduced by Cleveland (Cleveland, 1993; Cleveland, 1994), showcasing a widely-known barley data set that was analysed in textbooks for decades until a visualisation strongly suggested an error in the data set -- two years of crop yield of one variety at one of six farms were accidentally swapped. It took a visualisation to reveal what numerous numerical analyses had missed!
+
+Cleveland named the display type "trellis", being inspired by a trellis in his garden (Cleveland, 1993). The trellis concept was first implemented in S (Becker and Chambers, 1984) and S-PLUS (Becker and Cleveland, 1996). When R (R core team, 2021) was developed by Robert Gentleman and Ross Ihaka in Auckland NZ in the 1980s, a package named `lattice` was developed (Sarkar, 2008) since "trellis" carried a trademark (by Lucent and later MathSoft). With the advent of ggplot, the term faceting (with functions facet_grid and facet_wrap) replaced the "lattice" with its "panels".
