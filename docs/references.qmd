@@ -64,41 +64,33 @@ Wickham H. ggplot2. Create elegant data visualisations using the grammar of grap
 
 Wilkinson, L. (2005) The Grammar of Graphics. New York: Springer-Verlag (Statistics and Computing). Available at: <https://doi.org/10.1007/0-387-28695-0>.
 
-::: {#refs}
-:::
-
 ### Additional Reading
 
 #### Functional Aesthetics for Data Visualization. 
-Vidya Setlur and Bridget Cogley. Wiley. 2022.
+@Setlur2022
 
 Why we recommend: *This book connects research and practice, combining ideas from cognitive psychology, data literacy, and visual design. Its ideas go beyond simple charts, and can be extending to complex visual displays including interactive dashboards and visualisations.*
 
-Link: [www.functionalaestheticsbook.com](https://www.functionalaestheticsbook.com/)
-
-
 
 #### Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks.
-Jonathan Schwabish. Columbia University Press. 2021.
+@Schwabish2021
 
 Why we recommend: *This book guides you towards which types of data visualisations may best depending on what you’re trying to show. Not only that, but it uses visual perception theory to explain why some charts are easier to read than others.*
 
-Link: [www.jstor.org/stable/10.7312/schw19310](https://www.jstor.org/stable/10.7312/schw19310)
-
-
 
 #### Data Feminism. 
-Catherine D'Ignazio and Lauren F. Klein. MIT Press. 2020.
+@DIgnazio2020
 
 Why we recommend: *We often hear the term “storytelling” when we’re talking about data visualisation, and we should remember the role of the storyteller in this. In this book, the authors make several critical points, including that when we work with data we must also think about why it was collected, and what it could be used for.*
 
-Link: [mitpress.mit.edu/9780262547185/data-feminism](https://mitpress.mit.edu/9780262547185/data-feminism/)
-
 
 #### Preference for and understanding of graphs presenting health risk information. The role of age, health literacy, numeracy and graph literacy.
-Julia C.M. van Weert, Monique C. Alblas,  Liset van Dijk, and Jesse Jansen. Patient Education and Counseling. Volume 104, Issue 1, January 2021, Pages 109-117. 
+@VanWeert2021
 
 Why we recommend: *Patients are often presented with data about health risk information in the form in charts and tables. This article examines how well patients understand the information presented to them across a range of different chart types. It finds that the types of charts that patients prefer, is not always the type of chart that they understand best.*
 
-Link: [www.sciencedirect.com/science/article/pii/S0738399120303499](https://www.sciencedirect.com/science/article/pii/S0738399120303499)
+### References
+
+::: {#refs}
+:::
 
