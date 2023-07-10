@@ -64,6 +64,8 @@ Wickham H. ggplot2. Create elegant data visualisations using the grammar of grap
 
 Wilkinson, L. (2005) The Grammar of Graphics. New York: Springer-Verlag (Statistics and Computing). Available at: <https://doi.org/10.1007/0-387-28695-0>.
 
+::: {#refs}
+:::
 
 ### Additional Reading
 
