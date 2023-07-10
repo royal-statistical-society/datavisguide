@@ -2,7 +2,7 @@
 title: Styling charts for RSS publications
 format:
   html:
-    code-fold: true
+    code-fold: false
     code-tools: true
 execute: 
   eval: false
