@@ -196,31 +196,6 @@ ggplot(data = plot_df,
 
 If you find a bug in the {RSSthemes} package, or something that isn't working quite as you expected, please submit a [GitHub issue](https://github.com/nrennie/RSSthemes/issues).
 
-### Python
-
-[Python](https://www.python.org/) is a general-purpose programming language, with libraries available that provide capabilities for data analysis and visualisation.
-
-#### Matplotlib
-
-[Matplotlib](https://matplotlib.org/) is a Python library for creating static, animated, and interactive data visualisations.
-
-**Example**: changing bar chart colours in matplotlib
-
-```{{python}}
-```
-
-**Example**: changing the font family in matplotlib
-
-```{{python}}
-```
-
-### Microsoft Excel
-
-Microsoft Excel is a spreadsheet developed by Microsoft which features tools for making graphics, among other capabilities including performing calculations and statistical analysis.
-
-**Example**: changing the colours in Microsoft Excel
-
-**Example**: changing the colours in Microsoft Excel
 
 ## Publication specifications
 
