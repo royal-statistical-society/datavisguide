@@ -86,7 +86,7 @@ ggplot(
 
 Colour choices can strongly impact the accessibility of your data visualisation. The correct use of colour can also help to emphasise the story you are trying to tell.
 
-Before you get into choosing colours, ask yourself the question: do I really need to use colour here? [Beecham et al](https://www.mdpi.com/2220-9964/10/4/213) showed that the use of colour is one of the least effective methods for visually communicating differences between variables. Charts become both more accessible and more intuitive when using fewer colours.
+Before you get into choosing colours, ask yourself the question: do I really need to use colour here? @Beecham2021 showed that the use of colour is one of the least effective methods for visually communicating differences between variables. Charts become both more accessible and more intuitive when using fewer colours.
 
 ```{r}
 library(dplyr)
@@ -299,7 +299,7 @@ ggplot(
 
 When choosing a particular colour palette, there are several important factors to consider.
 
-Colours should be distinct from each other, for all readers. There are several different forms of colour blindness which can cause some colours to appear indistinguishable. The use of a [colour blind checker](https://www.color-blindness.com/coblis-color-blindness-simulator/) can show you what your plots may look like under different types of colour blindness. This is particularly important for diverging and qualitative palettes where the distinction between hues is used to tell apart different values. In contrast, sequential palettes often use luminosity to show how values change. [Paul Tol](https://personal.sron.nl/~pault/) has some very useful resources on choices of colours, and several suggested palettes.
+Colours should be distinct from each other, for all readers. There are several different forms of colour blindness which can cause some colours to appear indistinguishable. The use of a [colour blind checker](https://www.color-blindness.com/coblis-color-blindness-simulator/) [@Colblindor] can show you what your plots may look like under different types of colour blindness. This is particularly important for diverging and qualitative palettes where the distinction between hues is used to tell apart different values. In contrast, sequential palettes often use luminosity to show how values change. [Paul Tol](https://personal.sron.nl/~pault/) [@Tol2021] has some very useful resources on choices of colours, and several suggested palettes.
 
 ```{r}
 library(ggplot2)
@@ -362,7 +362,7 @@ cvd_grid(g)
 
 Colours should appear distinct from each other when printed in black and white. Readers, or indeed academic journals, may choose to print your visualisations in monochrome. Colours that seem visually distinct that have similar luminosity (a measure of how light or dark a hue is) may appear indistinguishable when printed in black and white.
 
-Colours should appropriately match your data. It's important not to play into stereotypes, e.g., choosing pink and blue for data relating to women and men. Don't confuse your readers by flipping common colour associations around, e.g., red for good and green for bad. Lisa Muth wrote an [article for Datawrapper](https://blog.datawrapper.de/gendercolor/) discussing the use of colour to display gender data, and many of the points can be extended to other types of data.
+Colours should appropriately match your data. It's important not to play into stereotypes, e.g., choosing pink and blue for data relating to women and men. Don't confuse your readers by flipping common colour associations around, e.g., red for good and green for bad. @Muth2018 discusses the use of colour to display gender data, and many of the points can be extended to other types of data.
 
 ### Checklist
 
@@ -468,11 +468,8 @@ The placement of annotations is also key:
 
 -   In a scatter plot, directly labelling every data point isn't usually an option as there are too many points to label without clutter. Instead, you may choose to highlight only one or two interesting points, such as outliers.
 -   When adding more extensive text to explain an outlier or point of interest, place the text in a relevant position. For example, if you're annotating a line chart to explain a decrease in value in 2008, position the text near to 2008.
--   Don't fill every white space with text. The ONS recommends [a maximum of 3 or 4 annotations per chart](https://style.ons.gov.uk/data-visualisation/titles-and-text/annotation-and-footnotes/) to avoid overwhelming readers. This also means keeping annotations brief and to the point. This is especially true for data visualisations that accompany journal publications or magazine articles where further textual explanation is likely included already.
+-   Don't fill every white space with text. @ONSstyle recommends [a maximum of 3 or 4 annotations per chart](https://style.ons.gov.uk/data-visualisation/titles-and-text/annotation-and-footnotes/) to avoid overwhelming readers. This also means keeping annotations brief and to the point. This is especially true for data visualisations that accompany journal publications or magazine articles where further textual explanation is likely included already.
 
-When choosing the font size, family, face, and colour of the annotation text, the same advice applies as given in the previous sections. It's particularly important to check there is sufficient contrast between the background colour and the text colour.
-
-<!-- Should the above para be moved to later in the text, as font family, etc., isn't discussed until the next section? -->
 
 ### Checklist
 
@@ -482,9 +479,9 @@ When choosing the font size, family, face, and colour of the annotation text, th
 
 ## Fonts
 
-Font choice is a key component of making your data visualisations easy to understand. Some fonts are easier to read than others, and this is particularly true for those with visual impairments, or a learning disability such as dyslexia. A poor choice of font may make your visualisation inaccessible to a significant number of people in your audience.
+Font choice is a key component of making your data visualisations easy to understand. Some fonts are easier to read than others, and this is particularly true for those with visual impairments, or a learning disability such as dyslexia. A poor choice of font may make your visualisation inaccessible to a significant number of people in your audience. 
 
-Try to minimise the number of different types of font you use: use a fixed set of sizes, a maximum of two different font families, and minimise the use of mixing font faces. This all helps to reduce unnecessary work from a reader when they look at your visualisation.
+Try to minimise the number of different types of font you use: use a fixed set of sizes, a maximum of two different font families, and minimise the use of mixing font faces. This all helps to reduce unnecessary work from a reader when they look at your visualisation. Previous advice relating to choice of colour is also relevant here - it's particularly important to check there is sufficient contrast between the background colour and the text colour.
 
 ### Font size
 
@@ -519,4 +516,4 @@ As you can see, there is no single font recommendation that will ensure your vis
 
 Alt text (short for alternative text) is text that describes the visual aspects and purpose of an image -- including charts. Though alt text has various uses, its primary purpose is to aid visually impaired users in interpreting images when the alt text is read aloud by screen readers.
 
-In a recent [*Significance* magazine article](https://academic.oup.com/jrssig/article/20/1/38/7034177), Mine Dogucu discussed the importance of adding alt text to your data visualisations, to ensure those who are blind or visually impaired don't miss out on the content in your charts. This [Medium article](https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81) by Amy Cesal provides a simple structure to aid you in writing alt text for data visualisations.
+In @Green2023, Mine Dogucu discusses the importance of adding alt text to your data visualisations, to ensure those who are blind or visually impaired don't miss out on the content in your charts. @Cesal2020 provides a simple structure to aid you in writing alt text for data visualisations.
