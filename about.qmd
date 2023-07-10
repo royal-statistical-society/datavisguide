@@ -42,7 +42,7 @@ Nicola Rennie is an academic, data scientist, and educator with a passion for ef
 
 - Website: [nrennie.rbind.io](https://nrennie.rbind.io/)
 - Twitter: [@nrennie35](https://twitter.com/nrennie35)
-- LinkedIn: [linkedin.com/in/nicola-rennie-076511b3](https://www.linkedin.com/in/nicola-rennie-076511b3/)
+- LinkedIn: [linkedin.com/in/nicola-rennie](https://www.linkedin.com/in/nicola-rennie/)
 - Mastodon: [@fosstodon.org/@nrennie](https://fosstodon.org/@nrennie)
 - ORCID: [orcid.org/0000-0003-4797-557X](https://orcid.org/0000-0003-4797-557X)
 
