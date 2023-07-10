@@ -1,5 +1,7 @@
 project:
   type: website
+  
+bibliography: references.bib
 
 website:
   title: "Best Practices for Data Visualisation"
