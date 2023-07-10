@@ -196,6 +196,80 @@ ggplot(data = plot_df,
 
 If you find a bug in the {RSSthemes} package, or something that isn't working quite as you expected, please submit a [GitHub issue](https://github.com/nrennie/RSSthemes/issues).
 
+### Python
+
+[Python](https://www.python.org/) is a general-purpose programming language, with libraries available that provide capabilities for data analysis and visualisation.
+
+#### Matplotlib
+
+[Matplotlib](https://matplotlib.org/) is a Python library for creating static, animated, and interactive data visualisations.
+
+**Example**: changing bar chart colours in matplotlib
+
+You can change the colour of chart elements in matplotlib using the `color` argument:
+
+```{python}
+#| message: false
+#| eval: false
+import matplotlib.pyplot as plt
+# generate data
+x_vals = ['A', 'B', 'C', 'D']
+y_vals = [1, 2, 3, 4]
+# create barchart
+plt.bar(x_vals, y_vals, color = "#009cc4")
+plt.show()
+```
+
+![Bar chart with bars coloured in Significance blue.](images/tools-blue-py.png){fig-alt="Bar charts visualising plant growth of average hght for different treatments with user specified colours red, blue, and dark green."}
+
+If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:
+
+```{python}
+#| message: false
+#| eval: false
+# define colour palette
+signif_qual = ['#3fa535', '#f4c100', '#009cc4', '#f07d00']
+# create barchart
+plt.bar(x_vals, y_vals, label = x_vals, color = signif_qual)
+plt.show()
+```
+
+![Bar chart showing the colours from the `signif_qual` palette](images/tools-qual-py.png){fig-alt="Barchart showing the colours from signif_qual"}
+
+**Example**: changing the font family in matplotlib
+
+You can change the font used in all elements of the plot using `rcParams`. Good practice when setting a custom font family is to add a generic font family (such as sans serif) as a back up. If you're using a font that isn't pre-installed on your system, you can load it in using `font_manager`:
+
+```{python}
+#| message: false
+#| eval: false
+from matplotlib import font_manager
+font_manager.fontManager.addfont("SourceSans3-Regular.ttf")
+```
+
+You can specify a different font family, weight, or size using `fontdic` for individual elements.
+
+```{python}
+#| message: false
+#| eval: false
+# define fonts
+from matplotlib import rcParams
+rcParams['font.family'] = ['Source Sans 3', 'sans-serif']
+
+# create barchart
+fig, ax = plt.subplots(1, 1)
+plt.bar(x_vals, y_vals, color = signif_qual, label = x_vals)
+plt.title('My Significance Plot', fontdict = {'fontsize':14}, loc = 'left')
+# add grid lines lines
+ax.set_axisbelow(True)
+ax.xaxis.grid(color = 'lightgrey')
+ax.yaxis.grid(color = 'lightgrey')
+# add legend below plot
+ax.legend(ncol = 4, loc = 'lower center', bbox_to_anchor = (0.5, -0.15), frameon = False)
+plt.show()
+```
+
+![Barchart showing the use of Source Sans font](images/tools-py-font.png){fig-alt="Barchart showing the use of Source Sans font."}
 
 ## Publication specifications
 
