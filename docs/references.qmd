@@ -66,25 +66,26 @@ Wilkinson, L. (2005) The Grammar of Graphics. New York: Springer-Verlag (Statist
 
 ### Additional Reading
 
-#### Functional Aesthetics for Data Visualization. 
+#### Functional Aesthetics for Data Visualization.
+
 @Setlur2022
 
 Why we recommend: *This book connects research and practice, combining ideas from cognitive psychology, data literacy, and visual design. Its ideas go beyond simple charts, and can be extending to complex visual displays including interactive dashboards and visualisations.*
 
-
 #### Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks.
+
 @Schwabish2021
 
-Why we recommend: *This book guides you towards which types of data visualisations may best depending on what you’re trying to show. Not only that, but it uses visual perception theory to explain why some charts are easier to read than others.*
+Why we recommend: *This book guides you towards which types of data visualisations may best depending on what you're trying to show. Not only that, but it uses visual perception theory to explain why some charts are easier to read than others.*
 
+#### Data Feminism.
 
-#### Data Feminism. 
 @DIgnazio2020
 
-Why we recommend: *We often hear the term “storytelling” when we’re talking about data visualisation, and we should remember the role of the storyteller in this. In this book, the authors make several critical points, including that when we work with data we must also think about why it was collected, and what it could be used for.*
-
+Why we recommend: *We often hear the term "storytelling" when we're talking about data visualisation, and we should remember the role of the storyteller in this. In this book, the authors make several critical points, including that when we work with data we must also think about why it was collected, and what it could be used for.*
 
 #### Preference for and understanding of graphs presenting health risk information. The role of age, health literacy, numeracy and graph literacy.
+
 @VanWeert2021
 
 Why we recommend: *Patients are often presented with data about health risk information in the form in charts and tables. This article examines how well patients understand the information presented to them across a range of different chart types. It finds that the types of charts that patients prefer, is not always the type of chart that they understand best.*
@@ -93,4 +94,3 @@ Why we recommend: *Patients are often presented with data about health risk info
 
 ::: {#refs}
 :::
-
