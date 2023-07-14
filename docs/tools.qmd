@@ -28,12 +28,14 @@ To help authors with styling their charts to fit in with the guidance in this do
 We aim to add this package to CRAN in the near future, but in the meantime you can install the development version from GitHub:
 
 ```{r}
+#| code-fold: false
 remotes::install_github("nrennie/RSSthemes")
 ```
 
 You can then load the package using:
 
 ```{r}
+#| code-fold: false
 library(RSSthemes)
 ```
 
@@ -41,7 +43,7 @@ library(RSSthemes)
 
 R has built-in graphics capabilities that allow users to make a wide range of data visualisations without installing any additional packages. This [blog post from Jumping Rivers](https://www.jumpingrivers.com/blog/styling-base-r-graphics/) [@JR2018] provides instructions on how to style graphics created in base R.
 
-**Example**: changing bar chart colours in base R
+**Example**: changing bar chart colours in base R.
 
 If all of the bars, lines, points, etc. should have the same colour, you can set the `col` argument to have one of the RSS colours. The options are: `signif_red`, `signif_blue`, `signif_green`, `signif_orange`, or `signif_yellow`.
 
@@ -49,7 +51,7 @@ If all of the bars, lines, points, etc. should have the same colour, you can set
 barplot(table(mtcars$gear), col = signif_blue)
 ```
 
-![Bar chart with bars coloured in Significance blue](images/tools-blue-base.png){fig-alt="Bar charts visualising plant growth of average hght for different treatments with user specified colours red, blue, and dark green."}
+![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-base.png){fig-alt="Bar charts visualising plant growth of average hght for different treatments with user specified colours red, blue, and dark green."}
 
 If the colours in your plot are based on values in your data, you can set the default colours using the `palette()` function. Within {RSSthemes}, the `set_rss_palette()` function changes the default colours used. There are currently three palettes available in {RSSthemes}, although we hope to add more in the future. The options are `signif_qual`, `signif_div`, or `signif_seq`.
 
@@ -58,11 +60,11 @@ set_rss_palette("signif_qual")
 plot(1:4, 1:4, col=1:4, pch=19, cex=3, xlab="", ylab="")
 ```
 
-![Scatter plot showing the colours from the `signif_qual` palette](images/tools-qual-base.png){fig-alt="Scatter plot showing the colours from signif_qual"}
+![Scatter plot showing the colours from the `signif_qual` palette.](images/tools-qual-base.png){fig-alt="Scatter plot showing the colours from signif_qual"}
 
 Run `palette("default")` to reset to original base R colours.
 
-**Example**: changing the styling of base R plots
+**Example**: changing the styling of base R plots.
 
 Within the `plot()` function (and related base R plotting functions such as `barplot()`, and `hist()`) , there are arguments to control how the non-data elements of the plot look. For example, the `family` argument changes which font family is used. You can also set many of these arguments globally by calling the `par()` function. Within {RSSthemes}, there is a function `set_signif_par()` which sets some default options, including the text alignment and font for all base R plots. We also recommend adding reference lines using the `abline()` function.
 
@@ -74,7 +76,7 @@ plot(1:4, 1:4, col=1:4, pch=19, cex=3, xlab="", ylab="",
 abline(h=1:4, v=1:4, col = "lightgrey")
 ```
 
-![Scatter plot showing the base R styling implemented by `set_signif_par()`](images/tools-theme-base.png){fig-alt="Scatter plot showing the base R styling implemented by the Significance par function."}
+![Scatter plot showing the base R styling implemented by `set_signif_par()`.](images/tools-theme-base.png){fig-alt="Scatter plot showing the base R styling implemented by the Significance par function."}
 
 #### {ggplot2}
 
@@ -83,12 +85,13 @@ abline(h=1:4, v=1:4, col = "lightgrey")
 Let's set up a basic data set to make some plots with {ggplot2}.
 
 ```{r}
+#| code-fold: false
 library(ggplot2)
 plot_df <- data.frame(x = LETTERS[1:4],
                       y = 1:4)
 ```
 
-**Example**: changing the non-mapped colours in {ggplot2}
+**Example**: changing the non-mapped colours in {ggplot2}.
 
 In {ggplot2}, the `colour` (or `color`) argument changes the colour that outlines an element, and `fill` changes the colour that fills the element. If all of the, e.g., bars, lines, or points should have the same colour, you can set either the `fill` or `colour` arguments to have one of the RSS colours. The options are: `signif_red`, `signif_blue`, `signif_green`, `signif_orange`, or `signif_yellow`.
 
@@ -98,9 +101,9 @@ ggplot(data = plot_df,
   geom_col(fill = signif_yellow)
 ```
 
-![Bar chart with bars coloured yellow](images/tools-yellow-bars.png){fig-alt="Bar chart with bars coloured yellow"}
+![Bar chart with bars coloured yellow.](images/tools-yellow-bars.png){fig-alt="Bar chart with bars coloured yellow"}
 
-**Example**: using a discrete colour scale in {ggplot2}
+**Example**: using a discrete colour scale in {ggplot2}.
 
 For working with qualitative (discrete) data, the best palette to use is `"signif_qual"`. This palette currently only contains four colours.
 
@@ -113,7 +116,7 @@ ggplot(data = plot_df,
   scale_fill_rss_d(palette = "signif_qual")
 ```
 
-![Bar chart with colours from `signif_qual`](images/tools-qual-bars.png){fig-alt="Bar chart with colours from signif_qual"}
+![Bar chart with colours from `signif_qual`.](images/tools-qual-bars.png){fig-alt="Bar chart with colours from signif_qual"}
 
 -   Discrete (colour) scale: `scale_colour_rss_d()`
 
@@ -124,9 +127,9 @@ ggplot(data = plot_df,
   scale_colour_rss_d(palette = "signif_qual")
 ```
 
-![Scatter plot with colours from `signif_qual`](images/tools-qual-points.png){fig-alt="Scatter plot with colours from signif_qual"}
+![Scatter plot with colours from `signif_qual`.](images/tools-qual-points.png){fig-alt="Scatter plot with colours from signif_qual"}
 
-**Example**: using a continuous colour scale in {ggplot2}
+**Example**: using a continuous colour scale in {ggplot2}.
 
 Continuous colour scales may be sequential or diverging. For working with sequential (continuous) data, the best palette to use is `"signif_seq"`.
 
@@ -139,7 +142,7 @@ ggplot(data = plot_df,
   scale_fill_rss_c(palette = "signif_seq")
 ```
 
-![Bar chart showing sequential green colour palette](images/tools-seq-bars.png){fig-alt="Bar chart showing sequential green colour palette"}
+![Bar chart showing sequential green colour palette.](images/tools-seq-bars.png){fig-alt="Bar chart showing sequential green colour palette"}
 
 -   Continuous (colour) scale: `scale_colour_rss_c()`
 
@@ -150,7 +153,7 @@ ggplot(data = plot_df,
   scale_colour_rss_c(palette = "signif_seq")
 ```
 
-![Scatter plot showing sequential green colour palette](images/tools-seq-points.png){fig-alt="Scatter plot showing sequential green colour palette"}
+![Scatter plot showing sequential green colour palette.](images/tools-seq-points.png){fig-alt="Scatter plot showing sequential green colour palette"}
 
 For working with diverging (continuous) data, the best palette to use is `"signif_div"`.
 
@@ -163,7 +166,7 @@ ggplot(data = plot_df,
   scale_fill_rss_c(palette = "signif_div")
 ```
 
-![Bar chart showing diverging red to blue palette](images/tools-div-bars.png){fig-alt="Bar chart showing diverging red to blue palette"}
+![Bar chart showing diverging red to blue palette.](images/tools-div-bars.png){fig-alt="Bar chart showing diverging red to blue palette"}
 
 If you want to centre the diverging scale around a different value, you can alternatively pass the pre-defined colours from {RSSthemes} into `scale_fill_gradient2()` in {ggplot2}:
 
@@ -174,13 +177,13 @@ ggplot(data = plot_df,
   scale_fill_gradient2(low = signif_red, high = signif_blue, midpoint = 2)
 ```
 
-![Bar chart showing diverging red to blue palette centred at 2](images/tools-div-bars-grad.png){fig-alt="Bar chart showing diverging red to blue palette centred at 2"}
+![Bar chart showing diverging red to blue palette centred at 2.](images/tools-div-bars-grad.png){fig-alt="Bar chart showing diverging red to blue palette centred at 2"}
 
-**Example**: changing the theme in {ggplot2}
+**Example**: changing the theme in {ggplot2}.
 
 Within {ggplot2}, themes allow you to control the appearance of the non-data elements of your plot. The default theme is `theme_grey()` which has a darker background. We recommend using a white or transparent background, such as those created with `theme_minimal()` or `theme_bw()`.
 
-You can also use `theme_significance()` from {RSSthemes} which additionally sets the plot font to one of those used in Significance magazine. Check that you have already run `library(RSSthemes)` to ensure the fonts load correctly.
+You can also use `theme_significance()` from {RSSthemes} which additionally sets the plot font to one of those used in *Significance* magazine. Check that you have already run `library(RSSthemes)` to ensure the fonts load correctly.
 
 ```{r}
 ggplot(data = plot_df,
@@ -193,7 +196,7 @@ ggplot(data = plot_df,
   theme_significance()
 ```
 
-![Bar chart styled with `theme_significance()`](images/tools-theme.png){fig-alt="Bar chart with bars coloured green, yellow, blue, and orange showing custom theme"}
+![Bar chart styled with `theme_significance()`.](images/tools-theme.png){fig-alt="Bar chart with bars coloured green, yellow, blue, and orange showing custom theme"}
 
 If you find a bug in the {RSSthemes} package, or something that isn't working quite as you expected, please submit a [GitHub issue](https://github.com/nrennie/RSSthemes/issues).
 
@@ -201,7 +204,7 @@ If you find a bug in the {RSSthemes} package, or something that isn't working qu
 
 The following information should be used to design graphs and charts that meet RSS publication requirements. Details include page sizes and column widths, font types and sizes, and image resolutions and file formats.
 
-### Significance Magazine
+### *Significance* Magazine
 
 |                                |                                 |
 |--------------------------------|---------------------------------|
