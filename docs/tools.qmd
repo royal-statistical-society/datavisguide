@@ -4,6 +4,7 @@ format:
   html:
     code-fold: true
     code-tools: true
+  pdf: default
 execute: 
   eval: false
   echo: true
@@ -50,7 +51,7 @@ barplot(table(mtcars$gear), col = signif_blue)
 
 ![Bar chart with bars coloured in Significance blue](images/tools-blue-base.png){fig-alt="Bar charts visualising plant growth of average hght for different treatments with user specified colours red, blue, and dark green."}
 
-If you colours in your plot are based on values in your data, you can set the default colours using the `palette()` function. Within {RSSthemes}, the `set_rss_palette()` function changes the default colours used. There are currently three palettes available in {RSSthemes}, although we hope to add more in the future. The options are `signif_qual`, `signif_div`, or `signif_seq`.
+If the colours in your plot are based on values in your data, you can set the default colours using the `palette()` function. Within {RSSthemes}, the `set_rss_palette()` function changes the default colours used. There are currently three palettes available in {RSSthemes}, although we hope to add more in the future. The options are `signif_qual`, `signif_div`, or `signif_seq`.
 
 ```{r}
 set_rss_palette("signif_qual")
@@ -196,15 +197,18 @@ ggplot(data = plot_df,
 
 If you find a bug in the {RSSthemes} package, or something that isn't working quite as you expected, please submit a [GitHub issue](https://github.com/nrennie/RSSthemes/issues).
 
-
 ## Publication specifications
+
+The following information should be used to design graphs and charts that meet RSS publication requirements. Details include page sizes and column widths, font types and sizes, and image resolutions and file formats.
 
 ### Significance Magazine
 
-|           |                                 |
-|-----------|---------------------------------|
-| Page size | \(W\) 212.55 mm x (H) 263.65 mm |
-| Text area | \(W\) 188 mm x (H) 212 mm       |
+|                                |                                 |
+|--------------------------------|---------------------------------|
+| Page size                      | \(W\) 212.55 mm x (H) 263.65 mm |
+| Text area                      | \(W\) 188 mm x (H) 212 mm       |
+| Image resolution               | 300 dpi (print quality)         |
+| Recommended image file formats | jpeg, png                       |
 
 #### Notebook section
 
@@ -307,9 +311,11 @@ Uses three-column layout.
 
 Uses a single-column layout.
 
-|           |                           |
-|-----------|---------------------------|
-| Page size | \(W\) 189 mm x (H) 246 mm |
-| Text area | \(W\) 136 mm x (H) 217 mm |
-| Body font | Sabon LT Std Roman        |
-| Font size | 9.25 pt                   |
+|                                |                           |
+|--------------------------------|---------------------------|
+| Page size                      | \(W\) 189 mm x (H) 246 mm |
+| Text area                      | \(W\) 136 mm x (H) 217 mm |
+| Body font                      | Sabon LT Std Roman        |
+| Font size                      | 9.25 pt                   |
+| Image resolution               | 300 dpi (print quality)   |
+| Recommended image file formats | jpeg, png                 |

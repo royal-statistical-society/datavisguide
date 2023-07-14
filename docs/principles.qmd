@@ -458,7 +458,7 @@ plot_grid(gg, gg2, gg3, nrow=1)
 
 [![Adding elements, such as lines to indicate the point of no change, can improve readability](images/principles-auxiliary.png){fig-alt="Adding elements, such as lines to indicate the point of no change, can improve readability. In this three-part figure, the panel on the left is a line plot showing changes over time. In the middle plot, a keyline is added to mark the baseline -- zero -- on the y-axis, and in the right panel, the axis range is set to be symmetrical around this keyline."}](images/principles-auxiliary.png)
 
-### Higher dimensions
+### Three-dimensional charts
 
 Three-dimensional displays of data may look striking, in some respects, but accurate reading and interpretation is not straightforward with such presentations.
 
