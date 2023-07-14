@@ -1,6 +1,8 @@
 ---
-title: References
+title: References and resources
 ---
+
+## Texts referenced in the Guide
 
 Battle-Baptiste W, Rusert B.: W.E.B. Du Bois's data portraits: Visualizing black America: The Color Line at the Turn of the Twentieth Century. The W.E.B. Du Bois Center at the University of Massachusetts; 2018.
 
@@ -64,7 +66,7 @@ Wickham H. ggplot2. Create elegant data visualisations using the grammar of grap
 
 Wilkinson, L. (2005) The Grammar of Graphics. New York: Springer-Verlag (Statistics and Computing). Available at: <https://doi.org/10.1007/0-387-28695-0>.
 
-### Additional Reading
+## Further reading
 
 #### Functional Aesthetics for Data Visualization.
 
@@ -94,3 +96,8 @@ Why we recommend: *Patients are often presented with data about health risk info
 
 ::: {#refs}
 :::
+
+## Additional resources
+
+- training courses
+- online tools?
