@@ -7,7 +7,7 @@ toc: true
 This site and its content are in development. The authors welcome feedback. Please either \[insert info about raising an issue/PR/email etc.\]
 :::
 
-We designed this guide to be read from beginning to end, so that each section builds on the foundations of those that came before. If this is your first time reading the guide, we would encourage you to read it in this way. However, those looking for guidance on specific aspects of data visualisation can make use of the search and navigation functions of this website. If you would prefer to read offline, you can download a PDF version of the complete guide. You can also download PDFs of individuals sections.
+We designed this guide to be read from beginning to end, so that each section builds on the foundations of those that came before. If this is your first time reading the guide, we would encourage you to read it in this way. However, those looking for guidance on specific aspects of data visualisation can make use of the search and navigation functions of this website. If you would prefer to read offline, you can download PDFs of the individual pages that make up this guide.
 
 Throughout the text you will find examples of charts and graphs. For many of these, we provide code in R to allow you to reproduce the visualisations, and we encourage you to do so and to adapt the code for your own purposes.
 
