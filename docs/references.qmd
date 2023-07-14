@@ -6,13 +6,13 @@ Battle-Baptiste W, Rusert B.: W.E.B. Du Bois's data portraits: Visualizing black
 
 Becker RA, Chambers JM. S: An Interactive Environment for Data Analysis and Graphics. Pacific Grove, CA: Wadsworth & Brooks/Cole; 1984. 
 
-Becker RA, Cleveland WS: S-PLUS Trellis Graphics User\'s Manual. MathSoft, Seattle WA, 1996. Available from <https://socialsciences.mcmaster.ca/jfox/Courses/R/ICPSR/trellis.usermanual.pdf> (accessed June 19, 2023).
+Becker RA, Cleveland WS: S-PLUS Trellis Graphics User's Manual. MathSoft, Seattle WA, 1996. Available from <https://socialsciences.mcmaster.ca/jfox/Courses/R/ICPSR/trellis.usermanual.pdf> (accessed June 19, 2023).
 
 Cleveland, W.S. (1993) Visualizing data. Summit NJ: Hobart Press.
 
 Cleveland, W.S. (1994) The elements of graphing data. Summit NJ: Hobart Press.
 
-Corbett J. (2001). Charles Joseph Minard, Mapping Napoleon\'s March, 1861. CSISS Class 2001. <https://escholarship.org/uc/item/4qj8h064> 
+Corbett J. (2001). Charles Joseph Minard, Mapping Napoleon's March, 1861. CSISS Class 2001. <https://escholarship.org/uc/item/4qj8h064> 
 
 Du Bois W.E.B. The Exhibit of American Negroes. Paris; 1900.
 
@@ -24,13 +24,13 @@ Friendly M. Remembrances of Things EDA \[Internet\]. 2022. Available from: <http
 
 Friendly M, Denis D. The early origins and development of the scatterplot. J Hist Behav Sci. 2005;41(2):103--30. Available from: <https://doi.org/10.1002/jhbs.20078> 
 
-Garland, K. (1994) Mr Beck\'s underground map. Capital Transport. 
+Garland, K. (1994) Mr Beck's underground map. Capital Transport. 
 
-Kent, A.J. (2021) \'When Topology Trumped Topography: Celebrating 90 Years of Beck\'s Underground Map\', The Cartographic Journal, 58(1), pp. 1--12. Available at: <https://doi.org/10.1080/00087041.2021.1953765> 
+Kent, A.J. (2021) 'When Topology Trumped Topography: Celebrating 90 Years of Beck's Underground Map', The Cartographic Journal, 58(1), pp. 1--12. Available at: <https://doi.org/10.1080/00087041.2021.1953765> 
 
-Krause A (2013): Concepts and Principles of Clinical Data Graphics. In Krause and O\'Connell (2013).
+Krause A (2013): Concepts and Principles of Clinical Data Graphics. In Krause and O'Connell (2013).
 
-Krause A, O\'Connell M. (editors), 2013. A picture is worth a thousand tables: Graphics in life sciences. Springer.
+Krause A, O'Connell M. (editors), 2013. A picture is worth a thousand tables: Graphics in life sciences. Springer.
 
 Nightingale F. A contribution to the sanitary history of the British army during the late war with Russia. London, UK: Harrison and Sons; 1859. <https://iiif.lib.harvard.edu/manifests/view/drs:7420433$24b> (accessed June 19, 2023).
 
@@ -63,3 +63,34 @@ Wickham H. ggplot2. Wiley Interdiscip Rev Comput Stat 2011; 3: 180--5. <https://
 Wickham H. ggplot2. Create elegant data visualisations using the grammar of graphics. Springer International Publishing; 2016 (Use R!; vol. 2). Available from: <https://doi.org/10.1007/978-3-319-24277-4> 
 
 Wilkinson, L. (2005) The Grammar of Graphics. New York: Springer-Verlag (Statistics and Computing). Available at: <https://doi.org/10.1007/0-387-28695-0>.
+
+### Additional Reading
+
+#### Functional Aesthetics for Data Visualization. 
+@Setlur2022
+
+Why we recommend: *This book connects research and practice, combining ideas from cognitive psychology, data literacy, and visual design. Its ideas go beyond simple charts, and can be extending to complex visual displays including interactive dashboards and visualisations.*
+
+
+#### Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks.
+@Schwabish2021
+
+Why we recommend: *This book guides you towards which types of data visualisations may best depending on what you’re trying to show. Not only that, but it uses visual perception theory to explain why some charts are easier to read than others.*
+
+
+#### Data Feminism. 
+@DIgnazio2020
+
+Why we recommend: *We often hear the term “storytelling” when we’re talking about data visualisation, and we should remember the role of the storyteller in this. In this book, the authors make several critical points, including that when we work with data we must also think about why it was collected, and what it could be used for.*
+
+
+#### Preference for and understanding of graphs presenting health risk information. The role of age, health literacy, numeracy and graph literacy.
+@VanWeert2021
+
+Why we recommend: *Patients are often presented with data about health risk information in the form in charts and tables. This article examines how well patients understand the information presented to them across a range of different chart types. It finds that the types of charts that patients prefer, is not always the type of chart that they understand best.*
+
+### References
+
+::: {#refs}
+:::
+

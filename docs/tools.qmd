@@ -20,7 +20,7 @@ In this section, we discuss the technical details of how to change the style of 
 
 ### R
 
-[R](https://www.r-project.org/) is a programming language which is popular for statistical computing and graphics. There are many packages with R that can be used to create data visualisations, and we don't aim to cover them all here. Instead, we address the most common methods: built-in base R graphics, and the {ggplot2} package.
+R [@RTeam2021] is a programming language which is popular for statistical computing and graphics. There are many packages with R that can be used to create data visualisations, and we don't aim to cover them all here. Instead, we address the most common methods: built-in base R graphics, and the {ggplot2} package [@Wickham2016a].
 
 To help authors with styling their charts to fit in with the guidance in this document, we have developed an R package, [{RSSthemes}](https://github.com/nrennie/RSSthemes). We include some examples of using the package here, but encourage readers to check the GitHub repository for any updates.
 
@@ -38,7 +38,7 @@ library(RSSthemes)
 
 #### Base R
 
-R has built-in graphics capabilities that allow users to make a wide range of data visualisations without installing any additional packages. This [blog post from Jumping Rivers](https://www.jumpingrivers.com/blog/styling-base-r-graphics/) provides instructions on how to style graphics created in base R.
+R has built-in graphics capabilities that allow users to make a wide range of data visualisations without installing any additional packages. This [blog post from Jumping Rivers](https://www.jumpingrivers.com/blog/styling-base-r-graphics/) [@JR2018] provides instructions on how to style graphics created in base R.
 
 **Example**: changing bar chart colours in base R
 
@@ -77,9 +77,9 @@ abline(h=1:4, v=1:4, col = "lightgrey")
 
 #### {ggplot2}
 
-{ggplot2} is an R package within the {tidyverse} framework specifically for creating data visualisations. The [package documentation](https://ggplot2.tidyverse.org/) provides guidance on how to create different types of charts. Advice on [changing the colours](https://ggplot2-book.org/scale-colour.html) and [styles](https://ggplot2-book.org/polishing.html) of {ggplot2} visualisations, can be found in the [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/index.html) book by Hadley Wickham, Danielle Navarro, and Thomas Lin Pedersen.
+{ggplot2} is an R package within the {tidyverse} framework specifically for creating data visualisations. The [package documentation](https://ggplot2.tidyverse.org/) provides guidance on how to create different types of charts. Advice on [changing the colours](https://ggplot2-book.org/scale-colour.html) and [styles](https://ggplot2-book.org/polishing.html) of {ggplot2} visualisations, can be found in the [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/index.html) book by Hadley Wickham [@Wickham2016a].
 
-Let's set up a basic data set to make some plots wih {ggplot2}.
+Let's set up a basic data set to make some plots with {ggplot2}.
 
 ```{r}
 library(ggplot2)
@@ -196,31 +196,6 @@ ggplot(data = plot_df,
 
 If you find a bug in the {RSSthemes} package, or something that isn't working quite as you expected, please submit a [GitHub issue](https://github.com/nrennie/RSSthemes/issues).
 
-### Python
-
-[Python](https://www.python.org/) is a general-purpose programming language, with libraries available that provide capabilities for data analysis and visualisation.
-
-#### Matplotlib
-
-[Matplotlib](https://matplotlib.org/) is a Python library for creating static, animated, and interactive data visualisations.
-
-**Example**: changing bar chart colours in matplotlib
-
-```{{python}}
-```
-
-**Example**: changing the font family in matplotlib
-
-```{{python}}
-```
-
-### Microsoft Excel
-
-Microsoft Excel is a spreadsheet developed by Microsoft which features tools for making graphics, among other capabilities including performing calculations and statistical analysis.
-
-**Example**: changing the colours in Microsoft Excel
-
-**Example**: changing the colours in Microsoft Excel
 
 ## Publication specifications
 
