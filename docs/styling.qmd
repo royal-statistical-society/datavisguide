@@ -4,6 +4,7 @@ format:
   html:
     code-fold: true
     code-tools: true
+  pdf: default
 execute: 
   eval: false
   echo: true
