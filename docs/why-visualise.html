@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -209,7 +228,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation">Motivation</a></li>
   <li><a href="#a-brief-history-of-data-visualisation" id="toc-a-brief-history-of-data-visualisation" class="nav-link" data-scroll-target="#a-brief-history-of-data-visualisation">A brief history of data visualisation</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="why-visualise.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -249,7 +268,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>efficiently; and</p></li>
 <li><p>accurately.&nbsp;</p></li>
 </ul>
-<p>It is important, when creating a visualisation, to consider the background of the reader or intended audience (Krause, 2013). Interpretation is in the eye of the beholder, and a visualisation will only succeed at conveying its message if designed with its audience in mind.</p>
+<p>It is important, when creating a visualisation, to consider the background of the reader or intended audience <span class="citation" data-cites="Krause2013">(<a href="#ref-Krause2013" role="doc-biblioref">Krause 2013</a>)</span>. Interpretation is in the eye of the beholder, and a visualisation will only succeed at conveying its message if designed with its audience in mind.</p>
 <p>A successful data visualisation will:</p>
 <ul>
 <li><dl>
@@ -288,56 +307,131 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="a-brief-history-of-data-visualisation" class="level2">
 <h2 class="anchored" data-anchor-id="a-brief-history-of-data-visualisation">A brief history of data visualisation</h2>
-<p>Data visualisation has been, for a long time, both a topic of scientific research and an evolving art form.</p>
-<p>In 1859, <a href="https://en.wikipedia.org/wiki/Florence_Nightingale">Florence Nightingale</a>, the founder of modern nursing, published her findings on the sanitary status of the British army during the war with Russia. She showed raw data as well as summary statistics in tables and charts (Nightingale, 1859). One chart in particular continues to be celebrated today: a polar area chart on the “causes of mortality in the army in the East” (below).</p>
+<p>Data visualisation has been, for a long time, both a topic of scientific research and an evolving art form with a variety of high-impact applications.</p>
+<p>In 1859, <a href="https://en.wikipedia.org/wiki/Florence_Nightingale">Florence Nightingale</a>, the founder of modern nursing, published her findings on the sanitary status of the British army during the war with Russia. She showed raw data as well as summary statistics in tables and charts (Nightingale, 1859). One chart in particular continues to be celebrated today: a polar area chart on the “causes of mortality in the army in the East”.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/Nightingale-mortality.jpg"><img src="images/Nightingale-mortality.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/Nightingale-mortality.jpg"><img src="images/Nightingale-mortality.jpg" class="img-fluid figure-img" width="500"></a></p>
 </figure>
 </div>
 <div class="figure-caption">
 <p>Florence Nightingale’s polar area chart, “Diagram of the causes of mortality in the army in the East”. Source: <a href="https://commons.wikimedia.org/wiki/File:Nightingale-mortality.jpg">Wikimedia Commons</a>.</p>
 </div>
-<p>“[W]hat made Nightingale’s graphs particularly iconic,” according to <a href="https://academic.oup.com/jrssig/article/17/2/26/7029585">Dr Alison Hedley</a> “was their powerful use of visual rhetoric to make an argument about data.” This quality is also evident in other visualisations produced by Nightingale’s contemporaries.</p>
-<p>For example, a simplistic but rather impactful visualisation of the water pumps in London associated with transmission of cholera paved the way for root cause identification (Snow, 1854).</p>
+<p>What made Nightingale’s graphs “particularly iconic was their powerful use of visual rhetoric to make an argument about data” <span class="citation" data-cites="Hedley">(<a href="#ref-Hedley" role="doc-biblioref">Hedley 2020</a>)</span>. This quality is also evident in other visualisations produced by Nightingale’s contemporaries.</p>
+<p>A simplistic but rather impactful visualisation of the water pumps in London associated with transmission of cholera paved the way for root cause identification <span class="citation" data-cites="Snow1854">(<a href="#ref-Snow1854" role="doc-biblioref">Snow 1854</a>)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/Snow-cholera-map.jpg"><img src="images/Snow-cholera-map.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/Snow-cholera-map.jpg"><img src="images/Snow-cholera-map.jpg" class="img-fluid figure-img" width="500"></a></p>
 </figure>
 </div>
 <div class="figure-caption">
 <p>Map by John Snow showing clusters of cholera cases in the London epidemic of 1854. Source: <a href="https://en.wikipedia.org/wiki/File:Snow-cholera-map-1.jpg">Wikimedia Commons</a>.</p>
 </div>
-<p>And an early complex visualisation was created by Minard in 1861, depicting <a href="https://academic.oup.com/jrssig/article/5/3/133/7029764">data from Napoleon’s march on Moscow</a> in 1812/13 and his subsequent retreat (below). The map shows latitude and longitude of the army as it moved. The line shows the direction of movement, and the line width represents the size of the army (the surviving soldiers). Particular locations were marked by the date of the army presence, and the temperature is shown, too. Six variables were elegantly woven into a single display ( Tufte, 2001; Corbett, 2001; Robinson, 1967).</p>
+<p>An early complex visualisation was created by Minard in 1861, depicting <a href="https://academic.oup.com/jrssig/article/5/3/133/7029764">data from Napoleon’s march on Moscow</a> in 1812/13 and his subsequent retreat.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/minard.png"><img src="images/minard.png" class="img-fluid figure-img"></a></p>
+<p><a href="images/minard.png"><img src="images/minard.png" class="img-fluid figure-img" width="500"></a></p>
 </figure>
 </div>
 <div class="figure-caption">
 <p>Charles Minard’s 1869 map of “the successive losses in men of the French Army in the Russian campaign 1812–1813”. Source: <a href="https://en.wikipedia.org/wiki/File:Minard.png">Wikimedia Commons</a>.</p>
 </div>
-<p>The Paris Exposition in 1900 featured W. E. B. Du Bois exhibiting graphs, charts, and maps of how Black Americans were living (Du Bois, 1900; Battle-Baptiste and Rusert, 2018).</p>
+<p>The map shows latitude and longitude of the army as it moved. The line shows the direction of movement, and the line width represents the size of the army (the surviving soldiers). Particular locations were marked by the date of the army presence, and the temperature is shown, too. Six variables were elegantly woven into a single display <span class="citation" data-cites="Tufte2001 Corbett2001 Robinson1967">(<a href="#ref-Tufte2001" role="doc-biblioref">Tufte 2001</a>; <a href="#ref-Corbett2001" role="doc-biblioref">Corbett 2001</a>; <a href="#ref-Robinson1967" role="doc-biblioref">Robinson 1967</a>)</span>.</p>
+<p>The Paris Exposition in 1900 featured W. E. B. Du Bois exhibiting graphs, charts, and maps of how Black Americans were living <span class="citation" data-cites="DuBois1900 BattleBaptiste2018">(<a href="#ref-DuBois1900" role="doc-biblioref">Du Bois 1900</a>; <a href="#ref-BattleBaptiste2018" role="doc-biblioref">Battle-Baptiste and Rusert 2018</a>)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/du-bois.jpg"><img src="images/du-bois.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/du-bois.jpg"><img src="images/du-bois.jpg" class="img-fluid figure-img" width="500"></a></p>
 </figure>
 </div>
 <div class="figure-caption">
 <p>A series of statistical charts illustrating the condition of the descendants of former African slaves now in residence in the United States of America. Drawing, ca. 1900. //hdl.loc.gov/loc.pnp/ppmsca.33899. Source: <a href="https://blogs.loc.gov/picturethis/2014/02/du-boiss-american-negro-exhibit-for-the-1900-paris-exposition/">Library of Congress</a>.</p>
 </div>
-<p>Groundbreaking work in modern visualisation was provided by Tukey with his book <em>Exploratory Data Analysis</em> (Tukey, 1970), and Edward Tufte (Tufte, 1990; Tufte, 2004; Tufte, 2006).</p>
-<p>The historical development of visualisations is provided in various publications by Michael Friendly (Friendly and Denis, 2005; Friendly, 2018; Friendly, 2022).</p>
+<p>Groundbreaking work in modern visualisation was provided by Tukey with his book <em>Exploratory Data Analysis</em> <span class="citation" data-cites="Tukey1977">(<a href="#ref-Tukey1977" role="doc-biblioref">Tukey 1977</a>)</span>, and Edward Tufte <span class="citation" data-cites="Tufte1990 Tufte2004 Tufte2006">(<a href="#ref-Tufte1990" role="doc-biblioref">Tufte 1990</a>, <a href="#ref-Tufte2004" role="doc-biblioref">2004</a>, <a href="#ref-Tufte2006" role="doc-biblioref">2006</a>)</span>.</p>
+<p>The historical development of visualisations is provided in various publications by Michael Friendly <span class="citation" data-cites="Friendly2005 Friendly2018 Friendly2022">(<a href="#ref-Friendly2005" role="doc-biblioref">Friendly and Denis 2005</a>; <a href="#ref-Friendly2018" role="doc-biblioref">Friendly 2018</a>, <a href="#ref-Friendly2022" role="doc-biblioref">2022</a>)</span>.</p>
 <p>Data were visualised by hand until computers came along. The first monitors and printers worked in text mode only, with a resolution of 25 rows and 80 columns or similar, which did not permit much detail or precision. Graphics terminals and dot matrix printers followed, and resolutions kept increasing with the development of laser printers.</p>
-<p>Statistical systems such as SAS enabled creation of data visualisations early on (SAS).</p>
-<p>Arguably the most consistent implementation of a graphics system was realised with ggplot (Wickham, 2011; Wickham, 2016) based on Wilkinson’s “The Grammar of Graphics” (Wilkinson, 2005).</p>
-<p>A key component of ggplot2 is the feature of creating conditional displays. These allow for subsetting the data by the values of one or more variables. The concept was introduced by Cleveland (Cleveland, 1993; Cleveland, 1994), showcasing a widely-known barley data set that was analysed in textbooks for decades until a visualisation strongly suggested an error in the data set – two years of crop yield of one variety at one of six farms were accidentally swapped. It took a visualisation to reveal what numerous numerical analyses had missed!</p>
-<p>Cleveland named the display type “trellis”, being inspired by a trellis in his garden (Cleveland, 1993). The trellis concept was first implemented in S (Becker and Chambers, 1984) and S-PLUS (Becker and Cleveland, 1996). When R (R core team, 2021) was developed by Robert Gentleman and Ross Ihaka in Auckland NZ in the 1980s, a package named <code>lattice</code> was developed (Sarkar, 2008) since “trellis” carried a trademark (by Lucent and later MathSoft). With the advent of ggplot, the term faceting (with functions facet_grid and facet_wrap) replaced the “lattice” with its “panels”.</p>
+<p>Statistical systems such as SAS enabled creation of data visualisations early on <span class="citation" data-cites="SAS">(<a href="#ref-SAS" role="doc-biblioref"><span>“Documentation”</span> n.d.</a>)</span>.</p>
+<p>Arguably the most consistent implementation of a graphics system was realised with ggplot <span class="citation" data-cites="Wickham2011 Wickham2016">(<a href="#ref-Wickham2011" role="doc-biblioref">Wickham 2011</a>, <a href="#ref-Wickham2016" role="doc-biblioref">2016</a>)</span> based on Wilkinson’s <em>The Grammar of Graphics</em> <span class="citation" data-cites="Wilkinson2005">(<a href="#ref-Wilkinson2005" role="doc-biblioref">Wilkinson 2005</a>)</span>.</p>
+<p>A key component of ggplot2 is the feature of creating conditional displays. These allow for subsetting the data by the values of one or more variables. The concept was introduced by Cleveland <span class="citation" data-cites="Cleveland1993 Cleveland1994">(<a href="#ref-Cleveland1993" role="doc-biblioref">Cleveland 1993</a>, <a href="#ref-Cleveland1994" role="doc-biblioref">1994</a>)</span>, showcasing a widely-known barley data set that was analysed in textbooks for decades until a visualisation strongly suggested an error in the data set – two years of crop yield of one variety at one of six farms were accidentally swapped. It took a visualisation to reveal what numerous numerical analyses had missed!</p>
+<p>Cleveland named the display type “trellis”, being inspired by a trellis in his garden <span class="citation" data-cites="Cleveland1993">(<a href="#ref-Cleveland1993" role="doc-biblioref">Cleveland 1993</a>)</span>. The trellis concept was first implemented in S <span class="citation" data-cites="Becker1984">(<a href="#ref-Becker1984" role="doc-biblioref">Becker and Chambers 1984</a>)</span> and S-PLUS <span class="citation" data-cites="Becker1996">(<a href="#ref-Becker1996" role="doc-biblioref">Becker and Cleveland 1996</a>)</span>. When R <span class="citation" data-cites="Rteam2021">(<a href="#ref-Rteam2021" role="doc-biblioref"><strong>Rteam2021?</strong></a>)</span> was developed by Robert Gentleman and Ross Ihaka in Auckland NZ in the 1980s, a package named <code>lattice</code> was developed <span class="citation" data-cites="Sarkar2008">(<a href="#ref-Sarkar2008" role="doc-biblioref">Sarkar 2008</a>)</span> since “trellis” carried a trademark (by Lucent and later MathSoft). With the advent of ggplot, the term faceting (with functions facet_grid and facet_wrap) replaced the “lattice” with its “panels”.</p>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-BattleBaptiste2018" class="csl-entry" role="listitem">
+Battle-Baptiste, W., and B. Rusert. 2018. <em>W.e.b. Du Bois’s Data Portraits: Visualizing Black America: The Color Line at the Turn of the Twentieth Century</em>. The W.E.B. Du Bois Center at the University of Massachusetts.
+</div>
+<div id="ref-Becker1984" class="csl-entry" role="listitem">
+Becker, R. A., and J. M. Chambers. 1984. <em>S: An Interactive Environment for Data Analysis and Graphics</em>. Pacific Grove, CA: Wadsworth &amp; Brooks/Cole.
+</div>
+<div id="ref-Becker1996" class="csl-entry" role="listitem">
+Becker, R. A., and W. S. Cleveland. 1996. <em>S-PLUS Trellis Graphics User’s Manual</em>. Seattle, WA: MathSoft.
+</div>
+<div id="ref-Cleveland1993" class="csl-entry" role="listitem">
+Cleveland, W. S. 1993. <em>Visualizing Data</em>. Summit, NJ: Hobart Press.
+</div>
+<div id="ref-Cleveland1994" class="csl-entry" role="listitem">
+———. 1994. <em>The Elements of Graphing Data</em>. Summit, NJ: Hobart Press.
+</div>
+<div id="ref-Corbett2001" class="csl-entry" role="listitem">
+Corbett, J. 2001. <span>“Charles Joseph Minard, Mapping Napoleon’s March, 1861.”</span> CSISS Class 2001. 2001. <a href="https://escholarship.org/uc/item/4qj8h064">https://escholarship.org/uc/item/4qj8h064</a>.
+</div>
+<div id="ref-SAS" class="csl-entry" role="listitem">
+<span>“Documentation.”</span> n.d. Statistical Analysis System. Accessed June 19, 2023. <a href="https://support.sas.com/en/documentation.html">https://support.sas.com/en/documentation.html</a>.
+</div>
+<div id="ref-DuBois1900" class="csl-entry" role="listitem">
+Du Bois, W. E. B. 1900. <em>The Exhibit of American Negroes</em>. Paris.
+</div>
+<div id="ref-Friendly2018" class="csl-entry" role="listitem">
+Friendly, M. 2018. <span>“A Very Brief History of Visualization: Visions, Stories and Pictures.”</span> Chicago, IL. 2018. <a href="http://datavis.ca/papers/CHF-2x2.pdf">http://datavis.ca/papers/CHF-2x2.pdf</a>.
+</div>
+<div id="ref-Friendly2022" class="csl-entry" role="listitem">
+———. 2022. <span>“Remembrances of Things EDA.”</span> 2022. <a href="https://www.researchgate.net/publication/361191335_Rememberances_of_Things_EDA">https://www.researchgate.net/publication/361191335_Rememberances_of_Things_EDA</a>.
+</div>
+<div id="ref-Friendly2005" class="csl-entry" role="listitem">
+Friendly, M., and D. Denis. 2005. <span>“The Early Origins and Development of the Scatterplot.”</span> <em>J. Hist. Behav. Sci.</em> 41 (2): 103–30. <a href="https://doi.org/10.1002/jhbs.20078">https://doi.org/10.1002/jhbs.20078</a>.
+</div>
+<div id="ref-Hedley" class="csl-entry" role="listitem">
+Hedley, Alison. 2020. <span>“<span class="nocase">Florence Nightingale and Victorian Data Visualisation</span>.”</span> <em>Significance</em> 17 (2): 26–30. <a href="https://doi.org/10.1111/1740-9713.01376">https://doi.org/10.1111/1740-9713.01376</a>.
+</div>
+<div id="ref-Krause2013" class="csl-entry" role="listitem">
+Krause, A. 2013. <span>“Concepts and Principles of Clinical Data Graphics.”</span> In <em>A Picture Is Worth a Thousand Tables: Graphics in Life Sciences</em>. Springer.
+</div>
+<div id="ref-Robinson1967" class="csl-entry" role="listitem">
+Robinson, A. H. 1967. <span>“The Thematic Maps of Charles Joseph Minard.”</span> <em>Imago Mundi</em> 21: 95–108.
+</div>
+<div id="ref-Sarkar2008" class="csl-entry" role="listitem">
+Sarkar, D. 2008. <em>Lattice: Multivariate Data Visualization with r</em>. New York, NY: Springer.
+</div>
+<div id="ref-Snow1854" class="csl-entry" role="listitem">
+Snow, J. 1854. <span>“Mode of Communication of Cholera.”</span> Piccadilly (London), UK: John Churchill. 1854. <a href="https://archive.org/details/b28985266/page/52/mode/2up?view=theater">https://archive.org/details/b28985266/page/52/mode/2up?view=theater</a>.
+</div>
+<div id="ref-Tufte1990" class="csl-entry" role="listitem">
+Tufte, E. R. 1990. <em>Envisioning Information</em>. Graphics Press.
+</div>
+<div id="ref-Tufte2001" class="csl-entry" role="listitem">
+———. 2001. <em>The Visual Display of Quantitative Information</em>. 2nd ed. Cheshire, CT: Graphics Press.
+</div>
+<div id="ref-Tufte2004" class="csl-entry" role="listitem">
+———. 2004. <em>Visual Explanations: Images and Quantities, Evidence and Narrative</em>. Cheshire, CT: Graphics Press.
+</div>
+<div id="ref-Tufte2006" class="csl-entry" role="listitem">
+———. 2006. <em>Beautiful Evidence</em>. Cheshire, CT: Graphics Press.
+</div>
+<div id="ref-Tukey1977" class="csl-entry" role="listitem">
+Tukey, J. W. 1977. <em>Exploratory Data Analysis</em>. Reading, MA: Addison-Wesley.
+</div>
+<div id="ref-Wickham2011" class="csl-entry" role="listitem">
+Wickham, H. 2011. <span>“Ggplot2.”</span> <em>Wiley Interdisciplinary Reviews: Computational Statistics</em> 3: 180–85. <a href="https://onlinelibrary.wiley.com/doi/10.1002/wics.147">https://onlinelibrary.wiley.com/doi/10.1002/wics.147</a>.
+</div>
+<div id="ref-Wickham2016" class="csl-entry" role="listitem">
+———. 2016. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. Vol. 2. Use r! Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-24277-4">https://doi.org/10.1007/978-3-319-24277-4</a>.
+</div>
+<div id="ref-Wilkinson2005" class="csl-entry" role="listitem">
+Wilkinson, L. 2005. <em>The Grammar of Graphics</em>. Statistics and Computing. New York: Springer-Verlag. <a href="https://doi.org/10.1007/0-387-28695-0">https://doi.org/10.1007/0-387-28695-0</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

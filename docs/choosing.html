@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -217,7 +236,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#checklist-1" id="toc-checklist-1" class="nav-link" data-scroll-target="#checklist-1">Checklist</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="choosing.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -251,7 +270,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="goals-and-audience" class="level2">
 <h2 class="anchored" data-anchor-id="goals-and-audience">Goals and audience</h2>
-<p>The process of deciding what type of data visualisation to create begins with a simple question: Why am I doing this? <a href="../docs/principles.html">Data visualisations must serve a purpose</a> so all decisions about chart type, design, layout, etc., flow from a clear understanding of the intended purpose of a graphic.</p>
+<p>The process of deciding what type of data visualisation to create begins with a simple question: Why am I doing this? <a href="../docs/principles.html">Data visualisations must serve a purpose</a> so all decisions about chart type, design, layout, and more, should flow from a clear understanding of the intended purpose of a graphic.</p>
 <p><a href="https://statmodeling.stat.columbia.edu/2022/03/15/a-checklist-for-data-graphics/">Christian Hennig</a>, a statistics professor at the University of Bologna, suggests working through the following questions:</p>
 <blockquote class="blockquote">
 <ol type="1">
@@ -279,8 +298,8 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="https://www.data-to-viz.com/">From Data to Viz</a> presents users with a series of decision trees, each leading to different recommended chart formats depending on the type of data selected (numeric, categoric, etc.).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://www.data-to-viz.com/"><img src="images/choosing-data-to-viz.png" class="img-fluid figure-img" alt="Screenshot of From Data to Viz website, showing decision tree of chart formats suitable for numeric data"></a></p>
-<figcaption class="figure-caption">Screenshot of From Data to Viz</figcaption>
+<p><a href="images/choosing-data-to-viz.png"><img src="images/choosing-data-to-viz.png" class="img-fluid figure-img" alt="Screenshot of From Data to Viz website, showing decision tree of chart formats suitable for numeric data" width="500"></a></p>
+<figcaption class="figure-caption">Screenshot of From Data to Viz.</figcaption>
 </figure>
 </div>
 </section>
@@ -289,8 +308,8 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="https://ft-interactive.github.io/visual-vocabulary/">Visual Vocabulary</a> is a site developed by the data visualisation team at the <em>Financial Times</em>. It allows users to narrow down the choice of chart type based on the data relationship that is “most important in your story”. Relationship options include deviation, correlation, change versus time, ranking, and more.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://ft-interactive.github.io/visual-vocabulary/"><img src="images/choosing-visual-vocabulary.png" class="img-fluid figure-img" alt="Screenshot of the Visual Vocabulary website, showing chart types suitable for visualising deviations from fixed reference points"></a></p>
-<figcaption class="figure-caption">Screenshot of Visual Vocabulary</figcaption>
+<p><a href="images/choosing-visual-vocabulary.png"><img src="images/choosing-visual-vocabulary.png" class="img-fluid figure-img" alt="Screenshot of the Visual Vocabulary website, showing chart types suitable for visualising deviations from fixed reference points" width="500"></a></p>
+<figcaption class="figure-caption">Screenshot of Visual Vocabulary.</figcaption>
 </figure>
 </div>
 </section>
@@ -310,15 +329,23 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Further general guidance is provided by Few's <em>Show Me the Numbers</em> (Few, 2004) and Robbins’ <em>Creating Better Graphs</em> (Robbins, 2006).</p>
+<p>Further general guidance is provided by Few’s <em>Show Me the Numbers</em> <span class="citation" data-cites="Few2004">(<a href="#ref-Few2004" role="doc-biblioref">Few 2004</a>)</span> and Robbins’ <em>Creating Better Graphs</em> <span class="citation" data-cites="Robbins2006">(<a href="#ref-Robbins2006" role="doc-biblioref">Robbins 2006</a>)</span>.</p>
 </div>
 </div>
+
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Few2004" class="csl-entry" role="listitem">
+Few, S. 2004. <em>Show Me the Numbers</em>. Burlingame, CA: Analytics Press.
+</div>
+<div id="ref-Robbins2006" class="csl-entry" role="listitem">
+Robbins, NB. 2006. <em>Creating More Effective Graphs</em>. Hoboken, NJ: Wiley.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
