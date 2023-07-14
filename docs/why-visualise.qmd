@@ -56,7 +56,7 @@ Tables, too, are a way to visualise data or statistics, and can be similarly imp
 
 ## A brief history of data visualisation
 
-Data visualisation has been, for a long time, both a topic of scientific research and an evolving art form.
+Data visualisation has been, for a long time, both a topic of scientific research and an evolving art form with a variety of high-impact applications.
 
 In 1859, [Florence Nightingale](https://en.wikipedia.org/wiki/Florence_Nightingale), the founder of modern nursing, published her findings on the sanitary status of the British army during the war with Russia. She showed raw data as well as summary statistics in tables and charts (Nightingale, 1859). One chart in particular continues to be celebrated today: a polar area chart on the "causes of mortality in the army in the East" (below).
 
@@ -68,7 +68,7 @@ Florence Nightingale's polar area chart, "Diagram of the causes of mortality in 
 
 "\[W\]hat made Nightingale's graphs particularly iconic," according to [Dr Alison Hedley](https://academic.oup.com/jrssig/article/17/2/26/7029585) "was their powerful use of visual rhetoric to make an argument about data." This quality is also evident in other visualisations produced by Nightingale's contemporaries.
 
-For example, a simplistic but rather impactful visualisation of the water pumps in London associated with transmission of cholera paved the way for root cause identification (Snow, 1854).
+A simplistic but rather impactful visualisation of the water pumps in London associated with transmission of cholera paved the way for root cause identification (Snow, 1854).
 
 [![](images/Snow-cholera-map.jpg)](images/Snow-cholera-map.jpg)
 
@@ -76,7 +76,7 @@ For example, a simplistic but rather impactful visualisation of the water pumps 
 Map by John Snow showing clusters of cholera cases in the London epidemic of 1854. Source: [Wikimedia Commons](https://en.wikipedia.org/wiki/File:Snow-cholera-map-1.jpg).
 :::
 
-And an early complex visualisation was created by Minard in 1861, depicting [data from Napoleon's march on Moscow](https://academic.oup.com/jrssig/article/5/3/133/7029764) in 1812/13 and his subsequent retreat (below). The map shows latitude and longitude of the army as it moved. The line shows the direction of movement, and the line width represents the size of the army (the surviving soldiers). Particular locations were marked by the date of the army presence, and the temperature is shown, too. Six variables were elegantly woven into a single display ( Tufte, 2001; Corbett, 2001; Robinson, 1967).
+An early complex visualisation was created by Minard in 1861, depicting [data from Napoleon's march on Moscow](https://academic.oup.com/jrssig/article/5/3/133/7029764) in 1812/13 and his subsequent retreat (below). The map shows latitude and longitude of the army as it moved. The line shows the direction of movement, and the line width represents the size of the army (the surviving soldiers). Particular locations were marked by the date of the army presence, and the temperature is shown, too. Six variables were elegantly woven into a single display (Tufte, 2001; Corbett, 2001; Robinson, 1967).
 
 [![](images/minard.png)](images/minard.png)
 
