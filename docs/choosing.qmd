@@ -1,5 +1,8 @@
 ---
 title: Choosing a visualisation type
+format: 
+  html: default
+  pdf: default
 ---
 
 ::: {.callout-warning appearance="simple"}
@@ -35,13 +38,13 @@ There are a range of online tools to help decide on a visualisation type. We rec
 
 [From Data to Viz](https://www.data-to-viz.com/) presents users with a series of decision trees, each leading to different recommended chart formats depending on the type of data selected (numeric, categoric, etc.).
 
-[![Screenshot of From Data to Viz](images/choosing-data-to-viz.png){width="500px" fig-alt="Screenshot of From Data to Viz website, showing decision tree of chart formats suitable for numeric data"}](images/choosing-data-to-viz.png)
+[![Screenshot of From Data to Viz.](images/choosing-data-to-viz.png){width="500px" fig-alt="Screenshot of From Data to Viz website, showing decision tree of chart formats suitable for numeric data"}](images/choosing-data-to-viz.png)
 
 ### Relationship
 
 [Visual Vocabulary](https://ft-interactive.github.io/visual-vocabulary/) is a site developed by the data visualisation team at the *Financial Times*. It allows users to narrow down the choice of chart type based on the data relationship that is "most important in your story". Relationship options include deviation, correlation, change versus time, ranking, and more.
 
-[![Screenshot of Visual Vocabulary](images/choosing-visual-vocabulary.png){width="500px" fig-alt="Screenshot of the Visual Vocabulary website, showing chart types suitable for visualising deviations from fixed reference points"}](images/choosing-visual-vocabulary.png)
+[![Screenshot of Visual Vocabulary.](images/choosing-visual-vocabulary.png){width="500px" fig-alt="Screenshot of the Visual Vocabulary website, showing chart types suitable for visualising deviations from fixed reference points"}](images/choosing-visual-vocabulary.png)
 
 ### Checklist
 
@@ -49,5 +52,5 @@ There are a range of online tools to help decide on a visualisation type. We rec
 -   When selecting from a range of suitable chart types, keep in mind the needs of the target audience and their likely levels of graph literacy.
 
 ::: callout-note
-Further general guidance is provided by Few's *Show Me the Numbers* (Few, 2004) and Robbins' *Creating Better Graphs* (Robbins, 2006).
+Further general guidance is provided by Few's *Show Me the Numbers* [@Few2004] and Robbins' *Creating Better Graphs* [@Robbins2006].
 :::
