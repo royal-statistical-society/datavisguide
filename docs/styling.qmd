@@ -80,7 +80,7 @@ ggplot(
   )
 ```
 
-[![Before and after bar charts visualising tooth growth of guinea pigs](images/styling-intro.png){fig-alt="Before and after bar charts visualising tooth growth of guinea pigs. Left is unstyled with default colour scheme. Right is styled with labelled bars, a text legend, and easier to read fonts."}](images/styling-intro.png)
+[![Before and after bar charts visualising tooth growth of guinea pigs.](images/styling-intro.png){fig-alt="Before and after bar charts visualising tooth growth of guinea pigs. Left is unstyled with default colour scheme. Right is styled with labelled bars, a text legend, and easier to read fonts."}](images/styling-intro.png)
 
 ## Colours
 
@@ -150,7 +150,7 @@ ggplot(
   )
 ```
 
-[![Before and after bar charts visualising car data showing colouring vs highlighting](images/styling-highlight.png){fig-alt="Before and after bar charts visualising car data. Left has a different colour for each bar. Right uses colour to highlight a specific bar."}](images/styling-highlight.png)
+[![Before and after bar charts visualising car data showing colouring vs highlighting.](images/styling-highlight.png){fig-alt="Before and after bar charts visualising car data. Left has a different colour for each bar. Right uses colour to highlight a specific bar."}](images/styling-highlight.png)
 
 In the bar chart example above, rather than duplicating the information on the y-axis and colouring each bar a different colour, a better approach is to use colour to highlight a specific element of the data, e.g., a specific car, which focuses the reader's attention straight to the point you are trying to make.
 
@@ -231,7 +231,7 @@ ggplot(
   )
 ```
 
-[![Before and after scatterplots visualising Ferris wheel data showing only dots, vs, dots and triangles to differentiate groups](images/styling-shapes.png){fig-alt="Before and after scatterplots visualising Ferris wheel data. Left uses only colour to differentiate country. Right also uses different shapes."}](images/styling-shapes.png)
+[![Before and after scatterplots visualising Ferris wheel data showing only dots, vs, dots and triangles to differentiate groups.](images/styling-shapes.png){fig-alt="Before and after scatterplots visualising Ferris wheel data. Left uses only colour to differentiate country. Right also uses different shapes."}](images/styling-shapes.png)
 
 Despite the difficulties that can arise from ineffective use, colour remains one of the most common methods for either distinguishing between categories, or showing changes in a value. If you decide to use colours, you then need to decide which colours to use.
 
@@ -293,7 +293,7 @@ ggplot(
   )
 ```
 
-[![Different types of colour palettes](images/styling-palettes.png){fig-alt="Three colour palette plots showing sequential blue colours, diverging orange to purple colours, and bold qualitative colours."}](images/styling-palettes.png)
+[![Different types of colour palettes.](images/styling-palettes.png){fig-alt="Three colour palette plots showing sequential blue colours, diverging orange to purple colours, and bold qualitative colours."}](images/styling-palettes.png)
 
 ### Accessible colour palettes
 
@@ -358,7 +358,7 @@ g <- ggplot(
 cvd_grid(g)
 ```
 
-[![The simulated appearance of the same bar chart with different types of colour blindness](images/styling-colours.png){fig-alt="A 2x2 grid showing a bar chart under three types of colour blindness, and in monochrome. The monochrome is especially hard to differentiate colours."}](images/styling-colours.png)
+[![The simulated appearance of the same bar chart with different types of colour blindness.](images/styling-colours.png){fig-alt="A 2x2 grid showing a bar chart under three types of colour blindness, and in monochrome. The monochrome is especially hard to differentiate colours."}](images/styling-colours.png)
 
 Colours should appear distinct from each other when printed in black and white. Readers, or indeed academic journals, may choose to print your visualisations in monochrome. Colours that seem visually distinct that have similar luminosity (a measure of how light or dark a hue is) may appear indistinguishable when printed in black and white.
 
@@ -462,7 +462,7 @@ ggplot(
   )
 ```
 
-[![Before and after adding annotations to label a bar chart](images/styling-annotate-bars.png)]{fig-alt="A before and after showing the same bar chart of tooth growth data without annotations on the left, and with labels showing bar values on the right."}(images/styling-annotate-bars.png)
+[![Before and after adding annotations to label a bar chart.](images/styling-annotate-bars.png){fig-alt="A before and after showing the same bar chart of tooth growth data without annotations on the left, and with labels showing bar values on the right."}](images/styling-annotate-bars.png)
 
 The placement of annotations is also key:
 
