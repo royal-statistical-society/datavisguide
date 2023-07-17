@@ -11,49 +11,56 @@ website:
   repo-url: https://github.com/royal-statistical-society/datavisguide
   repo-actions: [edit, issue]
   navbar:
+    collapse-below: lg
     logo: images/RSS_logo_colour.png
-    left:
-      - href: index.qmd
-        text: Introduction
-      - href: howto.qmd
-        text: How to use this guide
-      - href: docs/index.qmd
-        text: The guide
-      - href: about.qmd
-        text: About the authors
-
+    logo-alt: "RSS logo"
+    right:
+      - text: Royal Statistical Society publications
+        menu:
+        - text: Journal of the Royal Statistical Society
+          href: https://academic.oup.com/jrsssa
+        - text: Real World Data Science
+          href: https://realworlddatascience.net/
+        - text: Significance Magazine
+          href: https://academic.oup.com/jrssig
+      - icon: github
+        href: https://github.com/royal-statistical-society/datavisguide
         
   sidebar: 
-      - title: Guide
-        style: floating
-        collapse-level: 2
-        align: left
-        contents:
-          - href: index.qmd
-            text: Introduction
-          - href: howto.qmd
-            text: How to use this guide
-          - section: "The guide"
-            href: docs/index.qmd
-            contents: 
-              - href: docs/why-visualise.qmd
-                text: Why we visualise data
-              - href: docs/principles.qmd
-                text: Principles and elements of visualisations
-              - href: docs/choosing.qmd
-                text: Choosing a visualisation type
-              - href: docs/styling.qmd
-                text: Styling for accessibility
-              - href: docs/tools.qmd
-                text: Styling for RSS publications
-              - href: docs/references.qmd
-                text: References
-          - href: about.qmd
-            text: About the authors
-          - href: ts-and-cs.qmd
-            text: Terms and conditions
+    - title: Guide
+      style: floating
+      collapse-level: 2
+      align: left
+      contents:
+        - href: index.qmd
+          text: Introduction
+        - href: howto.qmd
+          text: How to use this guide
+        - section: "The guide"
+          href: docs/index.qmd
+          contents: 
+            - href: docs/why-visualise.qmd
+              text: Why we visualise data
+            - href: docs/principles.qmd
+              text: Principles and elements of visualisations
+            - href: docs/choosing.qmd
+              text: Choosing a visualisation type
+            - href: docs/styling.qmd
+              text: Styling for accessibility
+            - href: docs/tools.qmd
+              text: Styling for RSS publications
+            - href: docs/references.qmd
+              text: References
+        - href: about.qmd
+          text: About the authors
+        - href: ts-and-cs.qmd
+          text: Terms and conditions
             
   page-navigation: true
+
+  page-footer:
+    center: |
+      Copyright &copy; 2023 [Royal Statistical Society](https://rss.org.uk/)
 
 format:
   html:

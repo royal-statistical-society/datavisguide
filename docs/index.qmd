@@ -1,7 +1,7 @@
 ---
 title: "The guide"
 subtitle: Table of contents
-toc: false
+toc: true
 ---
 
 ::: {.callout-warning appearance="simple"}
