@@ -4,7 +4,7 @@ subtitle: Insights, advice, and examples (with code) to make data outputs more r
 ---
 
 ::: {.callout-warning appearance="simple"}
-This site and its content are in development. The authors welcome feedback. Please either \[insert info about raising an issue/PR/email etc.\]
+This site and its content are under development, and the authors welcome feedback and contributions. See the [README file in our GitHub repository](https://github.com/royal-statistical-society/datavisguide) for information on how to contribute.
 :::
 
 Statistics is "the science of collecting, analyzing, presenting, and interpreting data" [@statistics]. Presentation of data is a key means to support and guide interpretation and subsequent decision making. Techniques exist for effective display. This is what this guide is all about.
