@@ -5,10 +5,6 @@ format:
   pdf: default
 ---
 
-::: {.callout-warning appearance="simple"}
-This site and its content are in development. The authors welcome feedback. Please either \[insert info about raising an issue/PR/email etc.\]
-:::
-
 ## Motivation
 
 Data visualisations can be a very efficient means of identifying patterns in data and conveying a message. The scientific aim of any visualisation is to allow the reader to understand data and extract information:
@@ -109,4 +105,4 @@ Arguably the most consistent implementation of a graphics system was realised wi
 
 A key component of ggplot2 is the feature of creating conditional displays. These allow for subsetting the data by the values of one or more variables. The concept was introduced by Cleveland [@Cleveland1993; @Cleveland1994], showcasing a widely-known barley data set that was analysed in textbooks for decades until a visualisation strongly suggested an error in the data set -- two years of crop yield of one variety at one of six farms were accidentally swapped. It took a visualisation to reveal what numerous numerical analyses had missed!
 
-Cleveland named the display type "trellis", being inspired by a trellis in his garden [@Cleveland1993]. The trellis concept was first implemented in S [@Becker1984] and S-PLUS [@Becker1996]. When R [@Rteam2021] was developed by Robert Gentleman and Ross Ihaka in Auckland NZ in the 1980s, a package named `lattice` was developed [@Sarkar2008] since "trellis" carried a trademark (by Lucent and later MathSoft). With the advent of ggplot, the term faceting (with functions facet_grid and facet_wrap) replaced the "lattice" with its "panels".
+Cleveland named the display type "trellis", being inspired by a trellis in his garden [@Cleveland1993]. The trellis concept was first implemented in S [@Becker1984] and S-PLUS [@Becker1996]. When R [@RTeam2021] was developed by Robert Gentleman and Ross Ihaka in Auckland NZ in the 1980s, a package named `lattice` was developed [@Sarkar2008] since "trellis" carried a trademark (by Lucent and later MathSoft). With the advent of ggplot, the term faceting (with functions facet_grid and facet_wrap) replaced the "lattice" with its "panels".

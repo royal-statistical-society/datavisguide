@@ -60,7 +60,7 @@ website:
 
   page-footer:
     center: |
-      Copyright &copy; 2023 [Royal Statistical Society](https://rss.org.uk/)
+      Copyright &copy; 2023 Andreas Krause, Nicola Rennie and the [Royal Statistical Society](https://rss.org.uk/)
 
 format:
   html:

@@ -5,10 +5,6 @@ format:
   pdf: default
 ---
 
-::: {.callout-warning appearance="simple"}
-This site and its content are in development. The authors welcome feedback. Please either \[insert info about raising an issue/PR/email etc.\]
-:::
-
 ## Goals and audience
 
 The process of deciding what type of data visualisation to create begins with a simple question: Why am I doing this? [Data visualisations must serve a purpose](/docs/principles.qmd) so all decisions about chart type, design, layout, and more, should flow from a clear understanding of the intended purpose of a graphic.

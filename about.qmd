@@ -3,10 +3,6 @@ title: "About the authors"
 editor: source
 ---
 
-::: {.callout-warning appearance="simple"}
-This site and its content are in development. The authors welcome feedback. Please either \[insert info about raising an issue/PR/email etc.\]
-:::
-
 ## Andreas Krause
 
 ::: grid

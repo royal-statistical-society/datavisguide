@@ -11,10 +11,6 @@ execute:
 editor: source
 ---
 
-::: {.callout-warning appearance="simple"}
-This site and its content are in development. The authors welcome feedback. Please either \[insert info about raising an issue/PR/email etc.\]
-:::
-
 ## Styling charts with different tools
 
 In this section, we discuss the technical details of how to change the style of charts built with some of the most common types of software used to create data visualisations.

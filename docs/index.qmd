@@ -4,10 +4,6 @@ subtitle: Table of contents
 toc: true
 ---
 
-::: {.callout-warning appearance="simple"}
-This site and its content are in development. The authors welcome feedback. Please either \[insert info about raising an issue/PR/email etc.\]
-:::
-
 ::: grid
 ::: {.g-col-12 .g-col-md-4 style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;"}
 #### [Why we visualise data](/docs/why-visualise.qmd){style="text-decoration:none;"}
