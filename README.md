@@ -33,7 +33,7 @@ Lead authors may offer feedback or suggestions to contributors before agreeing t
 
 Use of, and all contributions to, our website and repository are governed by our [Code of Conduct](CODE_OF_CONDUCT.md).
 
-All content created by the lead authors and published in this website and repository is licensed under a [Creative Commons Attribution 4.0 (CC BY 4.0) International licence](http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1), meaning it can be used and adapted for any purpose, provided attribution is given to the original authors. By contributing to this guide, contributors agree to licence their work under the same terms.
+Content created by the lead authors and published in this website and repository is licensed under a [Creative Commons Attribution 4.0 (CC BY 4.0) International licence](http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1), meaning it can be used and adapted for any purpose, provided attribution is given to the original authors. By contributing to this guide, contributors agree to licence their work under the same terms.
 
 This site is built in [Quarto](https://quarto.org/). To get started using Quarto, visit <https://quarto.org/docs/get-started/>.
 
