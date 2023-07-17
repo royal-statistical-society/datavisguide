@@ -1,0 +1,2 @@
+# Welcome to 'Best Practices for Data Visualisation', a new guide published by the Royal Statistical Society
+Statistics is “the science of collecting, analyzing, presenting, and interpreting data” (Williams, Anderson, and Sweeney 2023). Presentation of data is a key means to support and guide interpretation and subsequent decision making. Techniques exist for effective display. This is what this guide is all about.
