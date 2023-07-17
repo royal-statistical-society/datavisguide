@@ -99,5 +99,29 @@ Why we recommend: *Patients are often presented with data about health risk info
 
 ## Additional resources
 
-- training courses
-- online tools?
+### Training courses
+
+#### [Presenting Data (RSS)](https://rss.org.uk/training-events/training/public-courses/introduction-to-statistics/presenting-data/presenting-data-2021-12-25,-9-00am/#eventoverview)
+
+This online course is the foundation to all presentations of statistical information. The basic principles of presenting information in tables, charts, maps and text are explained. These are illustrated and then reinforced through practical exercises.
+
+#### [Data Exploration in Tableau (RSS)](https://rss.org.uk/training-events/training/public-courses/software-training/data-exploration-in-tableau/)
+
+Tableau is more than just a simple data visualisation tool. It also gives people the capability to manipulate multiple data sources, create custom charts, build predictive models, and turn their plots into interactive dashboards and presentations.
+
+This virtual course will run over two afternoons. It will guide you through the process of wrangling data, performing data analysis, and visually communicating outputs. By the end of this course you will be able to manipulate your own data to build custom charts. You will learn how to work with geographic data in Tableau, use predictive models to make forecasts, and create interactive dashboards and stories to share your work.
+
+#### [Power BI for Data Exploration and Basic Statistics (RSS)](https://rss.org.uk/training-events/training/public-courses/software-training/power-bi-for-data-exploration-and-basic-statistics/)
+
+Power BI is rapidly becoming a standard tool for producing interactive reports and dashboards and this course will provide a systematic introduction to Power BI, focusing on the workflow, from data preparation through to building and sharing visuals. There will be a focus on design issues, helping to achieve the right level of functionality and usability based on the intended audience. Particular attention will also be paid to the use of basic statistics.
+
+#### [Publishing Quality Charts in R with ggplot2 (RSS)](https://rss.org.uk/training-events/training/public-courses/software-training/publishing-quality-charts-in-r-with-ggplot2/)
+
+This tutor-led virtual course will introduce how the tidyverse and ggplot2 can be used to reproducibly create publication quality charts from R.
+
+### Low-code/no-code visualisation tools
+#### Datawrapper
+[https://www.datawrapper.de/](https://www.datawrapper.de/)
+
+#### Flourish
+[https://flourish.studio/](https://flourish.studio/)

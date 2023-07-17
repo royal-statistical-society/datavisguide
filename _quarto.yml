@@ -50,7 +50,7 @@ website:
             - href: docs/tools.qmd
               text: Styling for RSS publications
             - href: docs/references.qmd
-              text: References
+              text: References and resources
         - href: about.qmd
           text: About the authors
         - href: ts-and-cs.qmd
