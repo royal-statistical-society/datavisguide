@@ -6,6 +6,10 @@ bibliography: references.bib
 website:
   title: "Best Practices for Data Visualisation"
   image: images/RSS_logo_colour.png
+  open-graph: true
+  site-url: https://royal-statistical-society.github.io/datavisguide/
+  repo-url: https://github.com/royal-statistical-society/datavisguide
+  repo-actions: [edit, issue]
   navbar:
     logo: images/RSS_logo_colour.png
     left:
