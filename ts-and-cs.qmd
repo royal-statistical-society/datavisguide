@@ -56,8 +56,6 @@ This site is hosted by [GitHub Pages](https://pages.github.com/).
 
 This site uses [Google Analytics 4](https://support.google.com/analytics/answer/10089681?hl=en) for web analytics reporting.
 
-User comments and reaction functionality is provided by [giscus](https://giscus.app/), a comments system powered by [GitHub Discussions](https://docs.github.com/en/discussions). Use of this comment functionality is governed by the [Contributor Covenant Code of Conduct](#contributor-covenant-code-of-conduct).
-
 ## Notice and Takedown policy
 
 If you are a rights holder and are concerned that you have found material on our site for which you have not given permission, or is not covered by a limitation or exception in national law, please contact us in writing stating the following:
