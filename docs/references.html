@@ -96,7 +96,7 @@ div.csl-indent {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../images/RSS_logo_colour.png" alt="" class="navbar-logo">
+    <img src="../images/RSS_logo_colour.png" alt="RSS logo" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Best Practices for Data Visualisation</span>
@@ -107,25 +107,33 @@ div.csl-indent {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="../index.html" rel="" target="" aria-current="page">
- <span class="menu-text">Introduction</span></a>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-royal-statistical-society-publications" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Royal Statistical Society publications</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-royal-statistical-society-publications">    
+        <li>
+    <a class="dropdown-item" href="https://academic.oup.com/jrsssa" rel="" target="">
+ <span class="dropdown-text">Journal of the Royal Statistical Society</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../howto.html" rel="" target="">
- <span class="menu-text">How to use this guide</span></a>
+        <li>
+    <a class="dropdown-item" href="https://realworlddatascience.net/" rel="" target="">
+ <span class="dropdown-text">Real World Data Science</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../docs/index.html" rel="" target="">
- <span class="menu-text">The guide</span></a>
+        <li>
+    <a class="dropdown-item" href="https://academic.oup.com/jrssig" rel="" target="">
+ <span class="dropdown-text">Significance Magazine</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../about.html" rel="" target="">
- <span class="menu-text">About the authors</span></a>
+    </ul>
+  </li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/royal-statistical-society/datavisguide" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+            <div class="quarto-navbar-tools">
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -135,7 +143,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../docs/index.html">The guide</a></li><li class="breadcrumb-item"><a href="../docs/references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../docs/index.html">The guide</a></li><li class="breadcrumb-item"><a href="../docs/references.html">References and resources</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -201,7 +209,7 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../docs/references.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">References</span></a>
+ <span class="menu-text">References and resources</span></a>
   </div>
 </li>
       </ul>
@@ -233,7 +241,11 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional resources</a></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional resources</a>
+  <ul class="collapse">
+  <li><a href="#training-courses" id="toc-training-courses" class="nav-link" data-scroll-target="#training-courses">Training courses</a></li>
+  <li><a href="#low-codeno-code-visualisation-tools" id="toc-low-codeno-code-visualisation-tools" class="nav-link" data-scroll-target="#low-codeno-code-visualisation-tools">Low-code/no-code visualisation tools</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/royal-statistical-society/datavisguide/edit/main/docs/references.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/royal-statistical-society/datavisguide/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -333,12 +345,39 @@ van Weert, Julia C. M., Monique C. Alblas, Liset van Dijk, and Jesse Jansen. 202
 </section>
 <section id="additional-resources" class="level2">
 <h2 class="anchored" data-anchor-id="additional-resources">Additional resources</h2>
-<ul>
-<li>training courses</li>
-<li>online tools?</li>
-</ul>
+<section id="training-courses" class="level3">
+<h3 class="anchored" data-anchor-id="training-courses">Training courses</h3>
+<section id="presenting-data-rss" class="level4">
+<h4 class="anchored" data-anchor-id="presenting-data-rss"><a href="https://rss.org.uk/training-events/training/public-courses/introduction-to-statistics/presenting-data/presenting-data-2021-12-25,-9-00am/#eventoverview">Presenting Data (RSS)</a></h4>
+<p>This online course is the foundation to all presentations of statistical information. The basic principles of presenting information in tables, charts, maps and text are explained. These are illustrated and then reinforced through practical exercises.</p>
+</section>
+<section id="data-exploration-in-tableau-rss" class="level4">
+<h4 class="anchored" data-anchor-id="data-exploration-in-tableau-rss"><a href="https://rss.org.uk/training-events/training/public-courses/software-training/data-exploration-in-tableau/">Data Exploration in Tableau (RSS)</a></h4>
+<p>Tableau is more than just a simple data visualisation tool. It also gives people the capability to manipulate multiple data sources, create custom charts, build predictive models, and turn their plots into interactive dashboards and presentations.</p>
+<p>This virtual course will run over two afternoons. It will guide you through the process of wrangling data, performing data analysis, and visually communicating outputs. By the end of this course you will be able to manipulate your own data to build custom charts. You will learn how to work with geographic data in Tableau, use predictive models to make forecasts, and create interactive dashboards and stories to share your work.</p>
+</section>
+<section id="power-bi-for-data-exploration-and-basic-statistics-rss" class="level4">
+<h4 class="anchored" data-anchor-id="power-bi-for-data-exploration-and-basic-statistics-rss"><a href="https://rss.org.uk/training-events/training/public-courses/software-training/power-bi-for-data-exploration-and-basic-statistics/">Power BI for Data Exploration and Basic Statistics (RSS)</a></h4>
+<p>Power BI is rapidly becoming a standard tool for producing interactive reports and dashboards and this course will provide a systematic introduction to Power BI, focusing on the workflow, from data preparation through to building and sharing visuals. There will be a focus on design issues, helping to achieve the right level of functionality and usability based on the intended audience. Particular attention will also be paid to the use of basic statistics.</p>
+</section>
+<section id="publishing-quality-charts-in-r-with-ggplot2-rss" class="level4">
+<h4 class="anchored" data-anchor-id="publishing-quality-charts-in-r-with-ggplot2-rss"><a href="https://rss.org.uk/training-events/training/public-courses/software-training/publishing-quality-charts-in-r-with-ggplot2/">Publishing Quality Charts in R with ggplot2 (RSS)</a></h4>
+<p>This tutor-led virtual course will introduce how the tidyverse and ggplot2 can be used to reproducibly create publication quality charts from R.</p>
+</section>
+</section>
+<section id="low-codeno-code-visualisation-tools" class="level3">
+<h3 class="anchored" data-anchor-id="low-codeno-code-visualisation-tools">Low-code/no-code visualisation tools</h3>
+<section id="datawrapper" class="level4">
+<h4 class="anchored" data-anchor-id="datawrapper">Datawrapper</h4>
+<p><a href="https://www.datawrapper.de/">https://www.datawrapper.de/</a></p>
+</section>
+<section id="flourish" class="level4">
+<h4 class="anchored" data-anchor-id="flourish">Flourish</h4>
+<p><a href="https://flourish.studio/">https://flourish.studio/</a></p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -588,6 +627,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Copyright © 2023 Andreas Krause, Nicola Rennie and the <a href="https://rss.org.uk/">Royal Statistical Society</a></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

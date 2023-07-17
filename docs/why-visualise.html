@@ -97,7 +97,7 @@ div.csl-indent {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../images/RSS_logo_colour.png" alt="" class="navbar-logo">
+    <img src="../images/RSS_logo_colour.png" alt="RSS logo" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Best Practices for Data Visualisation</span>
@@ -108,25 +108,33 @@ div.csl-indent {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="../index.html" rel="" target="" aria-current="page">
- <span class="menu-text">Introduction</span></a>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-royal-statistical-society-publications" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Royal Statistical Society publications</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-royal-statistical-society-publications">    
+        <li>
+    <a class="dropdown-item" href="https://academic.oup.com/jrsssa" rel="" target="">
+ <span class="dropdown-text">Journal of the Royal Statistical Society</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../howto.html" rel="" target="">
- <span class="menu-text">How to use this guide</span></a>
+        <li>
+    <a class="dropdown-item" href="https://realworlddatascience.net/" rel="" target="">
+ <span class="dropdown-text">Real World Data Science</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../docs/index.html" rel="" target="">
- <span class="menu-text">The guide</span></a>
+        <li>
+    <a class="dropdown-item" href="https://academic.oup.com/jrssig" rel="" target="">
+ <span class="dropdown-text">Significance Magazine</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../about.html" rel="" target="">
- <span class="menu-text">About the authors</span></a>
+    </ul>
+  </li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/royal-statistical-society/datavisguide" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+            <div class="quarto-navbar-tools">
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -202,7 +210,7 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../docs/references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text">References and resources</span></a>
   </div>
 </li>
       </ul>
@@ -254,16 +262,6 @@ div.csl-indent {
 
 </header>
 
-<div class="callout callout-style-simple callout-warning">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>This site and its content are in development. The authors welcome feedback. Please either [insert info about raising an issue/PR/email etc.]</p>
-</div>
-</div>
-</div>
 <section id="motivation" class="level2">
 <h2 class="anchored" data-anchor-id="motivation">Motivation</h2>
 <p>Data visualisations can be a very efficient means of identifying patterns in data and conveying a message. The scientific aim of any visualisation is to allow the reader to understand data and extract information:</p>
@@ -356,7 +354,7 @@ div.csl-indent {
 <p>Statistical systems such as SAS enabled creation of data visualisations early on <span class="citation" data-cites="SAS">(<a href="#ref-SAS" role="doc-biblioref"><span>“Documentation”</span> n.d.</a>)</span>.</p>
 <p>Arguably the most consistent implementation of a graphics system was realised with ggplot <span class="citation" data-cites="Wickham2011 Wickham2016">(<a href="#ref-Wickham2011" role="doc-biblioref">Wickham 2011</a>, <a href="#ref-Wickham2016" role="doc-biblioref">2016</a>)</span> based on Wilkinson’s <em>The Grammar of Graphics</em> <span class="citation" data-cites="Wilkinson2005">(<a href="#ref-Wilkinson2005" role="doc-biblioref">Wilkinson 2005</a>)</span>.</p>
 <p>A key component of ggplot2 is the feature of creating conditional displays. These allow for subsetting the data by the values of one or more variables. The concept was introduced by Cleveland <span class="citation" data-cites="Cleveland1993 Cleveland1994">(<a href="#ref-Cleveland1993" role="doc-biblioref">Cleveland 1993</a>, <a href="#ref-Cleveland1994" role="doc-biblioref">1994</a>)</span>, showcasing a widely-known barley data set that was analysed in textbooks for decades until a visualisation strongly suggested an error in the data set – two years of crop yield of one variety at one of six farms were accidentally swapped. It took a visualisation to reveal what numerous numerical analyses had missed!</p>
-<p>Cleveland named the display type “trellis”, being inspired by a trellis in his garden <span class="citation" data-cites="Cleveland1993">(<a href="#ref-Cleveland1993" role="doc-biblioref">Cleveland 1993</a>)</span>. The trellis concept was first implemented in S <span class="citation" data-cites="Becker1984">(<a href="#ref-Becker1984" role="doc-biblioref">Becker and Chambers 1984</a>)</span> and S-PLUS <span class="citation" data-cites="Becker1996">(<a href="#ref-Becker1996" role="doc-biblioref">Becker and Cleveland 1996</a>)</span>. When R <span class="citation" data-cites="Rteam2021">(<a href="#ref-Rteam2021" role="doc-biblioref"><strong>Rteam2021?</strong></a>)</span> was developed by Robert Gentleman and Ross Ihaka in Auckland NZ in the 1980s, a package named <code>lattice</code> was developed <span class="citation" data-cites="Sarkar2008">(<a href="#ref-Sarkar2008" role="doc-biblioref">Sarkar 2008</a>)</span> since “trellis” carried a trademark (by Lucent and later MathSoft). With the advent of ggplot, the term faceting (with functions facet_grid and facet_wrap) replaced the “lattice” with its “panels”.</p>
+<p>Cleveland named the display type “trellis”, being inspired by a trellis in his garden <span class="citation" data-cites="Cleveland1993">(<a href="#ref-Cleveland1993" role="doc-biblioref">Cleveland 1993</a>)</span>. The trellis concept was first implemented in S <span class="citation" data-cites="Becker1984">(<a href="#ref-Becker1984" role="doc-biblioref">Becker and Chambers 1984</a>)</span> and S-PLUS <span class="citation" data-cites="Becker1996">(<a href="#ref-Becker1996" role="doc-biblioref">Becker and Cleveland 1996</a>)</span>. When R <span class="citation" data-cites="RTeam2021">(<a href="#ref-RTeam2021" role="doc-biblioref">R Core Team 2021</a>)</span> was developed by Robert Gentleman and Ross Ihaka in Auckland NZ in the 1980s, a package named <code>lattice</code> was developed <span class="citation" data-cites="Sarkar2008">(<a href="#ref-Sarkar2008" role="doc-biblioref">Sarkar 2008</a>)</span> since “trellis” carried a trademark (by Lucent and later MathSoft). With the advent of ggplot, the term faceting (with functions facet_grid and facet_wrap) replaced the “lattice” with its “panels”.</p>
 
 
 
@@ -401,6 +399,9 @@ Hedley, Alison. 2020. <span>“<span class="nocase">Florence Nightingale and Vic
 </div>
 <div id="ref-Krause2013" class="csl-entry" role="listitem">
 Krause, A. 2013. <span>“Concepts and Principles of Clinical Data Graphics.”</span> In <em>A Picture Is Worth a Thousand Tables: Graphics in Life Sciences</em>. Springer.
+</div>
+<div id="ref-RTeam2021" class="csl-entry" role="listitem">
+R Core Team. 2021. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
 </div>
 <div id="ref-Robinson1967" class="csl-entry" role="listitem">
 Robinson, A. H. 1967. <span>“The Thematic Maps of Charles Joseph Minard.”</span> <em>Imago Mundi</em> 21: 95–108.
@@ -682,6 +683,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Copyright © 2023 Andreas Krause, Nicola Rennie and the <a href="https://rss.org.uk/">Royal Statistical Society</a></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
 <meta property="og:site-name" content="Best Practices for Data Visualisation">
 </head>
 
-<body class="nav-sidebar floating nav-fixed fullcontent">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -77,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../images/RSS_logo_colour.png" alt="" class="navbar-logo">
+    <img src="../images/RSS_logo_colour.png" alt="RSS logo" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Best Practices for Data Visualisation</span>
@@ -88,25 +88,33 @@ ul.task-list li input[type="checkbox"] {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="../index.html" rel="" target="" aria-current="page">
- <span class="menu-text">Introduction</span></a>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-royal-statistical-society-publications" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Royal Statistical Society publications</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-royal-statistical-society-publications">    
+        <li>
+    <a class="dropdown-item" href="https://academic.oup.com/jrsssa" rel="" target="">
+ <span class="dropdown-text">Journal of the Royal Statistical Society</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../howto.html" rel="" target="">
- <span class="menu-text">How to use this guide</span></a>
+        <li>
+    <a class="dropdown-item" href="https://realworlddatascience.net/" rel="" target="">
+ <span class="dropdown-text">Real World Data Science</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../docs/index.html" rel="" target="">
- <span class="menu-text">The guide</span></a>
+        <li>
+    <a class="dropdown-item" href="https://academic.oup.com/jrssig" rel="" target="">
+ <span class="dropdown-text">Significance Magazine</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../about.html" rel="" target="">
- <span class="menu-text">About the authors</span></a>
+    </ul>
+  </li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/royal-statistical-society/datavisguide" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+            <div class="quarto-navbar-tools">
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -182,7 +190,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../docs/references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text">References and resources</span></a>
   </div>
 </li>
       </ul>
@@ -204,7 +212,9 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -226,16 +236,6 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="callout callout-style-simple callout-warning">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>This site and its content are in development. The authors welcome feedback. Please either [insert info about raising an issue/PR/email etc.]</p>
-</div>
-</div>
-</div>
 <div class="grid">
 <section id="why-we-visualise-data" class="level4 g-col-12 g-col-md-4" style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;">
 <h4 class="anchored" data-anchor-id="why-we-visualise-data"><a href="../docs/why-visualise.html" style="text-decoration:none;">Why we visualise data</a></h4>
@@ -296,11 +296,12 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="references" class="level4 g-col-12 g-col-md-4" style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;">
-<h4 class="anchored" data-anchor-id="references"><a href="../docs/references.html" style="text-decoration:none;">References</a></h4>
+<section id="references-and-resources" class="level4 g-col-12 g-col-md-4" style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;">
+<h4 class="anchored" data-anchor-id="references-and-resources"><a href="../docs/references.html" style="text-decoration:none;">References and resources</a></h4>
 <ul>
 <li>Primary sources</li>
-<li>Recommended reading</li>
+<li>Further reading</li>
+<li>Additional resources</li>
 </ul>
 </section>
 </div>
@@ -554,7 +555,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Copyright © 2023 Andreas Krause, Nicola Rennie and the <a href="https://rss.org.uk/">Royal Statistical Society</a><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/royal-statistical-society/datavisguide/edit/main/docs/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/royal-statistical-society/datavisguide/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/royal-statistical-society/datavisguide/edit/main/docs/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/royal-statistical-society/datavisguide/issues/new" class="toc-action">Report an issue</a></p></div></div></div></div></footer></body></html>
+</body></html>

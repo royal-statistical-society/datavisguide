@@ -76,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/RSS_logo_colour.png" alt="" class="navbar-logo">
+    <img src="./images/RSS_logo_colour.png" alt="RSS logo" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Best Practices for Data Visualisation</span>
@@ -87,25 +87,33 @@ ul.task-list li input[type="checkbox"] {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
- <span class="menu-text">Introduction</span></a>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-royal-statistical-society-publications" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Royal Statistical Society publications</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-royal-statistical-society-publications">    
+        <li>
+    <a class="dropdown-item" href="https://academic.oup.com/jrsssa" rel="" target="">
+ <span class="dropdown-text">Journal of the Royal Statistical Society</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./howto.html" rel="" target="">
- <span class="menu-text">How to use this guide</span></a>
+        <li>
+    <a class="dropdown-item" href="https://realworlddatascience.net/" rel="" target="">
+ <span class="dropdown-text">Real World Data Science</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./docs/index.html" rel="" target="">
- <span class="menu-text">The guide</span></a>
+        <li>
+    <a class="dropdown-item" href="https://academic.oup.com/jrssig" rel="" target="">
+ <span class="dropdown-text">Significance Magazine</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">About the authors</span></a>
+    </ul>
+  </li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/royal-statistical-society/datavisguide" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+            <div class="quarto-navbar-tools">
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -181,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./docs/references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text">References and resources</span></a>
   </div>
 </li>
       </ul>
@@ -285,7 +293,6 @@ ul.task-list li input[type="checkbox"] {
 <p>This site is built using <a href="https://quarto.org/">Quarto</a>, an open-source scientific and technical publishing system developed by <a href="https://posit.co/">Posit</a>. Quarto source code and software licences are available from <a href="https://github.com/quarto-dev">GitHub</a>.</p>
 <p>This site is hosted by <a href="https://pages.github.com/">GitHub Pages</a>.</p>
 <p>This site uses <a href="https://support.google.com/analytics/answer/10089681?hl=en">Google Analytics 4</a> for web analytics reporting.</p>
-<p>User comments and reaction functionality is provided by <a href="https://giscus.app/">giscus</a>, a comments system powered by <a href="https://docs.github.com/en/discussions">GitHub Discussions</a>. Use of this comment functionality is governed by the <a href="#contributor-covenant-code-of-conduct">Contributor Covenant Code of Conduct</a>.</p>
 </section>
 <section id="notice-and-takedown-policy" class="level2">
 <h2 class="anchored" data-anchor-id="notice-and-takedown-policy">Notice and Takedown policy</h2>
@@ -635,6 +642,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Copyright © 2023 Andreas Krause, Nicola Rennie and the <a href="https://rss.org.uk/">Royal Statistical Society</a></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 
