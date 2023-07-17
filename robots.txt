@@ -1,1 +1,1 @@
-Sitemap: https://brtarran.github.io/rssdatavisguide/sitemap.xml
+Sitemap: https://royal-statistical-society.github.io/datavisguide/sitemap.xml
