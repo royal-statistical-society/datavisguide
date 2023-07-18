@@ -1,0 +1,140 @@
+---
+title: Best Practices for Data Visualisation
+subtitle: Insights, advice, and examples (with code) to make data outputs more readable, accessible, and impactful
+author: "Andreas Krause, Nicola Rennie, & Brian Tarran"
+format:
+  pdf:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    number-depth: 2
+    output-file: "RSS-data-vis-guide"
+    output-ext:  "pdf"
+editor: source
+---
+
+```{r}
+#| echo: false
+#| eval: true
+process_qmd <- function(file, fpath_in = "images/", fpath_out = "images/") {
+  doc <- readLines(file)
+  end_yaml <- which(doc == "---")[2]
+  out_doc <- doc[seq(end_yaml+1, length(doc))]
+  if (fpath_in != fpath_out) {
+    out_doc <- stringr::str_replace_all(out_doc, fpath_in, fpath_out)
+  }
+  res <- knitr::knit_child(text = out_doc, quiet = TRUE, options = list(eval = FALSE, echo = TRUE))
+  return(res)
+}
+```
+
+# Introduction
+
+```{r}
+#| output: asis
+#| echo: false
+#| eval: true
+#| message: false
+idx <- process_qmd("index.qmd")
+cat(unlist(idx), sep = '\n')
+```
+
+# How to use this guide
+
+```{r}
+#| output: asis
+#| echo: false
+#| eval: true
+#| message: false
+howto <- process_qmd("howto.qmd")
+cat(unlist(howto), sep = '\n')
+```
+
+# Why we visualise data
+
+```{r}
+#| output: asis
+#| echo: false
+#| eval: true
+#| message: false
+why <- process_qmd("docs/why-visualise.qmd", fpath_in = "images/", fpath_out = "docs/images/")
+cat(unlist(why), sep = '\n')
+```
+
+# Principles and elements of visualisations
+
+```{r}
+#| output: asis
+#| echo: false
+#| eval: true
+#| message: false
+principles <- process_qmd("docs/principles.qmd", fpath_in = "images/", fpath_out = "docs/images/")
+cat(unlist(principles), sep = '\n')
+```
+
+# Choosing a visualisation type
+
+```{r}
+#| output: asis
+#| echo: false
+#| eval: true
+#| message: false
+choosing <- process_qmd("docs/choosing.qmd", fpath_in = "images/", fpath_out = "docs/images/")
+cat(unlist(choosing), sep = '\n')
+```
+
+# Styling for accessibility
+
+```{r}
+#| output: asis
+#| echo: false
+#| eval: true
+#| message: false
+styling <- process_qmd("docs/styling.qmd", fpath_in = "images/", fpath_out = "docs/images/")
+cat(unlist(styling), sep = '\n')
+```
+
+
+# Styling for RSS Publications
+
+```{r}
+#| output: asis
+#| echo: false
+#| eval: true
+#| message: false
+tools <- process_qmd("docs/tools.qmd", fpath_in = "images/", fpath_out = "docs/images/")
+cat(unlist(tools), sep = '\n')
+```
+
+# References
+
+```{r}
+#| output: asis
+#| echo: false
+#| eval: true
+#| message: false
+refs <- process_qmd("docs/references.qmd")
+cat(unlist(refs), sep = '\n')
+```
+
+# About the authors
+
+```{r}
+#| output: asis
+#| echo: false
+#| eval: true
+#| message: false
+about <- process_qmd("about.qmd")
+cat(unlist(about), sep = '\n')
+```
+
+# Terms and Conditions
+
+```{r}
+#| output: asis
+#| echo: false
+#| eval: true
+#| message: false
+ts_and_cs <- process_qmd("ts-and-cs.qmd")
+cat(unlist(ts_and_cs), sep = '\n')
+```
