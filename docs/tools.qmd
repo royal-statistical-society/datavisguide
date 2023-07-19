@@ -24,14 +24,12 @@ To help authors with styling their charts to fit in with the guidance in this do
 We aim to add this package to CRAN in the near future, but in the meantime you can install the development version from GitHub:
 
 ```{r}
-#| code-fold: false
 remotes::install_github("nrennie/RSSthemes")
 ```
 
 You can then load the package using:
 
 ```{r}
-#| code-fold: false
 library(RSSthemes)
 ```
 
@@ -198,11 +196,11 @@ If you find a bug in the {RSSthemes} package, or something that isn't working qu
 
 #### Exporting images from R
 
-There are different ways to export and save images from R. Using the *Export* button on the *Plots* pane in RStudio doesn't usually result in images of high enough resolution for publication quality graphics. The minimum image resolution for images published in print is 300 dpi. If you use `ggsave()` from {ggplot2}, 300 dpi is the default resolution. We recommend saving images in PDF or EPS file format as this makes it easier for them to be resized. 
+There are different ways to export and save images from R. Using the *Export* button on the *Plots* pane in RStudio doesn't usually result in images of high enough resolution for publication quality graphics. The minimum image resolution for images published in print is 300 dpi. If you use `ggsave()` from {ggplot2}, 300 dpi is the default resolution. We recommend saving images in PDF or EPS file format as this makes it easier for them to be resized.
 
-Further information on specific image sizes for different RSS publications is given in the next section. 
+Further information on specific image sizes for different RSS publications is given in the [Publication specifications](#publication-specifications) section.
 
-As an example, suppose you were creating a plot for the Features section of Significance magazine, and you wanted the plot to span two of the three columns. From the table below, the width of the image should be 124mm. To use the `pdf()` function to save an image, the width and height should be in inches (124mm ~ 4.88in). If we want an 2:1 aspect ratio, we make the height equal to half the width:
+As an example, suppose you were creating a plot for the Features section of *Significance* magazine, and you wanted the plot to span two of the three columns. From the [table](#features-section) below, the width of the image should be 124 mm. To use the `pdf()` function to save an image, the width and height should be in inches (124 mm \~ 4.88 in). If we want a 2:1 aspect ratio, we make the height equal to half the width:
 
 ```{r}
 pdf(file = "signifance-feature-plot.pdf", # name of file
@@ -213,7 +211,6 @@ plot(1:4, 1:4)
 dev.off()
 ```
 
-
 ### Python
 
 [Python](https://www.python.org/) is a general-purpose programming language, with libraries available that provide capabilities for data analysis and visualisation.
@@ -222,7 +219,7 @@ dev.off()
 
 [Matplotlib](https://matplotlib.org/) is a Python library for creating static, animated, and interactive data visualisations.
 
-**Example**: changing bar chart colours in matplotlib
+**Example**: changing bar chart colours in matplotlib.
 
 You can change the colour of chart elements in matplotlib using the `color` argument:
 
@@ -252,9 +249,9 @@ plt.bar(x_vals, y_vals, label = x_vals, color = signif_qual)
 plt.show()
 ```
 
-![Bar chart showing the colours from the `signif_qual` palette](images/tools-qual-py.png){fig-alt="Barchart showing the colours from signif_qual"}
+![Bar chart showing the colours from the `signif_qual` palette.](images/tools-qual-py.png){fig-alt="Barchart showing the colours from signif_qual"}
 
-**Example**: changing the font family in matplotlib
+**Example**: changing the font family in matplotlib.
 
 You can change the font used in all elements of the plot using `rcParams`. Good practice when setting a custom font family is to add a generic font family (such as sans serif) as a back up. If you're using a font that isn't pre-installed on your system, you can load it in using `font_manager`:
 
@@ -287,8 +284,7 @@ ax.legend(ncol = 4, loc = 'lower center', bbox_to_anchor = (0.5, -0.15), frameon
 plt.show()
 ```
 
-![Barchart showing the use of Source Sans font](images/tools-py-font.png){fig-alt="Barchart showing the use of Source Sans font."}
-
+![Barchart showing the use of Source Sans font.](images/tools-py-font.png){fig-alt="Barchart showing the use of Source Sans font."}
 
 ## Publication specifications
 
