@@ -9,7 +9,6 @@ execute:
   eval: false
   echo: true
 editor: source
-suppress-bibliography: true
 ---
 
 ## Principles of styling charts
@@ -517,3 +516,16 @@ As you can see, there is no single font recommendation that will ensure your vis
 Alt text (short for alternative text) is text that describes the visual aspects and purpose of an image -- including charts. Though alt text has various uses, its primary purpose is to aid visually impaired users in interpreting images when the alt text is read aloud by screen readers.
 
 In @Green2023, Mine Dogucu discusses the importance of adding alt text to your data visualisations, to ensure those who are blind or visually impaired don't miss out on the content in your charts. @Cesal2020 provides a simple structure to aid you in writing alt text for data visualisations.
+
+::: {.content-visible unless-format="pdf"}
+
+::: {.callout-note appearance="simple" collapse=true}
+
+## References
+
+::: {#refs}
+:::
+
+:::
+
+:::
