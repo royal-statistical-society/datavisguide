@@ -283,7 +283,8 @@ ax.set_axisbelow(True)
 ax.xaxis.grid(color = 'lightgrey')
 ax.yaxis.grid(color = 'lightgrey')
 # add legend below plot
-ax.legend(ncol = 4, loc = 'lower center', bbox_to_anchor = (0.5, -0.15), frameon = False)
+ax.legend(ncol = 4, loc = 'lower center',
+          bbox_to_anchor = (0.5, -0.15), frameon = False)
 plt.show()
 ```
 
