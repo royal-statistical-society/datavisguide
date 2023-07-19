@@ -235,7 +235,7 @@ plt.bar(x_vals, y_vals, color = "#009cc4")
 plt.show()
 ```
 
-![Bar chart with bars coloured in Significance blue.](images/tools-blue-py.png){fig-alt="Bar charts visualising plant growth of average hght for different treatments with user specified colours red, blue, and dark green."}
+![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-py.png){fig-alt="Bar charts visualising plant growth of average hght for different treatments with user specified colours red, blue, and dark green."}
 
 If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:
 
@@ -287,7 +287,7 @@ plt.show()
 
 ![Barchart showing the use of Source Sans font.](images/tools-py-font.png){fig-alt="Barchart showing the use of Source Sans font."}
 
-## Publication specifications
+## Publication specifications {#publication-specifications}
 
 The following information should be used to design graphs and charts that meet RSS publication requirements. Details include page sizes and column widths, font types and sizes, and image resolutions and file formats.
 
@@ -327,7 +327,7 @@ Uses four-column layout.
 |                 | -   Hex code = #e41b12                    |
 +-----------------+-------------------------------------------+
 
-#### Features section
+#### Features section {#features-section}
 
 Uses three-column layout.
 
