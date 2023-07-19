@@ -2,7 +2,8 @@ project:
   type: website
   
 bibliography: references.bib
-
+nocite: |
+  @*
 website:
   title: "Best Practices for Data Visualisation"
   image: images/RSS_logo_colour.png
