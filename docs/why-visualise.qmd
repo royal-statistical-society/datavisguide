@@ -60,39 +60,23 @@ Data visualisation has been, for a long time, both a topic of scientific researc
 
 In 1859, [Florence Nightingale](https://en.wikipedia.org/wiki/Florence_Nightingale), the founder of modern nursing, published her findings on the sanitary status of the British army during the war with Russia. She showed raw data as well as summary statistics in tables and charts (Nightingale, 1859). One chart in particular continues to be celebrated today: a polar area chart on the "causes of mortality in the army in the East".
 
-[![](images/Nightingale-mortality.jpg){width="500px"}](images/Nightingale-mortality.jpg)
-
-::: figure-caption
-Florence Nightingale's polar area chart, "Diagram of the causes of mortality in the army in the East". Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Nightingale-mortality.jpg).
-:::
+[![Florence Nightingale's polar area chart, "Diagram of the causes of mortality in the army in the East". Source: <a href="https://commons.wikimedia.org/wiki/File:Nightingale-mortality.jpg">Wikimedia Commons</a>.](images/Nightingale-mortality.jpg){width="500px"}](images/Nightingale-mortality.jpg)
 
 What made Nightingale's graphs "particularly iconic was their powerful use of visual rhetoric to make an argument about data" [@Hedley]. This quality is also evident in other visualisations produced by Nightingale's contemporaries.
 
 A simplistic but rather impactful visualisation of the water pumps in London associated with transmission of cholera paved the way for root cause identification [@Snow1854].
 
-[![](images/Snow-cholera-map.jpg){width="500px"}](images/Snow-cholera-map.jpg)
-
-::: figure-caption
-Map by John Snow showing clusters of cholera cases in the London epidemic of 1854. Source: [Wikimedia Commons](https://en.wikipedia.org/wiki/File:Snow-cholera-map-1.jpg).
-:::
+[![Map by John Snow showing clusters of cholera cases in the London epidemic of 1854. Source: <a href="https://en.wikipedia.org/wiki/File:Snow-cholera-map-1.jpg">Wikimedia Commons</a>.](images/Snow-cholera-map.jpg){width="500px"}](images/Snow-cholera-map.jpg)
 
 An early complex visualisation was created by Minard in 1861, depicting [data from Napoleon's march on Moscow](https://academic.oup.com/jrssig/article/5/3/133/7029764) in 1812/13 and his subsequent retreat.
 
-[![](images/minard.png){width="500px"}](images/minard.png)
-
-::: figure-caption
-Charles Minard's 1869 map of "the successive losses in men of the French Army in the Russian campaign 1812--1813". Source: [Wikimedia Commons](https://en.wikipedia.org/wiki/File:Minard.png).
-:::
+[![Charles Minard's 1869 map of "the successive losses in men of the French Army in the Russian campaign 1812--1813". Source: <a href="https://en.wikipedia.org/wiki/File:Minard.png">Wikimedia Commons</a>.](images/minard.png){width="500px"}](images/minard.png)
 
 The map shows latitude and longitude of the army as it moved. The line shows the direction of movement, and the line width represents the size of the army (the surviving soldiers). Particular locations were marked by the date of the army presence, and the temperature is shown, too. Six variables were elegantly woven into a single display [@Tufte2001; @Corbett2001; @Robinson1967].
 
 The Paris Exposition in 1900 featured W. E. B. Du Bois exhibiting graphs, charts, and maps of how Black Americans were living [@DuBois1900; @BattleBaptiste2018].
 
-[![](images/du-bois.jpg){width="500px"}](images/du-bois.jpg)
-
-::: figure-caption
-A series of statistical charts illustrating the condition of the descendants of former African slaves now in residence in the United States of America. Drawing, ca. 1900. //hdl.loc.gov/loc.pnp/ppmsca.33899. Source: [Library of Congress](https://blogs.loc.gov/picturethis/2014/02/du-boiss-american-negro-exhibit-for-the-1900-paris-exposition/).
-:::
+[![A series of statistical charts illustrating the condition of the descendants of former African slaves now in residence in the United States of America. Drawing, ca. 1900. //hdl.loc.gov/loc.pnp/ppmsca.33899. Source: <a href="https://blogs.loc.gov/picturethis/2014/02/du-boiss-american-negro-exhibit-for-the-1900-paris-exposition/">Library of Congress</a>.](images/du-bois.jpg){width="500px"}](images/du-bois.jpg)
 
 Groundbreaking work in modern visualisation was provided by Tukey with his book *Exploratory Data Analysis* [@Tukey1977], and Edward Tufte [@Tufte1990; @Tufte2004; @Tufte2006].
 
