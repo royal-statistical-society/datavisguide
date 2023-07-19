@@ -9,7 +9,6 @@ execute:
   eval: false
   echo: true
 editor: source
-suppress-bibliography: true
 ---
 
 ## Styling charts with different tools

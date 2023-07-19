@@ -1,7 +1,6 @@
 ---
 title: "About the authors"
 editor: source
-suppress-bibliography: true
 ---
 
 ## Andreas Krause

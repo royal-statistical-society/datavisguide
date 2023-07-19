@@ -1,5 +1,7 @@
 ---
 title: References and resources
+nocite: |
+  @*
 ---
 
 ## Texts referenced in the Guide
@@ -32,7 +34,6 @@ Why we recommend: *We often hear the term "storytelling" when we're talking abou
 @VanWeert2021
 
 Why we recommend: *Patients are often presented with data about health risk information in the form in charts and tables. This article examines how well patients understand the information presented to them across a range of different chart types. It finds that the types of charts that patients prefer, is not always the type of chart that they understand best.*
-
 
 ## Additional resources
 
