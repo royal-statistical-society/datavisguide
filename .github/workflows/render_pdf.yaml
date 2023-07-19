@@ -26,7 +26,7 @@ jobs:
           
       - name: Install R packages
         run: |
-          install.packages(c("knitr", "rmarkdown", "quarto", "stringr", "reticulate"))
+          install.packages(c("knitr", "rmarkdown", "quarto", "stringr"))
         shell: Rscript {0}
         
       - name: Render PDF
