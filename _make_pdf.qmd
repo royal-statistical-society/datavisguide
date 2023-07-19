@@ -3,6 +3,8 @@ title: Best Practices for Data Visualisation
 subtitle: Insights, advice, and examples (with code) to make data outputs more readable, accessible, and impactful
 author: "Andreas Krause, Nicola Rennie, & Brian Tarran"
 bibliography: references.bib
+nocite: |
+  @*
 format:
   pdf:
     toc: true
