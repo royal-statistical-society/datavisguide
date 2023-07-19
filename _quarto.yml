@@ -10,6 +10,7 @@ website:
   site-url: https://royal-statistical-society.github.io/datavisguide/
   repo-url: https://github.com/royal-statistical-society/datavisguide
   repo-actions: [edit, issue]
+  google-analytics: "G-5VHDJ5PKRW"
   navbar:
     collapse-below: lg
     logo: images/RSS_logo_colour.png
