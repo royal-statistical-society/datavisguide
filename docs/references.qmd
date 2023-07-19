@@ -120,8 +120,11 @@ Power BI is rapidly becoming a standard tool for producing interactive reports a
 This tutor-led virtual course will introduce how the tidyverse and ggplot2 can be used to reproducibly create publication quality charts from R.
 
 ### Low-code/no-code visualisation tools
+
 #### Datawrapper
-[https://www.datawrapper.de/](https://www.datawrapper.de/)
+
+<https://www.datawrapper.de/>
 
 #### Flourish
-[https://flourish.studio/](https://flourish.studio/)
+
+<https://flourish.studio/>
