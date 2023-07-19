@@ -4,67 +4,8 @@ title: References and resources
 
 ## Texts referenced in the Guide
 
-Battle-Baptiste W, Rusert B.: W.E.B. Du Bois's data portraits: Visualizing black America: The Color Line at the Turn of the Twentieth Century. The W.E.B. Du Bois Center at the University of Massachusetts; 2018.
-
-Becker RA, Chambers JM. S: An Interactive Environment for Data Analysis and Graphics. Pacific Grove, CA: Wadsworth & Brooks/Cole; 1984. 
-
-Becker RA, Cleveland WS: S-PLUS Trellis Graphics User's Manual. MathSoft, Seattle WA, 1996. Available from <https://socialsciences.mcmaster.ca/jfox/Courses/R/ICPSR/trellis.usermanual.pdf> (accessed June 19, 2023).
-
-Cleveland, W.S. (1993) Visualizing data. Summit NJ: Hobart Press.
-
-Cleveland, W.S. (1994) The elements of graphing data. Summit NJ: Hobart Press.
-
-Corbett J. (2001). Charles Joseph Minard, Mapping Napoleon's March, 1861. CSISS Class 2001. <https://escholarship.org/uc/item/4qj8h064> 
-
-Du Bois W.E.B. The Exhibit of American Negroes. Paris; 1900.
-
-Few S. Show me the numbers. Burlingame CA: Analytics Press; 2004.
-
-Friendly M. A very brief history of visualization: visions, stories and pictures. Chicago IL; 2018. Available from: <http://datavis.ca/papers/CHF-2x2.pdf>
-
-Friendly M. Remembrances of Things EDA \[Internet\]. 2022. Available from: <https://www.researchgate.net/publication/361191335_Rememberances_of_Things_EDA> 
-
-Friendly M, Denis D. The early origins and development of the scatterplot. J Hist Behav Sci. 2005;41(2):103--30. Available from: <https://doi.org/10.1002/jhbs.20078> 
-
-Garland, K. (1994) Mr Beck's underground map. Capital Transport. 
-
-Kent, A.J. (2021) 'When Topology Trumped Topography: Celebrating 90 Years of Beck's Underground Map', The Cartographic Journal, 58(1), pp. 1--12. Available at: <https://doi.org/10.1080/00087041.2021.1953765> 
-
-Krause A (2013): Concepts and Principles of Clinical Data Graphics. In Krause and O'Connell (2013).
-
-Krause A, O'Connell M. (editors), 2013. A picture is worth a thousand tables: Graphics in life sciences. Springer.
-
-Nightingale F. A contribution to the sanitary history of the British army during the late war with Russia. London, UK: Harrison and Sons; 1859. <https://iiif.lib.harvard.edu/manifests/view/drs:7420433$24b> (accessed June 19, 2023).
-
-Norman, D.A. (1990) The design of everyday things. New York NY: Currency Doubleday.
-
-R Core Team (2021). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. [https://www.R-project.org/](https://www.r-project.org/) (accessed June 19, 2023).
-
-Robbins, N.B. (2006) Creating more effective graphs. Hoboken NJ: Wiley.
-
-Robinson A.H. (1967). The thematic maps of Charles Joseph Minard. Imago Mundi; 21: 95--108. 
-
-Sarkar D. Lattice: multivariate data visualization with R. New York NY: Springer; 2008. 
-
-SAS (Statistical Analysis System). Documentation. <https://support.sas.com/en/documentation.html> (accessed June 19, 2023).
-
-Snow J. Mode of communication of cholera. 2nd ed. Piccadilly (London), UK: John Churchill; 1854. <https://archive.org/details/b28985266/page/52/mode/2up?view=theater> (accessed June 19, 2023).
-
-Tufte, E.R. (1990) Envisioning information. Graphics Press.
-
-Tufte, E.R. (2004) Visual explanations: images and quantities, evidence and narrative. Graphics Press, Cheshire CT.
-
-Tufte, E.R. (2006) Beautiful Evidence. Graphics Press, Cheshire CT.
-
-Tufte, E.R. (2001). The visual display of quantitative information. 2nd edn. Graphics Press, Cheshire CT.
-
-Tukey JW. Exploratory data analysis. Reading MA: Addison-Wesley; 1977.
-
-Wickham H. ggplot2. Wiley Interdiscip Rev Comput Stat 2011; 3: 180--5. <https://onlinelibrary.wiley.com/doi/10.1002/wics.147> 
-
-Wickham H. ggplot2. Create elegant data visualisations using the grammar of graphics. Springer International Publishing; 2016 (Use R!; vol. 2). Available from: <https://doi.org/10.1007/978-3-319-24277-4> 
-
-Wilkinson, L. (2005) The Grammar of Graphics. New York: Springer-Verlag (Statistics and Computing). Available at: <https://doi.org/10.1007/0-387-28695-0>.
+::: {#refs}
+:::
 
 ## Further reading
 
@@ -92,10 +33,6 @@ Why we recommend: *We often hear the term "storytelling" when we're talking abou
 
 Why we recommend: *Patients are often presented with data about health risk information in the form in charts and tables. This article examines how well patients understand the information presented to them across a range of different chart types. It finds that the types of charts that patients prefer, is not always the type of chart that they understand best.*
 
-### References
-
-::: {#refs}
-:::
 
 ## Additional resources
 
