@@ -2,6 +2,7 @@
 title: Best Practices for Data Visualisation
 subtitle: Insights, advice, and examples (with code) to make data outputs more readable, accessible, and impactful
 author: "Andreas Krause, Nicola Rennie, & Brian Tarran"
+bibliography: references.bib
 format:
   pdf:
     toc: true
@@ -10,6 +11,10 @@ format:
     number-depth: 2
     output-file: "RSS-data-vis-guide"
     output-ext:  "pdf"
+    linkcolor: RSSblue
+    urlcolor: RSSblue
+    include-in-header: 
+       - "styles.tex"
 editor: source
 ---
 
