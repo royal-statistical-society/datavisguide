@@ -223,7 +223,7 @@ dev.off()
 
 You can change the colour of chart elements in matplotlib using the `color` argument:
 
-```{python}
+```{{python}}
 #| message: false
 #| eval: false
 import matplotlib.pyplot as plt
@@ -239,7 +239,7 @@ plt.show()
 
 If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:
 
-```{python}
+```{{python}}
 #| message: false
 #| eval: false
 # define colour palette
@@ -255,7 +255,7 @@ plt.show()
 
 You can change the font used in all elements of the plot using `rcParams`. Good practice when setting a custom font family is to add a generic font family (such as sans serif) as a back up. If you're using a font that isn't pre-installed on your system, you can load it in using `font_manager`:
 
-```{python}
+```{{python}}
 #| message: false
 #| eval: false
 from matplotlib import font_manager
@@ -264,7 +264,7 @@ font_manager.fontManager.addfont("SourceSans3-Regular.ttf")
 
 You can specify a different font family, weight, or size using `fontdic` for individual elements.
 
-```{python}
+```{{python}}
 #| message: false
 #| eval: false
 # define fonts
