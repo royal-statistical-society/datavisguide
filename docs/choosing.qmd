@@ -3,6 +3,7 @@ title: Choosing a visualisation type
 format: 
   html: default
   pdf: default
+suppress-bibliography: true
 ---
 
 ## Goals and audience

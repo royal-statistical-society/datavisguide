@@ -9,6 +9,7 @@ execute:
   warning: false
   eval: false
   echo: true
+suppress-bibliography: true
 ---
 
 Data visualisations must serve a purpose. By understanding the purpose of a visualisation, we -- as author or reader -- are in a position to assess whether a visualisation succeeds in its aims or requires improvement.

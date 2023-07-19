@@ -3,6 +3,7 @@ title: Why we visualise data
 format: 
   html: default
   pdf: default
+suppress-bibliography: true
 ---
 
 ## Motivation
