@@ -57,7 +57,7 @@ toc: true
 :::
 
 ::: {.g-col-12 .g-col-md-4 style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;"}
-#### [References and resources](/docs/references.qmd){style="text-decoration:none;"} 
+#### [References and resources](/docs/references.qmd){style="text-decoration:none;"}
 
 -   Primary sources
 -   Further reading

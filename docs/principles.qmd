@@ -34,26 +34,27 @@ set.seed(93384)
 time <- c(0, 0.5, 1, 2, 4, 8, 12, 16, 24)
 n <- 32 # no of subjects
 
-data <- expand.grid(ID=1:n, time=time)
+data <- expand.grid(ID = 1:n, time = time)
 
 bw <- data.frame(
-	ID=sort(unique(data$ID)),
-	bw=rlnorm(n, log(75), sdlog=0.25)
+  ID = sort(unique(data$ID)),
+  bw = rlnorm(n, log(75), sdlog = 0.25)
 )
 
 bw$bw.category <- cut(bw$bw,
-	breaks=quantile(bw$bw, c(0, 0.33, 0.66, 1)), 
-	labels=paste(c("low", "medium", "high"), "body weight"), 
-	include.lowest=TRUE)
+  breaks = quantile(bw$bw, c(0, 0.33, 0.66, 1)),
+  labels = paste(c("low", "medium", "high"), "body weight"),
+  include.lowest = TRUE
+)
 
 data <- merge(data, bw)
 
 data <- data[order(data$ID, data$time), ]
 
 # Simulate drug concentrations as a function of body weight.
-data$conc <- 100/(data$bw^1.0)*exp(-0.085*data$time)*
-	rlnorm(nrow(data), sdlog=0.25)+ # res. error
-	(data$ID-mean(data$ID))/mean(data$ID)/4 # r. eff
+data$conc <- 100 / (data$bw^1.0) * exp(-0.085 * data$time) *
+  rlnorm(nrow(data), sdlog = 0.25) + # res. error
+  (data$ID - mean(data$ID)) / mean(data$ID) / 4 # r. eff
 
 # ---
 # Visualisation.
@@ -63,25 +64,24 @@ gg <- list()
 
 data$ID <- factor(data$ID)
 
-gg[["3x1"]] <- ggplot(data, aes(x=time, y=conc, group=ID, color=ID)) + geom_line() 
-gg[["3x1"]] <- gg[["3x1"]] + scale_x_continuous(breaks=seq(0, 24, by=4)) 
-gg[["3x1"]] <- gg[["3x1"]] + theme_bw() + xlab("time [h]") + ylab("drug concentration [ng/mL]")
+gg[["3x1"]] <- ggplot(data, aes(x = time, y = conc, group = ID, color = ID)) +
+  geom_line()
+gg[["3x1"]] <- gg[["3x1"]] + scale_x_continuous(breaks = seq(0, 24, by = 4))
+gg[["3x1"]] <- gg[["3x1"]] + theme_bw() + 
+  xlab("time [h]") + 
+  ylab("drug concentration [ng/mL]")
 gg[["3x1"]] <- gg[["3x1"]] + facet_grid(bw.category ~ .)
-gg[["3x1"]] <- gg[["3x1"]] + theme(legend.position="none")
+gg[["3x1"]] <- gg[["3x1"]] + theme(legend.position = "none")
 
 gg[["1x3"]] <- gg[["3x1"]] + facet_grid(. ~ bw.category)
 
 # Add space to the rhs of the first figure for better separation in the cowplot.
-gg[["3x1"]] <- gg[["3x1"]] + theme(plot.margin = unit(c(0.5, 4, 0.5, 0.5), "lines"))
+gg[["3x1"]] <- gg[["3x1"]] + 
+  theme(plot.margin = unit(c(0.5, 4, 0.5, 0.5), "lines"))
 
-
-# print(gg)
-
-# ---
 # Both figures into a single output figure.
-
 library(cowplot)
-plot_grid(gg[[1]], gg[[2]], rel_widths=c(1.5, 2))
+plot_grid(gg[[1]], gg[[2]], rel_widths = c(1.5, 2))
 ```
 
 [![Line plots showing how choice of layout determines ease of comparison across panels.](images/principles-layout.png){fig-alt="Line plots showing how choice of layout determines ease of comparison across panels. Left panel shows 3 plots stacked vertically. Right panel shows same three plots arranged horizontally"}](images/principles-layout.png)
@@ -102,13 +102,13 @@ Our visual perception of data in a display must not depend on the choice of x- a
 # Old Faithful Geyser (Yellowstone) data set with eruption duration
 #   and waiting time to the next eruption (both in minutes).
 data <- data.frame(
-	x=faithful$eruptions,
-	y=faithful$waiting
+  x = faithful$eruptions,
+  y = faithful$waiting
 )
 
 # ---
 # Regression model fit.
-fit <- lm(y ~ x, data=data)
+fit <- lm(y ~ x, data = data)
 
 # Addition of predicted values to the data set.
 data$pred <- predict(fit)
@@ -121,21 +121,22 @@ r <- range(unlist(data[c("y", "pred")]))
 
 library(ggplot2)
 
-gg <- ggplot(data, aes(x=pred, y=y))
+gg <- ggplot(data, aes(x = pred, y = y))
 
-# Adding the line of identity, y=x (note: plotting it first will add points on top).
-gg <- gg + geom_abline(intercept=0, slope=1, color="black", linewidth=1)
+# Adding the line of identity, y = x
+# (note: plotting it first will add points on top).
+gg <- gg + geom_abline(intercept = 0, slope = 1, color = "black", linewidth = 1)
 
 # Adding points, removing grey background.
-gg <- gg + geom_point() + theme_bw() 
+gg <- gg + geom_point() + theme_bw()
 
 # Adding linear OLS regression fit of y~x.
-gg <- gg + geom_smooth(method="loess", color="firebrick", se=FALSE)
+gg <- gg + geom_smooth(method = "loess", color = "firebrick", se = FALSE)
 
 # Adding axis labels.
 gg <- gg + xlab("predicted") + ylab("observed")
 
-# Transpose (flip coordinates)
+# make a second copy
 gg2 <- gg
 
 # + coord_flip()
@@ -149,7 +150,7 @@ gg3 <- gg3 + xlim(r) + ylim(r)
 
 # Cow (column-wise) plot, combine all figures into one.
 library(cowplot)
-plot_grid(gg, gg2, gg3, rel_widths=c(4, 2, 2), nrow=1)
+plot_grid(gg, gg2, gg3, rel_widths = c(4, 2, 2), nrow = 1)
 ```
 
 [![Scatter plots showing how visual perception of model fit can be influenced by aspect ratio.](images/principles-aspect-ratio-2.png){fig-alt="Scatter plots showing how visual perception of model fit can be influenced by aspect ratio. Left panel has a stretched x-axis, middle panel has a stretched y-axis, and right panel has a 1:1 aspect ratio with identical axis limits."}](images/principles-aspect-ratio2.png)
@@ -182,34 +183,40 @@ If the data displayed as x and as y are comparable, axis limits should be identi
 #| layout-ncol: 2
 
 library(ggplot2)
-plot_data <- data.frame(type = factor(
-      c("Our product", "Competitor"),
-      levels = c("Our product", "Competitor")),
-      value = c(220, 210))
+plot_data <- data.frame(
+  type = factor(
+    c("Our product", "Competitor"),
+    levels = c("Our product", "Competitor")
+  ),
+  value = c(220, 210)
+)
 
 # Original plot
 ggplot(plot_data) +
-      geom_col(
-            mapping=aes(x=type, y=value),
-            fill="lightblue",
-            colour="black"
+  geom_col(
+    mapping = aes(x = type, y = value),
+    fill = "lightblue",
+    colour = "black"
   ) +
-      scale_y_continuous(breaks=seq(0, 220, by=20), expand=c(0, 0)) +
-      labs(x="", y="") + theme_minimal()
+  scale_y_continuous(breaks = seq(0, 220, by = 20), expand = c(0, 0)) +
+  labs(x = "", y = "") +
+  theme_minimal()
 
 # Offset the y axis
 offset <- 208
 ggplot(plot_data) +
-      geom_col(
-            mapping = aes(x=type, y=value-offset),
-            fill="lightblue",
-            colour="black"
+  geom_col(
+    mapping = aes(x = type, y = value - offset),
+    fill = "lightblue",
+    colour = "black"
   ) +
-  scale_y_continuous(breaks=seq(0, 14, by=2),
-                     labels=seq(0+offset, 14 + offset, by=2),
-                     expand=c(0, 0)) +
-      labs(x="", y="") +
-      theme_minimal()
+  scale_y_continuous(
+    breaks = seq(0, 14, by = 2),
+    labels = seq(0 + offset, 14 + offset, by = 2),
+    expand = c(0, 0)
+  ) +
+  labs(x = "", y = "") +
+  theme_minimal()
 ```
 
 [![Bar charts showing how visual impression can be driven by the choice of axis limits.](images/principles-axes.png){fig-alt="Bar charts showing how visual impression can be driven by the choice of axis limits. Left panel chart has y-axis starting at zero, right panel has y-axis starting at 208, overselling the small 10-unit difference between two bars."}](images/principles-axes.png)
@@ -224,59 +231,67 @@ The figure below shows data with, on average, no change compared to a reference 
 #| warning: false
 #| message: false
 #| layout-ncol: 2
-# Naïve plot of y vs x. If there is no change (on average), 
+# Naïve plot of y vs x. If there is no change (on average),
 # half the data are below the line of no change.
 # Asymmetric view, and it depends on y/x or x/y.
 
 set.seed(33838)
 x <- data.frame(
-  x=rlnorm(200, 2, 0.2),
-  y=rlnorm(200, 0.2, 0.75)
+  x = rlnorm(200, 2, 0.2),
+  y = rlnorm(200, 0.2, 0.75)
 )
 # Add an outlier manually.
-x <- rbind(x, data.frame(x=quantile(x$x, 0.8), y=max(x$y)*1.5))
+x <- rbind(x, data.frame(x = quantile(x$x, 0.8), y = max(x$y) * 1.5))
 
 # ---
 # Plotting.
 
 library(ggplot2)
 # Scatterplot of y vs x.
-gg <- ggplot(x, aes(x=x, y=y)) + geom_point() + theme_bw()
-gg <- gg + geom_hline(yintercept=1, color="firebrick", linewidth=2)
+gg <- ggplot(x, aes(x = x, y = y)) +
+  geom_point() +
+  theme_bw()
+gg <- gg + geom_hline(yintercept = 1, color = "firebrick", linewidth = 2)
 gg <- gg + xlab("x-variable") + ylab("Fold-change")
 gg
 
 # Logarithmic axes, symmetric range (!):
-xbr <- c(1/10, 1/5, 1/2, 1, 2, 5, 10)
-gg <- gg + scale_y_continuous(breaks=xbr, trans="log10",
-  limits=max(abs(x$y))^c(-1, 1))
-print(gg)
+xbr <- c(1 / 10, 1 / 5, 1 / 2, 1, 2, 5, 10)
+gg <- gg + scale_y_continuous(
+  breaks = xbr, trans = "log10",
+  limits = max(abs(x$y))^c(-1, 1)
+)
+gg
 
 # Second axis:
 gg <- gg + scale_y_continuous(
-  breaks=xbr,
-  labels=paste(100*xbr, "%", sep=""),
-  trans="log10",
-  limits=max(abs(x$y))^c(-1, 1),
-  sec.axis=sec_axis(trans=~.*1, breaks=xbr,
-  labels=ifelse(xbr < 1, paste("1/", 1/xbr, sep=""), xbr))
+  breaks = xbr,
+  labels = paste(100 * xbr, "%", sep = ""),
+  trans = "log10",
+  limits = max(abs(x$y))^c(-1, 1),
+  sec.axis = sec_axis(
+    trans = ~ . * 1, breaks = xbr,
+    labels = ifelse(xbr < 1, paste("1/", 1 / xbr, sep = ""), xbr)
+  )
 )
 
 # ---
 # Univariate distribution (histogram).
 
-gg <- ggplot(x, aes(x=y)) + theme_bw() + xlab("Fold-change")
-gg <- gg + geom_histogram(color="firebrick", fill="gray")
-print(gg)
+gg <- ggplot(x, aes(x = y)) +
+  theme_bw() +
+  xlab("Fold-change")
+gg <- gg + geom_histogram(color = "firebrick", fill = "gray")
+gg
 
 # Symmetric range, log scale.
 gg <- gg + scale_x_continuous(
-  breaks=xbr,
-  labels=ifelse(xbr < 1, paste("1/", 1/xbr), xbr),
-  trans="log10",
-  limits=max(abs(x$x))^c(-1, 1)
+  breaks = xbr,
+  labels = ifelse(xbr < 1, paste("1/", 1 / xbr), xbr),
+  trans = "log10",
+  limits = max(abs(x$x))^c(-1, 1)
 )
-print(gg)
+gg
 ```
 
 [![Switching from linear axes (left) to logarithmic axes (right) helps clarify changes in values relative to some baseline measure.](images/principles-log.png){fig-alt="Switching from linear axes to logarithmic axes helps clarify changes in values relative to some baseline measure. In the top row are two scatter plots, with a basline value marked with a red horizontal keyline. The top left panel is on a linear axis, while the top right panel is on a logarithmic axis and more clearly shows the even spread of data points around the baseline. In the bottom row, the same data is shown in histogram form, again with linear axis on the left and logarithmic on the right."}](images/principles-log.png)
@@ -305,22 +320,22 @@ gg.list <- list()
 # Prepare the data set (reformat EuStockMarkets that comes with R).
 x <- EuStockMarkets
 df <- data.frame(
-    time=as.vector(time(x)),
-    index=rep(colnames(x), rep(nrow(x), ncol(x))),
-    value=as.vector(x),
-      stringsAsFactors = TRUE
+  time = as.vector(time(x)),
+  index = rep(colnames(x), rep(nrow(x), ncol(x))),
+  value = as.vector(x),
+  stringsAsFactors = TRUE
 )
 df$index2 <- df$index # For use with labels later.
 
 library(ggplot2)
 
 # Standard layout and legend.
-gg <- ggplot(df, aes(x=time, y=value, group=index, color=index, label=index2))
+gg <- ggplot(df, aes(x = time, y = value, group = index, color = index, label = index2))
 gg <- gg + geom_line() + theme_bw()
 
 # Nicer axis tick mark settings.
-ax <- pretty(df$time, n=10)
-gg <- gg + scale_x_continuous(limits=range(ax), breaks=ax)
+ax <- pretty(df$time, n = 10)
+gg <- gg + scale_x_continuous(limits = range(ax), breaks = ax)
 gg <- gg + xlab("year") + ylab("Stock index")
 
 gg.list[[1]] <- gg
@@ -331,21 +346,21 @@ gg.list[[1]] <- gg
 y <- df[rev(order(df$time)), ] # descending in time.
 y <- y[!duplicated(y$index), ] # first entry per index
 y$index2 <- y$index # Create a copy that contains formatted strings.
-levels(y$index2)[levels(y$index2)=="FTSE"] <- "\n\nFTSE" 
-	# Add a newline to separate FTSE from DAX.
-	# Note that the factor level is modified, not the data.
+levels(y$index2)[levels(y$index2) == "FTSE"] <- "\n\nFTSE"
+# Add a newline to separate FTSE from DAX.
+# Note that the factor level is modified, not the data.
 
 # Drop the legend, move labels into figure.
-gg <- gg + geom_text(data=y, hjust="left", nudge_x=0.1) 
+gg <- gg + geom_text(data = y, hjust = "left", nudge_x = 0.1)
 # aes as before, nudge adds space on the lhs.
-gg <- gg + theme(legend.position="none")
+gg <- gg + theme(legend.position = "none")
 gg.list[[2]] <- gg
 
 # ---
 # Both figures into a single output figure.
 
 library(cowplot)
-plot_grid(gg.list[[1]], gg.list[[2]], rel_widths=c(2.25, 2))
+plot_grid(gg.list[[1]], gg.list[[2]], rel_widths = c(2.25, 2))
 ```
 
 [![Line plots showing how direct labelling of figure elements can improve ease of reading.](images/principles-legends.png){fig-alt="Line plots showing how direct labelling of figure elements can improve ease of reading. Left panel uses a legend to identify different coloured lines. Right panel includes labelling within figure, at the end of each line."}](images/principles-legends.png)
@@ -365,7 +380,7 @@ library(ggplot2)
 x <- mpg # miles per gallon data set.
 x$car <- paste(x$manufacturer, x$model)
 
-gg <- ggplot(x, aes(x=car, y=hwy, group=car))
+gg <- ggplot(x, aes(x = car, y = hwy, group = car))
 gg <- gg + geom_boxplot() + theme_bw() + xlab("Miles per gallon (highway)")
 gg.list[["vertical orientation"]] <- gg
 
@@ -375,7 +390,7 @@ gg.list[["horizontal orientation"]] <- gg + coord_flip()
 # Both figures into a single output figure.
 
 library(cowplot)
-plot_grid(gg.list[[1]], gg.list[[2]], rel_widths=c(2, 2.5))
+plot_grid(gg.list[[1]], gg.list[[2]], rel_widths = c(2, 2.5))
 ```
 
 [![Changes to orientation can improve both readability of labels and the visual interpretation of data.](images/principles-orientation.png){fig-alt="Changes to orientation can improve both readability of labels and the visual interpretation of data. Two boxplots are shown. On the left, the boxplots are vertical: axis labels overlap and visual comparison of values is more difficult than on the right, where boxplots are horizontal and axis labels are now separated and readable."}](images/principles-orientation.png)
@@ -394,29 +409,28 @@ A local scatterplot smoother (loess, lowess, polynomial) can be particularly hel
 #| fig-height: 3
 # Function for data set generation.
 make.data <- function(
-  x=c(0, 0.5, 1, 2, 4, 8, 12, 16, 24),
-  y=exp(-0.2*x) - exp(-0.21*x),
-  sd=0.25, # std dev of y
-  seed=4384590,
-  n=50
-)
-{
+    x = c(0, 0.5, 1, 2, 4, 8, 12, 16, 24),
+    y = exp(-0.2 * x) - exp(-0.21 * x),
+    sd = 0.25, # std dev of y
+    seed = 4384590,
+    n = 50) {
   # Setting the random number seed for reproducibility.
   set.seed(seed)
   # Creation of x- and y-variables.
   x2 <- rep(x, n)
   y2 <- NULL
-  for(i in 1:n)
-    y2 <- c(y2, y*(2*(n/4-i)) + rlnorm(length(y), sd=sd))
+  for (i in 1:n) {
+    y2 <- c(y2, y * (2 * (n / 4 - i)) + rlnorm(length(y), sd = sd))
+  }
 
   # Creation of an identifier for each profile.
   ID <- factor(rep(1:n, rep(length(y), n)))
 
   # Composition of the data set.
-  df <- data.frame(PD=100*y2, time=x, ID=ID)
+  df <- data.frame(PD = 100 * y2, time = x, ID = ID)
 
   # Addition of a baseline variable.
-  BL <- df[df$time==0, c("ID", "PD")]
+  BL <- df[df$time == 0, c("ID", "PD")]
   names(BL) <- c("ID", "BL")
   df <- merge(df, BL)
 
@@ -436,21 +450,21 @@ x <- make.data()
 # Figures.
 
 library(ggplot2)
-gg <- ggplot(x, aes(x=time, y=Change, group=ID, color=ID))
+gg <- ggplot(x, aes(x = time, y = Change, group = ID, color = ID))
 gg <- gg + theme_bw()
 gg <- gg + xlab("Time [h]") + ylab("Change from baseline")
-gg <- gg + geom_line(linewidth=1.1) + theme(legend.position="none")
-gg <- gg + facet_grid(.~trt)
+gg <- gg + geom_line(linewidth = 1.1) + theme(legend.position = "none")
+gg <- gg + facet_grid(. ~ trt)
 
 # Addition of an auxiliary line at y=0.
-gg2 <- gg + geom_hline(yintercept=0, linewidth=1.2)
+gg2 <- gg + geom_hline(yintercept = 0, linewidth = 1.2)
 
 # Symmetric y-axis limits.
-gg3 <- gg2 + ylim(c(-1, 1)*max(abs(x$Change)))
+gg3 <- gg2 + ylim(c(-1, 1) * max(abs(x$Change)))
 
 # Arranging all plots into one figure.
 library(cowplot)
-plot_grid(gg, gg2, gg3, nrow=1)
+plot_grid(gg, gg2, gg3, nrow = 1)
 ```
 
 [![Adding elements, such as lines to indicate the point of no change, can improve readability.](images/principles-auxiliary.png){fig-alt="Adding elements, such as lines to indicate the point of no change, can improve readability. In this three-part figure, the panel on the left is a line plot showing changes over time. In the middle plot, a keyline is added to mark the baseline -- zero -- on the y-axis, and in the right panel, the axis range is set to be symmetrical around this keyline."}](images/principles-auxiliary.png)
