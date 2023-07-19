@@ -1,6 +1,8 @@
 ---
-title: References
+title: References and resources
 ---
+
+## Texts referenced in the Guide
 
 Battle-Baptiste W, Rusert B.: W.E.B. Du Bois's data portraits: Visualizing black America: The Color Line at the Turn of the Twentieth Century. The W.E.B. Du Bois Center at the University of Massachusetts; 2018.
 
@@ -64,27 +66,28 @@ Wickham H. ggplot2. Create elegant data visualisations using the grammar of grap
 
 Wilkinson, L. (2005) The Grammar of Graphics. New York: Springer-Verlag (Statistics and Computing). Available at: <https://doi.org/10.1007/0-387-28695-0>.
 
-### Additional Reading
+## Further reading
 
-#### Functional Aesthetics for Data Visualization. 
+#### Functional Aesthetics for Data Visualization.
+
 @Setlur2022
 
 Why we recommend: *This book connects research and practice, combining ideas from cognitive psychology, data literacy, and visual design. Its ideas go beyond simple charts, and can be extending to complex visual displays including interactive dashboards and visualisations.*
 
-
 #### Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks.
+
 @Schwabish2021
 
-Why we recommend: *This book guides you towards which types of data visualisations may best depending on what you’re trying to show. Not only that, but it uses visual perception theory to explain why some charts are easier to read than others.*
+Why we recommend: *This book guides you towards which types of data visualisations may best depending on what you're trying to show. Not only that, but it uses visual perception theory to explain why some charts are easier to read than others.*
 
+#### Data Feminism.
 
-#### Data Feminism. 
 @DIgnazio2020
 
-Why we recommend: *We often hear the term “storytelling” when we’re talking about data visualisation, and we should remember the role of the storyteller in this. In this book, the authors make several critical points, including that when we work with data we must also think about why it was collected, and what it could be used for.*
-
+Why we recommend: *We often hear the term "storytelling" when we're talking about data visualisation, and we should remember the role of the storyteller in this. In this book, the authors make several critical points, including that when we work with data we must also think about why it was collected, and what it could be used for.*
 
 #### Preference for and understanding of graphs presenting health risk information. The role of age, health literacy, numeracy and graph literacy.
+
 @VanWeert2021
 
 Why we recommend: *Patients are often presented with data about health risk information in the form in charts and tables. This article examines how well patients understand the information presented to them across a range of different chart types. It finds that the types of charts that patients prefer, is not always the type of chart that they understand best.*
@@ -94,3 +97,31 @@ Why we recommend: *Patients are often presented with data about health risk info
 ::: {#refs}
 :::
 
+## Additional resources
+
+### Training courses
+
+#### [Presenting Data (RSS)](https://rss.org.uk/training-events/training/public-courses/introduction-to-statistics/presenting-data/presenting-data-2021-12-25,-9-00am/#eventoverview)
+
+This online course is the foundation to all presentations of statistical information. The basic principles of presenting information in tables, charts, maps and text are explained. These are illustrated and then reinforced through practical exercises.
+
+#### [Data Exploration in Tableau (RSS)](https://rss.org.uk/training-events/training/public-courses/software-training/data-exploration-in-tableau/)
+
+Tableau is more than just a simple data visualisation tool. It also gives people the capability to manipulate multiple data sources, create custom charts, build predictive models, and turn their plots into interactive dashboards and presentations.
+
+This virtual course will run over two afternoons. It will guide you through the process of wrangling data, performing data analysis, and visually communicating outputs. By the end of this course you will be able to manipulate your own data to build custom charts. You will learn how to work with geographic data in Tableau, use predictive models to make forecasts, and create interactive dashboards and stories to share your work.
+
+#### [Power BI for Data Exploration and Basic Statistics (RSS)](https://rss.org.uk/training-events/training/public-courses/software-training/power-bi-for-data-exploration-and-basic-statistics/)
+
+Power BI is rapidly becoming a standard tool for producing interactive reports and dashboards and this course will provide a systematic introduction to Power BI, focusing on the workflow, from data preparation through to building and sharing visuals. There will be a focus on design issues, helping to achieve the right level of functionality and usability based on the intended audience. Particular attention will also be paid to the use of basic statistics.
+
+#### [Publishing Quality Charts in R with ggplot2 (RSS)](https://rss.org.uk/training-events/training/public-courses/software-training/publishing-quality-charts-in-r-with-ggplot2/)
+
+This tutor-led virtual course will introduce how the tidyverse and ggplot2 can be used to reproducibly create publication quality charts from R.
+
+### Low-code/no-code visualisation tools
+#### Datawrapper
+[https://www.datawrapper.de/](https://www.datawrapper.de/)
+
+#### Flourish
+[https://flourish.studio/](https://flourish.studio/)

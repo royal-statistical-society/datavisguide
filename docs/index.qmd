@@ -1,23 +1,19 @@
 ---
 title: "The guide"
 subtitle: Table of contents
-toc: false
+toc: true
 ---
-
-::: {.callout-warning appearance="simple"}
-This site and its content are in development. The authors welcome feedback. Please either \[insert info about raising an issue/PR/email etc.\]
-:::
 
 ::: grid
 ::: {.g-col-12 .g-col-md-4 style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;"}
-### [Why we visualise data](/docs/why-visualise.qmd){style="text-decoration:none;"}
+#### [Why we visualise data](/docs/why-visualise.qmd){style="text-decoration:none;"}
 
 -   Motivation
 -   A brief history of data visualisation
 :::
 
 ::: {.g-col-12 .g-col-md-4 style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;"}
-### [Principles and elements of visualisations](/docs/principles.qmd){style="text-decoration:none;"}
+#### [Principles and elements of visualisations](/docs/principles.qmd){style="text-decoration:none;"}
 
 -   Elements of charts, including:
     -   Layout
@@ -30,7 +26,7 @@ This site and its content are in development. The authors welcome feedback. Plea
 :::
 
 ::: {.g-col-12 .g-col-md-4 style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;"}
-### [Choosing a visualisation type](/docs/choosing.qmd){style="text-decoration:none;"}
+#### [Choosing a visualisation type](/docs/choosing.qmd){style="text-decoration:none;"}
 
 -   Goals
 -   Target audience
@@ -39,7 +35,7 @@ This site and its content are in development. The authors welcome feedback. Plea
 :::
 
 ::: {.g-col-12 .g-col-md-4 style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;"}
-### [Styling charts for accessibility](/docs/styling.qmd){style="text-decoration:none;"}
+#### [Styling charts for accessibility](/docs/styling.qmd){style="text-decoration:none;"}
 
 -   Colours
 -   Annotations
@@ -48,7 +44,7 @@ This site and its content are in development. The authors welcome feedback. Plea
 :::
 
 ::: {.g-col-12 .g-col-md-4 style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;"}
-### [Styling charts for RSS publications](/docs/tools.qmd){style="text-decoration:none;"}
+#### [Styling charts for RSS publications](/docs/tools.qmd){style="text-decoration:none;"}
 
 -   Styling with different tools, including:
     -   R
@@ -61,9 +57,10 @@ This site and its content are in development. The authors welcome feedback. Plea
 :::
 
 ::: {.g-col-12 .g-col-md-4 style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;"}
-### [References](/docs/references.qmd){style="text-decoration:none;"}
+#### [References and resources](/docs/references.qmd){style="text-decoration:none;"} 
 
 -   Primary sources
--   Recommended reading
+-   Further reading
+-   Additional resources
 :::
 :::

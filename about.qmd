@@ -3,77 +3,58 @@ title: "About the authors"
 editor: source
 ---
 
-::: {.callout-warning appearance="simple"}
-This site and its content are in development. The authors welcome feedback. Please either \[insert info about raising an issue/PR/email etc.\]
-:::
-
 ## Andreas Krause
 
-:::: {.grid}
+::: grid
 ::: {.g-col-12 .g-col-md-6}
-
 Andreas Krause holds a PhD and an MSc in statistics and computer science. His current position is senior director, data science, modeling and simulation, at Idorsia Pharmaceuticals Ltd in Basel, Switzerland. His group provides clinical drug development teams with statistics and model-based analysis and predictions to support decision making. His works include more than 100 peer-reviewed [scientific publications](https://scholar.google.com/citations?hl=en&user=9a--8FUAAAAJ&view_op=list_works&sortby=pubdate).
 
-Andreas’ scientific activities include positions as co-editor of the American Statistical Association's section on [Statistical Computing and Graphics](https://community.amstat.org/jointscsg-section/home), book review editor and board member of [*Computational Statistics*](https://www.springer.com/journal/180), associate editor and editor-in-chief of [*Pharmaceutical Statistics*](https://onlinelibrary.wiley.com/page/journal/15391612/homepage/editorialboard.html), and, currently, advisory board member of *Pharmaceutical Statistics* and the [*Journal of Pharmacokinetics and Pharmacodynamics*](https://doi.org/10.1007/s10928-023-09855-x).
+Andreas' scientific activities include positions as co-editor of the American Statistical Association's section on [Statistical Computing and Graphics](https://community.amstat.org/jointscsg-section/home), book review editor and board member of [*Computational Statistics*](https://www.springer.com/journal/180), associate editor and editor-in-chief of [*Pharmaceutical Statistics*](https://onlinelibrary.wiley.com/page/journal/15391612/homepage/editorialboard.html), and, currently, advisory board member of *Pharmaceutical Statistics* and the [*Journal of Pharmacokinetics and Pharmacodynamics*](https://doi.org/10.1007/s10928-023-09855-x).
 
 Andreas started using the [S language](https://en.wikipedia.org/wiki/S_(programming_language)) in 1987, became European [S-PLUS](https://en.wikipedia.org/wiki/S-PLUS) distributor and supporter in 1988, and started using R in the 1990s. He is author of [*The Basics of S and S-Plus*](https://link.springer.com/search?query=the+basics+of+s&dc.creator=Andreas+Krause) (Springer, 4 editions, more than 20,000 copies sold) and editor of [*A picture is worth a thousand tables: graphics in life sciences*](https://doi.org/10.1007/978-1-4614-5329-1) (Springer, 2012).
 
 Graphics and visualisation are long-standing topics for him, including numerous presentations and workshops on "Graphics of clinical data: the good, the bad, and the ugly" at various conferences and seminars.
 
-- LinkedIn: [linkedin.com/in/andreaskrause](https://www.linkedin.com/in/andreaskrause/)
-- ORCID: [orcid.org/0000-0002-4686-976X](https://orcid.org/0000-0002-4686-976X)
-
+-   LinkedIn: [linkedin.com/in/andreaskrause](https://www.linkedin.com/in/andreaskrause/)
+-   ORCID: [orcid.org/0000-0002-4686-976X](https://orcid.org/0000-0002-4686-976X)
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-
-![](images/andreas.png){fig-align="center" fig-alt="Image of Andreas Krause" width=70%}
-
+![](images/andreas.png){fig-align="center" fig-alt="Image of Andreas Krause" width="70%"}
 :::
-
-::::
+:::
 
 ## Nicola Rennie
 
-:::: {.grid}
+::: grid
 ::: {.g-col-12 .g-col-md-6}
-
 Nicola Rennie is an academic, data scientist, and educator with a passion for effectively communicating data. She is a Lecturer in Health Data Science at Lancaster Medical School, where her research focuses on the use of statistical models to improve health outcomes. Her teaching experience covers topics including data visualisation, programming in R and Python, and how to effectively communicate the results of statistical analyses. Nicola is the author and maintainer of multiple R packages, and an active member of the R community - regularly presenting at R User Group Meetups and mentoring new members of the community.
 
-- Website: [nrennie.rbind.io](https://nrennie.rbind.io/)
-- Twitter: [@nrennie35](https://twitter.com/nrennie35)
-- LinkedIn: [linkedin.com/in/nicola-rennie](https://www.linkedin.com/in/nicola-rennie/)
-- Mastodon: [@fosstodon.org/@nrennie](https://fosstodon.org/@nrennie)
-- ORCID: [orcid.org/0000-0003-4797-557X](https://orcid.org/0000-0003-4797-557X)
-
+-   Website: [nrennie.rbind.io](https://nrennie.rbind.io/)
+-   Twitter: [\@nrennie35](https://twitter.com/nrennie35)
+-   LinkedIn: [linkedin.com/in/nicola-rennie](https://www.linkedin.com/in/nicola-rennie/)
+-   Mastodon: [\@fosstodon.org](https://fosstodon.org/@nrennie)[/\@nrennie](https://fosstodon.org/@nrennie)
+-   ORCID: [orcid.org/0000-0003-4797-557X](https://orcid.org/0000-0003-4797-557X)
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-
-![](images/nicola.jpg){fig-align="center" fig-alt="Image of Nicola Rennie wearing a red jacket" width=70%}
-
+![](images/nicola.jpg){fig-align="center" fig-alt="Image of Nicola Rennie wearing a red jacket" width="70%"}
 :::
-
-::::
+:::
 
 ## Brian Tarran
 
-:::: {.grid}
+::: grid
 ::: {.g-col-12 .g-col-md-6}
+Brian Tarran is a writer and editor with 20 years of experience covering the research and data space. He has worked for the Royal Statistical Society (RSS) for the past 8 years, and was editor of [*Significance* Magazine](https://www.significancemagazine.com/) (a joint publication of the RSS, the American Statistical Association and the Statistical Society of Australia) prior to the launch of [Real World Data Science](https://realworlddatascience.net/). Brian is a former editor of Research-Live.com and was launch editor of Impact magazine, both published by the Market Research Society.
 
-Brian Tarran is a writer and editor with 20 years of experience covering the research and data space. Has has worked for the Royal Statistical Society (RSS) for the past 8 years, and was editor of [Significance Magazine](https://www.significancemagazine.com/) (a joint publication of the RSS, the American Statistical Association and the Statistical Society of Australia) prior to the launch of [Real World Data Science](https://realworlddatascience.net/). Brian is a former editor of Research-Live.com and was launch editor of Impact magazine, both published by the Market Research Society.
-
-- Twitter: [@brtarran](https://twitter.com/brtarran)
-- LinkedIn: [linkedin.com/in/brian-tarran-58b0261](https://www.linkedin.com/in/brian-tarran-58b0261/)
-- Mastodon: [@mastodon.social/@brtarran](https://mastodon.social/@brtarran)
-- GitHub: [github.com/brtarran](https://github.com/brtarran)
-
+-   Twitter: [\@brtarran](https://twitter.com/brtarran)
+-   LinkedIn: [linkedin.com/in/brian-tarran-58b0261](https://www.linkedin.com/in/brian-tarran-58b0261/)
+-   Mastodon: [\@mastodon.social](https://mastodon.social/@brtarran)[/\@brtarran](https://mastodon.social/@brtarran)
+-   GitHub: [github.com/brtarran](https://github.com/brtarran)
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-
-![](images/brian.png){fig-align="center" fig-alt="Image of Brian Tarran" width=70%}
-
+![](images/brian.png){fig-align="center" fig-alt="Image of Brian Tarran" width="70%"}
 :::
-
-::::
+:::

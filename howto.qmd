@@ -3,34 +3,44 @@ title: How to use this guide
 toc: true
 ---
 
-::: {.callout-warning appearance="simple"}
-This site and its content are in development. The authors welcome feedback. Please either \[insert info about raising an issue/PR/email etc.\]
-:::
+We designed this guide to be read from beginning to end, so that each section builds on the foundations of those that came before. If this is your first time reading the guide, we would encourage you to read it in this way. However, those looking for guidance on specific aspects of data visualisation can make use of the search and navigation functions of this website.
 
-We designed this guide to be read from beginning to end, so that each section builds on the foundations of those that came before. If this is your first time reading the guide, we would encourage you to read it in this way. However, those looking for guidance on specific aspects of data visualisation can make use of the search and navigation functions of this website. If you would prefer to read offline, you can download a PDF version of the complete guide. You can also download PDFs of individuals sections.
+If you would prefer to read offline, you can [download the guide as a PDF](RSS-data-vis-guide.pdf). Individual sections of the guide can also be downloaded as separate PDFs using the "Other Formats \> PDF" option when shown in the right-hand navigation menu.
 
 Throughout the text you will find examples of charts and graphs. For many of these, we provide code in R to allow you to reproduce the visualisations, and we encourage you to do so and to adapt the code for your own purposes.
 
 ## How to contribute to this guide
 
-\[add section on how to contribute using GitHub repo, etc., once set up\]
+#### To make a suggestion or ask a question
+
+Please open up a discussion in our GitHub repository's [Discussions](https://github.com/royal-statistical-society/datavisguide/discussions) section.
+
+#### If you spot a bug or an error
+
+Please either:
+
+1.  Raise an issue in our GitHub repository's [Issues](https://github.com/royal-statistical-society/datavisguide/issues) section. You can do this using one of the 'Report an issue' links on our website; or
+2.  Fork our repository, edit the relevant file(s), and make a pull request against the `main` branch of our repository. You can do this using one of the 'Edit this page' links on our website.
+
+#### If you want to add a new feature or section to the guide
+
+1.  Raise an issue in our GitHub repository's [Issues](https://github.com/royal-statistical-society/datavisguide/issues) section, tag it as an 'enhancement' and describe your proposed contribution.
+2.  Fork the repository and create a new branch named, e.g., `my-new-feature-or-section`.
+3.  Add content, code and files to your branch.
+4.  Make a pull request against the `main` branch of our repository.
+
+Further information about the contribution process can be found in our repository's [README file](https://github.com/royal-statistical-society/datavisguide/tree/main#readme).
 
 ## How to engage with other users of this guide
 
-\[add section on using GitHub discussions. Could also consider adding a comment functionality to section pages. Also need to include guidance on standards of discourse - e.g. be civil, no libellous comments, etc.\]
-
-## How to reach us
-
-How can readers contact the authors?
-
--   Submit a GitHub issue
-
--   Email address?
+Readers are encouraged to make full use of our GitHub repository's [Discussions](https://github.com/royal-statistical-society/datavisguide/discussions) section. Please note that use of, and all contributions to, our website and repository are governed by our [Code of Conduct](ts-and-cs.qmd#contributor-covenant-code-of-conduct).
 
 ## Copyright, re-use, distribution, and disclaimer
 
-This guide is copyright © 2023 Andreas Krause, Nicola Rennie and the Royal Statistical Society. Unless otherwise stated, all copyright content in this guide is licensed under a [Creative Commons Attribution 4.0 (CC BY 4.0) International licence](http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1), meaning it can be used and adapted for any purpose, provided attribution is given to the original authors. **How to cite:** Authors, Title, Version, URL.
+This guide is copyright © 2023 Andreas Krause, Nicola Rennie and the Royal Statistical Society. Content created by the lead authors (Andreas Krause, Nicola Rennie, and Brian Tarran) and published in this guide is licensed under a [Creative Commons Attribution 4.0 (CC BY 4.0) International licence](http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1), meaning it can be used and adapted for any purpose, provided attribution is given to the original authors. By contributing to this guide, contributors agree to licence their own work under the same terms.
 
-If you've found this guide useful and want to make use of it or build on it for other purposes, please do so -- and please share your work with us.
+> **How to cite:** Krause, Andreas, Nicola Rennie and Brian Tarran. 2023. "Best Practices for Data Visualisation." Royal Statistical Society, July 2023. https://royal-statistical-society.github.io/datavisguide/.
 
-No warranty, use at your own risk, etc. See the R disclaimer for an example ("R comes with absolutely no warranty").
+Statements of fact and opinion published on this website are those of the respective authors and contributors and not necessarily those of the Royal Statistical Society (RSS).
+
+The authors have prepared the content of this website responsibly and carefully. However, the authors and the RSS disclaim all warranties, express or implied, as to the accuracy of the information contained in any of the materials on this website or on other linked websites or on any subsequent links. See the full [terms and conditions](ts-and-cs.qmd).

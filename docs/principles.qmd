@@ -4,19 +4,16 @@ format:
   html:
     code-fold: true
     code-tools: true
+  pdf: default
 execute: 
   warning: false
   eval: false
   echo: true
 ---
 
-::: {.callout-warning appearance="simple"}
-This site and its content are in development. The authors welcome feedback. Please either \[insert info about raising an issue/PR/email etc.\]
-:::
-
 Data visualisations must serve a purpose. By understanding the purpose of a visualisation, we -- as author or reader -- are in a position to assess whether a visualisation succeeds in its aims or requires improvement.
 
-Arguably the most common purpose of a visualisation is a comparison of groups of data, such as data on patients receiving different treatments. A good choice of axes, axis limits, labels and symbols can facilitate substantially the identification of patterns in the data, whereas  poor choices for any of these elements can substantially hamper the extraction of information.
+Arguably the most common purpose of a visualisation is a comparison of groups of data, such as data on patients receiving different treatments. A good choice of axes, axis limits, labels and symbols can facilitate substantially the identification of patterns in the data, whereas poor choices for any of these elements can substantially hamper the extraction of information.
 
 ## Elements of charts
 
@@ -87,7 +84,7 @@ library(cowplot)
 plot_grid(gg[[1]], gg[[2]], rel_widths=c(1.5, 2))
 ```
 
-[![Line plots showing how choice of layout determines ease of comparison across panels](images/principles-layout.png){fig-alt="Line plots showing how choice of layout determines ease of comparison across panels. Left panel shows 3 plots stacked vertically. Right panel shows same three plots arranged horizontally"}](images/principles-layout.png)
+[![Line plots showing how choice of layout determines ease of comparison across panels.](images/principles-layout.png){fig-alt="Line plots showing how choice of layout determines ease of comparison across panels. Left panel shows 3 plots stacked vertically. Right panel shows same three plots arranged horizontally"}](images/principles-layout.png)
 
 ### Aspect ratio
 
@@ -155,7 +152,7 @@ library(cowplot)
 plot_grid(gg, gg2, gg3, rel_widths=c(4, 2, 2), nrow=1)
 ```
 
-[![Scatter plots showing how visual perception of model fit can be influenced by aspect ratio](images/principles-aspect-ratio-2.png){fig-alt="Scatter plots showing how visual perception of model fit can be influenced by aspect ratio. Left panel has a stretched x-axis, middle panel has a stretched y-axis, and right panel has a 1:1 aspect ratio with identical axis limits."}](images/principles-aspect-ratio2.png)
+[![Scatter plots showing how visual perception of model fit can be influenced by aspect ratio.](images/principles-aspect-ratio-2.png){fig-alt="Scatter plots showing how visual perception of model fit can be influenced by aspect ratio. Left panel has a stretched x-axis, middle panel has a stretched y-axis, and right panel has a 1:1 aspect ratio with identical axis limits."}](images/principles-aspect-ratio2.png)
 
 ### Lines
 
@@ -167,7 +164,7 @@ Point symbols should be chosen such that the visualisation displays the data in 
 
 ### Colours
 
-Colours should serve a purpose such as helping to identify different groups. Colours for pure decoration are discouraged. Cleveland pointed out that because "they do have a natural visual hierarchy, varying shades of gray show varying quantities better than color", and "the shades of gray provide an easily comprehended order to the data measures. This is the key" (Cleveland 2001, p. 154).
+Colours should serve a purpose such as helping to identify different groups. Colours for pure decoration are discouraged. Cleveland pointed out that because "they do have a natural visual hierarchy, varying shades of gray show varying quantities better than color", and "the shades of gray provide an easily comprehended order to the data measures. This is the key" [@Tufte2001, p. 154].
 
 ### Axes
 
@@ -215,7 +212,7 @@ ggplot(plot_data) +
       theme_minimal()
 ```
 
-[![Bar charts showing how visual impression can be driven by the choice of axis limits](images/principles-axes.png){fig-alt="Bar charts showing how visual impression can be driven by the choice of axis limits. Left panel chart has y-axis starting at zero, right panel has y-axis starting at 208, overselling the small 10-unit difference between two bars."}](images/principles-axes.png)
+[![Bar charts showing how visual impression can be driven by the choice of axis limits.](images/principles-axes.png){fig-alt="Bar charts showing how visual impression can be driven by the choice of axis limits. Left panel chart has y-axis starting at zero, right panel has y-axis starting at 208, overselling the small 10-unit difference between two bars."}](images/principles-axes.png)
 
 #### Linear and logarithmic axes
 
@@ -282,11 +279,11 @@ gg <- gg + scale_x_continuous(
 print(gg)
 ```
 
-[![Switching from linear axes (left) to logarithmic axes (right) helps clarify changes in values relative to some baseline measure](images/principles-log.png){fig-alt="Switching from linear axes to logarithmic axes helps clarify changes in values relative to some baseline measure. In the top row are two scatter plots, with a basline value marked with a red horizontal keyline. The top left panel is on a linear axis, while the top right panel is on a logarithmic axis and more clearly shows the even spread of data points around the baseline. In the bottom row, the same data is shown in histogram form, again with linear axis on the left and logarithmic on the right."}](images/principles-log.png)
+[![Switching from linear axes (left) to logarithmic axes (right) helps clarify changes in values relative to some baseline measure.](images/principles-log.png){fig-alt="Switching from linear axes to logarithmic axes helps clarify changes in values relative to some baseline measure. In the top row are two scatter plots, with a basline value marked with a red horizontal keyline. The top left panel is on a linear axis, while the top right panel is on a logarithmic axis and more clearly shows the even spread of data points around the baseline. In the bottom row, the same data is shown in histogram form, again with linear axis on the left and logarithmic on the right."}](images/principles-log.png)
 
 ### Symbols
 
-Symbols should be intuitive (for example, "+" for a positive outcome, "-" for a negative outcome, "O" for a neutral outcome). In an ideal case, symbols require only a single look at the legend to subsequently focus on the visualisation. 
+Symbols should be intuitive (for example, "+" for a positive outcome, "--" for a negative outcome, "O" for a neutral outcome). In an ideal case, symbols require only a single look at the legend to subsequently focus on the visualisation. 
 
 Symbols such as triangles, circles, and squares do not have an intuitive connotation. However, if there is an order in the data, it might be reflected in the order of the symbols, e.g., the number of vertices (circle, dash, triangle, square, pentagon, etc.).
 
@@ -351,11 +348,11 @@ library(cowplot)
 plot_grid(gg.list[[1]], gg.list[[2]], rel_widths=c(2.25, 2))
 ```
 
-[![Line plots showing how direct labelling of figure elements can improve ease of reading](images/principles-legends.png){fig-alt="Line plots showing how direct labelling of figure elements can improve ease of reading. Left panel uses a legend to identify different coloured lines. Right panel includes labelling within figure, at the end of each line."}](images/principles-legends.png)
+[![Line plots showing how direct labelling of figure elements can improve ease of reading.](images/principles-legends.png){fig-alt="Line plots showing how direct labelling of figure elements can improve ease of reading. Left panel uses a legend to identify different coloured lines. Right panel includes labelling within figure, at the end of each line."}](images/principles-legends.png)
 
 ### Orientation
 
-If there is an order in the data that is to be visualised, e.g., as a barplot, showing the data as horizontal bars and sorting values from top to bottom (highest value to lowest) is more intuitive than showing vertical bars with a left-to-right orientation (Few, 2004, p. 182). One common exception to this is where data are to be ordered according to units of time. Time is often visually interpreted as flowing left to right, from past to present to future.
+If there is an order in the data that is to be visualised, e.g., as a barplot, showing the data as horizontal bars and sorting values from top to bottom (highest value to lowest) is more intuitive than showing vertical bars with a left-to-right orientation [@Few2004, p. 182]. One common exception to this is where data are to be ordered according to units of time. Time is often visually interpreted as flowing left to right, from past to present to future.
 
 In the case of boxplots, for example, a horizontal orientation allows for a more accurate visual comparison than a vertical orientation, since it is easier for the human eye to follow an imaginary vertical line than an imaginary horizontal line, as can be seen from the figure below. Note, also, that the long x-axis labels are not readable in the panel on the left since they overlap, but they become readable with a horizontal orientation in the panel on the right.
 
@@ -381,7 +378,7 @@ library(cowplot)
 plot_grid(gg.list[[1]], gg.list[[2]], rel_widths=c(2, 2.5))
 ```
 
-[![Changes to orientation can improve both readability of labels and the visual interpretation of data](images/principles-orientation.png){fig-alt="Changes to orientation can improve both readability of labels and the visual interpretation of data. Two boxplots are shown. On the left, the boxplots are vertical: axis labels overlap and visual comparison of values is more difficult than on the right, where boxplots are horizontal and axis labels are now separated and readable."}](images/principles-orientation.png)
+[![Changes to orientation can improve both readability of labels and the visual interpretation of data.](images/principles-orientation.png){fig-alt="Changes to orientation can improve both readability of labels and the visual interpretation of data. Two boxplots are shown. On the left, the boxplots are vertical: axis labels overlap and visual comparison of values is more difficult than on the right, where boxplots are horizontal and axis labels are now separated and readable."}](images/principles-orientation.png)
 
 ### Auxiliary elements
 
@@ -456,15 +453,15 @@ library(cowplot)
 plot_grid(gg, gg2, gg3, nrow=1)
 ```
 
-[![Adding elements, such as lines to indicate the point of no change, can improve readability](images/principles-auxiliary.png){fig-alt="Adding elements, such as lines to indicate the point of no change, can improve readability. In this three-part figure, the panel on the left is a line plot showing changes over time. In the middle plot, a keyline is added to mark the baseline -- zero -- on the y-axis, and in the right panel, the axis range is set to be symmetrical around this keyline."}](images/principles-auxiliary.png)
+[![Adding elements, such as lines to indicate the point of no change, can improve readability.](images/principles-auxiliary.png){fig-alt="Adding elements, such as lines to indicate the point of no change, can improve readability. In this three-part figure, the panel on the left is a line plot showing changes over time. In the middle plot, a keyline is added to mark the baseline -- zero -- on the y-axis, and in the right panel, the axis range is set to be symmetrical around this keyline."}](images/principles-auxiliary.png)
 
-### Higher dimensions
+### Three-dimensional charts
 
 Three-dimensional displays of data may look striking, in some respects, but accurate reading and interpretation is not straightforward with such presentations.
 
 **Example:** The left panel of the figure below displays a single number, 10, as a 3D bar chart. The correct identification of the value is indicated by the red "X": the height of the bar must be projected against the rear wall (the axis) from the viewing position. The panel on the right positions bars on a tilted surface, resulting in perceived height differences when there are none: the same four numbers, 10, 20, 30, and 40, are shown in each row and column.
 
-[![Reading off data values from 3D charts is difficult](images/principles-3d.png){fig-alt="Reading off data values from 3D charts is difficult. The left panel of this figure displays a single number, 10, as a 3D bar chart. The correct identification of the value is indicated by the red X on the rear wall of the image. The panel on the right positions bars on a tilted surface, resulting in perceived height differences when there are none: the same four numbers, 10, 20, 30, and 40, over several rows and columns."}](images/principles-3d.png)
+[![Reading off data values from 3D charts is difficult.](images/principles-3d.png){fig-alt="Reading off data values from 3D charts is difficult. The left panel of this figure displays a single number, 10, as a 3D bar chart. The correct identification of the value is indicated by the red X on the rear wall of the image. The panel on the right positions bars on a tilted surface, resulting in perceived height differences when there are none: the same four numbers, 10, 20, 30, and 40, over several rows and columns."}](images/principles-3d.png)
 
 ## Elements of tables
 
