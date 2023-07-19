@@ -1,6 +1,7 @@
 ---
 title: "About the authors"
 editor: source
+suppress-bibliography: true
 ---
 
 ## Andreas Krause
@@ -19,7 +20,7 @@ Graphics and visualisation are long-standing topics for him, including numerous 
 -   ORCID: [orcid.org/0000-0002-4686-976X](https://orcid.org/0000-0002-4686-976X)
 :::
 
-::: {.g-col-12 .g-col-md-6}
+::: {.g-col-12 .g-col-md-6 .content-visible unless-format="pdf"}
 ![](images/andreas.png){fig-align="center" fig-alt="Image of Andreas Krause" width="70%"}
 :::
 :::
@@ -37,7 +38,7 @@ Nicola Rennie is an academic, data scientist, and educator with a passion for ef
 -   ORCID: [orcid.org/0000-0003-4797-557X](https://orcid.org/0000-0003-4797-557X)
 :::
 
-::: {.g-col-12 .g-col-md-6}
+::: {.g-col-12 .g-col-md-6 .content-visible unless-format="pdf"}
 ![](images/nicola.jpg){fig-align="center" fig-alt="Image of Nicola Rennie wearing a red jacket" width="70%"}
 :::
 :::
@@ -54,7 +55,7 @@ Brian Tarran is a writer and editor with 20 years of experience covering the res
 -   GitHub: [github.com/brtarran](https://github.com/brtarran)
 :::
 
-::: {.g-col-12 .g-col-md-6}
+::: {.g-col-12 .g-col-md-6 .content-visible unless-format="pdf"}
 ![](images/brian.png){fig-align="center" fig-alt="Image of Brian Tarran" width="70%"}
 :::
 :::
