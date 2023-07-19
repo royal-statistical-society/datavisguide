@@ -1,10 +1,8 @@
-name: Render PDF
+name: Build and deploy site
 
 on:
   workflow_dispatch:
   push:
-    branches: main
-  pull_request:
     branches: main
 
 jobs:
