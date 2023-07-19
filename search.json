@@ -25,7 +25,7 @@
     "href": "about.html#brian-tarran",
     "title": "About the authors",
     "section": "Brian Tarran",
-    "text": "Brian Tarran\n\n\nBrian Tarran is a writer and editor with 20 years of experience covering the research and data space. Has has worked for the Royal Statistical Society (RSS) for the past 8 years, and was editor of Significance Magazine (a joint publication of the RSS, the American Statistical Association and the Statistical Society of Australia) prior to the launch of Real World Data Science. Brian is a former editor of Research-Live.com and was launch editor of Impact magazine, both published by the Market Research Society.\n\nTwitter: @brtarran\nLinkedIn: linkedin.com/in/brian-tarran-58b0261\nMastodon: @mastodon.social/@brtarran\nGitHub: github.com/brtarran"
+    "text": "Brian Tarran\n\n\nBrian Tarran is a writer and editor with 20 years of experience covering the research and data space. He has worked for the Royal Statistical Society (RSS) for the past 8 years, and was editor of Significance Magazine (a joint publication of the RSS, the American Statistical Association and the Statistical Society of Australia) prior to the launch of Real World Data Science. Brian is a former editor of Research-Live.com and was launch editor of Impact magazine, both published by the Market Research Society.\n\nTwitter: @brtarran\nLinkedIn: linkedin.com/in/brian-tarran-58b0261\nMastodon: @mastodon.social/@brtarran\nGitHub: github.com/brtarran"
   },
   {
     "objectID": "CODE_OF_CONDUCT.html",
@@ -249,7 +249,7 @@
     "href": "howto.html",
     "title": "How to use this guide",
     "section": "",
-    "text": "We designed this guide to be read from beginning to end, so that each section builds on the foundations of those that came before. If this is your first time reading the guide, we would encourage you to read it in this way. However, those looking for guidance on specific aspects of data visualisation can make use of the search and navigation functions of this website. If you would prefer to read offline, you can download PDFs of the individual pages that make up this guide.\nThroughout the text you will find examples of charts and graphs. For many of these, we provide code in R to allow you to reproduce the visualisations, and we encourage you to do so and to adapt the code for your own purposes."
+    "text": "We designed this guide to be read from beginning to end, so that each section builds on the foundations of those that came before. If this is your first time reading the guide, we would encourage you to read it in this way. However, those looking for guidance on specific aspects of data visualisation can make use of the search and navigation functions of this website.\nIf you would prefer to read offline, you can download the guide as a PDF. Individual sections of the guide can also be downloaded as separate PDFs using the “Other Formats &gt; PDF” option when shown in the right-hand navigation menu.\nThroughout the text you will find examples of charts and graphs. For many of these, we provide code in R to allow you to reproduce the visualisations, and we encourage you to do so and to adapt the code for your own purposes."
   },
   {
     "objectID": "howto.html#how-to-contribute-to-this-guide",
