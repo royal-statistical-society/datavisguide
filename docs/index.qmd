@@ -3,6 +3,9 @@ title: "The guide"
 subtitle: Table of contents
 toc: true
 ---
+::: {.callout-warning appearance="simple"}
+This guide is under development, and the authors welcome feedback and contributions. See the [README file in our GitHub repository](https://github.com/royal-statistical-society/datavisguide#readme) for information on how to contribute.
+:::
 
 ::: grid
 ::: {.g-col-12 .g-col-md-4 style="background-color:#f8f9fa; padding-left:1rem; padding-right:1rem;"}

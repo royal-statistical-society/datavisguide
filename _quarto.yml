@@ -54,8 +54,11 @@ website:
               text: References and resources
         - href: about.qmd
           text: About the authors
+        - href: rss_conference.qmd
+          text: Join us at RSS Conference
         - href: ts-and-cs.qmd
           text: Terms and conditions
+
             
   page-navigation: true
 

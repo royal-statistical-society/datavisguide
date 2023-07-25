@@ -3,8 +3,8 @@ title: Best Practices for Data Visualisation
 subtitle: Insights, advice, and examples (with code) to make data outputs more readable, accessible, and impactful  
 ---
 
-::: {.callout-warning appearance="simple"}
-This site and its content are under development, and the authors welcome feedback and contributions. See the [README file in our GitHub repository](https://github.com/royal-statistical-society/datavisguide#readme) for information on how to contribute.
+::: {.callout-tip appearance="simple"}
+**Coming to the RSS Conference this September?** Find out more about [our conference session](rss_conference.qmd) and how to become a guide contributor!
 :::
 
 Statistics is "the science of collecting, analyzing, presenting, and interpreting data" [@statistics]. Presentation of data is a key means to support and guide interpretation and subsequent decision making. Techniques exist for effective display. This is what this guide is all about.
