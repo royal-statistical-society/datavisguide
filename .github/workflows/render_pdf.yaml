@@ -1,11 +1,9 @@
 name: Render PDF
 
 on:
+  workflow_dispatch:
   push:
     branches: main
-    
-  workflow_dispatch:
-
 
 jobs:
   render:
