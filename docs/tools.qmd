@@ -309,7 +309,7 @@ x_vals = [1, 2, 3, 4]
 y_vals = [1, 2, 3, 4]
 # create barchart
 barplot(x_vals, y_vals, color="#009cc4", axis=(; xticks=(1:4, ["A", "B", "C", "D"])))
-````
+```
 
 ![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-jl.png){fig-alt="Bar charts visualising plant growth of average height for different treatments with user specified colour in blue."}
 
