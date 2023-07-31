@@ -29,7 +29,7 @@ A successful data visualisation will:
 
     Improve access to information
 
-    :   Textual descriptions can be lengthy and hard to read, while skillfully created visualisations permit the extraction of key information more efficiently, making information extraction a fun task.
+    :   Textual descriptions can be lengthy and hard to read, while skilfully created visualisations permit the extraction of key information more efficiently, making information extraction a fun task.
 
 -   
 
@@ -59,17 +59,17 @@ Data visualisation has been, for a long time, both a topic of scientific researc
 
 In 1859, [Florence Nightingale](https://en.wikipedia.org/wiki/Florence_Nightingale), the founder of modern nursing, published her findings on the sanitary status of the British army during the war with Russia. She showed raw data as well as summary statistics in tables and charts (Nightingale, 1859). One chart in particular continues to be celebrated today: a polar area chart on the "causes of mortality in the army in the East".
 
-[![Florence Nightingale's polar area chart, "Diagram of the causes of mortality in the army in the East". Source: Wikimedia Commons.](images/Nightingale-mortality.jpg){width="500px"}](images/Nightingale-mortality.jpg)
+[![Florence Nightingale\'s polar area chart, "Diagram of the causes of mortality in the army in the East". Source: Wikimedia Commons.](images/Nightingale-mortality.jpg){width="500px"}](images/Nightingale-mortality.jpg)
 
 What made Nightingale's graphs "particularly iconic was their powerful use of visual rhetoric to make an argument about data" [@Hedley]. This quality is also evident in other visualisations produced by Nightingale's contemporaries.
 
-A simplistic but rather impactful visualisation of the water pumps in London associated with transmission of cholera paved the way for root cause identification [@Snow1854].
+A simplistic but rather impactful visualisation of the water pumps in London associated with transmission of cholera paved the way for root cause identification. Medical doctor John Snow collected data of cholera deaths and created a visualisation where the number of deaths was represented by the height of a bar at the corresponding address in London. This visualisation showed that the deaths clustered around Broad Street, which helped identify the cause of the cholera transmission, the Broad Street water pump [@Snow1854; @SnowWikipedia].
 
 [![Map by John Snow showing clusters of cholera cases in the London epidemic of 1854. Source: Wikimedia Commons.](images/Snow-cholera-map.jpg){width="500px"}](images/Snow-cholera-map.jpg)
 
 An early complex visualisation was created by Minard in 1861, depicting [data from Napoleon's march on Moscow](https://academic.oup.com/jrssig/article/5/3/133/7029764) in 1812/13 and his subsequent retreat.
 
-[![Charles Minard's 1869 map of "the successive losses in men of the French Army in the Russian campaign 1812--1813". Source: Wikimedia Commons.](images/minard.png){width="500px"}](images/minard.png)
+[![Charles Minard\'s 1869 map of "the successive losses in men of the French Army in the Russian campaign 1812--1813". Source: Wikimedia Commons.](images/minard.png){width="500px"}](images/minard.png)
 
 The map shows latitude and longitude of the army as it moved. The line shows the direction of movement, and the line width represents the size of the army (the surviving soldiers). Particular locations were marked by the date of the army presence, and the temperature is shown, too. Six variables were elegantly woven into a single display [@Tufte2001; @Corbett2001; @Robinson1967].
 
@@ -87,6 +87,6 @@ Statistical systems such as SAS enabled creation of data visualisations early on
 
 Arguably the most consistent implementation of a graphics system was realised with ggplot [@Wickham2011; @Wickham2016] based on Wilkinson's *The Grammar of Graphics* [@Wilkinson2005].
 
-A key component of ggplot2 is the feature of creating conditional displays. These allow for subsetting the data by the values of one or more variables. The concept was introduced by Cleveland [@Cleveland1993; @Cleveland1994], showcasing a widely-known barley data set that was analysed in textbooks for decades until a visualisation strongly suggested an error in the data set -- two years of crop yield of one variety at one of six farms were accidentally swapped. It took a visualisation to reveal what numerous numerical analyses had missed!
+A key component of ggplot2 is the feature of creating conditional displays. These allow for subsetting the data by the values of one or more variables. The concept was introduced by Cleveland [@Cleveland1993; @Cleveland1994], showcasing a widely known barley data set that was analysed in textbooks for decades until a visualisation strongly suggested an error in the data set -- two years of crop yield of one variety at one of six farms were accidentally swapped. It took a visualisation to reveal what numerous numerical analyses had missed!
 
 Cleveland named the display type "trellis", being inspired by a trellis in his garden [@Cleveland1993]. The trellis concept was first implemented in S [@Becker1984] and S-PLUS [@Becker1996]. When R [@RTeam2021] was developed by Robert Gentleman and Ross Ihaka in Auckland NZ in the 1980s, a package named `lattice` was developed [@Sarkar2008] since "trellis" carried a trademark (by Lucent and later MathSoft). With the advent of ggplot, the term faceting (with functions facet_grid and facet_wrap) replaced the "lattice" with its "panels".
