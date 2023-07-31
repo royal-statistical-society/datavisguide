@@ -165,7 +165,7 @@ Point symbols should be chosen such that the visualisation displays the data in 
 
 ### Colours
 
-Colours should serve a purpose such as helping to identify different groups. Colours for pure decoration are discouraged. Cleveland pointed out that because "they do have a natural visual hierarchy, varying shades of gray show varying quantities better than color", and "the shades of gray provide an easily comprehended order to the data measures. This is the key" [@Tufte2001, p. 154].
+Colours should serve a purpose such as helping to identify different groups. Colours for pure decoration are discouraged. Tufte pointed out that because "they do have a natural visual hierarchy, varying shades of gray show varying quantities better than color", and "the shades of gray provide an easily comprehended order to the data measures. This is the key" [@Tufte2001, p. 154].
 
 ### Axes
 
