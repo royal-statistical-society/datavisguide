@@ -62,10 +62,10 @@ jobs:
         with:
           use-public-rspm: true
         
-      - name: Install R packages
-        run: |
-          install.packages(c("knitr", "rmarkdown", "quarto", "stringr"))
-        shell: Rscript {0}
+      # - name: Install R packages
+      #   run: |
+      #     install.packages(c("knitr", "rmarkdown", "quarto", "stringr"))
+      #   shell: Rscript {0}
       
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2
