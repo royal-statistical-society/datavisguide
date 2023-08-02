@@ -40,10 +40,6 @@ jobs:
           git add RSS-data-vis-guide.pdf
           git commit -m "Render PDF"
           git push
-          git checkout gh-pages
-          git checkout main RSS-data-vis-guide.pdf
-          git commit -m "Render PDF"
-          git push
         env:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
