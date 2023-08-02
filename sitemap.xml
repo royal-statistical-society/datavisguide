@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/howto.html</loc>
-    <lastmod>2023-08-02T09:32:34.254Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/rss_conference.html</loc>
-    <lastmod>2023-08-02T09:32:33.246Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/ts-and-cs.html</loc>
-    <lastmod>2023-08-02T09:32:32.394Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/index.html</loc>
-    <lastmod>2023-08-02T09:32:30.974Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/docs/styling.html</loc>
-    <lastmod>2023-08-02T09:32:18.702Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/docs/references.html</loc>
-    <lastmod>2023-08-02T09:32:05.666Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/docs/choosing.html</loc>
-    <lastmod>2023-08-02T09:31:52.102Z</lastmod>
+    <loc>https://royal-statistical-society.github.io/datavisguide/about.html</loc>
+    <lastmod>2023-08-02T10:05:13.230Z</lastmod>
   </url>
   <url>
     <loc>https://royal-statistical-society.github.io/datavisguide/docs/why-visualise.html</loc>
-    <lastmod>2023-08-02T09:31:42.302Z</lastmod>
+    <lastmod>2023-08-02T10:05:12.414Z</lastmod>
   </url>
   <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/docs/principles.html</loc>
-    <lastmod>2023-08-02T09:32:05.026Z</lastmod>
+    <loc>https://royal-statistical-society.github.io/datavisguide/docs/choosing.html</loc>
+    <lastmod>2023-08-02T10:04:53.837Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royal-statistical-society.github.io/datavisguide/docs/references.html</loc>
+    <lastmod>2023-08-02T10:04:33.125Z</lastmod>
   </url>
   <url>
     <loc>https://royal-statistical-society.github.io/datavisguide/docs/index.html</loc>
-    <lastmod>2023-08-02T09:32:06.182Z</lastmod>
+    <lastmod>2023-08-02T10:04:21.645Z</lastmod>
   </url>
   <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/docs/tools.html</loc>
-    <lastmod>2023-08-02T09:32:30.502Z</lastmod>
+    <loc>https://royal-statistical-society.github.io/datavisguide/howto.html</loc>
+    <lastmod>2023-08-02T10:04:20.489Z</lastmod>
   </url>
   <url>
     <loc>https://royal-statistical-society.github.io/datavisguide/CODE_OF_CONDUCT.html</loc>
-    <lastmod>2023-08-02T09:32:31.558Z</lastmod>
+    <lastmod>2023-08-02T10:04:19.601Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royal-statistical-society.github.io/datavisguide/index.html</loc>
+    <lastmod>2023-08-02T10:04:18.753Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royal-statistical-society.github.io/datavisguide/rss_conference.html</loc>
+    <lastmod>2023-08-02T10:04:20.025Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royal-statistical-society.github.io/datavisguide/ts-and-cs.html</loc>
+    <lastmod>2023-08-02T10:04:21.221Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royal-statistical-society.github.io/datavisguide/docs/tools.html</loc>
+    <lastmod>2023-08-02T10:04:32.597Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royal-statistical-society.github.io/datavisguide/docs/principles.html</loc>
+    <lastmod>2023-08-02T10:04:45.069Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royal-statistical-society.github.io/datavisguide/docs/styling.html</loc>
+    <lastmod>2023-08-02T10:05:04.894Z</lastmod>
   </url>
   <url>
     <loc>https://royal-statistical-society.github.io/datavisguide/LICENCE.html</loc>
-    <lastmod>2023-08-02T09:32:32.794Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/about.html</loc>
-    <lastmod>2023-08-02T09:32:33.762Z</lastmod>
+    <lastmod>2023-08-02T10:05:12.754Z</lastmod>
   </url>
 </urlset>
