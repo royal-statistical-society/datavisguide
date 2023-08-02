@@ -45,7 +45,7 @@ If all of the bars, lines, points, etc. should have the same colour, you can set
 barplot(table(mtcars$gear), col = signif_blue)
 ```
 
-![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-base.png){fig-alt="Bar charts visualising plant growth of average hght for different treatments with user specified colours red, blue, and dark green."}
+![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-base.png){fig-alt="Bar charts visualising plant growth of average height for different treatments with user specified colours red, blue, and dark green."}
 
 If the colours in your plot are based on values in your data, you can set the default colours using the `palette()` function. Within {RSSthemes}, the `set_rss_palette()` function changes the default colours used. There are currently three palettes available in {RSSthemes}, although we hope to add more in the future. The options are `signif_qual`, `signif_div`, or `signif_seq`.
 
@@ -203,9 +203,9 @@ Further information on specific image sizes for different RSS publications is gi
 As an example, suppose you were creating a plot for the Features section of *Significance* magazine, and you wanted the plot to span two of the three columns. From the [table](#features-section) below, the width of the image should be 124 mm. To use the `pdf()` function to save an image, the width and height should be in inches (124 mm \~ 4.88 in). If we want a 2:1 aspect ratio, we make the height equal to half the width:
 
 ```{r}
-pdf(file = "signifance-feature-plot.pdf", # name of file
-    width = 4.88,                         # width of plot
-    height = 4.88 / 2                     # height of plot
+pdf(file = "significance-feature-plot.pdf", # name of file
+    width = 4.88,                           # width of plot
+    height = 4.88 / 2                       # height of plot
     ) 
 plot(1:4, 1:4)
 dev.off()
