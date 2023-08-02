@@ -1,0 +1,80 @@
+name: Render Build Deploy
+
+on:
+  push:
+    branches: main
+
+  workflow_dispatch:
+
+jobs:
+  # render:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Check out repository
+  #       uses: actions/checkout@v3
+        
+  #     - name: Set up Quarto
+  #       uses: quarto-dev/quarto-actions/setup@v2
+  #       with:
+  #         tinytex: true
+          
+  #     - name: Set up R
+  #       uses: r-lib/actions/setup-r@v2
+  #       with:
+  #         use-public-rspm: true
+          
+  #     - name: Install R packages
+  #       run: |
+  #         install.packages(c("knitr", "rmarkdown", "quarto", "stringr"))
+  #       shell: Rscript {0}
+        
+  #     - name: Render PDF
+  #       run: |
+  #         quarto::quarto_render("_make_pdf.qmd")
+  #       shell: Rscript {0}
+        
+  #     - name: Commit files
+  #       run: |
+  #         git config --local user.email "actions@github.com"
+  #         git config --local user.name "GitHub Actions"
+  #         git add RSS-data-vis-guide.pdf
+  #         git commit -m "Render PDF"
+  #         git push
+  #       env:
+  #         github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  build-deploy:
+    # needs: render
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
+      
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+        
+      # - name: Install R packages
+      #   run: |
+      #     install.packages(c("knitr", "rmarkdown", "quarto", "stringr"))
+      #   shell: Rscript {0}
+      
+      - name: Render Quarto Project
+        uses: quarto-dev/quarto-actions/render@v2
+
+      - name: Deploy 🚀
+        if: github.event_name != 'pull_request'
+        uses: JamesIves/github-pages-deploy-action@v4.4.3
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: _site # The folder the action should deploy.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
