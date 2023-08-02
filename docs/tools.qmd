@@ -326,7 +326,7 @@ barplot(x_vals, y_vals, color=signif_qual, axis=(; xticks=(1:4, ["A", "B", "C", 
 
 ![Bar chart showing the colours from the `signif_qual` palette.](images/tools-qual-jl.png){fig-alt="Barchart showing the colours from signif_qual"}
 
-You can specify a custom labels and titles using the `axis` argument:
+You can specify custom labels and titles using the `axis` argument:
 
 ```{{julia}}
 #| message: false
