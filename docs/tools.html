@@ -85,6 +85,7 @@ div.csl-indent {
 <meta name="quarto:offset" content="../">
 <link href="../docs/references.html" rel="next">
 <link href="../docs/styling.html" rel="prev">
+<link href="../images/favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -346,7 +347,7 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/tools-blue-base.png" class="img-fluid figure-img" alt="Bar charts visualising plant growth of average hght for different treatments with user specified colours red, blue, and dark green."></p>
+<p><img src="images/tools-blue-base.png" class="img-fluid figure-img" alt="Bar charts visualising plant growth of average height for different treatments with user specified colours red, blue, and dark green."></p>
 <figcaption class="figure-caption">Bar chart with bars coloured in <em>Significance</em> blue.</figcaption>
 </figure>
 </div>
@@ -520,9 +521,9 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 <p>Further information on specific image sizes for different RSS publications is given in the <a href="#publication-specifications">Publication specifications</a> section.</p>
 <p>As an example, suppose you were creating a plot for the Features section of <em>Significance</em> magazine, and you wanted the plot to span two of the three columns. From the <a href="#features-section">table</a> below, the width of the image should be 124 mm. To use the <code>pdf()</code> function to save an image, the width and height should be in inches (124 mm ~ 4.88 in). If we want a 2:1 aspect ratio, we make the height equal to half the width:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="at">file =</span> <span class="st">"signifance-feature-plot.pdf"</span>, <span class="co"># name of file</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="fl">4.88</span>,                         <span class="co"># width of plot</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">height =</span> <span class="fl">4.88</span> <span class="sc">/</span> <span class="dv">2</span>                     <span class="co"># height of plot</span></span>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="at">file =</span> <span class="st">"significance-feature-plot.pdf"</span>, <span class="co"># name of file</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="fl">4.88</span>,                           <span class="co"># width of plot</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">height =</span> <span class="fl">4.88</span> <span class="sc">/</span> <span class="dv">2</span>                       <span class="co"># height of plot</span></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    ) </span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)</span>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1181,7 +1182,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb20-51"><a href="#cb20-51" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(mtcars<span class="sc">$</span>gear), <span class="at">col =</span> signif_blue)</span>
 <span id="cb20-52"><a href="#cb20-52" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb20-53"><a href="#cb20-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-54"><a href="#cb20-54" aria-hidden="true" tabindex="-1"></a><span class="al">![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-base.png)</span>{fig-alt="Bar charts visualising plant growth of average hght for different treatments with user specified colours red, blue, and dark green."}</span>
+<span id="cb20-54"><a href="#cb20-54" aria-hidden="true" tabindex="-1"></a><span class="al">![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-base.png)</span>{fig-alt="Bar charts visualising plant growth of average height for different treatments with user specified colours red, blue, and dark green."}</span>
 <span id="cb20-55"><a href="#cb20-55" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-56"><a href="#cb20-56" aria-hidden="true" tabindex="-1"></a>If the colours in your plot are based on values in your data, you can set the default colours using the <span class="in">`palette()`</span> function. Within {RSSthemes}, the <span class="in">`set_rss_palette()`</span> function changes the default colours used. There are currently three palettes available in {RSSthemes}, although we hope to add more in the future. The options are <span class="in">`signif_qual`</span>, <span class="in">`signif_div`</span>, or <span class="in">`signif_seq`</span>.</span>
 <span id="cb20-57"><a href="#cb20-57" aria-hidden="true" tabindex="-1"></a></span>
@@ -1339,9 +1340,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb20-231"><a href="#cb20-231" aria-hidden="true" tabindex="-1"></a>As an example, suppose you were creating a plot for the Features section of *Significance* magazine, and you wanted the plot to span two of the three columns. From the <span class="co">[</span><span class="ot">table</span><span class="co">](#features-section)</span> below, the width of the image should be 124 mm. To use the <span class="in">`pdf()`</span> function to save an image, the width and height should be in inches (124 mm \~ 4.88 in). If we want a 2:1 aspect ratio, we make the height equal to half the width:</span>
 <span id="cb20-232"><a href="#cb20-232" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-235"><a href="#cb20-235" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb20-236"><a href="#cb20-236" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="at">file =</span> <span class="st">"signifance-feature-plot.pdf"</span>, <span class="co"># name of file</span></span>
-<span id="cb20-237"><a href="#cb20-237" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="fl">4.88</span>,                         <span class="co"># width of plot</span></span>
-<span id="cb20-238"><a href="#cb20-238" aria-hidden="true" tabindex="-1"></a>    <span class="at">height =</span> <span class="fl">4.88</span> <span class="sc">/</span> <span class="dv">2</span>                     <span class="co"># height of plot</span></span>
+<span id="cb20-236"><a href="#cb20-236" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="at">file =</span> <span class="st">"significance-feature-plot.pdf"</span>, <span class="co"># name of file</span></span>
+<span id="cb20-237"><a href="#cb20-237" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="fl">4.88</span>,                           <span class="co"># width of plot</span></span>
+<span id="cb20-238"><a href="#cb20-238" aria-hidden="true" tabindex="-1"></a>    <span class="at">height =</span> <span class="fl">4.88</span> <span class="sc">/</span> <span class="dv">2</span>                       <span class="co"># height of plot</span></span>
 <span id="cb20-239"><a href="#cb20-239" aria-hidden="true" tabindex="-1"></a>    ) </span>
 <span id="cb20-240"><a href="#cb20-240" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)</span>
 <span id="cb20-241"><a href="#cb20-241" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span>
