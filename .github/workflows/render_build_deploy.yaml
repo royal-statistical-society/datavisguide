@@ -38,6 +38,8 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add RSS-data-vis-guide.pdf
+          git commit -m "Render PDF"
+          git push
           git checkout gh-pages
           git checkout main RSS-data-vis-guide.pdf
           git commit -m "Render PDF"
