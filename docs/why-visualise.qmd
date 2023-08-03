@@ -69,7 +69,7 @@ A simplistic but rather impactful visualisation of the water pumps in London ass
 
 An early complex visualisation was created by Minard in 1861, depicting [data from Napoleon's march on Moscow](https://academic.oup.com/jrssig/article/5/3/133/7029764) in 1812/13 and his subsequent retreat.
 
-[![Charles Minard\'s 1869 map of "the successive losses in men of the French Army in the Russian campaign 1812--1813". Source: Wikimedia Commons.](images/minard.png){width="500px"}](images/minard.png)
+[![Charles Minard\'s 1869 map of "the successive losses in men of the French Army in the Russian campaign 1812--1813". Source: Wikimedia Commons.](images/Minard.png){width="500px"}](images/Minard.png)
 
 The map shows latitude and longitude of the army as it moved. The line shows the direction of movement, and the line width represents the size of the army (the surviving soldiers). Particular locations were marked by the date of the army presence, and the temperature is shown, too. Six variables were elegantly woven into a single display [@Tufte2001; @Corbett2001; @Robinson1967].
 
