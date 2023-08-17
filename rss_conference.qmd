@@ -1,0 +1,30 @@
+---
+title: Join us at RSS Conference
+editor: source
+---
+
+The authors of “Best Practices for Data Visualisation” are [hosting a session](https://virtual.oxfordabstracts.com/#/event/4019/program?session=65937&s=0) at the [RSS International Conference](https://rss.org.uk/training-events/conference-2023/) in Harrogate this September. Take part in this session to learn more about the guide and help contribute to its ongoing development.
+
+![](images/RSS-2023-Banner-for-website.jpg){fig-alt="Banner image for RSS International Conference 2023 in Harrogate, 4-7 September 2023" width="700px" fig-align="center"}
+
+Our 80-minute session is divided into two halves:
+
+In **part 1**, authors Andreas Krause, Nicola Rennie, and Brian Tarran will introduce the guide and its key recommendations, and there will be a short demo of how to use the new [{RSSthemes} R package](https://github.com/nrennie/RSSthemes).
+
+In **part 2**, attendees will be invited to share feedback with the authors, propose ideas, and start developing new and expanded sections of the guide. Attendees will be shown how to work with the guide’s source files and collaborate via GitHub. But to get the most out of the session, we recommend you work through these steps ahead of time:
+
+1. This guide was created using [Quarto](https://quarto.org/), an open-source publishing system from Posit, the makers of RStudio. [Follow the instructions](https://quarto.org/docs/get-started/) to download and setup Quarto on your machine.
+
+2. Try out the [Quarto demo](https://quarto.org/docs/get-started/hello/vscode.html) using your coding or editing tool of choice.
+
+3. If you don’t have one already, head over to [GitHub.com](https://github.com/) and create a free GitHub account. Try out the GitHub demo for a basic introduction to creating repositories, forking repositories, pushing and pulling commits, and merging pull requests. The Turing Way also has a nice [GitHub Intro for Beginners](https://docs.google.com/presentation/d/e/2PACX-1vR-Qu4kYulSMGnnAHH9-OonNiLkaJrsolEecEkt0VD5_3PmKWePmiSQwxK3QHoq5gNsL-MJKowmgsAx/pub?start=false&loop=false&delayms=3000&slide=id.g526267be46_0_606).
+
+4. Once you’re feeling comfortable with GitHub, head on over to our [GitHub repository]( https://github.com/royal-statistical-society/datavisguide). Click the “Fork” button to add a copy of the repository to your own GitHub account.
+
+5. Next, you’ll want to “clone” the repository to your local machine. The easiest way to do this is using [GitHub Desktop](https://desktop.github.com/).
+
+6. Once the forked repository is on your local machine, you can start exploring the guide’s source code and files!
+
+Ready to make a contribution? Come along to our [RSS Conference session](https://virtual.oxfordabstracts.com/#/event/4019/program?session=65937&s=0) at 11:40 am on Tuesday, 5 September 2023 and share your ideas with other delegates. 
+
+Can’t wait to get started? Check out our [README](https://github.com/royal-statistical-society/datavisguide#readme) file for further instructions.

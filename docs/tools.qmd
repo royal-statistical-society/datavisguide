@@ -45,7 +45,7 @@ If all of the bars, lines, points, etc. should have the same colour, you can set
 barplot(table(mtcars$gear), col = signif_blue)
 ```
 
-![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-base.png){fig-alt="Bar charts visualising plant growth of average hght for different treatments with user specified colours red, blue, and dark green."}
+![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-base.png){fig-alt="Bar charts visualising plant growth of average height for different treatments with user specified colours red, blue, and dark green."}
 
 If the colours in your plot are based on values in your data, you can set the default colours using the `palette()` function. Within {RSSthemes}, the `set_rss_palette()` function changes the default colours used. There are currently three palettes available in {RSSthemes}, although we hope to add more in the future. The options are `signif_qual`, `signif_div`, or `signif_seq`.
 
@@ -203,9 +203,9 @@ Further information on specific image sizes for different RSS publications is gi
 As an example, suppose you were creating a plot for the Features section of *Significance* magazine, and you wanted the plot to span two of the three columns. From the [table](#features-section) below, the width of the image should be 124 mm. To use the `pdf()` function to save an image, the width and height should be in inches (124 mm \~ 4.88 in). If we want a 2:1 aspect ratio, we make the height equal to half the width:
 
 ```{r}
-pdf(file = "signifance-feature-plot.pdf", # name of file
-    width = 4.88,                         # width of plot
-    height = 4.88 / 2                     # height of plot
+pdf(file = "significance-feature-plot.pdf", # name of file
+    width = 4.88,                           # width of plot
+    height = 4.88 / 2                       # height of plot
     ) 
 plot(1:4, 1:4)
 dev.off()
@@ -235,7 +235,7 @@ plt.bar(x_vals, y_vals, color = "#009cc4")
 plt.show()
 ```
 
-![Bar chart with bars coloured in Significance blue.](images/tools-blue-py.png){fig-alt="Bar charts visualising plant growth of average hght for different treatments with user specified colours red, blue, and dark green."}
+![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-py.png){fig-alt="Bar charts visualising plant growth of average height for different treatments with user specified colour in blue."}
 
 If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:
 
@@ -287,7 +287,74 @@ plt.show()
 
 ![Barchart showing the use of Source Sans font.](images/tools-py-font.png){fig-alt="Barchart showing the use of Source Sans font."}
 
-## Publication specifications
+### Julia
+
+[Julia](https://www.julialang.org/) is a general-purpose programming language, focused in high performance, while providing easy syntax.
+Julia has libraries available that provide capabilities for data analysis and visualisation.
+
+#### Makie
+
+[Makie](https://makie.org) is a high-level plotting library for the [Julia](https://www.julialang.org/) programming language.
+
+**Example**: changing bar chart colours in Makie.
+
+You can change the colour of chart elements in Makie using the `color` argument and custom tick labels using the `xticks` argument inside `axis`:
+
+```{{julia}}
+#| message: false
+#| eval: false
+using CairoMakie
+# generate data
+x_vals = [1, 2, 3, 4]
+y_vals = [1, 2, 3, 4]
+# create barchart
+barplot(x_vals, y_vals, color="#009cc4", axis=(; xticks=(1:4, ["A", "B", "C", "D"])))
+```
+
+![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-jl.png){fig-alt="Bar charts visualising plant growth of average height for different treatments with user specified colour in blue."}
+
+If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:
+
+```{{julia}}
+#| message: false
+#| eval: false
+# define colour palette
+signif_qual = ["#3fa535", "#f4c100", "#009cc4", "#f07d00"]
+# create barchart
+barplot(x_vals, y_vals, color=signif_qual, axis=(; xticks=(1:4, ["A", "B", "C", "D"])))
+```
+
+![Bar chart showing the colours from the `signif_qual` palette.](images/tools-qual-jl.png){fig-alt="Barchart showing the colours from signif_qual"}
+
+You can specify custom labels and titles using the `axis` argument:
+
+```{{julia}}
+#| message: false
+#| eval: false
+# define labels and title
+title = "My Significance Plot"
+subtitle = "Some longer sentence explaining what is happening in the chart."
+xlabel = "X-axis label"
+ylabel = "Y-axis label"
+
+# create barchart
+barplot(x_vals,
+        y_vals;
+        color=signif_qual,
+        axis=(;
+            xticks=(1:4, ["A", "B", "C", "D"]),
+            title=title,
+            subtitle=subtitle,
+            titlealign=:left,
+            xlabel=xlabel,
+            ylabel=ylabel,
+        ),
+)
+```
+
+![Barchart showing the use of custom labels and titles.](images/tools-jl-labels.png){fig-alt="Barchart showing the use of custom labels and titles."}
+
+## Publication specifications {#publication-specifications}
 
 The following information should be used to design graphs and charts that meet RSS publication requirements. Details include page sizes and column widths, font types and sizes, and image resolutions and file formats.
 
@@ -327,7 +394,7 @@ Uses four-column layout.
 |                 | -   Hex code = #e41b12                    |
 +-----------------+-------------------------------------------+
 
-#### Features section
+#### Features section {#features-section}
 
 Uses three-column layout.
 

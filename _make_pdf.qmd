@@ -135,6 +135,17 @@ about <- process_qmd("about.qmd")
 cat(unlist(about), sep = '\n')
 ```
 
+# Join us at RSS Conference
+
+```{r}
+#| output: asis
+#| echo: false
+#| eval: true
+#| message: false
+rss <- process_qmd("rss_conference.qmd")
+cat(unlist(rss), sep = '\n')
+```
+
 # Terms and Conditions
 
 ```{r}
