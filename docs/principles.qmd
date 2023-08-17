@@ -130,7 +130,7 @@ gg <- gg + geom_abline(intercept = 0, slope = 1, color = "black", linewidth = 1)
 # Adding points, removing grey background.
 gg <- gg + geom_point() + theme_bw()
 
-# Adding linear OLS regression fit of y~x.
+# Adding regression fit (local smoother, loess) of y~x.
 gg <- gg + geom_smooth(method = "loess", color = "firebrick", se = FALSE)
 
 # Adding axis labels.
