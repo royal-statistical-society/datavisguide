@@ -69,5 +69,7 @@ Brian Tarran is a writer and editor with 20 years of experience covering the res
 - [Jose Storopoli](https://github.com/storopoli) added Julia examples to [Styling for RSS publications](https://royal-statistical-society.github.io/datavisguide/docs/tools.html#julia).
 
 ## Acknowledgements
+Thanks to Kelly Zou, Marco Geraci, Jordi Prats-Rodriguez, Marc Vandemeulebroecke, and Peter Bonate for comments on an early version of this guide. Thanks also to: 
+
 - [Philip Shirk](https://github.com/philipshirk) for [styling fixes](https://github.com/royal-statistical-society/datavisguide/commit/f509e06baf387e4bdc895e4324f30f7b11911d5d).
 - [Brent Riechelman](https://github.com/BrentWHR) for [bug hunting](https://github.com/royal-statistical-society/datavisguide/issues/29).
