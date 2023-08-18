@@ -1,4 +1,4 @@
-name: Render PDF
+name: Render build deploy
 
 on:
   workflow_dispatch:
@@ -40,7 +40,6 @@ jobs:
           git commit -m "Render PDF"
           git push
         env:
-<<<<<<< HEAD:.github/workflows/render_build_deploy.yaml
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
   build-deploy:
@@ -79,6 +78,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
-=======
-          github_token: ${{ secrets.GITHUB_TOKEN }}
->>>>>>> 9202a4fa7c4579a45488fcdaccc9d8f8947021d3:.github/workflows/render_pdf.yaml
