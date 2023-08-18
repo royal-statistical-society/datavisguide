@@ -130,27 +130,33 @@ gg <- gg + geom_abline(intercept = 0, slope = 1, color = "black", linewidth = 1)
 # Adding points, removing grey background.
 gg <- gg + geom_point() + theme_bw()
 
-# Adding linear OLS regression fit of y~x.
+# Adding regression fit (local smoother, loess) of y~x.
 gg <- gg + geom_smooth(method = "loess", color = "firebrick", se = FALSE)
 
 # Adding axis labels.
 gg <- gg + xlab("predicted") + ylab("observed")
 
-# make a second copy
-gg2 <- gg
+# Aspect ratios are commonly not fixed but adapted to figure size.
+#   With dynamic displays, the point of different perception
+#   might not be obvious depending on the figure/screen size.
+#   To make that point independent of figure height and width,
+#     the aspect ratio is fixed in this example.
+gg <- gg + coord_fixed(ratio=0.5)
+
+# Copy the figure and fix the aspect ratio to 2, i.e., 
+#   one pixel in x corresponds to 2 pixels in y.
+gg2 <- gg + coord_fixed(ratio=2)
 
 # + coord_flip()
 
-# Setting the aspect ratio to 1 (1 unit in x and y corresponds
-#   to the same number of pixels).
-gg3 <- gg + coord_fixed()
-
-# Defining identical axis limits for x and y.
-gg3 <- gg3 + xlim(r) + ylim(r)
+# Setting the aspect ratio to 1 (1 unit in x and y 
+#   corresponds to the same number of pixels) and 
+#   setting axis limits to be identical.
+gg3 <- gg3 + coord_fixed(ratio=1, xlim=r, ylim=r)
 
 # Cow (column-wise) plot, combine all figures into one.
 library(cowplot)
-plot_grid(gg, gg2, gg3, rel_widths = c(4, 2, 2), nrow = 1)
+print(plot_grid(gg, gg2, gg3, rel_widths = c(4, 2, 3), nrow = 1))
 ```
 
 [![Scatter plots showing how visual perception of model fit can be influenced by aspect ratio.](images/principles-aspect-ratio-2.png){fig-alt="Scatter plots showing how visual perception of model fit can be influenced by aspect ratio. Left panel has a stretched x-axis, middle panel has a stretched y-axis, and right panel has a 1:1 aspect ratio with identical axis limits."}](images/principles-aspect-ratio2.png)
