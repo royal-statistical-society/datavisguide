@@ -52,7 +52,7 @@ This guide is under development, and the authors welcome feedback and contributi
 -   Styling with different tools, including:
     -   R
     -   Python
-    -   Microsoft Excel
+    -   Julia
 -   Publication specifications, including:
     -   Pages sizes and column widths
     -   Font types and sizes
