@@ -157,7 +157,7 @@ library(cowplot)
 plot_grid(gg, gg2, gg3, rel_widths = c(4, 2, 3), nrow = 1)
 ```
 
-[![Scatter plots showing how visual perception of model fit can be influenced by aspect ratio.](images/principles-aspect-ratio.png){fig-alt="Scatter plots showing how visual perception of model fit can be influenced by aspect ratio. Left panel has a stretched x-axis, middle panel has a stretched y-axis, and right panel has a 1:1 aspect ratio with identical axis limits."}](images/principles-aspect-ratio2.png)
+[![Scatter plots showing how visual perception of model fit can be influenced by aspect ratio.](images/principles-aspect-ratio.png){fig-alt="Scatter plots showing how visual perception of model fit can be influenced by aspect ratio. Left panel has a stretched x-axis, middle panel has a stretched y-axis, and right panel has a 1:1 aspect ratio with identical axis limits."}](images/principles-aspect-ratio.png)
 
 ### Lines
 
