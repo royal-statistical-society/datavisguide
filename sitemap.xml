@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/howto.html</loc>
-    <lastmod>2023-08-18T11:50:45.250Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/rss_conference.html</loc>
-    <lastmod>2023-08-18T11:50:44.330Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/ts-and-cs.html</loc>
-    <lastmod>2023-08-18T11:50:43.582Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/index.html</loc>
-    <lastmod>2023-08-18T11:50:42.422Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/docs/styling.html</loc>
-    <lastmod>2023-08-18T11:50:31.282Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/docs/references.html</loc>
-    <lastmod>2023-08-18T11:50:19.978Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/docs/choosing.html</loc>
-    <lastmod>2023-08-18T11:50:07.662Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/docs/why-visualise.html</loc>
-    <lastmod>2023-08-18T11:49:58.682Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/docs/principles.html</loc>
-    <lastmod>2023-08-18T11:50:19.434Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/docs/index.html</loc>
-    <lastmod>2023-08-18T11:50:20.394Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royal-statistical-society.github.io/datavisguide/docs/tools.html</loc>
-    <lastmod>2023-08-18T11:50:41.966Z</lastmod>
-  </url>
-  <url>
     <loc>https://royal-statistical-society.github.io/datavisguide/CODE_OF_CONDUCT.html</loc>
-    <lastmod>2023-08-18T11:50:42.894Z</lastmod>
+    <lastmod>2023-08-21T11:07:10.735Z</lastmod>
   </url>
   <url>
     <loc>https://royal-statistical-society.github.io/datavisguide/LICENCE.html</loc>
-    <lastmod>2023-08-18T11:50:43.906Z</lastmod>
+    <lastmod>2023-08-21T11:07:09.563Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royal-statistical-society.github.io/datavisguide/docs/why-visualise.html</loc>
+    <lastmod>2023-08-21T11:07:08.611Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royal-statistical-society.github.io/datavisguide/docs/index.html</loc>
+    <lastmod>2023-08-21T11:06:51.439Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royal-statistical-society.github.io/datavisguide/docs/references.html</loc>
+    <lastmod>2023-08-21T11:06:38.679Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royal-statistical-society.github.io/datavisguide/docs/principles.html</loc>
+    <lastmod>2023-08-21T11:06:25.590Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royal-statistical-society.github.io/datavisguide/rss_conference.html</loc>
+    <lastmod>2023-08-21T11:06:11.742Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royal-statistical-society.github.io/datavisguide/ts-and-cs.html</loc>
+    <lastmod>2023-08-21T11:06:10.842Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royal-statistical-society.github.io/datavisguide/index.html</loc>
+    <lastmod>2023-08-21T11:06:12.234Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royal-statistical-society.github.io/datavisguide/docs/tools.html</loc>
+    <lastmod>2023-08-21T11:06:38.027Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royal-statistical-society.github.io/datavisguide/docs/styling.html</loc>
+    <lastmod>2023-08-21T11:06:50.927Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royal-statistical-society.github.io/datavisguide/docs/choosing.html</loc>
+    <lastmod>2023-08-21T11:07:00.699Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royal-statistical-society.github.io/datavisguide/howto.html</loc>
+    <lastmod>2023-08-21T11:07:09.135Z</lastmod>
   </url>
   <url>
     <loc>https://royal-statistical-society.github.io/datavisguide/about.html</loc>
-    <lastmod>2023-08-18T11:50:44.802Z</lastmod>
+    <lastmod>2023-08-21T11:07:10.151Z</lastmod>
   </url>
 </urlset>
