@@ -215,6 +215,8 @@ dev.off()
 
 [Python](https://www.python.org/) is a general-purpose programming language, with libraries available that provide capabilities for data analysis and visualisation.
 
+A work-in-progress Python package for implementing RSS colour palettes can be found at [github.com/nrennie/RSSpythemes](https://github.com/nrennie/RSSpythemes). If you'd like to contribute to this Python package development, please [raise an issue](https://github.com/nrennie/RSSpythemes/issues) or create a pull request on GitHub.
+
 #### Matplotlib
 
 [Matplotlib](https://matplotlib.org/) is a Python library for creating static, animated, and interactive data visualisations.
