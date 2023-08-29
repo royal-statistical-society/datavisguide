@@ -83,7 +83,7 @@ ggplot(
 
 Colour choices can strongly impact the accessibility of your data visualisation. The correct use of colour can also help to emphasise the story you are trying to tell.
 
-Before you get into choosing colours, ask yourself the question: do I really need to use colour here? @Beecham2021 showed that the use of colour is one of the least effective methods for visually communicating differences between variables. Charts become both more accessible and more intuitive when using fewer colours.
+Before you get into choosing colours, ask yourself the question: do I really need to use colour here? @Beecham2021 showed that the use of colour is one of the least effective methods for visually communicating differences between variables.
 
 ```{r}
 library(dplyr)
@@ -298,7 +298,9 @@ ggplot(
 
 When choosing a particular colour palette, there are several important factors to consider.
 
-Colours should be distinct from each other, for all readers. There are several different forms of colour blindness which can cause some colours to appear indistinguishable. The use of a [colour blind checker](https://www.color-blindness.com/coblis-color-blindness-simulator/) [@Colblindor] can show you what your plots may look like under different types of colour blindness. This is particularly important for diverging and qualitative palettes where the distinction between hues is used to tell apart different values. In contrast, sequential palettes often use luminosity to show how values change. [Paul Tol](https://personal.sron.nl/~pault/) [@Tol2021] has some very useful resources on choices of colours, and several suggested palettes.
+Colours should be distinct from each other, for all readers. There are several different forms of colour blindness which can cause some colours to appear indistinguishable. The use of a [colour blind checker](https://www.color-blindness.com/coblis-color-blindness-simulator/) [@Colblindor] can show you what your plots may look like under different types of colour blindness. This is particularly important for diverging and qualitative palettes where the distinction between hues is used to tell apart different values. In contrast, sequential palettes often use luminosity to show how values change. [@Hoellt2023] note that single hue palettes
+are a safer choice as they are typically ore likely to be colourblind friendly. [@Hoellt2023] also note that the larger the variability across luminosity and
+chroma (purity of colour), the likelier it is that the colors are more distinguishable by colourblind people. [Paul Tol](https://personal.sron.nl/~pault/) [@Tol2021] has some very useful resources on choices of colours, and several suggested palettes.
 
 ```{r}
 library(ggplot2)
@@ -494,13 +496,15 @@ So what makes a good choice of font family? There are three main types of font:
 -   **Sans serif**: Fonts without serifs are called sans serif fonts.
 -   **Monospace**: monospace fonts are those whose characters each take up an equal width.
 
-There is no consensus as to which type of font (serif, sans serif, or monospace) is more accessible. The simpler characters of sans serif fonts may increase readability for visually impaired readers, while those with dyslexia may find the characters more difficult to tell apart. Serif fonts (such as Times New Roman) can be more difficult to read as the decorative lines distract from the shape of the letter. This is especially true in digital publications where on-screen pixelation can further distort the letters. We'd recommend avoiding serif fonts for any text in images that will appear online.
+There is no consensus as to which type of font (serif, sans serif, or monospace) is more accessible. The simpler characters of sans serif fonts may increase readability for visually impaired readers, while those with dyslexia may find the characters more difficult to tell apart. Serif fonts (such as Times New Roman) can be more difficult to read as the decorative lines distract from the shape of the letter. This is especially true in digital publications where on-screen pixelation can further distort the letters. We'd recommend avoiding serif fonts for any text in images that will appear online. Common sans serif fonts such as Arial, Calibri, and Verdana are often considered to be accessible.
 
-Common sans serif fonts such as Arial, Calibri, and Verdana are often considered to be accessible. [Dyslexie](https://www.dyslexiefont.com/) and [OpenDyslexic](https://opendyslexic.org/) are fonts specifically designed to aid readability for those with dyslexia, as they increase font weight at the bottom of the letters which reduces how much the letters appear to move around. Atkinson Hyperlegible is a font developed by the Braille Institute of America, which is designed to maximise distinction between different characters for low vision readers . It's freely available, and can be downloaded from the [Braille Institute](https://brailleinstitute.org/freefont) or used through [Google Fonts](https://fonts.google.com/specimen/Atkinson+Hyperlegible). Some fonts, particularly sans serif fonts, have characters which appear very similar to other characters. For example, a capital I, lowercase l, and number 1, can sometimes be indistinguishable. Choose a font face with a distinguishable feature for each letter and number. Source Sans Pro and Verdana both meet this condition.
+[Dyslexie](https://www.dyslexiefont.com/) and [OpenDyslexic](https://opendyslexic.org/) are fonts specifically designed to aid readability for those with dyslexia, as they increase font weight at the bottom of the letters which reduces how much the letters appear to move around. Atkinson Hyperlegible is a font developed by the Braille Institute of America, which is designed to maximise distinction between different characters for low vision readers . It's freely available, and can be downloaded from the [Braille Institute](https://brailleinstitute.org/freefont) or used through [Google Fonts](https://fonts.google.com/specimen/Atkinson+Hyperlegible). There is conflicting evidence about whether or not specially designed fonts are actually more accessible [@Rello2016, @Wery2017]. Therefore, sticking with a sans serif font is likely a safer choice.
+
+Some fonts, particularly sans serif fonts, have characters which appear very similar to other characters. For example, a capital I, lowercase l, and number 1, can sometimes be indistinguishable. Choose a font face with a distinguishable feature for each letter and number. Source Sans Pro and Verdana both meet this condition.
 
 ### Font face
 
-Font faces, e.g., bold or italic effects, can be used to emphasise particular parts of text. For example, a plot annotation may highlight a specific value placed in amongst some explanatory text. Italicised text is generally considered more difficult to read, as is capitalised text when used for the purpose of emphasis. Instead, use bold text to highlight (sparingly!).
+Font faces, e.g., bold or italic effects, can be used to emphasise particular parts of text. For example, a plot annotation may highlight a specific value placed in amongst some explanatory text. Italicised text is generally considered more difficult to read [@Rello2016], as is capitalised text when used for the purpose of emphasis. Instead, use bold text to highlight (sparingly!).
 
 ### Checklist
 
