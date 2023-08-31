@@ -298,9 +298,7 @@ ggplot(
 
 When choosing a particular colour palette, there are several important factors to consider.
 
-Colours should be distinct from each other, for all readers. There are several different forms of colour blindness which can cause some colours to appear indistinguishable. The use of a [colour blind checker](https://www.color-blindness.com/coblis-color-blindness-simulator/) [@Colblindor] can show you what your plots may look like under different types of colour blindness. This is particularly important for diverging and qualitative palettes where the distinction between hues is used to tell apart different values. In contrast, sequential palettes often use luminosity to show how values change. [@Hoellt2023] note that single hue palettes
-are a safer choice as they are typically ore likely to be colourblind friendly. [@Hoellt2023] also note that the larger the variability across luminosity and
-chroma (purity of colour), the likelier it is that the colors are more distinguishable by colourblind people. [Paul Tol](https://personal.sron.nl/~pault/) [@Tol2021] has some very useful resources on choices of colours, and several suggested palettes.
+Colours should be distinct from each other, for all readers. There are several different forms of colour blindness which can cause some colours to appear indistinguishable. The use of a [colour blind checker](https://www.color-blindness.com/coblis-color-blindness-simulator/) [@Colblindor] can show you what your plots may look like under different types of colour blindness. This is particularly important for diverging and qualitative palettes where the distinction between hues is used to tell apart different values. In contrast, sequential palettes often use luminosity to show how values change. @Hoellt2023 note that single hue palettes are a safer choice as they are typically more likely to be colourblind friendly. @Hoellt2023 also note that the larger the variability across luminosity and chroma (purity of colour), the likelier it is that the colours are more distinguishable by those with colour blindness. [Paul Tol](https://personal.sron.nl/~pault/) [-@Tol2021] has some very useful resources on choices of colours, and several suggested palettes.
 
 ```{r}
 library(ggplot2)
@@ -471,7 +469,6 @@ The placement of annotations is also key:
 -   When adding more extensive text to explain an outlier or point of interest, place the text in a relevant position. For example, if you're annotating a line chart to explain a decrease in value in 2008, position the text near to 2008.
 -   Don't fill every white space with text. @ONSstyle recommends [a maximum of 3 or 4 annotations per chart](https://style.ons.gov.uk/data-visualisation/titles-and-text/annotation-and-footnotes/) to avoid overwhelming readers. This also means keeping annotations brief and to the point. This is especially true for data visualisations that accompany journal publications or magazine articles where further textual explanation is likely included already.
 
-
 ### Checklist
 
 -   Check if there are outliers that need further explanation, or values that could be directly labelled.
@@ -480,7 +477,7 @@ The placement of annotations is also key:
 
 ## Fonts
 
-Font choice is a key component of making your data visualisations easy to understand. Some fonts are easier to read than others, and this is particularly true for those with visual impairments, or a learning disability such as dyslexia. A poor choice of font may make your visualisation inaccessible to a significant number of people in your audience. 
+Font choice is a key component of making your data visualisations easy to understand. Some fonts are easier to read than others, and this is particularly true for those with visual impairments, or a learning disability such as dyslexia. A poor choice of font may make your visualisation inaccessible to a significant number of people in your audience.
 
 Try to minimise the number of different types of font you use: use a fixed set of sizes, a maximum of two different font families, and minimise the use of mixing font faces. This all helps to reduce unnecessary work from a reader when they look at your visualisation. Previous advice relating to choice of colour is also relevant here - it's particularly important to check there is sufficient contrast between the background colour and the text colour.
 
@@ -498,7 +495,7 @@ So what makes a good choice of font family? There are three main types of font:
 
 There is no consensus as to which type of font (serif, sans serif, or monospace) is more accessible. The simpler characters of sans serif fonts may increase readability for visually impaired readers, while those with dyslexia may find the characters more difficult to tell apart. Serif fonts (such as Times New Roman) can be more difficult to read as the decorative lines distract from the shape of the letter. This is especially true in digital publications where on-screen pixelation can further distort the letters. We'd recommend avoiding serif fonts for any text in images that will appear online. Common sans serif fonts such as Arial, Calibri, and Verdana are often considered to be accessible.
 
-[Dyslexie](https://www.dyslexiefont.com/) and [OpenDyslexic](https://opendyslexic.org/) are fonts specifically designed to aid readability for those with dyslexia, as they increase font weight at the bottom of the letters which reduces how much the letters appear to move around. Atkinson Hyperlegible is a font developed by the Braille Institute of America, which is designed to maximise distinction between different characters for low vision readers . It's freely available, and can be downloaded from the [Braille Institute](https://brailleinstitute.org/freefont) or used through [Google Fonts](https://fonts.google.com/specimen/Atkinson+Hyperlegible). There is conflicting evidence about whether or not specially designed fonts are actually more accessible [@Rello2016, @Wery2017]. Therefore, sticking with a sans serif font is likely a safer choice.
+[Dyslexie](https://www.dyslexiefont.com/) and [OpenDyslexic](https://opendyslexic.org/) are fonts specifically designed to aid readability for those with dyslexia, as they increase font weight at the bottom of the letters which reduces how much the letters appear to move around. Atkinson Hyperlegible is a font developed by the Braille Institute of America, which is designed to maximise distinction between different characters for low vision readers. It's freely available, and can be downloaded from the [Braille Institute](https://brailleinstitute.org/freefont) or used through [Google Fonts](https://fonts.google.com/specimen/Atkinson+Hyperlegible). There is conflicting evidence about whether or not specially designed fonts are actually more accessible [@Rello2016, @Wery2017]. Therefore, sticking with a sans serif font is likely a safer choice.
 
 Some fonts, particularly sans serif fonts, have characters which appear very similar to other characters. For example, a capital I, lowercase l, and number 1, can sometimes be indistinguishable. Choose a font face with a distinguishable feature for each letter and number. Source Sans Pro and Verdana both meet this condition.
 
