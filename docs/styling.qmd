@@ -13,7 +13,9 @@ editor: source
 
 ## Principles of styling charts
 
-The two charts below show the same data using the same type of chart -- guinea pig tooth growth data visualised on a horizontal bar chart. However, the clarity of the two charts is distinctly different. The choice of colours, addition of text annotations, change of font size, and more informative labels make the chart on the right-hand side much easier to interpret. In this section, we'll explore each of these elements in detail, and discuss how to style different elements of charts to improve accessibility and interpretability of your data visualisations.
+The two charts below show the same data using the same type of chart -- guinea pig tooth growth data visualised on a horizontal bar chart. However, the clarity of the two charts is distinctly different. The choice of colours, addition of text annotations, change of font size, and more informative labels make the chart on the right-hand side much easier to interpret.[^1] In this section, we'll explore each of these elements in detail, and discuss how to style different elements of charts to improve accessibility and interpretability of your data visualisations.
+
+[^1]: For an alternative presentation of the same tooth growth data, see [this discussion (with code)](https://github.com/royal-statistical-society/datavisguide/discussions/31) in our GitHub repository.
 
 ```{r}
 library(ggplot2)
