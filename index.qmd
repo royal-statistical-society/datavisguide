@@ -3,10 +3,6 @@ title: Best Practices for Data Visualisation
 subtitle: Insights, advice, and examples (with code) to make data outputs more readable, accessible, and impactful  
 ---
 
-::: {.callout-tip appearance="simple"}
-**Coming to the RSS Conference this September?** Find out more about [our conference session](rss_conference.qmd) and how to become a guide contributor!
-:::
-
 Statistics is "the science of collecting, analyzing, presenting, and interpreting data" [@statistics]. Presentation of data is a key means to support and guide interpretation and subsequent decision making. Techniques exist for effective display. This is what this guide is all about.
 
 Good data visualisation requires appreciation and careful consideration of the technical aspects of data presentation. But it also involves a creative element. Authorial choices are made about the "story" we want to tell, and design decisions are driven by the need to convey that story most effectively to our audience. Software systems use default settings for most graphical elements. However, each visualisation has its own story to tell, and so we must actively consider and choose settings for the visualisation under construction.
