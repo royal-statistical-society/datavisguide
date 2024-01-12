@@ -362,6 +362,70 @@ barplot(x_vals,
 
 ![Barchart showing the use of custom labels and titles.](images/tools-jl-labels.png){fig-alt="Barchart showing the use of custom labels and titles."}
 
+#### AlgebraOfGraphics
+
+[AlgebraOfGraphics](https://aog.makie.org) is a high-level plotting library for the [Julia](https://www.julialang.org/) programming language that uses [Makie](https://makie.org) as a plotting backend.
+It follows the grammar of graphics and is similar to R's `ggplot2`.
+
+**Example**: changing bar chart colours in AlgebraOfGraphics.
+
+You can change the colour of chart elements in Makie using the `color` argument and custom tick labels using the `xticks` argument inside `axis`:
+
+```{{julia}}
+#| message: false
+#| eval: false
+using AlgebraOfGraphics
+using CairoMakie
+# generate data
+x_vals = [1, 2, 3, 4]
+y_vals = [1, 2, 3, 4]
+# create barchart
+plt = data((; x_vals, y_vals)) * mapping(:x_vals, :y_vals) * visual(BarPlot; color="#009cc4")
+draw(plt; axis=(; xticks=(1:4, ["A", "B", "C", "D"])))
+```
+
+![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-jl.png){fig-alt="Bar charts visualising plant growth of average height for different treatments with user specified colour in blue."}
+
+If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:
+
+```{{julia}}
+#| message: false
+#| eval: false
+# define colour palette
+signif_qual = ["#3fa535", "#f4c100", "#009cc4", "#f07d00"]
+# create barchart
+plt = data((; x_vals, y_vals)) * mapping(:x_vals, :y_vals) * visual(BarPlot; color=signif_qual)
+draw(plt; axis=(; xticks=(1:4, ["A", "B", "C", "D"])))
+```
+
+![Bar chart showing the colours from the `signif_qual` palette.](images/tools-qual-jl.png){fig-alt="Barchart showing the colours from signif_qual"}
+
+You can specify custom labels and titles using the `axis` argument:
+
+```{{julia}}
+#| message: false
+#| eval: false
+# define labels and title
+title = "My Significance Plot"
+subtitle = "Some longer sentence explaining what is happening in the chart."
+xlabel = "X-axis label"
+ylabel = "Y-axis label"
+
+# create barchart
+draw(plt;
+     axis=(;
+         xticks=(1:4, ["A", "B", "C", "D"]),
+         title=title,
+         subtitle=subtitle,
+         titlealign=:left,
+         xlabel=xlabel,
+         ylabel=ylabel,
+     ),
+)
+```
+
+![Barchart showing the use of custom labels and titles.](images/tools-jl-labels.png){fig-alt="Barchart showing the use of custom labels and titles."}
+
 ## Publication specifications {#publication-specifications}
 
 The following information should be used to design graphs and charts that meet RSS publication requirements. Details include page sizes and column widths, font types and sizes, and image resolutions and file formats.
