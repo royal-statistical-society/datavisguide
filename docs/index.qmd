@@ -2,6 +2,7 @@
 title: "The guide"
 subtitle: Table of contents
 toc: true
+repo-actions: false
 ---
 ::: {.callout-warning appearance="simple"}
 This guide is under development, and the authors welcome feedback and contributions. See the [README file in our GitHub repository](https://github.com/royal-statistical-society/datavisguide#readme) for information on how to contribute.
