@@ -1,6 +1,7 @@
 ---
 title: How to use this guide
 toc: true
+repo-actions: false
 ---
 
 We designed this guide to be read from beginning to end, so that each section builds on the foundations of those that came before. If this is your first time reading the guide, we would encourage you to read it in this way. However, those looking for guidance on specific aspects of data visualisation can make use of the search and navigation functions of this website.

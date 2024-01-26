@@ -1,6 +1,7 @@
 ---
 title: Best Practices for Data Visualisation
-subtitle: Insights, advice, and examples (with code) to make data outputs more readable, accessible, and impactful  
+subtitle: Insights, advice, and examples (with code) to make data outputs more readable, accessible, and impactful
+repo-actions: false  
 ---
 
 Statistics is "the science of collecting, analyzing, presenting, and interpreting data" [@statistics]. Presentation of data is a key means to support and guide interpretation and subsequent decision making. Techniques exist for effective display. This is what this guide is all about.
