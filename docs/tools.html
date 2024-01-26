@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -58,6 +58,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -101,7 +102,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -110,6 +117,7 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -128,19 +136,17 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 
 <meta property="og:title" content="Best Practices for Data Visualisation - Styling charts for RSS publications">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://royal-statistical-society.github.io/datavisguide/docs/images/tools-blue-base.png">
-<meta property="og:site-name" content="Best Practices for Data Visualisation">
-<meta property="og:image:height" content="400">
-<meta property="og:image:width" content="600">
+<meta property="og:image" content="https://royal-statistical-society.github.io/datavisguide/docs/images/RSS_logo_colour.png">
+<meta property="og:site_name" content="Best Practices for Data Visualisation">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
     <img src="../images/RSS_logo_colour.png" alt="RSS logo" class="navbar-logo">
     </a>
@@ -155,50 +161,50 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-royal-statistical-society-publications" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-royal-statistical-society-publications" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Royal Statistical Society publications</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-royal-statistical-society-publications">    
         <li>
-    <a class="dropdown-item" href="https://academic.oup.com/jrsssa" rel="" target="">
+    <a class="dropdown-item" href="https://academic.oup.com/jrsssa">
  <span class="dropdown-text">Journal of the Royal Statistical Society</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://realworlddatascience.net/" rel="" target="">
+    <a class="dropdown-item" href="https://realworlddatascience.net/">
  <span class="dropdown-text">Real World Data Science</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://academic.oup.com/jrssig" rel="" target="">
+    <a class="dropdown-item" href="https://academic.oup.com/jrssig">
  <span class="dropdown-text">Significance Magazine</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/royal-statistical-society/datavisguide" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/royal-statistical-society/datavisguide"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../docs/index.html">The guide</a></li><li class="breadcrumb-item"><a href="../docs/tools.html">Styling for RSS publications</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../docs/index.html">The guide</a></li><li class="breadcrumb-item"><a href="../docs/tools.html">Styling for RSS publications</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -275,7 +281,7 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -294,12 +300,12 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
   <li><a href="#journal-of-the-royal-statistical-society-series-a" id="toc-journal-of-the-royal-statistical-society-series-a" class="nav-link" data-scroll-target="#journal-of-the-royal-statistical-society-series-a">Journal of the Royal Statistical Society Series A</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/royal-statistical-society/datavisguide/edit/main/docs/tools.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/royal-statistical-society/datavisguide/issues/new" class="toc-action">Report an issue</a></p></div></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="tools.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/royal-statistical-society/datavisguide/edit/main/docs/tools.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/royal-statistical-society/datavisguide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="tools.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../docs/index.html">The guide</a></li><li class="breadcrumb-item"><a href="../docs/tools.html">Styling for RSS publications</a></li></ol></nav>
 <div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Styling charts for RSS publications</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
@@ -314,7 +320,9 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
   </div>
   
 
+
 </header>
+
 
 <section id="styling-charts-with-different-tools" class="level2">
 <h2 class="anchored" data-anchor-id="styling-charts-with-different-tools">Styling charts with different tools</h2>
@@ -346,7 +354,7 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-blue-base.png" class="img-fluid figure-img" alt="Bar charts visualising plant growth of average height for different treatments with user specified colours red, blue, and dark green."></p>
-<figcaption class="figure-caption">Bar chart with bars coloured in <em>Significance</em> blue.</figcaption>
+<figcaption>Bar chart with bars coloured in <em>Significance</em> blue.</figcaption>
 </figure>
 </div>
 <p>If the colours in your plot are based on values in your data, you can set the default colours using the <code>palette()</code> function. Within {RSSthemes}, the <code>set_rss_palette()</code> function changes the default colours used. There are currently three palettes available in {RSSthemes}, although we hope to add more in the future. The options are <code>signif_qual</code>, <code>signif_div</code>, or <code>signif_seq</code>.</p>
@@ -357,7 +365,7 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-qual-base.png" class="img-fluid figure-img" alt="Scatter plot showing the colours from signif_qual"></p>
-<figcaption class="figure-caption">Scatter plot showing the colours from the <code>signif_qual</code> palette.</figcaption>
+<figcaption>Scatter plot showing the colours from the <code>signif_qual</code> palette.</figcaption>
 </figure>
 </div>
 <p>Run <code>palette("default")</code> to reset to original base R colours.</p>
@@ -373,7 +381,7 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-theme-base.png" class="img-fluid figure-img" alt="Scatter plot showing the base R styling implemented by the Significance par function."></p>
-<figcaption class="figure-caption">Scatter plot showing the base R styling implemented by <code>set_signif_par()</code>.</figcaption>
+<figcaption>Scatter plot showing the base R styling implemented by <code>set_signif_par()</code>.</figcaption>
 </figure>
 </div>
 </section>
@@ -396,7 +404,7 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-yellow-bars.png" class="img-fluid figure-img" alt="Bar chart with bars coloured yellow"></p>
-<figcaption class="figure-caption">Bar chart with bars coloured yellow.</figcaption>
+<figcaption>Bar chart with bars coloured yellow.</figcaption>
 </figure>
 </div>
 <p><strong>Example</strong>: using a discrete colour scale in {ggplot2}.</p>
@@ -413,7 +421,7 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-qual-bars.png" class="img-fluid figure-img" alt="Bar chart with colours from signif_qual"></p>
-<figcaption class="figure-caption">Bar chart with colours from <code>signif_qual</code>.</figcaption>
+<figcaption>Bar chart with colours from <code>signif_qual</code>.</figcaption>
 </figure>
 </div>
 <ul>
@@ -428,7 +436,7 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-qual-points.png" class="img-fluid figure-img" alt="Scatter plot with colours from signif_qual"></p>
-<figcaption class="figure-caption">Scatter plot with colours from <code>signif_qual</code>.</figcaption>
+<figcaption>Scatter plot with colours from <code>signif_qual</code>.</figcaption>
 </figure>
 </div>
 <p><strong>Example</strong>: using a continuous colour scale in {ggplot2}.</p>
@@ -445,7 +453,7 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-seq-bars.png" class="img-fluid figure-img" alt="Bar chart showing sequential green colour palette"></p>
-<figcaption class="figure-caption">Bar chart showing sequential green colour palette.</figcaption>
+<figcaption>Bar chart showing sequential green colour palette.</figcaption>
 </figure>
 </div>
 <ul>
@@ -460,7 +468,7 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-seq-points.png" class="img-fluid figure-img" alt="Scatter plot showing sequential green colour palette"></p>
-<figcaption class="figure-caption">Scatter plot showing sequential green colour palette.</figcaption>
+<figcaption>Scatter plot showing sequential green colour palette.</figcaption>
 </figure>
 </div>
 <p>For working with diverging (continuous) data, the best palette to use is <code>"signif_div"</code>.</p>
@@ -476,7 +484,7 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-div-bars.png" class="img-fluid figure-img" alt="Bar chart showing diverging red to blue palette"></p>
-<figcaption class="figure-caption">Bar chart showing diverging red to blue palette.</figcaption>
+<figcaption>Bar chart showing diverging red to blue palette.</figcaption>
 </figure>
 </div>
 <p>If you want to centre the diverging scale around a different value, you can alternatively pass the pre-defined colours from {RSSthemes} into <code>scale_fill_gradient2()</code> in {ggplot2}:</p>
@@ -489,7 +497,7 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-div-bars-grad.png" class="img-fluid figure-img" alt="Bar chart showing diverging red to blue palette centred at 2"></p>
-<figcaption class="figure-caption">Bar chart showing diverging red to blue palette centred at 2.</figcaption>
+<figcaption>Bar chart showing diverging red to blue palette centred at 2.</figcaption>
 </figure>
 </div>
 <p><strong>Example</strong>: changing the theme in {ggplot2}.</p>
@@ -508,7 +516,7 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-theme.png" class="img-fluid figure-img" alt="Bar chart with bars coloured green, yellow, blue, and orange showing custom theme"></p>
-<figcaption class="figure-caption">Bar chart styled with <code>theme_significance()</code>.</figcaption>
+<figcaption>Bar chart styled with <code>theme_significance()</code>.</figcaption>
 </figure>
 </div>
 <p>If you find a bug in the {RSSthemes} package, or something that isn’t working quite as you expected, please submit a <a href="https://github.com/nrennie/RSSthemes/issues">GitHub issue</a>.</p>
@@ -538,71 +546,71 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 <p><strong>Example</strong>: changing bar chart colours in matplotlib.</p>
 <p>You can change the colour of chart elements in matplotlib using the <code>color</code> argument:</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># generate data</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>x_vals <span class="op">=</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'D'</span>]</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>y_vals <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>plt.bar(x_vals, y_vals, color <span class="op">=</span> <span class="st">"#009cc4"</span>)</span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="in">import matplotlib.pyplot as plt</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="in"># generate data</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="in">x_vals = ['A', 'B', 'C', 'D']</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="in">y_vals = [1, 2, 3, 4]</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="in">plt.bar(x_vals, y_vals, color = "#009cc4")</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
 <span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-blue-py.png" class="img-fluid figure-img" alt="Bar charts visualising plant growth of average height for different treatments with user specified colour in blue."></p>
-<figcaption class="figure-caption">Bar chart with bars coloured in <em>Significance</em> blue.</figcaption>
+<figcaption>Bar chart with bars coloured in <em>Significance</em> blue.</figcaption>
 </figure>
 </div>
 <p>If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># define colour palette</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>signif_qual <span class="op">=</span> [<span class="st">'#3fa535'</span>, <span class="st">'#f4c100'</span>, <span class="st">'#009cc4'</span>, <span class="st">'#f07d00'</span>]</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>plt.bar(x_vals, y_vals, label <span class="op">=</span> x_vals, color <span class="op">=</span> signif_qual)</span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="in"># define colour palette</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="in">signif_qual = ['#3fa535', '#f4c100', '#009cc4', '#f07d00']</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="in">plt.bar(x_vals, y_vals, label = x_vals, color = signif_qual)</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
 <span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-qual-py.png" class="img-fluid figure-img" alt="Barchart showing the colours from signif_qual"></p>
-<figcaption class="figure-caption">Bar chart showing the colours from the <code>signif_qual</code> palette.</figcaption>
+<figcaption>Bar chart showing the colours from the <code>signif_qual</code> palette.</figcaption>
 </figure>
 </div>
 <p><strong>Example</strong>: changing the font family in matplotlib.</p>
 <p>You can change the font used in all elements of the plot using <code>rcParams</code>. Good practice when setting a custom font family is to add a generic font family (such as sans serif) as a back up. If you’re using a font that isn’t pre-installed on your system, you can load it in using <code>font_manager</code>:</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> font_manager</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>font_manager.fontManager.addfont(<span class="st">"SourceSans3-Regular.ttf"</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="in">from matplotlib import font_manager</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="in">font_manager.fontManager.addfont("SourceSans3-Regular.ttf")</span></span>
 <span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You can specify a different font family, weight, or size using <code>fontdic</code> for individual elements.</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co"># define fonts</span></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> rcParams</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>rcParams[<span class="st">'font.family'</span>] <span class="op">=</span> [<span class="st">'Source Sans 3'</span>, <span class="st">'sans-serif'</span>]</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="in"># define fonts</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="in">from matplotlib import rcParams</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="in">rcParams['font.family'] = ['Source Sans 3', 'sans-serif']</span></span>
 <span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
-<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>)</span>
-<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>plt.bar(x_vals, y_vals, color <span class="op">=</span> signif_qual, label <span class="op">=</span> x_vals)</span>
-<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'My Significance Plot'</span>, fontdict <span class="op">=</span> {<span class="st">'fontsize'</span>:<span class="dv">14</span>}, loc <span class="op">=</span> <span class="st">'left'</span>)</span>
-<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="co"># add grid lines lines</span></span>
-<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>ax.set_axisbelow(<span class="va">True</span>)</span>
-<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>ax.xaxis.grid(color <span class="op">=</span> <span class="st">'lightgrey'</span>)</span>
-<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>ax.yaxis.grid(color <span class="op">=</span> <span class="st">'lightgrey'</span>)</span>
-<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a><span class="co"># add legend below plot</span></span>
-<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>ax.legend(ncol <span class="op">=</span> <span class="dv">4</span>, loc <span class="op">=</span> <span class="st">'lower center'</span>,</span>
-<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>          bbox_to_anchor <span class="op">=</span> (<span class="fl">0.5</span>, <span class="op">-</span><span class="fl">0.15</span>), frameon <span class="op">=</span> <span class="va">False</span>)</span>
-<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="in">fig, ax = plt.subplots(1, 1)</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="in">plt.bar(x_vals, y_vals, color = signif_qual, label = x_vals)</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="in">plt.title('My Significance Plot', fontdict = {'fontsize':14}, loc = 'left')</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="in"># add grid lines lines</span></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="in">ax.set_axisbelow(True)</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a><span class="in">ax.xaxis.grid(color = 'lightgrey')</span></span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a><span class="in">ax.yaxis.grid(color = 'lightgrey')</span></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a><span class="in"># add legend below plot</span></span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a><span class="in">ax.legend(ncol = 4, loc = 'lower center',</span></span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a><span class="in">          bbox_to_anchor = (0.5, -0.15), frameon = False)</span></span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
 <span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-py-font.png" class="img-fluid figure-img" alt="Barchart showing the use of Source Sans font."></p>
-<figcaption class="figure-caption">Barchart showing the use of Source Sans font.</figcaption>
+<figcaption>Barchart showing the use of Source Sans font.</figcaption>
 </figure>
 </div>
 </section>
@@ -616,64 +624,64 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 <p><strong>Example</strong>: changing bar chart colours in Makie.</p>
 <p>You can change the colour of chart elements in Makie using the <code>color</code> argument and custom tick labels using the <code>xticks</code> argument inside <code>axis</code>:</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>using CairoMakie</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="co"># generate data</span></span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>x_vals = [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>y_vals = [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>barplot(x_vals, y_vals, color=<span class="ot">"</span><span class="st">#009cc4</span><span class="ot">"</span>, axis=(; xticks=(<span class="dv">1</span>:<span class="dv">4</span>, [<span class="ot">"</span><span class="st">A</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">B</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">C</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">D</span><span class="ot">"</span>])))</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="in">using CairoMakie</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="in"># generate data</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="in">x_vals = [1, 2, 3, 4]</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="in">y_vals = [1, 2, 3, 4]</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="in">barplot(x_vals, y_vals, color="#009cc4", axis=(; xticks=(1:4, ["A", "B", "C", "D"])))</span></span>
 <span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-blue-jl.png" class="img-fluid figure-img" alt="Bar charts visualising plant growth of average height for different treatments with user specified colour in blue."></p>
-<figcaption class="figure-caption">Bar chart with bars coloured in <em>Significance</em> blue.</figcaption>
+<figcaption>Bar chart with bars coloured in <em>Significance</em> blue.</figcaption>
 </figure>
 </div>
 <p>If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># define colour palette</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>signif_qual = [<span class="ot">"</span><span class="st">#3fa535</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">#f4c100</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">#009cc4</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">#f07d00</span><span class="ot">"</span>]</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>barplot(x_vals, y_vals, color=signif_qual, axis=(; xticks=(<span class="dv">1</span>:<span class="dv">4</span>, [<span class="ot">"</span><span class="st">A</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">B</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">C</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">D</span><span class="ot">"</span>])))</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="in"># define colour palette</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="in">signif_qual = ["#3fa535", "#f4c100", "#009cc4", "#f07d00"]</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="in">barplot(x_vals, y_vals, color=signif_qual, axis=(; xticks=(1:4, ["A", "B", "C", "D"])))</span></span>
 <span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-qual-jl.png" class="img-fluid figure-img" alt="Barchart showing the colours from signif_qual"></p>
-<figcaption class="figure-caption">Bar chart showing the colours from the <code>signif_qual</code> palette.</figcaption>
+<figcaption>Bar chart showing the colours from the <code>signif_qual</code> palette.</figcaption>
 </figure>
 </div>
 <p>You can specify custom labels and titles using the <code>axis</code> argument:</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co"># define labels and title</span></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>title = <span class="ot">"</span><span class="st">My Significance Plot</span><span class="ot">"</span></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>subtitle = <span class="ot">"</span><span class="st">Some longer sentence explaining what is happening in the chart.</span><span class="ot">"</span></span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>xlabel = <span class="ot">"</span><span class="st">X-axis label</span><span class="ot">"</span></span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>ylabel = <span class="ot">"</span><span class="st">Y-axis label</span><span class="ot">"</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="in"># define labels and title</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="in">title = "My Significance Plot"</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle = "Some longer sentence explaining what is happening in the chart."</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="in">xlabel = "X-axis label"</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="in">ylabel = "Y-axis label"</span></span>
 <span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>barplot(x_vals,</span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>        y_vals;</span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>        color=signif_qual,</span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>        axis=(;</span>
-<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>            xticks=(<span class="dv">1</span>:<span class="dv">4</span>, [<span class="ot">"</span><span class="st">A</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">B</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">C</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">D</span><span class="ot">"</span>]),</span>
-<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>            title=title,</span>
-<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>            subtitle=subtitle,</span>
-<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>            titlealign=:left,</span>
-<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>            xlabel=xlabel,</span>
-<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>            ylabel=ylabel,</span>
-<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>        ),</span>
-<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="in">barplot(x_vals,</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="in">        y_vals;</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a><span class="in">        color=signif_qual,</span></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a><span class="in">        axis=(;</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="in">            xticks=(1:4, ["A", "B", "C", "D"]),</span></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a><span class="in">            title=title,</span></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a><span class="in">            subtitle=subtitle,</span></span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a><span class="in">            titlealign=:left,</span></span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a><span class="in">            xlabel=xlabel,</span></span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a><span class="in">            ylabel=ylabel,</span></span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a><span class="in">        ),</span></span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
 <span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-jl-labels.png" class="img-fluid figure-img" alt="Barchart showing the use of custom labels and titles."></p>
-<figcaption class="figure-caption">Barchart showing the use of custom labels and titles.</figcaption>
+<figcaption>Barchart showing the use of custom labels and titles.</figcaption>
 </figure>
 </div>
 </section>
@@ -683,65 +691,65 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 <p><strong>Example</strong>: changing bar chart colours in AlgebraOfGraphics.</p>
 <p>You can change the colour of chart elements in Makie using the <code>color</code> argument and custom tick labels using the <code>xticks</code> argument inside <code>axis</code>:</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>using AlgebraOfGraphics</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>using CairoMakie</span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="co"># generate data</span></span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>x_vals = [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>y_vals = [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>plt = data((; x_vals, y_vals)) <span class="ot">*</span> mapping(:x_vals, :y_vals) <span class="ot">*</span> visual(BarPlot; color=<span class="ot">"</span><span class="st">#009cc4</span><span class="ot">"</span>)</span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>draw(plt; axis=(; xticks=(<span class="dv">1</span>:<span class="dv">4</span>, [<span class="ot">"</span><span class="st">A</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">B</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">C</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">D</span><span class="ot">"</span>])))</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="in">using AlgebraOfGraphics</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="in">using CairoMakie</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="in"># generate data</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="in">x_vals = [1, 2, 3, 4]</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="in">y_vals = [1, 2, 3, 4]</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="in">plt = data((; x_vals, y_vals)) * mapping(:x_vals, :y_vals) * visual(BarPlot; color="#009cc4")</span></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="in">draw(plt; axis=(; xticks=(1:4, ["A", "B", "C", "D"])))</span></span>
 <span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-blue-jl.png" class="img-fluid figure-img" alt="Bar charts visualising plant growth of average height for different treatments with user specified colour in blue."></p>
-<figcaption class="figure-caption">Bar chart with bars coloured in <em>Significance</em> blue.</figcaption>
+<figcaption>Bar chart with bars coloured in <em>Significance</em> blue.</figcaption>
 </figure>
 </div>
 <p>If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co"># define colour palette</span></span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>signif_qual = [<span class="ot">"</span><span class="st">#3fa535</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">#f4c100</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">#009cc4</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">#f07d00</span><span class="ot">"</span>]</span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>plt = data((; x_vals, y_vals)) <span class="ot">*</span> mapping(:x_vals, :y_vals) <span class="ot">*</span> visual(BarPlot; color=signif_qual)</span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>draw(plt; axis=(; xticks=(<span class="dv">1</span>:<span class="dv">4</span>, [<span class="ot">"</span><span class="st">A</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">B</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">C</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">D</span><span class="ot">"</span>])))</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="in"># define colour palette</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="in">signif_qual = ["#3fa535", "#f4c100", "#009cc4", "#f07d00"]</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="in">plt = data((; x_vals, y_vals)) * mapping(:x_vals, :y_vals) * visual(BarPlot; color=signif_qual)</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="in">draw(plt; axis=(; xticks=(1:4, ["A", "B", "C", "D"])))</span></span>
 <span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-qual-jl.png" class="img-fluid figure-img" alt="Barchart showing the colours from signif_qual"></p>
-<figcaption class="figure-caption">Bar chart showing the colours from the <code>signif_qual</code> palette.</figcaption>
+<figcaption>Bar chart showing the colours from the <code>signif_qual</code> palette.</figcaption>
 </figure>
 </div>
 <p>You can specify custom labels and titles using the <code>axis</code> argument:</p>
 <div class="sourceCode" id="cb26"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co"># define labels and title</span></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>title = <span class="ot">"</span><span class="st">My Significance Plot</span><span class="ot">"</span></span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>subtitle = <span class="ot">"</span><span class="st">Some longer sentence explaining what is happening in the chart.</span><span class="ot">"</span></span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>xlabel = <span class="ot">"</span><span class="st">X-axis label</span><span class="ot">"</span></span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>ylabel = <span class="ot">"</span><span class="st">Y-axis label</span><span class="ot">"</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="in"># define labels and title</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="in">title = "My Significance Plot"</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle = "Some longer sentence explaining what is happening in the chart."</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="in">xlabel = "X-axis label"</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="in">ylabel = "Y-axis label"</span></span>
 <span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
-<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>draw(plt;</span>
-<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>     axis=(;</span>
-<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>         xticks=(<span class="dv">1</span>:<span class="dv">4</span>, [<span class="ot">"</span><span class="st">A</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">B</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">C</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">D</span><span class="ot">"</span>]),</span>
-<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>         title=title,</span>
-<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>         subtitle=subtitle,</span>
-<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>         titlealign=:left,</span>
-<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>         xlabel=xlabel,</span>
-<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>         ylabel=ylabel,</span>
-<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>     ),</span>
-<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a><span class="in">draw(plt;</span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="in">     axis=(;</span></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a><span class="in">         xticks=(1:4, ["A", "B", "C", "D"]),</span></span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a><span class="in">         title=title,</span></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a><span class="in">         subtitle=subtitle,</span></span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a><span class="in">         titlealign=:left,</span></span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a><span class="in">         xlabel=xlabel,</span></span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a><span class="in">         ylabel=ylabel,</span></span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a><span class="in">     ),</span></span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
 <span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-jl-labels.png" class="img-fluid figure-img" alt="Barchart showing the use of custom labels and titles."></p>
-<figcaption class="figure-caption">Barchart showing the use of custom labels and titles.</figcaption>
+<figcaption>Barchart showing the use of custom labels and titles.</figcaption>
 </figure>
 </div>
 </section>
@@ -966,7 +974,7 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-RTeam2021" class="csl-entry" role="listitem">
 R Core Team. 2021. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
 </div>
@@ -1107,10 +1115,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   if (showAllCode) {
     showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1120,8 +1127,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1134,6 +1150,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1177,6 +1312,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1202,6 +1338,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1263,12 +1425,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../docs/styling.html" class="pagination-link">
+      <a href="../docs/styling.html" class="pagination-link  aria-label=" styling="" for="" accessibility"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Styling for accessibility</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../docs/references.html" class="pagination-link">
+      <a href="../docs/references.html" class="pagination-link" aria-label="References and resources">
         <span class="nav-page-text">References and resources</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -1507,15 +1669,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb27-264"><a href="#cb27-264" aria-hidden="true" tabindex="-1"></a>You can change the colour of chart elements in matplotlib using the <span class="in">`color`</span> argument:</span>
 <span id="cb27-265"><a href="#cb27-265" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-266"><a href="#cb27-266" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb27-267"><a href="#cb27-267" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb27-268"><a href="#cb27-268" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb27-269"><a href="#cb27-269" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb27-270"><a href="#cb27-270" aria-hidden="true" tabindex="-1"></a><span class="co"># generate data</span></span>
-<span id="cb27-271"><a href="#cb27-271" aria-hidden="true" tabindex="-1"></a>x_vals <span class="op">=</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'D'</span>]</span>
-<span id="cb27-272"><a href="#cb27-272" aria-hidden="true" tabindex="-1"></a>y_vals <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
-<span id="cb27-273"><a href="#cb27-273" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
-<span id="cb27-274"><a href="#cb27-274" aria-hidden="true" tabindex="-1"></a>plt.bar(x_vals, y_vals, color <span class="op">=</span> <span class="st">"#009cc4"</span>)</span>
-<span id="cb27-275"><a href="#cb27-275" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb27-267"><a href="#cb27-267" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb27-268"><a href="#cb27-268" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb27-269"><a href="#cb27-269" aria-hidden="true" tabindex="-1"></a><span class="in">import matplotlib.pyplot as plt</span></span>
+<span id="cb27-270"><a href="#cb27-270" aria-hidden="true" tabindex="-1"></a><span class="in"># generate data</span></span>
+<span id="cb27-271"><a href="#cb27-271" aria-hidden="true" tabindex="-1"></a><span class="in">x_vals = ['A', 'B', 'C', 'D']</span></span>
+<span id="cb27-272"><a href="#cb27-272" aria-hidden="true" tabindex="-1"></a><span class="in">y_vals = [1, 2, 3, 4]</span></span>
+<span id="cb27-273"><a href="#cb27-273" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb27-274"><a href="#cb27-274" aria-hidden="true" tabindex="-1"></a><span class="in">plt.bar(x_vals, y_vals, color = "#009cc4")</span></span>
+<span id="cb27-275"><a href="#cb27-275" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
 <span id="cb27-276"><a href="#cb27-276" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb27-277"><a href="#cb27-277" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-278"><a href="#cb27-278" aria-hidden="true" tabindex="-1"></a><span class="al">![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-py.png)</span>{fig-alt="Bar charts visualising plant growth of average height for different treatments with user specified colour in blue."}</span>
@@ -1523,13 +1685,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb27-280"><a href="#cb27-280" aria-hidden="true" tabindex="-1"></a>If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:</span>
 <span id="cb27-281"><a href="#cb27-281" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-282"><a href="#cb27-282" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb27-283"><a href="#cb27-283" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb27-284"><a href="#cb27-284" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb27-285"><a href="#cb27-285" aria-hidden="true" tabindex="-1"></a><span class="co"># define colour palette</span></span>
-<span id="cb27-286"><a href="#cb27-286" aria-hidden="true" tabindex="-1"></a>signif_qual <span class="op">=</span> [<span class="st">'#3fa535'</span>, <span class="st">'#f4c100'</span>, <span class="st">'#009cc4'</span>, <span class="st">'#f07d00'</span>]</span>
-<span id="cb27-287"><a href="#cb27-287" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
-<span id="cb27-288"><a href="#cb27-288" aria-hidden="true" tabindex="-1"></a>plt.bar(x_vals, y_vals, label <span class="op">=</span> x_vals, color <span class="op">=</span> signif_qual)</span>
-<span id="cb27-289"><a href="#cb27-289" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb27-283"><a href="#cb27-283" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb27-284"><a href="#cb27-284" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb27-285"><a href="#cb27-285" aria-hidden="true" tabindex="-1"></a><span class="in"># define colour palette</span></span>
+<span id="cb27-286"><a href="#cb27-286" aria-hidden="true" tabindex="-1"></a><span class="in">signif_qual = ['#3fa535', '#f4c100', '#009cc4', '#f07d00']</span></span>
+<span id="cb27-287"><a href="#cb27-287" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb27-288"><a href="#cb27-288" aria-hidden="true" tabindex="-1"></a><span class="in">plt.bar(x_vals, y_vals, label = x_vals, color = signif_qual)</span></span>
+<span id="cb27-289"><a href="#cb27-289" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
 <span id="cb27-290"><a href="#cb27-290" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb27-291"><a href="#cb27-291" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-292"><a href="#cb27-292" aria-hidden="true" tabindex="-1"></a><span class="al">![Bar chart showing the colours from the `signif_qual` palette.](images/tools-qual-py.png)</span>{fig-alt="Barchart showing the colours from signif_qual"}</span>
@@ -1539,33 +1701,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb27-296"><a href="#cb27-296" aria-hidden="true" tabindex="-1"></a>You can change the font used in all elements of the plot using <span class="in">`rcParams`</span>. Good practice when setting a custom font family is to add a generic font family (such as sans serif) as a back up. If you're using a font that isn't pre-installed on your system, you can load it in using <span class="in">`font_manager`</span>:</span>
 <span id="cb27-297"><a href="#cb27-297" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-298"><a href="#cb27-298" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb27-299"><a href="#cb27-299" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb27-300"><a href="#cb27-300" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb27-301"><a href="#cb27-301" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> font_manager</span>
-<span id="cb27-302"><a href="#cb27-302" aria-hidden="true" tabindex="-1"></a>font_manager.fontManager.addfont(<span class="st">"SourceSans3-Regular.ttf"</span>)</span>
+<span id="cb27-299"><a href="#cb27-299" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb27-300"><a href="#cb27-300" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb27-301"><a href="#cb27-301" aria-hidden="true" tabindex="-1"></a><span class="in">from matplotlib import font_manager</span></span>
+<span id="cb27-302"><a href="#cb27-302" aria-hidden="true" tabindex="-1"></a><span class="in">font_manager.fontManager.addfont("SourceSans3-Regular.ttf")</span></span>
 <span id="cb27-303"><a href="#cb27-303" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb27-304"><a href="#cb27-304" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-305"><a href="#cb27-305" aria-hidden="true" tabindex="-1"></a>You can specify a different font family, weight, or size using <span class="in">`fontdic`</span> for individual elements.</span>
 <span id="cb27-306"><a href="#cb27-306" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-307"><a href="#cb27-307" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb27-308"><a href="#cb27-308" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb27-309"><a href="#cb27-309" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb27-310"><a href="#cb27-310" aria-hidden="true" tabindex="-1"></a><span class="co"># define fonts</span></span>
-<span id="cb27-311"><a href="#cb27-311" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> rcParams</span>
-<span id="cb27-312"><a href="#cb27-312" aria-hidden="true" tabindex="-1"></a>rcParams[<span class="st">'font.family'</span>] <span class="op">=</span> [<span class="st">'Source Sans 3'</span>, <span class="st">'sans-serif'</span>]</span>
+<span id="cb27-308"><a href="#cb27-308" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb27-309"><a href="#cb27-309" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb27-310"><a href="#cb27-310" aria-hidden="true" tabindex="-1"></a><span class="in"># define fonts</span></span>
+<span id="cb27-311"><a href="#cb27-311" aria-hidden="true" tabindex="-1"></a><span class="in">from matplotlib import rcParams</span></span>
+<span id="cb27-312"><a href="#cb27-312" aria-hidden="true" tabindex="-1"></a><span class="in">rcParams['font.family'] = ['Source Sans 3', 'sans-serif']</span></span>
 <span id="cb27-313"><a href="#cb27-313" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-314"><a href="#cb27-314" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
-<span id="cb27-315"><a href="#cb27-315" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>)</span>
-<span id="cb27-316"><a href="#cb27-316" aria-hidden="true" tabindex="-1"></a>plt.bar(x_vals, y_vals, color <span class="op">=</span> signif_qual, label <span class="op">=</span> x_vals)</span>
-<span id="cb27-317"><a href="#cb27-317" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'My Significance Plot'</span>, fontdict <span class="op">=</span> {<span class="st">'fontsize'</span>:<span class="dv">14</span>}, loc <span class="op">=</span> <span class="st">'left'</span>)</span>
-<span id="cb27-318"><a href="#cb27-318" aria-hidden="true" tabindex="-1"></a><span class="co"># add grid lines lines</span></span>
-<span id="cb27-319"><a href="#cb27-319" aria-hidden="true" tabindex="-1"></a>ax.set_axisbelow(<span class="va">True</span>)</span>
-<span id="cb27-320"><a href="#cb27-320" aria-hidden="true" tabindex="-1"></a>ax.xaxis.grid(color <span class="op">=</span> <span class="st">'lightgrey'</span>)</span>
-<span id="cb27-321"><a href="#cb27-321" aria-hidden="true" tabindex="-1"></a>ax.yaxis.grid(color <span class="op">=</span> <span class="st">'lightgrey'</span>)</span>
-<span id="cb27-322"><a href="#cb27-322" aria-hidden="true" tabindex="-1"></a><span class="co"># add legend below plot</span></span>
-<span id="cb27-323"><a href="#cb27-323" aria-hidden="true" tabindex="-1"></a>ax.legend(ncol <span class="op">=</span> <span class="dv">4</span>, loc <span class="op">=</span> <span class="st">'lower center'</span>,</span>
-<span id="cb27-324"><a href="#cb27-324" aria-hidden="true" tabindex="-1"></a>          bbox_to_anchor <span class="op">=</span> (<span class="fl">0.5</span>, <span class="op">-</span><span class="fl">0.15</span>), frameon <span class="op">=</span> <span class="va">False</span>)</span>
-<span id="cb27-325"><a href="#cb27-325" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb27-314"><a href="#cb27-314" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb27-315"><a href="#cb27-315" aria-hidden="true" tabindex="-1"></a><span class="in">fig, ax = plt.subplots(1, 1)</span></span>
+<span id="cb27-316"><a href="#cb27-316" aria-hidden="true" tabindex="-1"></a><span class="in">plt.bar(x_vals, y_vals, color = signif_qual, label = x_vals)</span></span>
+<span id="cb27-317"><a href="#cb27-317" aria-hidden="true" tabindex="-1"></a><span class="in">plt.title('My Significance Plot', fontdict = {'fontsize':14}, loc = 'left')</span></span>
+<span id="cb27-318"><a href="#cb27-318" aria-hidden="true" tabindex="-1"></a><span class="in"># add grid lines lines</span></span>
+<span id="cb27-319"><a href="#cb27-319" aria-hidden="true" tabindex="-1"></a><span class="in">ax.set_axisbelow(True)</span></span>
+<span id="cb27-320"><a href="#cb27-320" aria-hidden="true" tabindex="-1"></a><span class="in">ax.xaxis.grid(color = 'lightgrey')</span></span>
+<span id="cb27-321"><a href="#cb27-321" aria-hidden="true" tabindex="-1"></a><span class="in">ax.yaxis.grid(color = 'lightgrey')</span></span>
+<span id="cb27-322"><a href="#cb27-322" aria-hidden="true" tabindex="-1"></a><span class="in"># add legend below plot</span></span>
+<span id="cb27-323"><a href="#cb27-323" aria-hidden="true" tabindex="-1"></a><span class="in">ax.legend(ncol = 4, loc = 'lower center',</span></span>
+<span id="cb27-324"><a href="#cb27-324" aria-hidden="true" tabindex="-1"></a><span class="in">          bbox_to_anchor = (0.5, -0.15), frameon = False)</span></span>
+<span id="cb27-325"><a href="#cb27-325" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
 <span id="cb27-326"><a href="#cb27-326" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb27-327"><a href="#cb27-327" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-328"><a href="#cb27-328" aria-hidden="true" tabindex="-1"></a><span class="al">![Barchart showing the use of Source Sans font.](images/tools-py-font.png)</span>{fig-alt="Barchart showing the use of Source Sans font."}</span>
@@ -1584,14 +1746,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb27-341"><a href="#cb27-341" aria-hidden="true" tabindex="-1"></a>You can change the colour of chart elements in Makie using the <span class="in">`color`</span> argument and custom tick labels using the <span class="in">`xticks`</span> argument inside <span class="in">`axis`</span>:</span>
 <span id="cb27-342"><a href="#cb27-342" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-343"><a href="#cb27-343" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb27-344"><a href="#cb27-344" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb27-345"><a href="#cb27-345" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb27-346"><a href="#cb27-346" aria-hidden="true" tabindex="-1"></a>using CairoMakie</span>
-<span id="cb27-347"><a href="#cb27-347" aria-hidden="true" tabindex="-1"></a><span class="co"># generate data</span></span>
-<span id="cb27-348"><a href="#cb27-348" aria-hidden="true" tabindex="-1"></a>x_vals = [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
-<span id="cb27-349"><a href="#cb27-349" aria-hidden="true" tabindex="-1"></a>y_vals = [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
-<span id="cb27-350"><a href="#cb27-350" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
-<span id="cb27-351"><a href="#cb27-351" aria-hidden="true" tabindex="-1"></a>barplot(x_vals, y_vals, color=<span class="ot">"</span><span class="st">#009cc4</span><span class="ot">"</span>, axis=(; xticks=(<span class="dv">1</span>:<span class="dv">4</span>, [<span class="ot">"</span><span class="st">A</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">B</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">C</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">D</span><span class="ot">"</span>])))</span>
+<span id="cb27-344"><a href="#cb27-344" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb27-345"><a href="#cb27-345" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb27-346"><a href="#cb27-346" aria-hidden="true" tabindex="-1"></a><span class="in">using CairoMakie</span></span>
+<span id="cb27-347"><a href="#cb27-347" aria-hidden="true" tabindex="-1"></a><span class="in"># generate data</span></span>
+<span id="cb27-348"><a href="#cb27-348" aria-hidden="true" tabindex="-1"></a><span class="in">x_vals = [1, 2, 3, 4]</span></span>
+<span id="cb27-349"><a href="#cb27-349" aria-hidden="true" tabindex="-1"></a><span class="in">y_vals = [1, 2, 3, 4]</span></span>
+<span id="cb27-350"><a href="#cb27-350" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb27-351"><a href="#cb27-351" aria-hidden="true" tabindex="-1"></a><span class="in">barplot(x_vals, y_vals, color="#009cc4", axis=(; xticks=(1:4, ["A", "B", "C", "D"])))</span></span>
 <span id="cb27-352"><a href="#cb27-352" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb27-353"><a href="#cb27-353" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-354"><a href="#cb27-354" aria-hidden="true" tabindex="-1"></a><span class="al">![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-jl.png)</span>{fig-alt="Bar charts visualising plant growth of average height for different treatments with user specified colour in blue."}</span>
@@ -1599,12 +1761,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb27-356"><a href="#cb27-356" aria-hidden="true" tabindex="-1"></a>If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:</span>
 <span id="cb27-357"><a href="#cb27-357" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-358"><a href="#cb27-358" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb27-359"><a href="#cb27-359" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb27-360"><a href="#cb27-360" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb27-361"><a href="#cb27-361" aria-hidden="true" tabindex="-1"></a><span class="co"># define colour palette</span></span>
-<span id="cb27-362"><a href="#cb27-362" aria-hidden="true" tabindex="-1"></a>signif_qual = [<span class="ot">"</span><span class="st">#3fa535</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">#f4c100</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">#009cc4</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">#f07d00</span><span class="ot">"</span>]</span>
-<span id="cb27-363"><a href="#cb27-363" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
-<span id="cb27-364"><a href="#cb27-364" aria-hidden="true" tabindex="-1"></a>barplot(x_vals, y_vals, color=signif_qual, axis=(; xticks=(<span class="dv">1</span>:<span class="dv">4</span>, [<span class="ot">"</span><span class="st">A</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">B</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">C</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">D</span><span class="ot">"</span>])))</span>
+<span id="cb27-359"><a href="#cb27-359" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb27-360"><a href="#cb27-360" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb27-361"><a href="#cb27-361" aria-hidden="true" tabindex="-1"></a><span class="in"># define colour palette</span></span>
+<span id="cb27-362"><a href="#cb27-362" aria-hidden="true" tabindex="-1"></a><span class="in">signif_qual = ["#3fa535", "#f4c100", "#009cc4", "#f07d00"]</span></span>
+<span id="cb27-363"><a href="#cb27-363" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb27-364"><a href="#cb27-364" aria-hidden="true" tabindex="-1"></a><span class="in">barplot(x_vals, y_vals, color=signif_qual, axis=(; xticks=(1:4, ["A", "B", "C", "D"])))</span></span>
 <span id="cb27-365"><a href="#cb27-365" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb27-366"><a href="#cb27-366" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-367"><a href="#cb27-367" aria-hidden="true" tabindex="-1"></a><span class="al">![Bar chart showing the colours from the `signif_qual` palette.](images/tools-qual-jl.png)</span>{fig-alt="Barchart showing the colours from signif_qual"}</span>
@@ -1612,27 +1774,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb27-369"><a href="#cb27-369" aria-hidden="true" tabindex="-1"></a>You can specify custom labels and titles using the <span class="in">`axis`</span> argument:</span>
 <span id="cb27-370"><a href="#cb27-370" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-371"><a href="#cb27-371" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb27-372"><a href="#cb27-372" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb27-373"><a href="#cb27-373" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb27-374"><a href="#cb27-374" aria-hidden="true" tabindex="-1"></a><span class="co"># define labels and title</span></span>
-<span id="cb27-375"><a href="#cb27-375" aria-hidden="true" tabindex="-1"></a>title = <span class="ot">"</span><span class="st">My Significance Plot</span><span class="ot">"</span></span>
-<span id="cb27-376"><a href="#cb27-376" aria-hidden="true" tabindex="-1"></a>subtitle = <span class="ot">"</span><span class="st">Some longer sentence explaining what is happening in the chart.</span><span class="ot">"</span></span>
-<span id="cb27-377"><a href="#cb27-377" aria-hidden="true" tabindex="-1"></a>xlabel = <span class="ot">"</span><span class="st">X-axis label</span><span class="ot">"</span></span>
-<span id="cb27-378"><a href="#cb27-378" aria-hidden="true" tabindex="-1"></a>ylabel = <span class="ot">"</span><span class="st">Y-axis label</span><span class="ot">"</span></span>
+<span id="cb27-372"><a href="#cb27-372" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb27-373"><a href="#cb27-373" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb27-374"><a href="#cb27-374" aria-hidden="true" tabindex="-1"></a><span class="in"># define labels and title</span></span>
+<span id="cb27-375"><a href="#cb27-375" aria-hidden="true" tabindex="-1"></a><span class="in">title = "My Significance Plot"</span></span>
+<span id="cb27-376"><a href="#cb27-376" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle = "Some longer sentence explaining what is happening in the chart."</span></span>
+<span id="cb27-377"><a href="#cb27-377" aria-hidden="true" tabindex="-1"></a><span class="in">xlabel = "X-axis label"</span></span>
+<span id="cb27-378"><a href="#cb27-378" aria-hidden="true" tabindex="-1"></a><span class="in">ylabel = "Y-axis label"</span></span>
 <span id="cb27-379"><a href="#cb27-379" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-380"><a href="#cb27-380" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
-<span id="cb27-381"><a href="#cb27-381" aria-hidden="true" tabindex="-1"></a>barplot(x_vals,</span>
-<span id="cb27-382"><a href="#cb27-382" aria-hidden="true" tabindex="-1"></a>        y_vals;</span>
-<span id="cb27-383"><a href="#cb27-383" aria-hidden="true" tabindex="-1"></a>        color=signif_qual,</span>
-<span id="cb27-384"><a href="#cb27-384" aria-hidden="true" tabindex="-1"></a>        axis=(;</span>
-<span id="cb27-385"><a href="#cb27-385" aria-hidden="true" tabindex="-1"></a>            xticks=(<span class="dv">1</span>:<span class="dv">4</span>, [<span class="ot">"</span><span class="st">A</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">B</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">C</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">D</span><span class="ot">"</span>]),</span>
-<span id="cb27-386"><a href="#cb27-386" aria-hidden="true" tabindex="-1"></a>            title=title,</span>
-<span id="cb27-387"><a href="#cb27-387" aria-hidden="true" tabindex="-1"></a>            subtitle=subtitle,</span>
-<span id="cb27-388"><a href="#cb27-388" aria-hidden="true" tabindex="-1"></a>            titlealign=:left,</span>
-<span id="cb27-389"><a href="#cb27-389" aria-hidden="true" tabindex="-1"></a>            xlabel=xlabel,</span>
-<span id="cb27-390"><a href="#cb27-390" aria-hidden="true" tabindex="-1"></a>            ylabel=ylabel,</span>
-<span id="cb27-391"><a href="#cb27-391" aria-hidden="true" tabindex="-1"></a>        ),</span>
-<span id="cb27-392"><a href="#cb27-392" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb27-380"><a href="#cb27-380" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb27-381"><a href="#cb27-381" aria-hidden="true" tabindex="-1"></a><span class="in">barplot(x_vals,</span></span>
+<span id="cb27-382"><a href="#cb27-382" aria-hidden="true" tabindex="-1"></a><span class="in">        y_vals;</span></span>
+<span id="cb27-383"><a href="#cb27-383" aria-hidden="true" tabindex="-1"></a><span class="in">        color=signif_qual,</span></span>
+<span id="cb27-384"><a href="#cb27-384" aria-hidden="true" tabindex="-1"></a><span class="in">        axis=(;</span></span>
+<span id="cb27-385"><a href="#cb27-385" aria-hidden="true" tabindex="-1"></a><span class="in">            xticks=(1:4, ["A", "B", "C", "D"]),</span></span>
+<span id="cb27-386"><a href="#cb27-386" aria-hidden="true" tabindex="-1"></a><span class="in">            title=title,</span></span>
+<span id="cb27-387"><a href="#cb27-387" aria-hidden="true" tabindex="-1"></a><span class="in">            subtitle=subtitle,</span></span>
+<span id="cb27-388"><a href="#cb27-388" aria-hidden="true" tabindex="-1"></a><span class="in">            titlealign=:left,</span></span>
+<span id="cb27-389"><a href="#cb27-389" aria-hidden="true" tabindex="-1"></a><span class="in">            xlabel=xlabel,</span></span>
+<span id="cb27-390"><a href="#cb27-390" aria-hidden="true" tabindex="-1"></a><span class="in">            ylabel=ylabel,</span></span>
+<span id="cb27-391"><a href="#cb27-391" aria-hidden="true" tabindex="-1"></a><span class="in">        ),</span></span>
+<span id="cb27-392"><a href="#cb27-392" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
 <span id="cb27-393"><a href="#cb27-393" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb27-394"><a href="#cb27-394" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-395"><a href="#cb27-395" aria-hidden="true" tabindex="-1"></a><span class="al">![Barchart showing the use of custom labels and titles.](images/tools-jl-labels.png)</span>{fig-alt="Barchart showing the use of custom labels and titles."}</span>
@@ -1647,16 +1809,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb27-404"><a href="#cb27-404" aria-hidden="true" tabindex="-1"></a>You can change the colour of chart elements in Makie using the <span class="in">`color`</span> argument and custom tick labels using the <span class="in">`xticks`</span> argument inside <span class="in">`axis`</span>:</span>
 <span id="cb27-405"><a href="#cb27-405" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-406"><a href="#cb27-406" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb27-407"><a href="#cb27-407" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb27-408"><a href="#cb27-408" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb27-409"><a href="#cb27-409" aria-hidden="true" tabindex="-1"></a>using AlgebraOfGraphics</span>
-<span id="cb27-410"><a href="#cb27-410" aria-hidden="true" tabindex="-1"></a>using CairoMakie</span>
-<span id="cb27-411"><a href="#cb27-411" aria-hidden="true" tabindex="-1"></a><span class="co"># generate data</span></span>
-<span id="cb27-412"><a href="#cb27-412" aria-hidden="true" tabindex="-1"></a>x_vals = [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
-<span id="cb27-413"><a href="#cb27-413" aria-hidden="true" tabindex="-1"></a>y_vals = [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
-<span id="cb27-414"><a href="#cb27-414" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
-<span id="cb27-415"><a href="#cb27-415" aria-hidden="true" tabindex="-1"></a>plt = data((; x_vals, y_vals)) <span class="ot">*</span> mapping(:x_vals, :y_vals) <span class="ot">*</span> visual(BarPlot; color=<span class="ot">"</span><span class="st">#009cc4</span><span class="ot">"</span>)</span>
-<span id="cb27-416"><a href="#cb27-416" aria-hidden="true" tabindex="-1"></a>draw(plt; axis=(; xticks=(<span class="dv">1</span>:<span class="dv">4</span>, [<span class="ot">"</span><span class="st">A</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">B</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">C</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">D</span><span class="ot">"</span>])))</span>
+<span id="cb27-407"><a href="#cb27-407" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb27-408"><a href="#cb27-408" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb27-409"><a href="#cb27-409" aria-hidden="true" tabindex="-1"></a><span class="in">using AlgebraOfGraphics</span></span>
+<span id="cb27-410"><a href="#cb27-410" aria-hidden="true" tabindex="-1"></a><span class="in">using CairoMakie</span></span>
+<span id="cb27-411"><a href="#cb27-411" aria-hidden="true" tabindex="-1"></a><span class="in"># generate data</span></span>
+<span id="cb27-412"><a href="#cb27-412" aria-hidden="true" tabindex="-1"></a><span class="in">x_vals = [1, 2, 3, 4]</span></span>
+<span id="cb27-413"><a href="#cb27-413" aria-hidden="true" tabindex="-1"></a><span class="in">y_vals = [1, 2, 3, 4]</span></span>
+<span id="cb27-414"><a href="#cb27-414" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb27-415"><a href="#cb27-415" aria-hidden="true" tabindex="-1"></a><span class="in">plt = data((; x_vals, y_vals)) * mapping(:x_vals, :y_vals) * visual(BarPlot; color="#009cc4")</span></span>
+<span id="cb27-416"><a href="#cb27-416" aria-hidden="true" tabindex="-1"></a><span class="in">draw(plt; axis=(; xticks=(1:4, ["A", "B", "C", "D"])))</span></span>
 <span id="cb27-417"><a href="#cb27-417" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb27-418"><a href="#cb27-418" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-419"><a href="#cb27-419" aria-hidden="true" tabindex="-1"></a><span class="al">![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-jl.png)</span>{fig-alt="Bar charts visualising plant growth of average height for different treatments with user specified colour in blue."}</span>
@@ -1664,13 +1826,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb27-421"><a href="#cb27-421" aria-hidden="true" tabindex="-1"></a>If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:</span>
 <span id="cb27-422"><a href="#cb27-422" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-423"><a href="#cb27-423" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb27-424"><a href="#cb27-424" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb27-425"><a href="#cb27-425" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb27-426"><a href="#cb27-426" aria-hidden="true" tabindex="-1"></a><span class="co"># define colour palette</span></span>
-<span id="cb27-427"><a href="#cb27-427" aria-hidden="true" tabindex="-1"></a>signif_qual = [<span class="ot">"</span><span class="st">#3fa535</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">#f4c100</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">#009cc4</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">#f07d00</span><span class="ot">"</span>]</span>
-<span id="cb27-428"><a href="#cb27-428" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
-<span id="cb27-429"><a href="#cb27-429" aria-hidden="true" tabindex="-1"></a>plt = data((; x_vals, y_vals)) <span class="ot">*</span> mapping(:x_vals, :y_vals) <span class="ot">*</span> visual(BarPlot; color=signif_qual)</span>
-<span id="cb27-430"><a href="#cb27-430" aria-hidden="true" tabindex="-1"></a>draw(plt; axis=(; xticks=(<span class="dv">1</span>:<span class="dv">4</span>, [<span class="ot">"</span><span class="st">A</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">B</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">C</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">D</span><span class="ot">"</span>])))</span>
+<span id="cb27-424"><a href="#cb27-424" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb27-425"><a href="#cb27-425" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb27-426"><a href="#cb27-426" aria-hidden="true" tabindex="-1"></a><span class="in"># define colour palette</span></span>
+<span id="cb27-427"><a href="#cb27-427" aria-hidden="true" tabindex="-1"></a><span class="in">signif_qual = ["#3fa535", "#f4c100", "#009cc4", "#f07d00"]</span></span>
+<span id="cb27-428"><a href="#cb27-428" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb27-429"><a href="#cb27-429" aria-hidden="true" tabindex="-1"></a><span class="in">plt = data((; x_vals, y_vals)) * mapping(:x_vals, :y_vals) * visual(BarPlot; color=signif_qual)</span></span>
+<span id="cb27-430"><a href="#cb27-430" aria-hidden="true" tabindex="-1"></a><span class="in">draw(plt; axis=(; xticks=(1:4, ["A", "B", "C", "D"])))</span></span>
 <span id="cb27-431"><a href="#cb27-431" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb27-432"><a href="#cb27-432" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-433"><a href="#cb27-433" aria-hidden="true" tabindex="-1"></a><span class="al">![Bar chart showing the colours from the `signif_qual` palette.](images/tools-qual-jl.png)</span>{fig-alt="Barchart showing the colours from signif_qual"}</span>
@@ -1678,25 +1840,25 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb27-435"><a href="#cb27-435" aria-hidden="true" tabindex="-1"></a>You can specify custom labels and titles using the <span class="in">`axis`</span> argument:</span>
 <span id="cb27-436"><a href="#cb27-436" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-437"><a href="#cb27-437" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb27-438"><a href="#cb27-438" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb27-439"><a href="#cb27-439" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb27-440"><a href="#cb27-440" aria-hidden="true" tabindex="-1"></a><span class="co"># define labels and title</span></span>
-<span id="cb27-441"><a href="#cb27-441" aria-hidden="true" tabindex="-1"></a>title = <span class="ot">"</span><span class="st">My Significance Plot</span><span class="ot">"</span></span>
-<span id="cb27-442"><a href="#cb27-442" aria-hidden="true" tabindex="-1"></a>subtitle = <span class="ot">"</span><span class="st">Some longer sentence explaining what is happening in the chart.</span><span class="ot">"</span></span>
-<span id="cb27-443"><a href="#cb27-443" aria-hidden="true" tabindex="-1"></a>xlabel = <span class="ot">"</span><span class="st">X-axis label</span><span class="ot">"</span></span>
-<span id="cb27-444"><a href="#cb27-444" aria-hidden="true" tabindex="-1"></a>ylabel = <span class="ot">"</span><span class="st">Y-axis label</span><span class="ot">"</span></span>
+<span id="cb27-438"><a href="#cb27-438" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb27-439"><a href="#cb27-439" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
+<span id="cb27-440"><a href="#cb27-440" aria-hidden="true" tabindex="-1"></a><span class="in"># define labels and title</span></span>
+<span id="cb27-441"><a href="#cb27-441" aria-hidden="true" tabindex="-1"></a><span class="in">title = "My Significance Plot"</span></span>
+<span id="cb27-442"><a href="#cb27-442" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle = "Some longer sentence explaining what is happening in the chart."</span></span>
+<span id="cb27-443"><a href="#cb27-443" aria-hidden="true" tabindex="-1"></a><span class="in">xlabel = "X-axis label"</span></span>
+<span id="cb27-444"><a href="#cb27-444" aria-hidden="true" tabindex="-1"></a><span class="in">ylabel = "Y-axis label"</span></span>
 <span id="cb27-445"><a href="#cb27-445" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-446"><a href="#cb27-446" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
-<span id="cb27-447"><a href="#cb27-447" aria-hidden="true" tabindex="-1"></a>draw(plt;</span>
-<span id="cb27-448"><a href="#cb27-448" aria-hidden="true" tabindex="-1"></a>     axis=(;</span>
-<span id="cb27-449"><a href="#cb27-449" aria-hidden="true" tabindex="-1"></a>         xticks=(<span class="dv">1</span>:<span class="dv">4</span>, [<span class="ot">"</span><span class="st">A</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">B</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">C</span><span class="ot">"</span>, <span class="ot">"</span><span class="st">D</span><span class="ot">"</span>]),</span>
-<span id="cb27-450"><a href="#cb27-450" aria-hidden="true" tabindex="-1"></a>         title=title,</span>
-<span id="cb27-451"><a href="#cb27-451" aria-hidden="true" tabindex="-1"></a>         subtitle=subtitle,</span>
-<span id="cb27-452"><a href="#cb27-452" aria-hidden="true" tabindex="-1"></a>         titlealign=:left,</span>
-<span id="cb27-453"><a href="#cb27-453" aria-hidden="true" tabindex="-1"></a>         xlabel=xlabel,</span>
-<span id="cb27-454"><a href="#cb27-454" aria-hidden="true" tabindex="-1"></a>         ylabel=ylabel,</span>
-<span id="cb27-455"><a href="#cb27-455" aria-hidden="true" tabindex="-1"></a>     ),</span>
-<span id="cb27-456"><a href="#cb27-456" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb27-446"><a href="#cb27-446" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb27-447"><a href="#cb27-447" aria-hidden="true" tabindex="-1"></a><span class="in">draw(plt;</span></span>
+<span id="cb27-448"><a href="#cb27-448" aria-hidden="true" tabindex="-1"></a><span class="in">     axis=(;</span></span>
+<span id="cb27-449"><a href="#cb27-449" aria-hidden="true" tabindex="-1"></a><span class="in">         xticks=(1:4, ["A", "B", "C", "D"]),</span></span>
+<span id="cb27-450"><a href="#cb27-450" aria-hidden="true" tabindex="-1"></a><span class="in">         title=title,</span></span>
+<span id="cb27-451"><a href="#cb27-451" aria-hidden="true" tabindex="-1"></a><span class="in">         subtitle=subtitle,</span></span>
+<span id="cb27-452"><a href="#cb27-452" aria-hidden="true" tabindex="-1"></a><span class="in">         titlealign=:left,</span></span>
+<span id="cb27-453"><a href="#cb27-453" aria-hidden="true" tabindex="-1"></a><span class="in">         xlabel=xlabel,</span></span>
+<span id="cb27-454"><a href="#cb27-454" aria-hidden="true" tabindex="-1"></a><span class="in">         ylabel=ylabel,</span></span>
+<span id="cb27-455"><a href="#cb27-455" aria-hidden="true" tabindex="-1"></a><span class="in">     ),</span></span>
+<span id="cb27-456"><a href="#cb27-456" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
 <span id="cb27-457"><a href="#cb27-457" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb27-458"><a href="#cb27-458" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-459"><a href="#cb27-459" aria-hidden="true" tabindex="-1"></a><span class="al">![Barchart showing the use of custom labels and titles.](images/tools-jl-labels.png)</span>{fig-alt="Barchart showing the use of custom labels and titles."}</span>
@@ -1831,12 +1993,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       &nbsp;
     </div>   
-    <div class="nav-footer-center">Copyright © 2023 Andreas Krause, Nicola Rennie and the <a href="https://rss.org.uk/">Royal Statistical Society</a></div>
+    <div class="nav-footer-center">
+<p>Copyright © 2023 Andreas Krause, Nicola Rennie and the <a href="https://rss.org.uk/">Royal Statistical Society</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/royal-statistical-society/datavisguide/edit/main/docs/tools.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/royal-statistical-society/datavisguide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
   </div>
 </footer>
+
 
 
 
