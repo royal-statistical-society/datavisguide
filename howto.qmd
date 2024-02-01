@@ -40,7 +40,7 @@ Readers are encouraged to make full use of our GitHub repository's [Discussions]
 
 This guide is copyright © 2023 Andreas Krause, Nicola Rennie and the Royal Statistical Society. Content created by the lead authors (Andreas Krause, Nicola Rennie, and Brian Tarran) and published in this guide is licensed under a [Creative Commons Attribution 4.0 (CC BY 4.0) International licence](http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1), meaning it can be used and adapted for any purpose, provided attribution is given to the original authors. By contributing to this guide, contributors agree to licence their own work under the same terms.
 
-> **How to cite:** Krause, Andreas, Nicola Rennie, and Brian Tarran. "Best Practices for Data Visualisation." Royal Statistical Society, 1 February 2024. https://doi.org/10.5281/zenodo.10605197.
+> **How to cite:** Krause, Andreas, Nicola Rennie, and Brian Tarran. "Best Practices for Data Visualisation." Royal Statistical Society, 1 February 2024. https://doi.org/10.5281/zenodo.10600718.
 
 Statements of fact and opinion published on this website are those of the respective authors and contributors and not necessarily those of the Royal Statistical Society (RSS).
 

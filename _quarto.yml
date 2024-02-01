@@ -62,7 +62,7 @@ website:
 
   page-footer:
     center: |
-      Copyright &copy; 2024 Andreas Krause, Nicola Rennie and the [Royal Statistical Society](https://rss.org.uk/). [![](https://zenodo.org/badge/DOI/10.5281/zenodo.10605197.svg)](https://doi.org/10.5281/zenodo.10605197) 
+      Copyright &copy; 2024 Andreas Krause, Nicola Rennie and the [Royal Statistical Society](https://rss.org.uk/). [![](https://zenodo.org/badge/DOI/10.5281/zenodo.10600718.svg)](https://doi.org/10.5281/zenodo.10600718) 
 format:
   html:
     theme: [cosmo, styles.scss]
