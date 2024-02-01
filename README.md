@@ -1,6 +1,6 @@
 # 'Best Practices for Data Visualisation', published by the Royal Statistical Society
 
-[![DOI](https://zenodo.org/badge/640531415.svg)](https://zenodo.org/doi/10.5281/zenodo.10600718)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10605197.svg)](https://doi.org/10.5281/zenodo.10605197)
 
 This GitHub repository contains all the source files and code for our website at <https://royal-statistical-society.github.io/datavisguide/>. The site and its content are under development, and the authors welcome feedback and contributions.
 
