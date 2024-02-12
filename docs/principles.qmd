@@ -185,9 +185,6 @@ If the data displayed as x and as y are comparable, axis limits should be identi
 **Example:** The figure below illustrates that the deliberate choice of axis limits (here, y-axis limits) can make a big difference to perception, and therefore interpretation, by the reader. The only difference between the two panels is the y-axis range.
 
 ```{r}
-#| code-fold: true
-#| layout-ncol: 2
-
 library(ggplot2)
 plot_data <- data.frame(
   type = factor(
@@ -234,10 +231,6 @@ ggplot(plot_data) +
 The figure below shows data with, on average, no change compared to a reference (baseline) measurement (red horizontal line, top two panels) -- approximately half the data are below the point of no change, and the other half are above. However, this is not easily apparent from the top-left panel, which uses a linear axis, and so space is allocated asymmetrically in the vertical direction -- both up and down -- away from the reference line. In the top-right panel, which uses a logarithmic axis, the relatively even spread of the data points around the reference line is clear to see. In the bottom row, the same data are shown in histogram form, again using linear and logarithmic axes.
 
 ```{r}
-#| code-fold: true
-#| warning: false
-#| message: false
-#| layout-ncol: 2
 # Naïve plot of y vs x. If there is no change (on average),
 # half the data are below the line of no change.
 # Asymmetric view, and it depends on y/x or x/y.
