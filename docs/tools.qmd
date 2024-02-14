@@ -231,9 +231,7 @@ A work-in-progress Python package for implementing RSS colour palettes can be fo
 
 You can change the colour of chart elements in matplotlib using the `color` argument:
 
-```{{python}}
-#| message: false
-#| eval: false
+```python
 import matplotlib.pyplot as plt
 # generate data
 x_vals = ['A', 'B', 'C', 'D']
@@ -247,9 +245,7 @@ plt.show()
 
 If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:
 
-```{{python}}
-#| message: false
-#| eval: false
+```python
 # define colour palette
 signif_qual = ['#3fa535', '#f4c100', '#009cc4', '#f07d00']
 # create barchart
@@ -263,18 +259,14 @@ plt.show()
 
 You can change the font used in all elements of the plot using `rcParams`. Good practice when setting a custom font family is to add a generic font family (such as sans serif) as a back up. If you're using a font that isn't pre-installed on your system, you can load it in using `font_manager`:
 
-```{{python}}
-#| message: false
-#| eval: false
+```python
 from matplotlib import font_manager
 font_manager.fontManager.addfont("SourceSans3-Regular.ttf")
 ```
 
 You can specify a different font family, weight, or size using `fontdic` for individual elements.
 
-```{{python}}
-#| message: false
-#| eval: false
+```python
 # define fonts
 from matplotlib import rcParams
 rcParams['font.family'] = ['Source Sans 3', 'sans-serif']
@@ -308,9 +300,7 @@ Julia has libraries available that provide capabilities for data analysis and vi
 
 You can change the colour of chart elements in Makie using the `color` argument and custom tick labels using the `xticks` argument inside `axis`:
 
-```{{julia}}
-#| message: false
-#| eval: false
+```julia
 using CairoMakie
 # generate data
 x_vals = [1, 2, 3, 4]
@@ -323,9 +313,7 @@ barplot(x_vals, y_vals, color="#009cc4", axis=(; xticks=(1:4, ["A", "B", "C", "D
 
 If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:
 
-```{{julia}}
-#| message: false
-#| eval: false
+```julia
 # define colour palette
 signif_qual = ["#3fa535", "#f4c100", "#009cc4", "#f07d00"]
 # create barchart
@@ -336,9 +324,7 @@ barplot(x_vals, y_vals, color=signif_qual, axis=(; xticks=(1:4, ["A", "B", "C", 
 
 You can specify custom labels and titles using the `axis` argument:
 
-```{{julia}}
-#| message: false
-#| eval: false
+```julia
 # define labels and title
 title = "My Significance Plot"
 subtitle = "Some longer sentence explaining what is happening in the chart."
@@ -371,9 +357,7 @@ It follows the grammar of graphics and is similar to R's `ggplot2`.
 
 You can change the colour of chart elements in Makie using the `color` argument and custom tick labels using the `xticks` argument inside `axis`:
 
-```{{julia}}
-#| message: false
-#| eval: false
+```julia
 using AlgebraOfGraphics
 using CairoMakie
 # generate data
@@ -388,9 +372,7 @@ draw(plt; axis=(; xticks=(1:4, ["A", "B", "C", "D"])))
 
 If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:
 
-```{{julia}}
-#| message: false
-#| eval: false
+```julia
 # define colour palette
 signif_qual = ["#3fa535", "#f4c100", "#009cc4", "#f07d00"]
 # create barchart
@@ -402,9 +384,7 @@ draw(plt; axis=(; xticks=(1:4, ["A", "B", "C", "D"])))
 
 You can specify custom labels and titles using the `axis` argument:
 
-```{{julia}}
-#| message: false
-#| eval: false
+```julia
 # define labels and title
 title = "My Significance Plot"
 subtitle = "Some longer sentence explaining what is happening in the chart."
