@@ -545,17 +545,13 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 <p><a href="https://matplotlib.org/">Matplotlib</a> is a Python library for creating static, animated, and interactive data visualisations.</p>
 <p><strong>Example</strong>: changing bar chart colours in matplotlib.</p>
 <p>You can change the colour of chart elements in matplotlib using the <code>color</code> argument:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="in">import matplotlib.pyplot as plt</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="in"># generate data</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="in">x_vals = ['A', 'B', 'C', 'D']</span></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="in">y_vals = [1, 2, 3, 4]</span></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="in">plt.bar(x_vals, y_vals, color = "#009cc4")</span></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># generate data</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>x_vals <span class="op">=</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'D'</span>]</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>y_vals <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>plt.bar(x_vals, y_vals, color <span class="op">=</span> <span class="st">"#009cc4"</span>)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-blue-py.png" class="img-fluid figure-img" alt="Bar charts visualising plant growth of average height for different treatments with user specified colour in blue."></p>
@@ -563,15 +559,11 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 </figure>
 </div>
 <p>If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="in"># define colour palette</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="in">signif_qual = ['#3fa535', '#f4c100', '#009cc4', '#f07d00']</span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="in">plt.bar(x_vals, y_vals, label = x_vals, color = signif_qual)</span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># define colour palette</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>signif_qual <span class="op">=</span> [<span class="st">'#3fa535'</span>, <span class="st">'#f4c100'</span>, <span class="st">'#009cc4'</span>, <span class="st">'#f07d00'</span>]</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>plt.bar(x_vals, y_vals, label <span class="op">=</span> x_vals, color <span class="op">=</span> signif_qual)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-qual-py.png" class="img-fluid figure-img" alt="Barchart showing the colours from signif_qual"></p>
@@ -580,33 +572,25 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 </div>
 <p><strong>Example</strong>: changing the font family in matplotlib.</p>
 <p>You can change the font used in all elements of the plot using <code>rcParams</code>. Good practice when setting a custom font family is to add a generic font family (such as sans serif) as a back up. If you’re using a font that isn’t pre-installed on your system, you can load it in using <code>font_manager</code>:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="in">from matplotlib import font_manager</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="in">font_manager.fontManager.addfont("SourceSans3-Regular.ttf")</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> font_manager</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>font_manager.fontManager.addfont(<span class="st">"SourceSans3-Regular.ttf"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You can specify a different font family, weight, or size using <code>fontdic</code> for individual elements.</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="in"># define fonts</span></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="in">from matplotlib import rcParams</span></span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="in">rcParams['font.family'] = ['Source Sans 3', 'sans-serif']</span></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
-<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="in">fig, ax = plt.subplots(1, 1)</span></span>
-<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="in">plt.bar(x_vals, y_vals, color = signif_qual, label = x_vals)</span></span>
-<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="in">plt.title('My Significance Plot', fontdict = {'fontsize':14}, loc = 'left')</span></span>
-<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="in"># add grid lines lines</span></span>
-<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="in">ax.set_axisbelow(True)</span></span>
-<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a><span class="in">ax.xaxis.grid(color = 'lightgrey')</span></span>
-<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a><span class="in">ax.yaxis.grid(color = 'lightgrey')</span></span>
-<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a><span class="in"># add legend below plot</span></span>
-<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a><span class="in">ax.legend(ncol = 4, loc = 'lower center',</span></span>
-<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a><span class="in">          bbox_to_anchor = (0.5, -0.15), frameon = False)</span></span>
-<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
-<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># define fonts</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> rcParams</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>rcParams[<span class="st">'font.family'</span>] <span class="op">=</span> [<span class="st">'Source Sans 3'</span>, <span class="st">'sans-serif'</span>]</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>plt.bar(x_vals, y_vals, color <span class="op">=</span> signif_qual, label <span class="op">=</span> x_vals)</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'My Significance Plot'</span>, fontdict <span class="op">=</span> {<span class="st">'fontsize'</span>:<span class="dv">14</span>}, loc <span class="op">=</span> <span class="st">'left'</span>)</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="co"># add grid lines lines</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>ax.set_axisbelow(<span class="va">True</span>)</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>ax.xaxis.grid(color <span class="op">=</span> <span class="st">'lightgrey'</span>)</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>ax.yaxis.grid(color <span class="op">=</span> <span class="st">'lightgrey'</span>)</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="co"># add legend below plot</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>ax.legend(ncol <span class="op">=</span> <span class="dv">4</span>, loc <span class="op">=</span> <span class="st">'lower center'</span>,</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>          bbox_to_anchor <span class="op">=</span> (<span class="fl">0.5</span>, <span class="op">-</span><span class="fl">0.15</span>), frameon <span class="op">=</span> <span class="va">False</span>)</span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-py-font.png" class="img-fluid figure-img" alt="Barchart showing the use of Source Sans font."></p>
@@ -623,16 +607,12 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 <p><a href="https://makie.org">Makie</a> is a high-level plotting library for the <a href="https://www.julialang.org/">Julia</a> programming language.</p>
 <p><strong>Example</strong>: changing bar chart colours in Makie.</p>
 <p>You can change the colour of chart elements in Makie using the <code>color</code> argument and custom tick labels using the <code>xticks</code> argument inside <code>axis</code>:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="in">using CairoMakie</span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="in"># generate data</span></span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="in">x_vals = [1, 2, 3, 4]</span></span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="in">y_vals = [1, 2, 3, 4]</span></span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="in">barplot(x_vals, y_vals, color="#009cc4", axis=(; xticks=(1:4, ["A", "B", "C", "D"])))</span></span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">CairoMakie</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co"># generate data</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>x_vals <span class="op">=</span> [<span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span>]</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>y_vals <span class="op">=</span> [<span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span>]</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(x_vals, y_vals, color<span class="op">=</span><span class="st">"#009cc4"</span>, axis<span class="op">=</span>(; xticks<span class="op">=</span>(<span class="fl">1</span><span class="op">:</span><span class="fl">4</span>, [<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>])))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-blue-jl.png" class="img-fluid figure-img" alt="Bar charts visualising plant growth of average height for different treatments with user specified colour in blue."></p>
@@ -640,14 +620,10 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 </figure>
 </div>
 <p>If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="in"># define colour palette</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="in">signif_qual = ["#3fa535", "#f4c100", "#009cc4", "#f07d00"]</span></span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="in">barplot(x_vals, y_vals, color=signif_qual, axis=(; xticks=(1:4, ["A", "B", "C", "D"])))</span></span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># define colour palette</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>signif_qual <span class="op">=</span> [<span class="st">"#3fa535"</span>, <span class="st">"#f4c100"</span>, <span class="st">"#009cc4"</span>, <span class="st">"#f07d00"</span>]</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(x_vals, y_vals, color<span class="op">=</span>signif_qual, axis<span class="op">=</span>(; xticks<span class="op">=</span>(<span class="fl">1</span><span class="op">:</span><span class="fl">4</span>, [<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>])))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-qual-jl.png" class="img-fluid figure-img" alt="Barchart showing the colours from signif_qual"></p>
@@ -655,29 +631,25 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 </figure>
 </div>
 <p>You can specify custom labels and titles using the <code>axis</code> argument:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="in"># define labels and title</span></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="in">title = "My Significance Plot"</span></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle = "Some longer sentence explaining what is happening in the chart."</span></span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="in">xlabel = "X-axis label"</span></span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="in">ylabel = "Y-axis label"</span></span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="in">barplot(x_vals,</span></span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="in">        y_vals;</span></span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a><span class="in">        color=signif_qual,</span></span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a><span class="in">        axis=(;</span></span>
-<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="in">            xticks=(1:4, ["A", "B", "C", "D"]),</span></span>
-<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a><span class="in">            title=title,</span></span>
-<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a><span class="in">            subtitle=subtitle,</span></span>
-<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a><span class="in">            titlealign=:left,</span></span>
-<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a><span class="in">            xlabel=xlabel,</span></span>
-<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a><span class="in">            ylabel=ylabel,</span></span>
-<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a><span class="in">        ),</span></span>
-<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
-<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># define labels and title</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>title <span class="op">=</span> <span class="st">"My Significance Plot"</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>subtitle <span class="op">=</span> <span class="st">"Some longer sentence explaining what is happening in the chart."</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>xlabel <span class="op">=</span> <span class="st">"X-axis label"</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>ylabel <span class="op">=</span> <span class="st">"Y-axis label"</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(x_vals,</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>        y_vals;</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span>signif_qual,</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>        axis<span class="op">=</span>(;</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>            xticks<span class="op">=</span>(<span class="fl">1</span><span class="op">:</span><span class="fl">4</span>, [<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>]),</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>            title<span class="op">=</span>title,</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>            subtitle<span class="op">=</span>subtitle,</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>            titlealign<span class="op">=:</span>left,</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>            xlabel<span class="op">=</span>xlabel,</span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>            ylabel<span class="op">=</span>ylabel,</span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-jl-labels.png" class="img-fluid figure-img" alt="Barchart showing the use of custom labels and titles."></p>
@@ -690,18 +662,14 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 <p><a href="https://aog.makie.org">AlgebraOfGraphics</a> is a high-level plotting library for the <a href="https://www.julialang.org/">Julia</a> programming language that uses <a href="https://makie.org">Makie</a> as a plotting backend. It follows the grammar of graphics and is similar to R’s <code>ggplot2</code>.</p>
 <p><strong>Example</strong>: changing bar chart colours in AlgebraOfGraphics.</p>
 <p>You can change the colour of chart elements in Makie using the <code>color</code> argument and custom tick labels using the <code>xticks</code> argument inside <code>axis</code>:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="in">using AlgebraOfGraphics</span></span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="in">using CairoMakie</span></span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="in"># generate data</span></span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="in">x_vals = [1, 2, 3, 4]</span></span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="in">y_vals = [1, 2, 3, 4]</span></span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="in">plt = data((; x_vals, y_vals)) * mapping(:x_vals, :y_vals) * visual(BarPlot; color="#009cc4")</span></span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="in">draw(plt; axis=(; xticks=(1:4, ["A", "B", "C", "D"])))</span></span>
-<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">AlgebraOfGraphics</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">CairoMakie</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co"># generate data</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>x_vals <span class="op">=</span> [<span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span>]</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>y_vals <span class="op">=</span> [<span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span>]</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>plt <span class="op">=</span> <span class="fu">data</span>((; x_vals, y_vals)) <span class="op">*</span> <span class="fu">mapping</span>(<span class="op">:</span>x_vals, <span class="op">:</span>y_vals) <span class="op">*</span> <span class="fu">visual</span>(BarPlot; color<span class="op">=</span><span class="st">"#009cc4"</span>)</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="fu">draw</span>(plt; axis<span class="op">=</span>(; xticks<span class="op">=</span>(<span class="fl">1</span><span class="op">:</span><span class="fl">4</span>, [<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>])))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-blue-jl.png" class="img-fluid figure-img" alt="Bar charts visualising plant growth of average height for different treatments with user specified colour in blue."></p>
@@ -709,15 +677,11 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 </figure>
 </div>
 <p>If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="in"># define colour palette</span></span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="in">signif_qual = ["#3fa535", "#f4c100", "#009cc4", "#f07d00"]</span></span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="in">plt = data((; x_vals, y_vals)) * mapping(:x_vals, :y_vals) * visual(BarPlot; color=signif_qual)</span></span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="in">draw(plt; axis=(; xticks=(1:4, ["A", "B", "C", "D"])))</span></span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># define colour palette</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>signif_qual <span class="op">=</span> [<span class="st">"#3fa535"</span>, <span class="st">"#f4c100"</span>, <span class="st">"#009cc4"</span>, <span class="st">"#f07d00"</span>]</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>plt <span class="op">=</span> <span class="fu">data</span>((; x_vals, y_vals)) <span class="op">*</span> <span class="fu">mapping</span>(<span class="op">:</span>x_vals, <span class="op">:</span>y_vals) <span class="op">*</span> <span class="fu">visual</span>(BarPlot; color<span class="op">=</span>signif_qual)</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="fu">draw</span>(plt; axis<span class="op">=</span>(; xticks<span class="op">=</span>(<span class="fl">1</span><span class="op">:</span><span class="fl">4</span>, [<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>])))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-qual-jl.png" class="img-fluid figure-img" alt="Barchart showing the colours from signif_qual"></p>
@@ -725,27 +689,23 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 </figure>
 </div>
 <p>You can specify custom labels and titles using the <code>axis</code> argument:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="in"># define labels and title</span></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="in">title = "My Significance Plot"</span></span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle = "Some longer sentence explaining what is happening in the chart."</span></span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="in">xlabel = "X-axis label"</span></span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="in">ylabel = "Y-axis label"</span></span>
-<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
-<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a><span class="in">draw(plt;</span></span>
-<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="in">     axis=(;</span></span>
-<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a><span class="in">         xticks=(1:4, ["A", "B", "C", "D"]),</span></span>
-<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a><span class="in">         title=title,</span></span>
-<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a><span class="in">         subtitle=subtitle,</span></span>
-<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a><span class="in">         titlealign=:left,</span></span>
-<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a><span class="in">         xlabel=xlabel,</span></span>
-<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a><span class="in">         ylabel=ylabel,</span></span>
-<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a><span class="in">     ),</span></span>
-<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
-<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># define labels and title</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>title <span class="op">=</span> <span class="st">"My Significance Plot"</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>subtitle <span class="op">=</span> <span class="st">"Some longer sentence explaining what is happening in the chart."</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>xlabel <span class="op">=</span> <span class="st">"X-axis label"</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>ylabel <span class="op">=</span> <span class="st">"Y-axis label"</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="fu">draw</span>(plt;</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>     axis<span class="op">=</span>(;</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>         xticks<span class="op">=</span>(<span class="fl">1</span><span class="op">:</span><span class="fl">4</span>, [<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>]),</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>         title<span class="op">=</span>title,</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>         subtitle<span class="op">=</span>subtitle,</span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>         titlealign<span class="op">=:</span>left,</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>         xlabel<span class="op">=</span>xlabel,</span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>         ylabel<span class="op">=</span>ylabel,</span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>     ),</span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tools-jl-labels.png" class="img-fluid figure-img" alt="Barchart showing the use of custom labels and titles."></p>
@@ -1668,323 +1628,303 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb27-263"><a href="#cb27-263" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-264"><a href="#cb27-264" aria-hidden="true" tabindex="-1"></a>You can change the colour of chart elements in matplotlib using the <span class="in">`color`</span> argument:</span>
 <span id="cb27-265"><a href="#cb27-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-266"><a href="#cb27-266" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb27-267"><a href="#cb27-267" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
-<span id="cb27-268"><a href="#cb27-268" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb27-269"><a href="#cb27-269" aria-hidden="true" tabindex="-1"></a><span class="in">import matplotlib.pyplot as plt</span></span>
-<span id="cb27-270"><a href="#cb27-270" aria-hidden="true" tabindex="-1"></a><span class="in"># generate data</span></span>
-<span id="cb27-271"><a href="#cb27-271" aria-hidden="true" tabindex="-1"></a><span class="in">x_vals = ['A', 'B', 'C', 'D']</span></span>
-<span id="cb27-272"><a href="#cb27-272" aria-hidden="true" tabindex="-1"></a><span class="in">y_vals = [1, 2, 3, 4]</span></span>
-<span id="cb27-273"><a href="#cb27-273" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
-<span id="cb27-274"><a href="#cb27-274" aria-hidden="true" tabindex="-1"></a><span class="in">plt.bar(x_vals, y_vals, color = "#009cc4")</span></span>
-<span id="cb27-275"><a href="#cb27-275" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
-<span id="cb27-276"><a href="#cb27-276" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-266"><a href="#cb27-266" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb27-267"><a href="#cb27-267" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb27-268"><a href="#cb27-268" aria-hidden="true" tabindex="-1"></a><span class="co"># generate data</span></span>
+<span id="cb27-269"><a href="#cb27-269" aria-hidden="true" tabindex="-1"></a>x_vals <span class="op">=</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'D'</span>]</span>
+<span id="cb27-270"><a href="#cb27-270" aria-hidden="true" tabindex="-1"></a>y_vals <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb27-271"><a href="#cb27-271" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
+<span id="cb27-272"><a href="#cb27-272" aria-hidden="true" tabindex="-1"></a>plt.bar(x_vals, y_vals, color <span class="op">=</span> <span class="st">"#009cc4"</span>)</span>
+<span id="cb27-273"><a href="#cb27-273" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb27-274"><a href="#cb27-274" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-275"><a href="#cb27-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-276"><a href="#cb27-276" aria-hidden="true" tabindex="-1"></a><span class="al">![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-py.png)</span>{fig-alt="Bar charts visualising plant growth of average height for different treatments with user specified colour in blue."}</span>
 <span id="cb27-277"><a href="#cb27-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-278"><a href="#cb27-278" aria-hidden="true" tabindex="-1"></a><span class="al">![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-py.png)</span>{fig-alt="Bar charts visualising plant growth of average height for different treatments with user specified colour in blue."}</span>
+<span id="cb27-278"><a href="#cb27-278" aria-hidden="true" tabindex="-1"></a>If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:</span>
 <span id="cb27-279"><a href="#cb27-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-280"><a href="#cb27-280" aria-hidden="true" tabindex="-1"></a>If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:</span>
-<span id="cb27-281"><a href="#cb27-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-282"><a href="#cb27-282" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb27-283"><a href="#cb27-283" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
-<span id="cb27-284"><a href="#cb27-284" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb27-285"><a href="#cb27-285" aria-hidden="true" tabindex="-1"></a><span class="in"># define colour palette</span></span>
-<span id="cb27-286"><a href="#cb27-286" aria-hidden="true" tabindex="-1"></a><span class="in">signif_qual = ['#3fa535', '#f4c100', '#009cc4', '#f07d00']</span></span>
-<span id="cb27-287"><a href="#cb27-287" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
-<span id="cb27-288"><a href="#cb27-288" aria-hidden="true" tabindex="-1"></a><span class="in">plt.bar(x_vals, y_vals, label = x_vals, color = signif_qual)</span></span>
-<span id="cb27-289"><a href="#cb27-289" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
-<span id="cb27-290"><a href="#cb27-290" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-280"><a href="#cb27-280" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb27-281"><a href="#cb27-281" aria-hidden="true" tabindex="-1"></a><span class="co"># define colour palette</span></span>
+<span id="cb27-282"><a href="#cb27-282" aria-hidden="true" tabindex="-1"></a>signif_qual <span class="op">=</span> [<span class="st">'#3fa535'</span>, <span class="st">'#f4c100'</span>, <span class="st">'#009cc4'</span>, <span class="st">'#f07d00'</span>]</span>
+<span id="cb27-283"><a href="#cb27-283" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
+<span id="cb27-284"><a href="#cb27-284" aria-hidden="true" tabindex="-1"></a>plt.bar(x_vals, y_vals, label <span class="op">=</span> x_vals, color <span class="op">=</span> signif_qual)</span>
+<span id="cb27-285"><a href="#cb27-285" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb27-286"><a href="#cb27-286" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-287"><a href="#cb27-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-288"><a href="#cb27-288" aria-hidden="true" tabindex="-1"></a><span class="al">![Bar chart showing the colours from the `signif_qual` palette.](images/tools-qual-py.png)</span>{fig-alt="Barchart showing the colours from signif_qual"}</span>
+<span id="cb27-289"><a href="#cb27-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-290"><a href="#cb27-290" aria-hidden="true" tabindex="-1"></a>**Example**: changing the font family in matplotlib.</span>
 <span id="cb27-291"><a href="#cb27-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-292"><a href="#cb27-292" aria-hidden="true" tabindex="-1"></a><span class="al">![Bar chart showing the colours from the `signif_qual` palette.](images/tools-qual-py.png)</span>{fig-alt="Barchart showing the colours from signif_qual"}</span>
+<span id="cb27-292"><a href="#cb27-292" aria-hidden="true" tabindex="-1"></a>You can change the font used in all elements of the plot using <span class="in">`rcParams`</span>. Good practice when setting a custom font family is to add a generic font family (such as sans serif) as a back up. If you're using a font that isn't pre-installed on your system, you can load it in using <span class="in">`font_manager`</span>:</span>
 <span id="cb27-293"><a href="#cb27-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-294"><a href="#cb27-294" aria-hidden="true" tabindex="-1"></a>**Example**: changing the font family in matplotlib.</span>
-<span id="cb27-295"><a href="#cb27-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-296"><a href="#cb27-296" aria-hidden="true" tabindex="-1"></a>You can change the font used in all elements of the plot using <span class="in">`rcParams`</span>. Good practice when setting a custom font family is to add a generic font family (such as sans serif) as a back up. If you're using a font that isn't pre-installed on your system, you can load it in using <span class="in">`font_manager`</span>:</span>
-<span id="cb27-297"><a href="#cb27-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-298"><a href="#cb27-298" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb27-299"><a href="#cb27-299" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
-<span id="cb27-300"><a href="#cb27-300" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb27-301"><a href="#cb27-301" aria-hidden="true" tabindex="-1"></a><span class="in">from matplotlib import font_manager</span></span>
-<span id="cb27-302"><a href="#cb27-302" aria-hidden="true" tabindex="-1"></a><span class="in">font_manager.fontManager.addfont("SourceSans3-Regular.ttf")</span></span>
-<span id="cb27-303"><a href="#cb27-303" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-304"><a href="#cb27-304" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-305"><a href="#cb27-305" aria-hidden="true" tabindex="-1"></a>You can specify a different font family, weight, or size using <span class="in">`fontdic`</span> for individual elements.</span>
-<span id="cb27-306"><a href="#cb27-306" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-307"><a href="#cb27-307" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb27-308"><a href="#cb27-308" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
-<span id="cb27-309"><a href="#cb27-309" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb27-310"><a href="#cb27-310" aria-hidden="true" tabindex="-1"></a><span class="in"># define fonts</span></span>
-<span id="cb27-311"><a href="#cb27-311" aria-hidden="true" tabindex="-1"></a><span class="in">from matplotlib import rcParams</span></span>
-<span id="cb27-312"><a href="#cb27-312" aria-hidden="true" tabindex="-1"></a><span class="in">rcParams['font.family'] = ['Source Sans 3', 'sans-serif']</span></span>
-<span id="cb27-313"><a href="#cb27-313" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-314"><a href="#cb27-314" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
-<span id="cb27-315"><a href="#cb27-315" aria-hidden="true" tabindex="-1"></a><span class="in">fig, ax = plt.subplots(1, 1)</span></span>
-<span id="cb27-316"><a href="#cb27-316" aria-hidden="true" tabindex="-1"></a><span class="in">plt.bar(x_vals, y_vals, color = signif_qual, label = x_vals)</span></span>
-<span id="cb27-317"><a href="#cb27-317" aria-hidden="true" tabindex="-1"></a><span class="in">plt.title('My Significance Plot', fontdict = {'fontsize':14}, loc = 'left')</span></span>
-<span id="cb27-318"><a href="#cb27-318" aria-hidden="true" tabindex="-1"></a><span class="in"># add grid lines lines</span></span>
-<span id="cb27-319"><a href="#cb27-319" aria-hidden="true" tabindex="-1"></a><span class="in">ax.set_axisbelow(True)</span></span>
-<span id="cb27-320"><a href="#cb27-320" aria-hidden="true" tabindex="-1"></a><span class="in">ax.xaxis.grid(color = 'lightgrey')</span></span>
-<span id="cb27-321"><a href="#cb27-321" aria-hidden="true" tabindex="-1"></a><span class="in">ax.yaxis.grid(color = 'lightgrey')</span></span>
-<span id="cb27-322"><a href="#cb27-322" aria-hidden="true" tabindex="-1"></a><span class="in"># add legend below plot</span></span>
-<span id="cb27-323"><a href="#cb27-323" aria-hidden="true" tabindex="-1"></a><span class="in">ax.legend(ncol = 4, loc = 'lower center',</span></span>
-<span id="cb27-324"><a href="#cb27-324" aria-hidden="true" tabindex="-1"></a><span class="in">          bbox_to_anchor = (0.5, -0.15), frameon = False)</span></span>
-<span id="cb27-325"><a href="#cb27-325" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
-<span id="cb27-326"><a href="#cb27-326" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-327"><a href="#cb27-327" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-328"><a href="#cb27-328" aria-hidden="true" tabindex="-1"></a><span class="al">![Barchart showing the use of Source Sans font.](images/tools-py-font.png)</span>{fig-alt="Barchart showing the use of Source Sans font."}</span>
-<span id="cb27-329"><a href="#cb27-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-330"><a href="#cb27-330" aria-hidden="true" tabindex="-1"></a><span class="fu">### Julia</span></span>
-<span id="cb27-331"><a href="#cb27-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-332"><a href="#cb27-332" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Julia</span><span class="co">](https://www.julialang.org/)</span> is a general-purpose programming language, focused in high performance, while providing easy syntax.</span>
-<span id="cb27-333"><a href="#cb27-333" aria-hidden="true" tabindex="-1"></a>Julia has libraries available that provide capabilities for data analysis and visualisation.</span>
+<span id="cb27-294"><a href="#cb27-294" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb27-295"><a href="#cb27-295" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> font_manager</span>
+<span id="cb27-296"><a href="#cb27-296" aria-hidden="true" tabindex="-1"></a>font_manager.fontManager.addfont(<span class="st">"SourceSans3-Regular.ttf"</span>)</span>
+<span id="cb27-297"><a href="#cb27-297" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-298"><a href="#cb27-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-299"><a href="#cb27-299" aria-hidden="true" tabindex="-1"></a>You can specify a different font family, weight, or size using <span class="in">`fontdic`</span> for individual elements.</span>
+<span id="cb27-300"><a href="#cb27-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-301"><a href="#cb27-301" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb27-302"><a href="#cb27-302" aria-hidden="true" tabindex="-1"></a><span class="co"># define fonts</span></span>
+<span id="cb27-303"><a href="#cb27-303" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> rcParams</span>
+<span id="cb27-304"><a href="#cb27-304" aria-hidden="true" tabindex="-1"></a>rcParams[<span class="st">'font.family'</span>] <span class="op">=</span> [<span class="st">'Source Sans 3'</span>, <span class="st">'sans-serif'</span>]</span>
+<span id="cb27-305"><a href="#cb27-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-306"><a href="#cb27-306" aria-hidden="true" tabindex="-1"></a><span class="co"># create barchart</span></span>
+<span id="cb27-307"><a href="#cb27-307" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb27-308"><a href="#cb27-308" aria-hidden="true" tabindex="-1"></a>plt.bar(x_vals, y_vals, color <span class="op">=</span> signif_qual, label <span class="op">=</span> x_vals)</span>
+<span id="cb27-309"><a href="#cb27-309" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'My Significance Plot'</span>, fontdict <span class="op">=</span> {<span class="st">'fontsize'</span>:<span class="dv">14</span>}, loc <span class="op">=</span> <span class="st">'left'</span>)</span>
+<span id="cb27-310"><a href="#cb27-310" aria-hidden="true" tabindex="-1"></a><span class="co"># add grid lines lines</span></span>
+<span id="cb27-311"><a href="#cb27-311" aria-hidden="true" tabindex="-1"></a>ax.set_axisbelow(<span class="va">True</span>)</span>
+<span id="cb27-312"><a href="#cb27-312" aria-hidden="true" tabindex="-1"></a>ax.xaxis.grid(color <span class="op">=</span> <span class="st">'lightgrey'</span>)</span>
+<span id="cb27-313"><a href="#cb27-313" aria-hidden="true" tabindex="-1"></a>ax.yaxis.grid(color <span class="op">=</span> <span class="st">'lightgrey'</span>)</span>
+<span id="cb27-314"><a href="#cb27-314" aria-hidden="true" tabindex="-1"></a><span class="co"># add legend below plot</span></span>
+<span id="cb27-315"><a href="#cb27-315" aria-hidden="true" tabindex="-1"></a>ax.legend(ncol <span class="op">=</span> <span class="dv">4</span>, loc <span class="op">=</span> <span class="st">'lower center'</span>,</span>
+<span id="cb27-316"><a href="#cb27-316" aria-hidden="true" tabindex="-1"></a>          bbox_to_anchor <span class="op">=</span> (<span class="fl">0.5</span>, <span class="op">-</span><span class="fl">0.15</span>), frameon <span class="op">=</span> <span class="va">False</span>)</span>
+<span id="cb27-317"><a href="#cb27-317" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb27-318"><a href="#cb27-318" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-319"><a href="#cb27-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-320"><a href="#cb27-320" aria-hidden="true" tabindex="-1"></a><span class="al">![Barchart showing the use of Source Sans font.](images/tools-py-font.png)</span>{fig-alt="Barchart showing the use of Source Sans font."}</span>
+<span id="cb27-321"><a href="#cb27-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-322"><a href="#cb27-322" aria-hidden="true" tabindex="-1"></a><span class="fu">### Julia</span></span>
+<span id="cb27-323"><a href="#cb27-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-324"><a href="#cb27-324" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Julia</span><span class="co">](https://www.julialang.org/)</span> is a general-purpose programming language, focused in high performance, while providing easy syntax.</span>
+<span id="cb27-325"><a href="#cb27-325" aria-hidden="true" tabindex="-1"></a>Julia has libraries available that provide capabilities for data analysis and visualisation.</span>
+<span id="cb27-326"><a href="#cb27-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-327"><a href="#cb27-327" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Makie</span></span>
+<span id="cb27-328"><a href="#cb27-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-329"><a href="#cb27-329" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Makie</span><span class="co">](https://makie.org)</span> is a high-level plotting library for the <span class="co">[</span><span class="ot">Julia</span><span class="co">](https://www.julialang.org/)</span> programming language.</span>
+<span id="cb27-330"><a href="#cb27-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-331"><a href="#cb27-331" aria-hidden="true" tabindex="-1"></a>**Example**: changing bar chart colours in Makie.</span>
+<span id="cb27-332"><a href="#cb27-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-333"><a href="#cb27-333" aria-hidden="true" tabindex="-1"></a>You can change the colour of chart elements in Makie using the <span class="in">`color`</span> argument and custom tick labels using the <span class="in">`xticks`</span> argument inside <span class="in">`axis`</span>:</span>
 <span id="cb27-334"><a href="#cb27-334" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-335"><a href="#cb27-335" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Makie</span></span>
-<span id="cb27-336"><a href="#cb27-336" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-337"><a href="#cb27-337" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Makie</span><span class="co">](https://makie.org)</span> is a high-level plotting library for the <span class="co">[</span><span class="ot">Julia</span><span class="co">](https://www.julialang.org/)</span> programming language.</span>
-<span id="cb27-338"><a href="#cb27-338" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-339"><a href="#cb27-339" aria-hidden="true" tabindex="-1"></a>**Example**: changing bar chart colours in Makie.</span>
-<span id="cb27-340"><a href="#cb27-340" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-341"><a href="#cb27-341" aria-hidden="true" tabindex="-1"></a>You can change the colour of chart elements in Makie using the <span class="in">`color`</span> argument and custom tick labels using the <span class="in">`xticks`</span> argument inside <span class="in">`axis`</span>:</span>
-<span id="cb27-342"><a href="#cb27-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-343"><a href="#cb27-343" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb27-344"><a href="#cb27-344" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
-<span id="cb27-345"><a href="#cb27-345" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb27-346"><a href="#cb27-346" aria-hidden="true" tabindex="-1"></a><span class="in">using CairoMakie</span></span>
-<span id="cb27-347"><a href="#cb27-347" aria-hidden="true" tabindex="-1"></a><span class="in"># generate data</span></span>
-<span id="cb27-348"><a href="#cb27-348" aria-hidden="true" tabindex="-1"></a><span class="in">x_vals = [1, 2, 3, 4]</span></span>
-<span id="cb27-349"><a href="#cb27-349" aria-hidden="true" tabindex="-1"></a><span class="in">y_vals = [1, 2, 3, 4]</span></span>
-<span id="cb27-350"><a href="#cb27-350" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
-<span id="cb27-351"><a href="#cb27-351" aria-hidden="true" tabindex="-1"></a><span class="in">barplot(x_vals, y_vals, color="#009cc4", axis=(; xticks=(1:4, ["A", "B", "C", "D"])))</span></span>
-<span id="cb27-352"><a href="#cb27-352" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-353"><a href="#cb27-353" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-354"><a href="#cb27-354" aria-hidden="true" tabindex="-1"></a><span class="al">![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-jl.png)</span>{fig-alt="Bar charts visualising plant growth of average height for different treatments with user specified colour in blue."}</span>
-<span id="cb27-355"><a href="#cb27-355" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-356"><a href="#cb27-356" aria-hidden="true" tabindex="-1"></a>If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:</span>
-<span id="cb27-357"><a href="#cb27-357" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-358"><a href="#cb27-358" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb27-359"><a href="#cb27-359" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
-<span id="cb27-360"><a href="#cb27-360" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb27-361"><a href="#cb27-361" aria-hidden="true" tabindex="-1"></a><span class="in"># define colour palette</span></span>
-<span id="cb27-362"><a href="#cb27-362" aria-hidden="true" tabindex="-1"></a><span class="in">signif_qual = ["#3fa535", "#f4c100", "#009cc4", "#f07d00"]</span></span>
-<span id="cb27-363"><a href="#cb27-363" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
-<span id="cb27-364"><a href="#cb27-364" aria-hidden="true" tabindex="-1"></a><span class="in">barplot(x_vals, y_vals, color=signif_qual, axis=(; xticks=(1:4, ["A", "B", "C", "D"])))</span></span>
-<span id="cb27-365"><a href="#cb27-365" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-366"><a href="#cb27-366" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-367"><a href="#cb27-367" aria-hidden="true" tabindex="-1"></a><span class="al">![Bar chart showing the colours from the `signif_qual` palette.](images/tools-qual-jl.png)</span>{fig-alt="Barchart showing the colours from signif_qual"}</span>
-<span id="cb27-368"><a href="#cb27-368" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-369"><a href="#cb27-369" aria-hidden="true" tabindex="-1"></a>You can specify custom labels and titles using the <span class="in">`axis`</span> argument:</span>
-<span id="cb27-370"><a href="#cb27-370" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-371"><a href="#cb27-371" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb27-372"><a href="#cb27-372" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
-<span id="cb27-373"><a href="#cb27-373" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb27-374"><a href="#cb27-374" aria-hidden="true" tabindex="-1"></a><span class="in"># define labels and title</span></span>
-<span id="cb27-375"><a href="#cb27-375" aria-hidden="true" tabindex="-1"></a><span class="in">title = "My Significance Plot"</span></span>
-<span id="cb27-376"><a href="#cb27-376" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle = "Some longer sentence explaining what is happening in the chart."</span></span>
-<span id="cb27-377"><a href="#cb27-377" aria-hidden="true" tabindex="-1"></a><span class="in">xlabel = "X-axis label"</span></span>
-<span id="cb27-378"><a href="#cb27-378" aria-hidden="true" tabindex="-1"></a><span class="in">ylabel = "Y-axis label"</span></span>
-<span id="cb27-379"><a href="#cb27-379" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-380"><a href="#cb27-380" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
-<span id="cb27-381"><a href="#cb27-381" aria-hidden="true" tabindex="-1"></a><span class="in">barplot(x_vals,</span></span>
-<span id="cb27-382"><a href="#cb27-382" aria-hidden="true" tabindex="-1"></a><span class="in">        y_vals;</span></span>
-<span id="cb27-383"><a href="#cb27-383" aria-hidden="true" tabindex="-1"></a><span class="in">        color=signif_qual,</span></span>
-<span id="cb27-384"><a href="#cb27-384" aria-hidden="true" tabindex="-1"></a><span class="in">        axis=(;</span></span>
-<span id="cb27-385"><a href="#cb27-385" aria-hidden="true" tabindex="-1"></a><span class="in">            xticks=(1:4, ["A", "B", "C", "D"]),</span></span>
-<span id="cb27-386"><a href="#cb27-386" aria-hidden="true" tabindex="-1"></a><span class="in">            title=title,</span></span>
-<span id="cb27-387"><a href="#cb27-387" aria-hidden="true" tabindex="-1"></a><span class="in">            subtitle=subtitle,</span></span>
-<span id="cb27-388"><a href="#cb27-388" aria-hidden="true" tabindex="-1"></a><span class="in">            titlealign=:left,</span></span>
-<span id="cb27-389"><a href="#cb27-389" aria-hidden="true" tabindex="-1"></a><span class="in">            xlabel=xlabel,</span></span>
-<span id="cb27-390"><a href="#cb27-390" aria-hidden="true" tabindex="-1"></a><span class="in">            ylabel=ylabel,</span></span>
-<span id="cb27-391"><a href="#cb27-391" aria-hidden="true" tabindex="-1"></a><span class="in">        ),</span></span>
-<span id="cb27-392"><a href="#cb27-392" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
-<span id="cb27-393"><a href="#cb27-393" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-394"><a href="#cb27-394" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-395"><a href="#cb27-395" aria-hidden="true" tabindex="-1"></a><span class="al">![Barchart showing the use of custom labels and titles.](images/tools-jl-labels.png)</span>{fig-alt="Barchart showing the use of custom labels and titles."}</span>
-<span id="cb27-396"><a href="#cb27-396" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-397"><a href="#cb27-397" aria-hidden="true" tabindex="-1"></a><span class="fu">#### AlgebraOfGraphics</span></span>
-<span id="cb27-398"><a href="#cb27-398" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-399"><a href="#cb27-399" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">AlgebraOfGraphics</span><span class="co">](https://aog.makie.org)</span> is a high-level plotting library for the <span class="co">[</span><span class="ot">Julia</span><span class="co">](https://www.julialang.org/)</span> programming language that uses <span class="co">[</span><span class="ot">Makie</span><span class="co">](https://makie.org)</span> as a plotting backend.</span>
-<span id="cb27-400"><a href="#cb27-400" aria-hidden="true" tabindex="-1"></a>It follows the grammar of graphics and is similar to R's <span class="in">`ggplot2`</span>.</span>
-<span id="cb27-401"><a href="#cb27-401" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-402"><a href="#cb27-402" aria-hidden="true" tabindex="-1"></a>**Example**: changing bar chart colours in AlgebraOfGraphics.</span>
-<span id="cb27-403"><a href="#cb27-403" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-404"><a href="#cb27-404" aria-hidden="true" tabindex="-1"></a>You can change the colour of chart elements in Makie using the <span class="in">`color`</span> argument and custom tick labels using the <span class="in">`xticks`</span> argument inside <span class="in">`axis`</span>:</span>
-<span id="cb27-405"><a href="#cb27-405" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-406"><a href="#cb27-406" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb27-407"><a href="#cb27-407" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
-<span id="cb27-408"><a href="#cb27-408" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb27-409"><a href="#cb27-409" aria-hidden="true" tabindex="-1"></a><span class="in">using AlgebraOfGraphics</span></span>
-<span id="cb27-410"><a href="#cb27-410" aria-hidden="true" tabindex="-1"></a><span class="in">using CairoMakie</span></span>
-<span id="cb27-411"><a href="#cb27-411" aria-hidden="true" tabindex="-1"></a><span class="in"># generate data</span></span>
-<span id="cb27-412"><a href="#cb27-412" aria-hidden="true" tabindex="-1"></a><span class="in">x_vals = [1, 2, 3, 4]</span></span>
-<span id="cb27-413"><a href="#cb27-413" aria-hidden="true" tabindex="-1"></a><span class="in">y_vals = [1, 2, 3, 4]</span></span>
-<span id="cb27-414"><a href="#cb27-414" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
-<span id="cb27-415"><a href="#cb27-415" aria-hidden="true" tabindex="-1"></a><span class="in">plt = data((; x_vals, y_vals)) * mapping(:x_vals, :y_vals) * visual(BarPlot; color="#009cc4")</span></span>
-<span id="cb27-416"><a href="#cb27-416" aria-hidden="true" tabindex="-1"></a><span class="in">draw(plt; axis=(; xticks=(1:4, ["A", "B", "C", "D"])))</span></span>
-<span id="cb27-417"><a href="#cb27-417" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-335"><a href="#cb27-335" aria-hidden="true" tabindex="-1"></a><span class="in">```julia</span></span>
+<span id="cb27-336"><a href="#cb27-336" aria-hidden="true" tabindex="-1"></a><span class="in">using CairoMakie</span></span>
+<span id="cb27-337"><a href="#cb27-337" aria-hidden="true" tabindex="-1"></a><span class="in"># generate data</span></span>
+<span id="cb27-338"><a href="#cb27-338" aria-hidden="true" tabindex="-1"></a><span class="in">x_vals = [1, 2, 3, 4]</span></span>
+<span id="cb27-339"><a href="#cb27-339" aria-hidden="true" tabindex="-1"></a><span class="in">y_vals = [1, 2, 3, 4]</span></span>
+<span id="cb27-340"><a href="#cb27-340" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb27-341"><a href="#cb27-341" aria-hidden="true" tabindex="-1"></a><span class="in">barplot(x_vals, y_vals, color="#009cc4", axis=(; xticks=(1:4, ["A", "B", "C", "D"])))</span></span>
+<span id="cb27-342"><a href="#cb27-342" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-343"><a href="#cb27-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-344"><a href="#cb27-344" aria-hidden="true" tabindex="-1"></a><span class="al">![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-jl.png)</span>{fig-alt="Bar charts visualising plant growth of average height for different treatments with user specified colour in blue."}</span>
+<span id="cb27-345"><a href="#cb27-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-346"><a href="#cb27-346" aria-hidden="true" tabindex="-1"></a>If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:</span>
+<span id="cb27-347"><a href="#cb27-347" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-348"><a href="#cb27-348" aria-hidden="true" tabindex="-1"></a><span class="in">```julia</span></span>
+<span id="cb27-349"><a href="#cb27-349" aria-hidden="true" tabindex="-1"></a><span class="in"># define colour palette</span></span>
+<span id="cb27-350"><a href="#cb27-350" aria-hidden="true" tabindex="-1"></a><span class="in">signif_qual = ["#3fa535", "#f4c100", "#009cc4", "#f07d00"]</span></span>
+<span id="cb27-351"><a href="#cb27-351" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb27-352"><a href="#cb27-352" aria-hidden="true" tabindex="-1"></a><span class="in">barplot(x_vals, y_vals, color=signif_qual, axis=(; xticks=(1:4, ["A", "B", "C", "D"])))</span></span>
+<span id="cb27-353"><a href="#cb27-353" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-354"><a href="#cb27-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-355"><a href="#cb27-355" aria-hidden="true" tabindex="-1"></a><span class="al">![Bar chart showing the colours from the `signif_qual` palette.](images/tools-qual-jl.png)</span>{fig-alt="Barchart showing the colours from signif_qual"}</span>
+<span id="cb27-356"><a href="#cb27-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-357"><a href="#cb27-357" aria-hidden="true" tabindex="-1"></a>You can specify custom labels and titles using the <span class="in">`axis`</span> argument:</span>
+<span id="cb27-358"><a href="#cb27-358" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-359"><a href="#cb27-359" aria-hidden="true" tabindex="-1"></a><span class="in">```julia</span></span>
+<span id="cb27-360"><a href="#cb27-360" aria-hidden="true" tabindex="-1"></a><span class="in"># define labels and title</span></span>
+<span id="cb27-361"><a href="#cb27-361" aria-hidden="true" tabindex="-1"></a><span class="in">title = "My Significance Plot"</span></span>
+<span id="cb27-362"><a href="#cb27-362" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle = "Some longer sentence explaining what is happening in the chart."</span></span>
+<span id="cb27-363"><a href="#cb27-363" aria-hidden="true" tabindex="-1"></a><span class="in">xlabel = "X-axis label"</span></span>
+<span id="cb27-364"><a href="#cb27-364" aria-hidden="true" tabindex="-1"></a><span class="in">ylabel = "Y-axis label"</span></span>
+<span id="cb27-365"><a href="#cb27-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-366"><a href="#cb27-366" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb27-367"><a href="#cb27-367" aria-hidden="true" tabindex="-1"></a><span class="in">barplot(x_vals,</span></span>
+<span id="cb27-368"><a href="#cb27-368" aria-hidden="true" tabindex="-1"></a><span class="in">        y_vals;</span></span>
+<span id="cb27-369"><a href="#cb27-369" aria-hidden="true" tabindex="-1"></a><span class="in">        color=signif_qual,</span></span>
+<span id="cb27-370"><a href="#cb27-370" aria-hidden="true" tabindex="-1"></a><span class="in">        axis=(;</span></span>
+<span id="cb27-371"><a href="#cb27-371" aria-hidden="true" tabindex="-1"></a><span class="in">            xticks=(1:4, ["A", "B", "C", "D"]),</span></span>
+<span id="cb27-372"><a href="#cb27-372" aria-hidden="true" tabindex="-1"></a><span class="in">            title=title,</span></span>
+<span id="cb27-373"><a href="#cb27-373" aria-hidden="true" tabindex="-1"></a><span class="in">            subtitle=subtitle,</span></span>
+<span id="cb27-374"><a href="#cb27-374" aria-hidden="true" tabindex="-1"></a><span class="in">            titlealign=:left,</span></span>
+<span id="cb27-375"><a href="#cb27-375" aria-hidden="true" tabindex="-1"></a><span class="in">            xlabel=xlabel,</span></span>
+<span id="cb27-376"><a href="#cb27-376" aria-hidden="true" tabindex="-1"></a><span class="in">            ylabel=ylabel,</span></span>
+<span id="cb27-377"><a href="#cb27-377" aria-hidden="true" tabindex="-1"></a><span class="in">        ),</span></span>
+<span id="cb27-378"><a href="#cb27-378" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
+<span id="cb27-379"><a href="#cb27-379" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-380"><a href="#cb27-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-381"><a href="#cb27-381" aria-hidden="true" tabindex="-1"></a><span class="al">![Barchart showing the use of custom labels and titles.](images/tools-jl-labels.png)</span>{fig-alt="Barchart showing the use of custom labels and titles."}</span>
+<span id="cb27-382"><a href="#cb27-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-383"><a href="#cb27-383" aria-hidden="true" tabindex="-1"></a><span class="fu">#### AlgebraOfGraphics</span></span>
+<span id="cb27-384"><a href="#cb27-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-385"><a href="#cb27-385" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">AlgebraOfGraphics</span><span class="co">](https://aog.makie.org)</span> is a high-level plotting library for the <span class="co">[</span><span class="ot">Julia</span><span class="co">](https://www.julialang.org/)</span> programming language that uses <span class="co">[</span><span class="ot">Makie</span><span class="co">](https://makie.org)</span> as a plotting backend.</span>
+<span id="cb27-386"><a href="#cb27-386" aria-hidden="true" tabindex="-1"></a>It follows the grammar of graphics and is similar to R's <span class="in">`ggplot2`</span>.</span>
+<span id="cb27-387"><a href="#cb27-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-388"><a href="#cb27-388" aria-hidden="true" tabindex="-1"></a>**Example**: changing bar chart colours in AlgebraOfGraphics.</span>
+<span id="cb27-389"><a href="#cb27-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-390"><a href="#cb27-390" aria-hidden="true" tabindex="-1"></a>You can change the colour of chart elements in Makie using the <span class="in">`color`</span> argument and custom tick labels using the <span class="in">`xticks`</span> argument inside <span class="in">`axis`</span>:</span>
+<span id="cb27-391"><a href="#cb27-391" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-392"><a href="#cb27-392" aria-hidden="true" tabindex="-1"></a><span class="in">```julia</span></span>
+<span id="cb27-393"><a href="#cb27-393" aria-hidden="true" tabindex="-1"></a><span class="in">using AlgebraOfGraphics</span></span>
+<span id="cb27-394"><a href="#cb27-394" aria-hidden="true" tabindex="-1"></a><span class="in">using CairoMakie</span></span>
+<span id="cb27-395"><a href="#cb27-395" aria-hidden="true" tabindex="-1"></a><span class="in"># generate data</span></span>
+<span id="cb27-396"><a href="#cb27-396" aria-hidden="true" tabindex="-1"></a><span class="in">x_vals = [1, 2, 3, 4]</span></span>
+<span id="cb27-397"><a href="#cb27-397" aria-hidden="true" tabindex="-1"></a><span class="in">y_vals = [1, 2, 3, 4]</span></span>
+<span id="cb27-398"><a href="#cb27-398" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb27-399"><a href="#cb27-399" aria-hidden="true" tabindex="-1"></a><span class="in">plt = data((; x_vals, y_vals)) * mapping(:x_vals, :y_vals) * visual(BarPlot; color="#009cc4")</span></span>
+<span id="cb27-400"><a href="#cb27-400" aria-hidden="true" tabindex="-1"></a><span class="in">draw(plt; axis=(; xticks=(1:4, ["A", "B", "C", "D"])))</span></span>
+<span id="cb27-401"><a href="#cb27-401" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-402"><a href="#cb27-402" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-403"><a href="#cb27-403" aria-hidden="true" tabindex="-1"></a><span class="al">![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-jl.png)</span>{fig-alt="Bar charts visualising plant growth of average height for different treatments with user specified colour in blue."}</span>
+<span id="cb27-404"><a href="#cb27-404" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-405"><a href="#cb27-405" aria-hidden="true" tabindex="-1"></a>If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:</span>
+<span id="cb27-406"><a href="#cb27-406" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-407"><a href="#cb27-407" aria-hidden="true" tabindex="-1"></a><span class="in">```julia</span></span>
+<span id="cb27-408"><a href="#cb27-408" aria-hidden="true" tabindex="-1"></a><span class="in"># define colour palette</span></span>
+<span id="cb27-409"><a href="#cb27-409" aria-hidden="true" tabindex="-1"></a><span class="in">signif_qual = ["#3fa535", "#f4c100", "#009cc4", "#f07d00"]</span></span>
+<span id="cb27-410"><a href="#cb27-410" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb27-411"><a href="#cb27-411" aria-hidden="true" tabindex="-1"></a><span class="in">plt = data((; x_vals, y_vals)) * mapping(:x_vals, :y_vals) * visual(BarPlot; color=signif_qual)</span></span>
+<span id="cb27-412"><a href="#cb27-412" aria-hidden="true" tabindex="-1"></a><span class="in">draw(plt; axis=(; xticks=(1:4, ["A", "B", "C", "D"])))</span></span>
+<span id="cb27-413"><a href="#cb27-413" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-414"><a href="#cb27-414" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-415"><a href="#cb27-415" aria-hidden="true" tabindex="-1"></a><span class="al">![Bar chart showing the colours from the `signif_qual` palette.](images/tools-qual-jl.png)</span>{fig-alt="Barchart showing the colours from signif_qual"}</span>
+<span id="cb27-416"><a href="#cb27-416" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-417"><a href="#cb27-417" aria-hidden="true" tabindex="-1"></a>You can specify custom labels and titles using the <span class="in">`axis`</span> argument:</span>
 <span id="cb27-418"><a href="#cb27-418" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-419"><a href="#cb27-419" aria-hidden="true" tabindex="-1"></a><span class="al">![Bar chart with bars coloured in *Significance* blue.](images/tools-blue-jl.png)</span>{fig-alt="Bar charts visualising plant growth of average height for different treatments with user specified colour in blue."}</span>
-<span id="cb27-420"><a href="#cb27-420" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-421"><a href="#cb27-421" aria-hidden="true" tabindex="-1"></a>If the colours in your plot are based on values in your data, you can also change the colours used by providing a list of colours:</span>
-<span id="cb27-422"><a href="#cb27-422" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-423"><a href="#cb27-423" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb27-424"><a href="#cb27-424" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
-<span id="cb27-425"><a href="#cb27-425" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb27-426"><a href="#cb27-426" aria-hidden="true" tabindex="-1"></a><span class="in"># define colour palette</span></span>
-<span id="cb27-427"><a href="#cb27-427" aria-hidden="true" tabindex="-1"></a><span class="in">signif_qual = ["#3fa535", "#f4c100", "#009cc4", "#f07d00"]</span></span>
-<span id="cb27-428"><a href="#cb27-428" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
-<span id="cb27-429"><a href="#cb27-429" aria-hidden="true" tabindex="-1"></a><span class="in">plt = data((; x_vals, y_vals)) * mapping(:x_vals, :y_vals) * visual(BarPlot; color=signif_qual)</span></span>
-<span id="cb27-430"><a href="#cb27-430" aria-hidden="true" tabindex="-1"></a><span class="in">draw(plt; axis=(; xticks=(1:4, ["A", "B", "C", "D"])))</span></span>
-<span id="cb27-431"><a href="#cb27-431" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-432"><a href="#cb27-432" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-433"><a href="#cb27-433" aria-hidden="true" tabindex="-1"></a><span class="al">![Bar chart showing the colours from the `signif_qual` palette.](images/tools-qual-jl.png)</span>{fig-alt="Barchart showing the colours from signif_qual"}</span>
-<span id="cb27-434"><a href="#cb27-434" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-435"><a href="#cb27-435" aria-hidden="true" tabindex="-1"></a>You can specify custom labels and titles using the <span class="in">`axis`</span> argument:</span>
-<span id="cb27-436"><a href="#cb27-436" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-437"><a href="#cb27-437" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb27-438"><a href="#cb27-438" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
-<span id="cb27-439"><a href="#cb27-439" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb27-440"><a href="#cb27-440" aria-hidden="true" tabindex="-1"></a><span class="in"># define labels and title</span></span>
-<span id="cb27-441"><a href="#cb27-441" aria-hidden="true" tabindex="-1"></a><span class="in">title = "My Significance Plot"</span></span>
-<span id="cb27-442"><a href="#cb27-442" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle = "Some longer sentence explaining what is happening in the chart."</span></span>
-<span id="cb27-443"><a href="#cb27-443" aria-hidden="true" tabindex="-1"></a><span class="in">xlabel = "X-axis label"</span></span>
-<span id="cb27-444"><a href="#cb27-444" aria-hidden="true" tabindex="-1"></a><span class="in">ylabel = "Y-axis label"</span></span>
-<span id="cb27-445"><a href="#cb27-445" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-446"><a href="#cb27-446" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
-<span id="cb27-447"><a href="#cb27-447" aria-hidden="true" tabindex="-1"></a><span class="in">draw(plt;</span></span>
-<span id="cb27-448"><a href="#cb27-448" aria-hidden="true" tabindex="-1"></a><span class="in">     axis=(;</span></span>
-<span id="cb27-449"><a href="#cb27-449" aria-hidden="true" tabindex="-1"></a><span class="in">         xticks=(1:4, ["A", "B", "C", "D"]),</span></span>
-<span id="cb27-450"><a href="#cb27-450" aria-hidden="true" tabindex="-1"></a><span class="in">         title=title,</span></span>
-<span id="cb27-451"><a href="#cb27-451" aria-hidden="true" tabindex="-1"></a><span class="in">         subtitle=subtitle,</span></span>
-<span id="cb27-452"><a href="#cb27-452" aria-hidden="true" tabindex="-1"></a><span class="in">         titlealign=:left,</span></span>
-<span id="cb27-453"><a href="#cb27-453" aria-hidden="true" tabindex="-1"></a><span class="in">         xlabel=xlabel,</span></span>
-<span id="cb27-454"><a href="#cb27-454" aria-hidden="true" tabindex="-1"></a><span class="in">         ylabel=ylabel,</span></span>
-<span id="cb27-455"><a href="#cb27-455" aria-hidden="true" tabindex="-1"></a><span class="in">     ),</span></span>
-<span id="cb27-456"><a href="#cb27-456" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
-<span id="cb27-457"><a href="#cb27-457" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-458"><a href="#cb27-458" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-459"><a href="#cb27-459" aria-hidden="true" tabindex="-1"></a><span class="al">![Barchart showing the use of custom labels and titles.](images/tools-jl-labels.png)</span>{fig-alt="Barchart showing the use of custom labels and titles."}</span>
-<span id="cb27-460"><a href="#cb27-460" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-461"><a href="#cb27-461" aria-hidden="true" tabindex="-1"></a><span class="fu">## Publication specifications {#publication-specifications}</span></span>
-<span id="cb27-462"><a href="#cb27-462" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-463"><a href="#cb27-463" aria-hidden="true" tabindex="-1"></a>The following information should be used to design graphs and charts that meet RSS publication requirements. Details include page sizes and column widths, font types and sizes, and image resolutions and file formats.</span>
-<span id="cb27-464"><a href="#cb27-464" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-465"><a href="#cb27-465" aria-hidden="true" tabindex="-1"></a><span class="fu">### *Significance* Magazine</span></span>
-<span id="cb27-466"><a href="#cb27-466" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-467"><a href="#cb27-467" aria-hidden="true" tabindex="-1"></a>|                                |                                 |</span>
-<span id="cb27-468"><a href="#cb27-468" aria-hidden="true" tabindex="-1"></a>|--------------------------------|---------------------------------|</span>
-<span id="cb27-469"><a href="#cb27-469" aria-hidden="true" tabindex="-1"></a>| Page size                      | <span class="sc">\(</span>W<span class="sc">\)</span> 212.55 mm x (H) 263.65 mm |</span>
-<span id="cb27-470"><a href="#cb27-470" aria-hidden="true" tabindex="-1"></a>| Text area                      | <span class="sc">\(</span>W<span class="sc">\)</span> 188 mm x (H) 212 mm       |</span>
-<span id="cb27-471"><a href="#cb27-471" aria-hidden="true" tabindex="-1"></a>| Image resolution               | 300 dpi (print quality)         |</span>
-<span id="cb27-472"><a href="#cb27-472" aria-hidden="true" tabindex="-1"></a>| Recommended image file formats | jpeg, png                       |</span>
-<span id="cb27-473"><a href="#cb27-473" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-474"><a href="#cb27-474" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Notebook section</span></span>
-<span id="cb27-475"><a href="#cb27-475" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-476"><a href="#cb27-476" aria-hidden="true" tabindex="-1"></a>Uses four-column layout.</span>
-<span id="cb27-477"><a href="#cb27-477" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-478"><a href="#cb27-478" aria-hidden="true" tabindex="-1"></a>+-----------------+-------------------------------------------+</span>
-<span id="cb27-479"><a href="#cb27-479" aria-hidden="true" tabindex="-1"></a>| 1x column width | 45 mm                                     |</span>
-<span id="cb27-480"><a href="#cb27-480" aria-hidden="true" tabindex="-1"></a>+-----------------+-------------------------------------------+</span>
-<span id="cb27-481"><a href="#cb27-481" aria-hidden="true" tabindex="-1"></a>| 2x column width | 93 mm                                     |</span>
-<span id="cb27-482"><a href="#cb27-482" aria-hidden="true" tabindex="-1"></a>+-----------------+-------------------------------------------+</span>
-<span id="cb27-483"><a href="#cb27-483" aria-hidden="true" tabindex="-1"></a>| 3x column width | 140 mm                                    |</span>
-<span id="cb27-484"><a href="#cb27-484" aria-hidden="true" tabindex="-1"></a>+-----------------+-------------------------------------------+</span>
-<span id="cb27-485"><a href="#cb27-485" aria-hidden="true" tabindex="-1"></a>| 4x column width | 188 mm                                    |</span>
-<span id="cb27-486"><a href="#cb27-486" aria-hidden="true" tabindex="-1"></a>+-----------------+-------------------------------------------+</span>
-<span id="cb27-487"><a href="#cb27-487" aria-hidden="true" tabindex="-1"></a>| Body font       | Meta Serif OT, Book                       |</span>
-<span id="cb27-488"><a href="#cb27-488" aria-hidden="true" tabindex="-1"></a>+-----------------+-------------------------------------------+</span>
-<span id="cb27-489"><a href="#cb27-489" aria-hidden="true" tabindex="-1"></a>| Font size       | 8.5 pt                                    |</span>
-<span id="cb27-490"><a href="#cb27-490" aria-hidden="true" tabindex="-1"></a>+-----------------+-------------------------------------------+</span>
-<span id="cb27-491"><a href="#cb27-491" aria-hidden="true" tabindex="-1"></a>| Section colour  | Red:\                                     |</span>
-<span id="cb27-492"><a href="#cb27-492" aria-hidden="true" tabindex="-1"></a>|                 | (in <span class="in">`RSSthemes`</span> package use <span class="in">`signif_red`</span>) |</span>
-<span id="cb27-493"><a href="#cb27-493" aria-hidden="true" tabindex="-1"></a>|                 |                                           |</span>
-<span id="cb27-494"><a href="#cb27-494" aria-hidden="true" tabindex="-1"></a>|                 | -   CMYK = 0, 96, 98, 1                   |</span>
-<span id="cb27-495"><a href="#cb27-495" aria-hidden="true" tabindex="-1"></a>|                 |                                           |</span>
-<span id="cb27-496"><a href="#cb27-496" aria-hidden="true" tabindex="-1"></a>|                 | -   RGB = 228, 27, 18                     |</span>
-<span id="cb27-497"><a href="#cb27-497" aria-hidden="true" tabindex="-1"></a>|                 |                                           |</span>
-<span id="cb27-498"><a href="#cb27-498" aria-hidden="true" tabindex="-1"></a>|                 | -   Hex code = #e41b12                    |</span>
-<span id="cb27-499"><a href="#cb27-499" aria-hidden="true" tabindex="-1"></a>+-----------------+-------------------------------------------+</span>
-<span id="cb27-500"><a href="#cb27-500" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-501"><a href="#cb27-501" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Features section {#features-section}</span></span>
-<span id="cb27-502"><a href="#cb27-502" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-503"><a href="#cb27-503" aria-hidden="true" tabindex="-1"></a>Uses three-column layout.</span>
-<span id="cb27-504"><a href="#cb27-504" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-505"><a href="#cb27-505" aria-hidden="true" tabindex="-1"></a>+-----------------+---------------------------------------------+</span>
-<span id="cb27-506"><a href="#cb27-506" aria-hidden="true" tabindex="-1"></a>| 1x column width | 60 mm                                       |</span>
-<span id="cb27-507"><a href="#cb27-507" aria-hidden="true" tabindex="-1"></a>+-----------------+---------------------------------------------+</span>
-<span id="cb27-508"><a href="#cb27-508" aria-hidden="true" tabindex="-1"></a>| 2x column width | 124 mm                                      |</span>
-<span id="cb27-509"><a href="#cb27-509" aria-hidden="true" tabindex="-1"></a>+-----------------+---------------------------------------------+</span>
-<span id="cb27-510"><a href="#cb27-510" aria-hidden="true" tabindex="-1"></a>| 3x column width | 188 mm                                      |</span>
-<span id="cb27-511"><a href="#cb27-511" aria-hidden="true" tabindex="-1"></a>+-----------------+---------------------------------------------+</span>
-<span id="cb27-512"><a href="#cb27-512" aria-hidden="true" tabindex="-1"></a>| Body font       | Source Sans Pro, Regular                    |</span>
-<span id="cb27-513"><a href="#cb27-513" aria-hidden="true" tabindex="-1"></a>+-----------------+---------------------------------------------+</span>
-<span id="cb27-514"><a href="#cb27-514" aria-hidden="true" tabindex="-1"></a>| Font size       | 9 pt                                        |</span>
-<span id="cb27-515"><a href="#cb27-515" aria-hidden="true" tabindex="-1"></a>+-----------------+---------------------------------------------+</span>
-<span id="cb27-516"><a href="#cb27-516" aria-hidden="true" tabindex="-1"></a>| Section colour  | Green:\                                     |</span>
-<span id="cb27-517"><a href="#cb27-517" aria-hidden="true" tabindex="-1"></a>|                 | (in <span class="in">`RSSthemes`</span> package use <span class="in">`signif_green`</span>) |</span>
-<span id="cb27-518"><a href="#cb27-518" aria-hidden="true" tabindex="-1"></a>|                 |                                             |</span>
-<span id="cb27-519"><a href="#cb27-519" aria-hidden="true" tabindex="-1"></a>|                 | -   CMYK = 75, 5, 100, 0                    |</span>
-<span id="cb27-520"><a href="#cb27-520" aria-hidden="true" tabindex="-1"></a>|                 |                                             |</span>
-<span id="cb27-521"><a href="#cb27-521" aria-hidden="true" tabindex="-1"></a>|                 | -   RGB = 63, 165, 53                       |</span>
-<span id="cb27-522"><a href="#cb27-522" aria-hidden="true" tabindex="-1"></a>|                 |                                             |</span>
-<span id="cb27-523"><a href="#cb27-523" aria-hidden="true" tabindex="-1"></a>|                 | -   Hex code = #3fa535                      |</span>
-<span id="cb27-524"><a href="#cb27-524" aria-hidden="true" tabindex="-1"></a>+-----------------+---------------------------------------------+</span>
-<span id="cb27-525"><a href="#cb27-525" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-526"><a href="#cb27-526" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Profiles / Perspectives / Statscom section</span></span>
-<span id="cb27-527"><a href="#cb27-527" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-528"><a href="#cb27-528" aria-hidden="true" tabindex="-1"></a>Uses three-column layout.</span>
-<span id="cb27-529"><a href="#cb27-529" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-530"><a href="#cb27-530" aria-hidden="true" tabindex="-1"></a>+------------------+----------------------------------------------+</span>
-<span id="cb27-531"><a href="#cb27-531" aria-hidden="true" tabindex="-1"></a>| 1x column width  | 60 mm                                        |</span>
-<span id="cb27-532"><a href="#cb27-532" aria-hidden="true" tabindex="-1"></a>+------------------+----------------------------------------------+</span>
-<span id="cb27-533"><a href="#cb27-533" aria-hidden="true" tabindex="-1"></a>| 2x column width  | 124 mm                                       |</span>
-<span id="cb27-534"><a href="#cb27-534" aria-hidden="true" tabindex="-1"></a>+------------------+----------------------------------------------+</span>
-<span id="cb27-535"><a href="#cb27-535" aria-hidden="true" tabindex="-1"></a>| 3x column width  | 188 mm                                       |</span>
-<span id="cb27-536"><a href="#cb27-536" aria-hidden="true" tabindex="-1"></a>+------------------+----------------------------------------------+</span>
-<span id="cb27-537"><a href="#cb27-537" aria-hidden="true" tabindex="-1"></a>| Body font        | Meta Serif OT, Book                          |</span>
-<span id="cb27-538"><a href="#cb27-538" aria-hidden="true" tabindex="-1"></a>+------------------+----------------------------------------------+</span>
-<span id="cb27-539"><a href="#cb27-539" aria-hidden="true" tabindex="-1"></a>| Font size        | 8.5 pt                                       |</span>
+<span id="cb27-419"><a href="#cb27-419" aria-hidden="true" tabindex="-1"></a><span class="in">```julia</span></span>
+<span id="cb27-420"><a href="#cb27-420" aria-hidden="true" tabindex="-1"></a><span class="in"># define labels and title</span></span>
+<span id="cb27-421"><a href="#cb27-421" aria-hidden="true" tabindex="-1"></a><span class="in">title = "My Significance Plot"</span></span>
+<span id="cb27-422"><a href="#cb27-422" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle = "Some longer sentence explaining what is happening in the chart."</span></span>
+<span id="cb27-423"><a href="#cb27-423" aria-hidden="true" tabindex="-1"></a><span class="in">xlabel = "X-axis label"</span></span>
+<span id="cb27-424"><a href="#cb27-424" aria-hidden="true" tabindex="-1"></a><span class="in">ylabel = "Y-axis label"</span></span>
+<span id="cb27-425"><a href="#cb27-425" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-426"><a href="#cb27-426" aria-hidden="true" tabindex="-1"></a><span class="in"># create barchart</span></span>
+<span id="cb27-427"><a href="#cb27-427" aria-hidden="true" tabindex="-1"></a><span class="in">draw(plt;</span></span>
+<span id="cb27-428"><a href="#cb27-428" aria-hidden="true" tabindex="-1"></a><span class="in">     axis=(;</span></span>
+<span id="cb27-429"><a href="#cb27-429" aria-hidden="true" tabindex="-1"></a><span class="in">         xticks=(1:4, ["A", "B", "C", "D"]),</span></span>
+<span id="cb27-430"><a href="#cb27-430" aria-hidden="true" tabindex="-1"></a><span class="in">         title=title,</span></span>
+<span id="cb27-431"><a href="#cb27-431" aria-hidden="true" tabindex="-1"></a><span class="in">         subtitle=subtitle,</span></span>
+<span id="cb27-432"><a href="#cb27-432" aria-hidden="true" tabindex="-1"></a><span class="in">         titlealign=:left,</span></span>
+<span id="cb27-433"><a href="#cb27-433" aria-hidden="true" tabindex="-1"></a><span class="in">         xlabel=xlabel,</span></span>
+<span id="cb27-434"><a href="#cb27-434" aria-hidden="true" tabindex="-1"></a><span class="in">         ylabel=ylabel,</span></span>
+<span id="cb27-435"><a href="#cb27-435" aria-hidden="true" tabindex="-1"></a><span class="in">     ),</span></span>
+<span id="cb27-436"><a href="#cb27-436" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
+<span id="cb27-437"><a href="#cb27-437" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-438"><a href="#cb27-438" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-439"><a href="#cb27-439" aria-hidden="true" tabindex="-1"></a><span class="al">![Barchart showing the use of custom labels and titles.](images/tools-jl-labels.png)</span>{fig-alt="Barchart showing the use of custom labels and titles."}</span>
+<span id="cb27-440"><a href="#cb27-440" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-441"><a href="#cb27-441" aria-hidden="true" tabindex="-1"></a><span class="fu">## Publication specifications {#publication-specifications}</span></span>
+<span id="cb27-442"><a href="#cb27-442" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-443"><a href="#cb27-443" aria-hidden="true" tabindex="-1"></a>The following information should be used to design graphs and charts that meet RSS publication requirements. Details include page sizes and column widths, font types and sizes, and image resolutions and file formats.</span>
+<span id="cb27-444"><a href="#cb27-444" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-445"><a href="#cb27-445" aria-hidden="true" tabindex="-1"></a><span class="fu">### *Significance* Magazine</span></span>
+<span id="cb27-446"><a href="#cb27-446" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-447"><a href="#cb27-447" aria-hidden="true" tabindex="-1"></a>|                                |                                 |</span>
+<span id="cb27-448"><a href="#cb27-448" aria-hidden="true" tabindex="-1"></a>|--------------------------------|---------------------------------|</span>
+<span id="cb27-449"><a href="#cb27-449" aria-hidden="true" tabindex="-1"></a>| Page size                      | <span class="sc">\(</span>W<span class="sc">\)</span> 212.55 mm x (H) 263.65 mm |</span>
+<span id="cb27-450"><a href="#cb27-450" aria-hidden="true" tabindex="-1"></a>| Text area                      | <span class="sc">\(</span>W<span class="sc">\)</span> 188 mm x (H) 212 mm       |</span>
+<span id="cb27-451"><a href="#cb27-451" aria-hidden="true" tabindex="-1"></a>| Image resolution               | 300 dpi (print quality)         |</span>
+<span id="cb27-452"><a href="#cb27-452" aria-hidden="true" tabindex="-1"></a>| Recommended image file formats | jpeg, png                       |</span>
+<span id="cb27-453"><a href="#cb27-453" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-454"><a href="#cb27-454" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Notebook section</span></span>
+<span id="cb27-455"><a href="#cb27-455" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-456"><a href="#cb27-456" aria-hidden="true" tabindex="-1"></a>Uses four-column layout.</span>
+<span id="cb27-457"><a href="#cb27-457" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-458"><a href="#cb27-458" aria-hidden="true" tabindex="-1"></a>+-----------------+-------------------------------------------+</span>
+<span id="cb27-459"><a href="#cb27-459" aria-hidden="true" tabindex="-1"></a>| 1x column width | 45 mm                                     |</span>
+<span id="cb27-460"><a href="#cb27-460" aria-hidden="true" tabindex="-1"></a>+-----------------+-------------------------------------------+</span>
+<span id="cb27-461"><a href="#cb27-461" aria-hidden="true" tabindex="-1"></a>| 2x column width | 93 mm                                     |</span>
+<span id="cb27-462"><a href="#cb27-462" aria-hidden="true" tabindex="-1"></a>+-----------------+-------------------------------------------+</span>
+<span id="cb27-463"><a href="#cb27-463" aria-hidden="true" tabindex="-1"></a>| 3x column width | 140 mm                                    |</span>
+<span id="cb27-464"><a href="#cb27-464" aria-hidden="true" tabindex="-1"></a>+-----------------+-------------------------------------------+</span>
+<span id="cb27-465"><a href="#cb27-465" aria-hidden="true" tabindex="-1"></a>| 4x column width | 188 mm                                    |</span>
+<span id="cb27-466"><a href="#cb27-466" aria-hidden="true" tabindex="-1"></a>+-----------------+-------------------------------------------+</span>
+<span id="cb27-467"><a href="#cb27-467" aria-hidden="true" tabindex="-1"></a>| Body font       | Meta Serif OT, Book                       |</span>
+<span id="cb27-468"><a href="#cb27-468" aria-hidden="true" tabindex="-1"></a>+-----------------+-------------------------------------------+</span>
+<span id="cb27-469"><a href="#cb27-469" aria-hidden="true" tabindex="-1"></a>| Font size       | 8.5 pt                                    |</span>
+<span id="cb27-470"><a href="#cb27-470" aria-hidden="true" tabindex="-1"></a>+-----------------+-------------------------------------------+</span>
+<span id="cb27-471"><a href="#cb27-471" aria-hidden="true" tabindex="-1"></a>| Section colour  | Red:\                                     |</span>
+<span id="cb27-472"><a href="#cb27-472" aria-hidden="true" tabindex="-1"></a>|                 | (in <span class="in">`RSSthemes`</span> package use <span class="in">`signif_red`</span>) |</span>
+<span id="cb27-473"><a href="#cb27-473" aria-hidden="true" tabindex="-1"></a>|                 |                                           |</span>
+<span id="cb27-474"><a href="#cb27-474" aria-hidden="true" tabindex="-1"></a>|                 | -   CMYK = 0, 96, 98, 1                   |</span>
+<span id="cb27-475"><a href="#cb27-475" aria-hidden="true" tabindex="-1"></a>|                 |                                           |</span>
+<span id="cb27-476"><a href="#cb27-476" aria-hidden="true" tabindex="-1"></a>|                 | -   RGB = 228, 27, 18                     |</span>
+<span id="cb27-477"><a href="#cb27-477" aria-hidden="true" tabindex="-1"></a>|                 |                                           |</span>
+<span id="cb27-478"><a href="#cb27-478" aria-hidden="true" tabindex="-1"></a>|                 | -   Hex code = #e41b12                    |</span>
+<span id="cb27-479"><a href="#cb27-479" aria-hidden="true" tabindex="-1"></a>+-----------------+-------------------------------------------+</span>
+<span id="cb27-480"><a href="#cb27-480" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-481"><a href="#cb27-481" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Features section {#features-section}</span></span>
+<span id="cb27-482"><a href="#cb27-482" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-483"><a href="#cb27-483" aria-hidden="true" tabindex="-1"></a>Uses three-column layout.</span>
+<span id="cb27-484"><a href="#cb27-484" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-485"><a href="#cb27-485" aria-hidden="true" tabindex="-1"></a>+-----------------+---------------------------------------------+</span>
+<span id="cb27-486"><a href="#cb27-486" aria-hidden="true" tabindex="-1"></a>| 1x column width | 60 mm                                       |</span>
+<span id="cb27-487"><a href="#cb27-487" aria-hidden="true" tabindex="-1"></a>+-----------------+---------------------------------------------+</span>
+<span id="cb27-488"><a href="#cb27-488" aria-hidden="true" tabindex="-1"></a>| 2x column width | 124 mm                                      |</span>
+<span id="cb27-489"><a href="#cb27-489" aria-hidden="true" tabindex="-1"></a>+-----------------+---------------------------------------------+</span>
+<span id="cb27-490"><a href="#cb27-490" aria-hidden="true" tabindex="-1"></a>| 3x column width | 188 mm                                      |</span>
+<span id="cb27-491"><a href="#cb27-491" aria-hidden="true" tabindex="-1"></a>+-----------------+---------------------------------------------+</span>
+<span id="cb27-492"><a href="#cb27-492" aria-hidden="true" tabindex="-1"></a>| Body font       | Source Sans Pro, Regular                    |</span>
+<span id="cb27-493"><a href="#cb27-493" aria-hidden="true" tabindex="-1"></a>+-----------------+---------------------------------------------+</span>
+<span id="cb27-494"><a href="#cb27-494" aria-hidden="true" tabindex="-1"></a>| Font size       | 9 pt                                        |</span>
+<span id="cb27-495"><a href="#cb27-495" aria-hidden="true" tabindex="-1"></a>+-----------------+---------------------------------------------+</span>
+<span id="cb27-496"><a href="#cb27-496" aria-hidden="true" tabindex="-1"></a>| Section colour  | Green:\                                     |</span>
+<span id="cb27-497"><a href="#cb27-497" aria-hidden="true" tabindex="-1"></a>|                 | (in <span class="in">`RSSthemes`</span> package use <span class="in">`signif_green`</span>) |</span>
+<span id="cb27-498"><a href="#cb27-498" aria-hidden="true" tabindex="-1"></a>|                 |                                             |</span>
+<span id="cb27-499"><a href="#cb27-499" aria-hidden="true" tabindex="-1"></a>|                 | -   CMYK = 75, 5, 100, 0                    |</span>
+<span id="cb27-500"><a href="#cb27-500" aria-hidden="true" tabindex="-1"></a>|                 |                                             |</span>
+<span id="cb27-501"><a href="#cb27-501" aria-hidden="true" tabindex="-1"></a>|                 | -   RGB = 63, 165, 53                       |</span>
+<span id="cb27-502"><a href="#cb27-502" aria-hidden="true" tabindex="-1"></a>|                 |                                             |</span>
+<span id="cb27-503"><a href="#cb27-503" aria-hidden="true" tabindex="-1"></a>|                 | -   Hex code = #3fa535                      |</span>
+<span id="cb27-504"><a href="#cb27-504" aria-hidden="true" tabindex="-1"></a>+-----------------+---------------------------------------------+</span>
+<span id="cb27-505"><a href="#cb27-505" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-506"><a href="#cb27-506" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Profiles / Perspectives / Statscom section</span></span>
+<span id="cb27-507"><a href="#cb27-507" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-508"><a href="#cb27-508" aria-hidden="true" tabindex="-1"></a>Uses three-column layout.</span>
+<span id="cb27-509"><a href="#cb27-509" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-510"><a href="#cb27-510" aria-hidden="true" tabindex="-1"></a>+------------------+----------------------------------------------+</span>
+<span id="cb27-511"><a href="#cb27-511" aria-hidden="true" tabindex="-1"></a>| 1x column width  | 60 mm                                        |</span>
+<span id="cb27-512"><a href="#cb27-512" aria-hidden="true" tabindex="-1"></a>+------------------+----------------------------------------------+</span>
+<span id="cb27-513"><a href="#cb27-513" aria-hidden="true" tabindex="-1"></a>| 2x column width  | 124 mm                                       |</span>
+<span id="cb27-514"><a href="#cb27-514" aria-hidden="true" tabindex="-1"></a>+------------------+----------------------------------------------+</span>
+<span id="cb27-515"><a href="#cb27-515" aria-hidden="true" tabindex="-1"></a>| 3x column width  | 188 mm                                       |</span>
+<span id="cb27-516"><a href="#cb27-516" aria-hidden="true" tabindex="-1"></a>+------------------+----------------------------------------------+</span>
+<span id="cb27-517"><a href="#cb27-517" aria-hidden="true" tabindex="-1"></a>| Body font        | Meta Serif OT, Book                          |</span>
+<span id="cb27-518"><a href="#cb27-518" aria-hidden="true" tabindex="-1"></a>+------------------+----------------------------------------------+</span>
+<span id="cb27-519"><a href="#cb27-519" aria-hidden="true" tabindex="-1"></a>| Font size        | 8.5 pt                                       |</span>
+<span id="cb27-520"><a href="#cb27-520" aria-hidden="true" tabindex="-1"></a>+------------------+----------------------------------------------+</span>
+<span id="cb27-521"><a href="#cb27-521" aria-hidden="true" tabindex="-1"></a>| Section colours: |                                              |</span>
+<span id="cb27-522"><a href="#cb27-522" aria-hidden="true" tabindex="-1"></a>+------------------+----------------------------------------------+</span>
+<span id="cb27-523"><a href="#cb27-523" aria-hidden="true" tabindex="-1"></a>| Profiles         | Blue:\                                       |</span>
+<span id="cb27-524"><a href="#cb27-524" aria-hidden="true" tabindex="-1"></a>|                  | (in <span class="in">`RSSthemes`</span> package use <span class="in">`signif_blue`</span>)   |</span>
+<span id="cb27-525"><a href="#cb27-525" aria-hidden="true" tabindex="-1"></a>|                  |                                              |</span>
+<span id="cb27-526"><a href="#cb27-526" aria-hidden="true" tabindex="-1"></a>|                  | -   CMYK = 78, 19, 15, 1                     |</span>
+<span id="cb27-527"><a href="#cb27-527" aria-hidden="true" tabindex="-1"></a>|                  |                                              |</span>
+<span id="cb27-528"><a href="#cb27-528" aria-hidden="true" tabindex="-1"></a>|                  | -   RGB = 0, 156, 196                        |</span>
+<span id="cb27-529"><a href="#cb27-529" aria-hidden="true" tabindex="-1"></a>|                  |                                              |</span>
+<span id="cb27-530"><a href="#cb27-530" aria-hidden="true" tabindex="-1"></a>|                  | -   Hex code = #009cc4                       |</span>
+<span id="cb27-531"><a href="#cb27-531" aria-hidden="true" tabindex="-1"></a>+------------------+----------------------------------------------+</span>
+<span id="cb27-532"><a href="#cb27-532" aria-hidden="true" tabindex="-1"></a>| Perspectives     | Yellow:\                                     |</span>
+<span id="cb27-533"><a href="#cb27-533" aria-hidden="true" tabindex="-1"></a>|                  | (in <span class="in">`RSSthemes`</span> package use <span class="in">`signif_yellow`</span>) |</span>
+<span id="cb27-534"><a href="#cb27-534" aria-hidden="true" tabindex="-1"></a>|                  |                                              |</span>
+<span id="cb27-535"><a href="#cb27-535" aria-hidden="true" tabindex="-1"></a>|                  | -   CMYK = 5, 24, 95, 1                      |</span>
+<span id="cb27-536"><a href="#cb27-536" aria-hidden="true" tabindex="-1"></a>|                  |                                              |</span>
+<span id="cb27-537"><a href="#cb27-537" aria-hidden="true" tabindex="-1"></a>|                  | -   RGB = 244, 193, 0                        |</span>
+<span id="cb27-538"><a href="#cb27-538" aria-hidden="true" tabindex="-1"></a>|                  |                                              |</span>
+<span id="cb27-539"><a href="#cb27-539" aria-hidden="true" tabindex="-1"></a>|                  | -   Hex code = #f4c100                       |</span>
 <span id="cb27-540"><a href="#cb27-540" aria-hidden="true" tabindex="-1"></a>+------------------+----------------------------------------------+</span>
-<span id="cb27-541"><a href="#cb27-541" aria-hidden="true" tabindex="-1"></a>| Section colours: |                                              |</span>
-<span id="cb27-542"><a href="#cb27-542" aria-hidden="true" tabindex="-1"></a>+------------------+----------------------------------------------+</span>
-<span id="cb27-543"><a href="#cb27-543" aria-hidden="true" tabindex="-1"></a>| Profiles         | Blue:\                                       |</span>
-<span id="cb27-544"><a href="#cb27-544" aria-hidden="true" tabindex="-1"></a>|                  | (in <span class="in">`RSSthemes`</span> package use <span class="in">`signif_blue`</span>)   |</span>
+<span id="cb27-541"><a href="#cb27-541" aria-hidden="true" tabindex="-1"></a>| Statscomm        | Orange:\                                     |</span>
+<span id="cb27-542"><a href="#cb27-542" aria-hidden="true" tabindex="-1"></a>|                  | (in <span class="in">`RSSthemes`</span> package use <span class="in">`signif_orange`</span>) |</span>
+<span id="cb27-543"><a href="#cb27-543" aria-hidden="true" tabindex="-1"></a>|                  |                                              |</span>
+<span id="cb27-544"><a href="#cb27-544" aria-hidden="true" tabindex="-1"></a>|                  | -   CMYK = 0, 60, 99, 0                      |</span>
 <span id="cb27-545"><a href="#cb27-545" aria-hidden="true" tabindex="-1"></a>|                  |                                              |</span>
-<span id="cb27-546"><a href="#cb27-546" aria-hidden="true" tabindex="-1"></a>|                  | -   CMYK = 78, 19, 15, 1                     |</span>
+<span id="cb27-546"><a href="#cb27-546" aria-hidden="true" tabindex="-1"></a>|                  | -   RGB = 240, 125, 0                        |</span>
 <span id="cb27-547"><a href="#cb27-547" aria-hidden="true" tabindex="-1"></a>|                  |                                              |</span>
-<span id="cb27-548"><a href="#cb27-548" aria-hidden="true" tabindex="-1"></a>|                  | -   RGB = 0, 156, 196                        |</span>
-<span id="cb27-549"><a href="#cb27-549" aria-hidden="true" tabindex="-1"></a>|                  |                                              |</span>
-<span id="cb27-550"><a href="#cb27-550" aria-hidden="true" tabindex="-1"></a>|                  | -   Hex code = #009cc4                       |</span>
-<span id="cb27-551"><a href="#cb27-551" aria-hidden="true" tabindex="-1"></a>+------------------+----------------------------------------------+</span>
-<span id="cb27-552"><a href="#cb27-552" aria-hidden="true" tabindex="-1"></a>| Perspectives     | Yellow:\                                     |</span>
-<span id="cb27-553"><a href="#cb27-553" aria-hidden="true" tabindex="-1"></a>|                  | (in <span class="in">`RSSthemes`</span> package use <span class="in">`signif_yellow`</span>) |</span>
-<span id="cb27-554"><a href="#cb27-554" aria-hidden="true" tabindex="-1"></a>|                  |                                              |</span>
-<span id="cb27-555"><a href="#cb27-555" aria-hidden="true" tabindex="-1"></a>|                  | -   CMYK = 5, 24, 95, 1                      |</span>
-<span id="cb27-556"><a href="#cb27-556" aria-hidden="true" tabindex="-1"></a>|                  |                                              |</span>
-<span id="cb27-557"><a href="#cb27-557" aria-hidden="true" tabindex="-1"></a>|                  | -   RGB = 244, 193, 0                        |</span>
-<span id="cb27-558"><a href="#cb27-558" aria-hidden="true" tabindex="-1"></a>|                  |                                              |</span>
-<span id="cb27-559"><a href="#cb27-559" aria-hidden="true" tabindex="-1"></a>|                  | -   Hex code = #f4c100                       |</span>
-<span id="cb27-560"><a href="#cb27-560" aria-hidden="true" tabindex="-1"></a>+------------------+----------------------------------------------+</span>
-<span id="cb27-561"><a href="#cb27-561" aria-hidden="true" tabindex="-1"></a>| Statscomm        | Orange:\                                     |</span>
-<span id="cb27-562"><a href="#cb27-562" aria-hidden="true" tabindex="-1"></a>|                  | (in <span class="in">`RSSthemes`</span> package use <span class="in">`signif_orange`</span>) |</span>
-<span id="cb27-563"><a href="#cb27-563" aria-hidden="true" tabindex="-1"></a>|                  |                                              |</span>
-<span id="cb27-564"><a href="#cb27-564" aria-hidden="true" tabindex="-1"></a>|                  | -   CMYK = 0, 60, 99, 0                      |</span>
-<span id="cb27-565"><a href="#cb27-565" aria-hidden="true" tabindex="-1"></a>|                  |                                              |</span>
-<span id="cb27-566"><a href="#cb27-566" aria-hidden="true" tabindex="-1"></a>|                  | -   RGB = 240, 125, 0                        |</span>
-<span id="cb27-567"><a href="#cb27-567" aria-hidden="true" tabindex="-1"></a>|                  |                                              |</span>
-<span id="cb27-568"><a href="#cb27-568" aria-hidden="true" tabindex="-1"></a>|                  | -   Hex code = #f07d00                       |</span>
-<span id="cb27-569"><a href="#cb27-569" aria-hidden="true" tabindex="-1"></a>+------------------+----------------------------------------------+</span>
-<span id="cb27-570"><a href="#cb27-570" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-571"><a href="#cb27-571" aria-hidden="true" tabindex="-1"></a><span class="fu">### Journal of the Royal Statistical Society Series A</span></span>
-<span id="cb27-572"><a href="#cb27-572" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-573"><a href="#cb27-573" aria-hidden="true" tabindex="-1"></a>Uses a single-column layout.</span>
-<span id="cb27-574"><a href="#cb27-574" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-575"><a href="#cb27-575" aria-hidden="true" tabindex="-1"></a>|                                |                           |</span>
-<span id="cb27-576"><a href="#cb27-576" aria-hidden="true" tabindex="-1"></a>|--------------------------------|---------------------------|</span>
-<span id="cb27-577"><a href="#cb27-577" aria-hidden="true" tabindex="-1"></a>| Page size                      | <span class="sc">\(</span>W<span class="sc">\)</span> 189 mm x (H) 246 mm |</span>
-<span id="cb27-578"><a href="#cb27-578" aria-hidden="true" tabindex="-1"></a>| Text area                      | <span class="sc">\(</span>W<span class="sc">\)</span> 136 mm x (H) 217 mm |</span>
-<span id="cb27-579"><a href="#cb27-579" aria-hidden="true" tabindex="-1"></a>| Body font                      | Sabon LT Std Roman        |</span>
-<span id="cb27-580"><a href="#cb27-580" aria-hidden="true" tabindex="-1"></a>| Font size                      | 9.25 pt                   |</span>
-<span id="cb27-581"><a href="#cb27-581" aria-hidden="true" tabindex="-1"></a>| Image resolution               | 300 dpi (print quality)   |</span>
-<span id="cb27-582"><a href="#cb27-582" aria-hidden="true" tabindex="-1"></a>| Recommended image file formats | jpeg, png                 |</span>
+<span id="cb27-548"><a href="#cb27-548" aria-hidden="true" tabindex="-1"></a>|                  | -   Hex code = #f07d00                       |</span>
+<span id="cb27-549"><a href="#cb27-549" aria-hidden="true" tabindex="-1"></a>+------------------+----------------------------------------------+</span>
+<span id="cb27-550"><a href="#cb27-550" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-551"><a href="#cb27-551" aria-hidden="true" tabindex="-1"></a><span class="fu">### Journal of the Royal Statistical Society Series A</span></span>
+<span id="cb27-552"><a href="#cb27-552" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-553"><a href="#cb27-553" aria-hidden="true" tabindex="-1"></a>Uses a single-column layout.</span>
+<span id="cb27-554"><a href="#cb27-554" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-555"><a href="#cb27-555" aria-hidden="true" tabindex="-1"></a>|                                |                           |</span>
+<span id="cb27-556"><a href="#cb27-556" aria-hidden="true" tabindex="-1"></a>|--------------------------------|---------------------------|</span>
+<span id="cb27-557"><a href="#cb27-557" aria-hidden="true" tabindex="-1"></a>| Page size                      | <span class="sc">\(</span>W<span class="sc">\)</span> 189 mm x (H) 246 mm |</span>
+<span id="cb27-558"><a href="#cb27-558" aria-hidden="true" tabindex="-1"></a>| Text area                      | <span class="sc">\(</span>W<span class="sc">\)</span> 136 mm x (H) 217 mm |</span>
+<span id="cb27-559"><a href="#cb27-559" aria-hidden="true" tabindex="-1"></a>| Body font                      | Sabon LT Std Roman        |</span>
+<span id="cb27-560"><a href="#cb27-560" aria-hidden="true" tabindex="-1"></a>| Font size                      | 9.25 pt                   |</span>
+<span id="cb27-561"><a href="#cb27-561" aria-hidden="true" tabindex="-1"></a>| Image resolution               | 300 dpi (print quality)   |</span>
+<span id="cb27-562"><a href="#cb27-562" aria-hidden="true" tabindex="-1"></a>| Recommended image file formats | jpeg, png                 |</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
