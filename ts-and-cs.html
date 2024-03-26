@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -306,11 +306,11 @@ gtag('config', 'G-5VHDJ5PKRW', { 'anonymize_ip': true});
 <h2 class="anchored" data-anchor-id="what-websites-will-we-not-link-to">What websites will we not link to?</h2>
 <p>We will not link to websites that contain racist, sexual or misleading content; that promote violence; that are in breach of any UK law; which are otherwise offensive to individuals or to groups of people.</p>
 <p>The decision of the authors is final and no correspondence will be entered into.</p>
-<p>If you wish to report a concern, please email <a href="mailto:b.tarran@rss.org.uk">b.tarran@rss.org.uk</a></p>
+<p>If you wish to report a concern, please email <a href="mailto:a.britten@rss.org.uk">a.britten@rss.org.uk</a>.</p>
 </section>
 <section id="software-and-services" class="level2">
 <h2 class="anchored" data-anchor-id="software-and-services">Software and services</h2>
-<p>Source code and files for this site are available from <a href="https://github.com/brtarran/rssdatavisguide">GitHub</a>. Use of our GitHub repository is governed by the <a href="#contributor-covenant-code-of-conduct">Contributor Covenant Code of Conduct</a>.</p>
+<p>Source code and files for this site are available from <a href="https://github.com/royal-statistical-society/datavisguide">GitHub</a>. Use of our GitHub repository is governed by the <a href="#contributor-covenant-code-of-conduct">Contributor Covenant Code of Conduct</a>.</p>
 <p>This site is built using <a href="https://quarto.org/">Quarto</a>, an open-source scientific and technical publishing system developed by <a href="https://posit.co/">Posit</a>. Quarto source code and software licences are available from <a href="https://github.com/quarto-dev">GitHub</a>.</p>
 <p>This site is hosted by <a href="https://pages.github.com/">GitHub Pages</a>.</p>
 <p>This site uses <a href="https://support.google.com/analytics/answer/10089681?hl=en">Google Analytics 4</a> for web analytics reporting.</p>
@@ -378,11 +378,11 @@ web@rss.org.uk</p>
 <section id="scope" class="level3">
 <h3 class="anchored" data-anchor-id="scope">Scope</h3>
 <p>This Code of Conduct applies within all community spaces (encompassing this site and our GitHub repository). It also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.</p>
-<p>Note that unless prior permission is agreed in writing with the RSS, only the lead authors (Andreas Krause, Nicola Rennie, and Brian Tarran) may officially represent the community. Comment to the media must only be given by appointed representatives and must be approved by the RSS press office.</p>
+<p>Note that unless prior permission is agreed in writing with the RSS, only the editorial team (Andreas Krause, Nicola Rennie, and Anna Britten) may officially represent the community. Comment to the media must only be given by appointed representatives and must be approved by the RSS press office.</p>
 </section>
 <section id="enforcement" class="level3">
 <h3 class="anchored" data-anchor-id="enforcement">Enforcement</h3>
-<p>Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at <a href="mailto:b.tarran@rss.org.uk">b.tarran@rss.org.uk</a>. All complaints will be reviewed and investigated promptly and fairly.</p>
+<p>Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at <a href="mailto:a.britten@rss.org.uk">a.britten@rss.org.uk</a>. All complaints will be reviewed and investigated promptly and fairly.</p>
 <p>All community leaders are obligated to respect the privacy and security of the reporter of any incident.</p>
 </section>
 <section id="enforcement-guidelines" class="level3">
@@ -499,6 +499,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/royal-statistical-society\.github\.io\/datavisguide\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -533,7 +551,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -809,7 +831,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./about.html" class="pagination-link  aria-label=" about="" the="" authors"="">
+      <a href="./about.html" class="pagination-link" aria-label="About the authors">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">About the authors</span>
       </a>          
   </div>
