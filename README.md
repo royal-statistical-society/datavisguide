@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10600718.svg)](https://doi.org/10.5281/zenodo.10600718)
 
-This GitHub repository contains all the source files and code for our website at <https://royal-statistical-society.github.io/datavisguide/>. The site and its content are under development, and the authors welcome feedback and contributions.
+This GitHub repository contains all the source files and code for our website at <https://royal-statistical-society.github.io/datavisguide/>. The site and its content are under development, and the editors welcome feedback and contributions.
 
 ## To make a suggestion or ask a question
 
@@ -22,19 +22,19 @@ Please either:
 3.  Add content, code and files to your branch.
 4.  Make a pull request against the `main` branch of this repository.
 
-Proposals for new features or sections will be reviewed by the lead author team ("lead authors"):
+Proposals for new features or sections will be reviewed by the editorial team:
 
 -   Andreas Krause
 
 -   Nicola Rennie
 
--   Brian Tarran
+-   Anna Britten
 
-Lead authors may offer feedback or suggestions to contributors before agreeing to merge pull requests. Lead authors reserve the right to refuse to merge pull requests, and the decision of the lead authors is final.
+Reviewers may offer feedback or suggestions to contributors before agreeing to merge pull requests. The editorial team reserves the right to refuse to merge pull requests, and the decision of the editorial team is final.
 
 Use of, and all contributions to, our website and repository are governed by our [Code of Conduct](CODE_OF_CONDUCT.md).
 
-Content created by the lead authors and published in this website and repository is licensed under a [Creative Commons Attribution 4.0 (CC BY 4.0) International licence](http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1), meaning it can be used and adapted for any purpose, provided attribution is given to the original authors. By contributing to this guide, contributors agree to licence their work under the same terms.
+Content created by the editorial team and published in this website and repository is licensed under a [Creative Commons Attribution 4.0 (CC BY 4.0) International licence](http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1), meaning it can be used and adapted for any purpose, provided attribution is given to the original authors. By contributing to this guide, contributors agree to licence their work under the same terms.
 
 This site is built in [Quarto](https://quarto.org/). To get started using Quarto, visit <https://quarto.org/docs/get-started/>.
 

@@ -34,11 +34,11 @@ Community leaders have the right and responsibility to remove, edit, or reject c
 
 This Code of Conduct applies within all community spaces (encompassing this site and our GitHub repository). It also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.
 
-Note that unless prior permission is agreed in writing with the RSS, only the lead authors (Andreas Krause, Nicola Rennie, and Brian Tarran) may officially represent the community. Comment to the media must only be given by appointed representatives and must be approved by the RSS press office.
+Note that unless prior permission is agreed in writing with the RSS, only the editorial team (Andreas Krause, Nicola Rennie, and Anna Britten) may officially represent the community. Comment to the media must only be given by appointed representatives and must be approved by the RSS press office.
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at [b.tarran\@rss.org.uk](mailto:b.tarran@rss.org.uk). All complaints will be reviewed and investigated promptly and fairly.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at [a.britten@rss.org.uk](mailto:a.britten@rss.org.uk). All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the reporter of any incident.
 
