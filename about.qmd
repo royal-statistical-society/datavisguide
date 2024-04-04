@@ -7,7 +7,7 @@ editor: source
 
 ::: grid
 ::: {.g-col-12 .g-col-md-8}
-Andreas Krause holds a PhD and an MSc in statistics and computer science. His current position is senior director, data science, modeling and simulation, at Idorsia Pharmaceuticals Ltd in Basel, Switzerland. His group provides clinical drug development teams with statistics and model-based analysis and predictions to support decision making. His works include more than 100 peer-reviewed [scientific publications](https://scholar.google.com/citations?hl=en&user=9a--8FUAAAAJ&view_op=list_works&sortby=pubdate).
+Andreas Krause holds a PhD and an MSc in statistics and computer science. He is Chief Scientific Officer, Clinical Pharmacology & Pharmacometric Services, at Simulations Plus, Inc., providing modeling and simulation expertise to the pharmaceutical industry. His works include more than 100 peer-reviewed [scientific publications](https://scholar.google.com/citations?hl=en&user=9a--8FUAAAAJ&view_op=list_works&sortby=pubdate).
 
 Andreas' scientific activities include positions as co-editor of the American Statistical Association's section on [Statistical Computing and Graphics](https://community.amstat.org/jointscsg-section/home), book review editor and board member of [*Computational Statistics*](https://www.springer.com/journal/180), associate editor and editor-in-chief of [*Pharmaceutical Statistics*](https://onlinelibrary.wiley.com/page/journal/15391612/homepage/editorialboard.html), and, currently, advisory board member of *Pharmaceutical Statistics* and the [*Journal of Pharmacokinetics and Pharmacodynamics*](https://doi.org/10.1007/s10928-023-09855-x).
 
