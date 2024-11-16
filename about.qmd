@@ -33,9 +33,9 @@ Graphics and visualisation are long-standing topics for him, including numerous 
 Nicola Rennie is an academic, data scientist, and educator with a passion for effectively communicating data. She is a Lecturer in Health Data Science at Lancaster Medical School, where her research focuses on the use of statistical models to improve health outcomes. Her teaching experience covers topics including data visualisation, programming in R and Python, and how to effectively communicate the results of statistical analyses. Nicola is the author and maintainer of multiple R packages, and an active member of the R community -- regularly presenting at R User Group Meetups and mentoring new members of the community.
 
 -   Website: [nrennie.rbind.io](https://nrennie.rbind.io/)
--   Twitter: [\@nrennie35](https://twitter.com/nrennie35)
+-   BlueSky: [nrennie.bsky.social](https://bsky.app/profile/nrennie.bsky.social)
 -   LinkedIn: [linkedin.com/in/nicola-rennie](https://www.linkedin.com/in/nicola-rennie/)
--   Mastodon: [\@fosstodon.org](https://fosstodon.org/@nrennie)[/\@nrennie](https://fosstodon.org/@nrennie)
+-   Mastodon: [fosstodon.org/@nrennie](https://fosstodon.org/@nrennie)
 -   ORCID: [orcid.org/0000-0003-4797-557X](https://orcid.org/0000-0003-4797-557X)
 :::
 
