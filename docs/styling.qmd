@@ -306,7 +306,7 @@ Colours should be distinct from each other, for all readers. There are several d
 library(ggplot2)
 library(dplyr)
 library(ggtext)
-library(colourblindr)
+library(colorblindr)
 plot_data <- ToothGrowth %>%
   mutate(dose = factor(dose)) %>%
   group_by(dose, supp) %>%
